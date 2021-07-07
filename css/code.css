@@ -1,0 +1,133 @@
+/* Tomorrow Night Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+
+/* 新添加的内容 */
+/* ------------------------------------- */
+/* 代码框背景色和字体顔色,与hljs一样就行 */
+/* 必须配置(把下面.hljs的color和background复製到这里来) */
+#article-container pre, 
+#article-container figure.highlight {
+  background: #221a0f;  
+  color: #d3af86
+}
+
+/* 代码框工具栏 (如果你关掉了copy、lang和shrink,可不用配置这个 */
+#article-container figure.highlight .highlight-tools {
+  color: #fff;
+  background: #321a0f
+}
+
+/* 代码框行数(如果已经关掉line_number,可以不用配置这个) */
+#article-container figure.highlight .gutter pre {
+  background-color: #221a0f;
+  color: #fff
+}
+
+/* 代码块figcaption配置(hexo自带标签https://hexo.io/zh-tw/docs/tag-plugins.html#Code-Block) */
+/* 不需要可以不用配置这个 */
+#article-container figure.highlight figcaption,
+#article-container figure.highlight figcaption a {
+  color: #d3af86 !important
+}
+
+/* 代码框滚动条 (需要可配置，默认为主题主顔色）*/
+/* 不需要可以不用配置这个 */
+#article-container figure.highlight table::-webkit-scrollbar-thumb {
+  background: #d3af86 !important
+}
+
+/* ------------------------------------- */
+
+
+/* 修改代码框的标题栏 */
+#article-container figure.highlight,#article-container pre {
+	color: #f8f8f8;
+	background: #000000
+}
+
+#article-container figure.highlight .highlight-tools {
+	color: #f8f8f8;
+	background: #000000
+}
+
+#article-container figure.highlight .gutter pre {
+	color: #f8f8f8;
+	background: #000000
+}
+
+#article-container figure.highlight figcaption a {
+	color: #f3f3f3!important
+}
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+  color: #969896;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+  color: #cc6666;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+  color: #de935f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+  color: #f0c674;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+  color: #b5bd68;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+  color: #81a2be;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+  color: #b294bb;
+}
+
+.hljs {
+  display: block;
+  overflow-x: auto;
+  background: #1d1f21;
+  color: #c5c8c6;
+  padding: 0.5em;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}

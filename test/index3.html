@@ -1,0 +1,168 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>网站推荐-Ming</title>
+  <link rel="icon" href="https://tvax4.sinaimg.cn/large/0072YHp3ly1gjlriqpyayj30hs0hswf6.jpg" type="image/x-icon">
+  <link href="http://cdn.sucai8.cn/cdn/css/demo/style_kj.css" type="text/css" rel="stylesheet" />
+  <link href="http://cdn.sucai8.cn/cdn/css/demo/demo.css?v1.9" type="text/css" rel="stylesheet" />
+  <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
+    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <script src="http://cdn.sucai8.cn/cdn/jquery/jquery-1.2.pack.js" type="text/javascript"></script>
+  <script src="http://cdn.sucai8.cn/cdn/jquery/jquery-1.7.2.js" type="text/javascript"></script>
+
+  <script src="http://cdn.sucai8.cn/cdn/jquery/qrcode.min.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    var theme_list_open = false;
+    $(document).ready(function () {
+      function fixHeight() {
+        var headerHeight = $("#switcher").height();
+        $("#iframe").attr("height", $(window).height() - 39 + "px");
+      }
+      $(window).resize(function () {
+        fixHeight();
+      }).resize();
+      //响应式预览
+      $('.icon-monitor').addClass('active');
+      $(".icon-mobile-3").click(function () {
+        $("#by").css("overflow-y", "auto");
+        $('#iframe-wrap').removeClass().addClass('mobile-width-3');
+        $('.icon-tablet,.icon-mobile-1,.icon-monitor,.icon-mobile-2,.icon-mobile-3').removeClass('active');
+        $(this).addClass('active');
+        return false;
+      });
+
+      $(".icon-mobile-2").click(function () {
+        $("#by").css("overflow-y", "auto");
+        $('#iframe-wrap').removeClass().addClass('mobile-width-2');
+        $('.icon-tablet,.icon-mobile-1,.icon-monitor,.icon-mobile-2,.icon-mobile-3').removeClass('active');
+        $(this).addClass('active');
+        return false;
+      });
+
+      $(".icon-mobile-1").click(function () {
+        $("#by").css("overflow-y", "auto");
+        $('#iframe-wrap').removeClass().addClass('mobile-width');
+        $('.icon-tablet,.icon-mobile,.icon-monitor,.icon-mobile-2,.icon-mobile-3').removeClass('active');
+        $(this).addClass('active');
+        return false;
+      });
+
+      $(".icon-tablet").click(function () {
+        $("#by").css("overflow-y", "auto");
+        $('#iframe-wrap').removeClass().addClass('tablet-width');
+        $('.icon-tablet,.icon-mobile-1,.icon-monitor,.icon-mobile-2,.icon-mobile-3').removeClass('active');
+        $(this).addClass('active');
+        return false;
+      });
+
+      $(".icon-monitor").click(function () {
+        $("#by").css("overflow-y", "hidden");
+        $('#iframe-wrap').removeClass().addClass('full-width');
+        $('.icon-tablet,.icon-mobile-1,.icon-monitor,.icon-mobile-2,.icon-mobile-3').removeClass('active');
+        $(this).addClass('active');
+        return false;
+      });
+    });
+  </script>
+  <script type="text/javascript">
+    function Responsive(a) {
+      if (a == true) $("#Device").css("opacity", "100");
+      if (a == false) $("#Device").css("opacity", "0");
+      $('#iframe-wrap').removeClass().addClass('full-width');
+      $('.icon-tablet,.icon-mobile-1,.icon-monitor,.icon-mobile-2,.icon-mobile-3').removeClass('active');
+      $(this).addClass('active');
+      return false;
+    };
+  </script>
+  <style type="text/css">
+    .muen_top a {
+      font-family: "微软雅黑";
+    }
+  </style>
+</head>
+
+<body id="by" style="overflow-y: hidden">
+  <nav class="navbar navbar-inverse navbar-fixed-top" style="background-color: white;border: 0px;">
+    <div class="container">
+
+      <div id="navbar" class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="https://mingsrc.xyz">首页</a></li>
+          <li><a href="https://mingsrc.xyz/about/">关于我</a></li>
+          <li><a href="https://mingsrc.xyz/messageboard/">联系我</a></li>
+        </ul>
+      </div>
+      <!--/.nav-collapse -->
+    </div>
+  </nav>
+  <!--
+    <div class="center">
+    <ul>
+      <div id="Device">
+        <li class="device-monitor"><a href="javascript:">
+          <div class="icon-monitor"></div>
+          </a></li>
+        <li class="device-mobile"><a href="javascript:">
+          <div class="icon-tablet"> </div>
+          </a></li>
+        <li class="device-mobile"><a href="javascript:">
+          <div class="icon-mobile-1"> </div>
+          </a></li>
+        <li class="device-mobile-2"><a href="javascript:">
+          <div class="icon-mobile-2"> </div>
+          </a></li>
+        <li class="device-mobile-3"><a href="javascript:">
+          <div class="icon-mobile-3"> </div>
+          </a></li>
+        <li class="toper" id="sj"><a href="#">手机二维码预览</a>
+          <div class="vm">
+            <div id="output">
+            </div>
+            <p style="color:#808080">扫一扫，直接在手机上打开</p>
+          </div>
+        </li>
+        <li class="logoTop" id="sj2"> <a href="/76053.html" title="点击下载" class="down" target="_blank">tab切换功能介绍特效</a>&nbsp;&nbsp;<span> [仅演示有水印] </span></li>
+      </div>
+    </ul>
+    <div class="closeframe"> <a href="http://www.sucai8.cn/demo/2019/06/tab切换功能介绍特效" title="关闭框架"></a> </div>
+  </div>
+
+-->
+  <script type="application/javascript">
+    function utf16to8(str) {
+      var out, i, len, c;
+      out = "";
+      len = str.length;
+      for (i = 0; i < len; i++) {
+        c = str.charCodeAt(i);
+        if ((c >= 0x0001) && (c <= 0x007F)) {
+          out += str.charAt(i);
+        } else if (c > 0x07FF) {
+          out += String.fromCharCode(0xE0 | ((c >> 12) & 0x0F));
+          out += String.fromCharCode(0x80 | ((c >> 6) & 0x3F));
+          out += String.fromCharCode(0x80 | ((c >> 0) & 0x3F));
+        } else {
+          out += String.fromCharCode(0xC0 | ((c >> 6) & 0x1F));
+          out += String.fromCharCode(0x80 | ((c >> 0) & 0x3F));
+        }
+      }
+      return out;
+    }
+    var utfurl = utf16to8("建站小程序功能特点.html");
+    jQuery('#output').qrcode(utfurl);
+  </script>
+    <iframe id="iframe" src="建站小程序功能特点.html" frameborder="0" width="100%"> </iframe>
+
+  </div>
+  <div style="display:none">
+    <script src="https://s4.cnzz.com/z_stat.php?id=1259596289&web_id=1259596289" type="text/javascript"
+      language="JavaScript"></script>
+  </div>
+</body>
+
+</html>

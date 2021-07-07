@@ -1,0 +1,256 @@
+body {
+    cursor: url(https://cdn.jsdelivr.net/gh/sviptzk/HexoStaticFile@latest/Hexo/img/default.cur),
+        default;
+}
+a,img {
+    cursor: url(https://cdn.jsdelivr.net/gh/sviptzk/HexoStaticFile@latest/Hexo/img/pointer.cur),
+        default;
+}
+
+/* 首页中间打字效果上方 */
+h1#site-title {
+  filter: drop-shadow(2px 4px 6px black);
+  animation: bgbreath 4s infinite;
+}
+@keyframes bgbreath{
+  0%{
+    filter: drop-shadow(1px 1px 1px black);
+  }
+  50%{
+    filter: drop-shadow(4px 8px 12px black);
+  }
+  100%{
+    filter: drop-shadow(1px 1px px black);
+  }
+}
+
+/* 页脚心图标 */
+#authorfooter{
+  color: rgb(255, 106, 106); 
+  animation: 0.8s linear 0s infinite normal none running announ_animation; 
+  user-select: auto
+}
+
+/*页脚自定义字段字体颜色*/
+/* 页脚透明 */
+#footer {
+  background:transparent !important;
+}
+#foot-wrap{
+  opacity: unset;
+}
+/* 也就是配置文件里的footer_custom_text */
+.footer_custom_text {
+  color: #00c4b6;
+}
+/* 顶部导航栏 */
+#nav a {
+  color: #f9f2f4;
+}
+/* 博主昵称颜色 */
+.author-info__name {
+  color: #ff7242;
+}
+/**/
+.author-info__description {
+}
+
+/* 博主头像动画 */
+img.avatar-img {
+  background-color: #3cefff;
+  margin: 10px auto;
+  -webkit-animation: rotateplane 10s infinite ease-in-out;
+  animation: rotateplane 10s infinite ease-in-out;
+}
+@-webkit-keyframes rotateplane {
+  0% {
+    -webkit-transform: perspective(120px);
+  }
+  50% {
+    -webkit-transform: perspective(120px) rotateY(360deg);
+  }
+  90% {
+    -webkit-transform: perspective(120px) rotateY(0deg) rotateX(0deg);
+  }
+  100% {
+    -webkit-transform: perspective(120px) rotateY(0deg) rotateX(0deg);
+  }
+}
+figure.highlight{
+  border-radius: 10px 20px;
+}
+@keyframes rotateplane {
+  0% {
+    transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+    -webkit-transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+  }
+  50% {
+    transform: perspective(120px)  rotateY(360deg);
+    -webkit-transform: perspective(120px)  rotateY(360deg);
+  }
+  90% {
+    transform: perspective(120px)  rotateY(0deg);
+    -webkit-transform: perspective(120px)  rotateY(0deg);
+  }
+  100% {
+    transform: perspective(120px)  rotateY(0deg);
+    -webkit-transform: perspective(120px)  rotateY(0deg);
+  }
+}
+
+
+
+
+#web_bg {
+  background-color: black;
+    animation: sun ease-in-out infinite;
+    background-image: url(https://tva1.sinaimg.cn/large/0072YHp3ly1grz82tfm7sj32yo1o0teg.jpg);
+      /* 标准的语法 */
+     /*background: -webkit-linear-gradient(
+      0deg,
+      rgba(247, 149, 51, 0.1) 0,
+      rgba(243, 112, 85, 0.1) 15%,
+      rgba(239, 78, 123, 0.1) 30%,
+      rgba(161, 102, 171, 0.1) 44%,
+      rgba(80, 115, 184, 0.1) 58%,
+      rgba(16, 152, 173, 0.1) 72%,
+      rgba(7, 179, 155, 0.1) 86%,
+      rgba(109, 186, 130, 0.1) 100%
+    );
+    background: -moz-linear-gradient(
+      0deg,
+      rgba(247, 149, 51, 0.1) 0,
+      rgba(243, 112, 85, 0.1) 15%,
+      rgba(239, 78, 123, 0.1) 30%,
+      rgba(161, 102, 171, 0.1) 44%,
+      rgba(80, 115, 184, 0.1) 58%,
+      rgba(16, 152, 173, 0.1) 72%,
+      rgba(7, 179, 155, 0.1) 86%,
+      rgba(109, 186, 130, 0.1) 100%
+    );
+    background: -o-linear-gradient(
+      0deg,
+      rgba(247, 149, 51, 0.1) 0,
+      rgba(243, 112, 85, 0.1) 15%,
+      rgba(239, 78, 123, 0.1) 30%,
+      rgba(161, 102, 171, 0.1) 44%,
+      rgba(80, 115, 184, 0.1) 58%,
+      rgba(16, 152, 173, 0.1) 72%,
+      rgba(7, 179, 155, 0.1) 86%,
+      rgba(109, 186, 130, 0.1) 100%
+    );
+    background: -ms-linear-gradient(
+      0deg,
+      rgba(247, 149, 51, 0.1) 0,
+      rgba(243, 112, 85, 0.1) 15%,
+      rgba(239, 78, 123, 0.1) 30%,
+      rgba(161, 102, 171, 0.1) 44%,
+      rgba(80, 115, 184, 0.1) 58%,
+      rgba(16, 152, 173, 0.1) 72%,
+      rgba(7, 179, 155, 0.1) 86%,
+      rgba(109, 186, 130, 0.1) 100%
+    );
+    background: linear-gradient(
+      90deg,
+      rgba(247, 149, 51, 0.1) 0,
+      rgba(243, 112, 85, 0.1) 15%,
+      rgba(239, 78, 123, 0.1) 30%,
+      rgba(161, 102, 171, 0.1) 44%,
+      rgba(80, 115, 184, 0.1) 58%,
+      rgba(16, 152, 173, 0.1) 72%,
+      rgba(7, 179, 155, 0.1) 86%,
+      rgba(109, 186, 130, 0.1) 100%
+    );*/
+  }
+  @keyframes sun {
+    0% {
+      background: linear-gradient(
+        90deg,
+        rgba(247, 149, 51, 0.1) 0,
+        rgba(243, 112, 85, 0.1) 15%,
+        rgba(239, 78, 123, 0.1) 30%,
+        rgba(161, 102, 171, 0.1) 44%,
+        rgba(80, 115, 184, 0.1) 58%,
+        rgba(16, 152, 173, 0.1) 72%,
+        rgba(7, 179, 155, 0.1) 86%,
+        rgba(109, 186, 130, 0.1) 100%
+      );
+
+    }
+    20% {
+      background: linear-gradient(
+        0deg,
+        rgba(247, 149, 51, 0.1) 0,
+        rgba(243, 112, 85, 0.1) 15%,
+        rgba(239, 78, 123, 0.1) 30%,
+        rgba(161, 102, 171, 0.1) 44%,
+        rgba(80, 115, 184, 0.1) 58%,
+        rgba(16, 152, 173, 0.1) 72%,
+        rgba(7, 179, 155, 0.1) 86%,
+        rgba(109, 186, 130, 0.1) 100%
+      );
+    }
+    40% {
+      background: linear-gradient(
+        180deg,
+        rgba(247, 149, 51, 0.1) 0,
+        rgba(243, 112, 85, 0.1) 15%,
+        rgba(239, 78, 123, 0.1) 30%,
+        rgba(161, 102, 171, 0.1) 44%,
+        rgba(80, 115, 184, 0.1) 58%,
+        rgba(16, 152, 173, 0.1) 72%,
+        rgba(7, 179, 155, 0.1) 86%,
+        rgba(109, 186, 130, 0.1) 100%
+      );
+    }
+    60% {
+      background: linear-gradient(
+        -90deg,
+        rgba(247, 149, 51, 0.1) 0,
+        rgba(243, 112, 85, 0.1) 15%,
+        rgba(239, 78, 123, 0.1) 30%,
+        rgba(161, 102, 171, 0.1) 44%,
+        rgba(80, 115, 184, 0.1) 58%,
+        rgba(16, 152, 173, 0.1) 72%,
+        rgba(7, 179, 155, 0.1) 86%,
+        rgba(109, 186, 130, 0.1) 100%
+      );
+    }
+    80% {
+      background: linear-gradient(
+        270deg,
+        rgba(247, 149, 51, 0.1) 0,
+        rgba(243, 112, 85, 0.1) 15%,
+        rgba(239, 78, 123, 0.1) 30%,
+        rgba(161, 102, 171, 0.1) 44%,
+        rgba(80, 115, 184, 0.1) 58%,
+        rgba(16, 152, 173, 0.1) 72%,
+        rgba(7, 179, 155, 0.1) 86%,
+        rgba(109, 186, 130, 0.1) 100%
+      );
+    }
+    100% {
+      background: linear-gradient(
+        0deg,
+        rgba(247, 149, 51, 0.1) 0,
+        rgba(243, 112, 85, 0.1) 15%,
+        rgba(239, 78, 123, 0.1) 30%,
+        rgba(161, 102, 171, 0.1) 44%,
+        rgba(80, 115, 184, 0.1) 58%,
+        rgba(16, 152, 173, 0.1) 72%,
+        rgba(7, 179, 155, 0.1) 86%,
+        rgba(109, 186, 130, 0.1) 100%
+      );
+    }
+
+  }
+
+
+
+#recent-posts .post-card-large {
+  height: 17.5% !important;
+}
+
+#recent-posts .post-card-large .recent-post-info .content{
+  -webkit-line-clamp: 5!important;
+}
