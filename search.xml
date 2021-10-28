@@ -175,6 +175,13 @@
 
 <div class="timenode"><div class="meta"><p><p>2021-2-24</p>
 </p></div><div class="body"><p>及时当勉励，岁月不待人。</p></div></div>
+
+
+
+<div class="timenode"><div class="meta"><p><p>2021-10-27</p>
+</p></div><div class="body"><p>见字如面，既爱又恨，那段时光</p></div></div>
+
+
 </div>]]></content>
   </entry>
   <entry>
@@ -3240,6 +3247,10 @@ old_price修改后的值： 50.0<br>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
 <p>转载声明：<a href="https://blog.csdn.net/qianyu6200430">SHERlocked93</a></p>
 </blockquote>
+<p>分享一个HTTP的抓包工具：</p>
+<blockquote>
+<p> <b><a href="https://dl.pconline.com.cn/download/363657.html">fiddler（fiddler中文版）</a></b>是一个http协议Web调试代理工具。fiddler能够记录并检查所有你的电脑和互联网之间的http通讯，设置断点查看所有的“进出”Fiddler的数据（指html,cookie,css，js等文件，这些都可以让你胡乱修改的意思）。Fiddler（fiddler中文版）要比其他的网络调试器要更加简单，因为它不仅仅可以帮助用户提供暴露http通讯，还提供了一个友好的用户格式。Fiddler包含了一个强大的基于事件脚本的子系统，并且能使用.net语言进行扩展，适用于：开发环境的host配置；前后端接口调试；线上bugfix；性能分析和优化等等。本站提供fiddler下载。</p>
+</blockquote>
 <h2 id="一、什么是HTTPS"><a href="#一、什么是HTTPS" class="headerlink" title="一、什么是HTTPS"></a>一、什么是HTTPS</h2><div><img src="../../../images/HTTPS/https.png" alt="https 的图像结果"  style="float:right;inline"/></div>
 
 <p>HTTPS是在HTTP上建立SSL加密层，并对传输数据进行加密，是HTTP协议的安全版。现在它被广泛用于万维网上安全敏感的通讯，例如交易支付方面。</p>
@@ -3271,6 +3282,10 @@ old_price修改后的值： 50.0<br>
 <h2 id="三、HTTPS如何解决HTTP上述问题"><a href="#三、HTTPS如何解决HTTP上述问题" class="headerlink" title="三、HTTPS如何解决HTTP上述问题?"></a>三、HTTPS如何解决HTTP上述问题?</h2><p>HTTPS并非是应用层的一种新协议。只是HTTP通信接口部分用SSL和TLS协议代替而已。</p>
 <p>通常，HTTP直接和TCP通信。当使用SSL时，则演变成先和SSL通信，再由SSL和TCP通信了。简言之，<strong>所谓HTTPS，其实就是身披SSL协议这层外壳的HTTP</strong>。</p>
 ]]></content>
+      <tags>
+        <tag>网络协议</tag>
+        <tag>HTTP</tag>
+      </tags>
   </entry>
   <entry>
     <title>Qt“CV”大法——Linux下的TCP通信</title>
@@ -3449,7 +3464,21 @@ old_price修改后的值： 50.0<br>
   <entry>
     <title>计算机网络协议</title>
     <url>/2020/11/25/C_%E9%9D%A2%E8%AF%95/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E4%BA%94%E5%B1%82%E5%8D%8F%E8%AE%AE%E5%8F%8A%E5%8A%9F%E8%83%BD/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="五层网络协议、功能、"><a href="#五层网络协议、功能、" class="headerlink" title="五层网络协议、功能、"></a>五层网络协议、功能、</h1><p><img src="https://tva1.sinaimg.cn/large/0072YHp3ly1gl18e39ln5j30go0b10wv.jpg"></p>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
+<p>一些可以帮助学习各种协议的工具推荐：</p>
+<blockquote>
+<p><b><a href="downza.cn/soft/30116.html">Cisco Packet Tracer中文版</a></b> 是一款功能齐全的思科交换机模拟器，简称PT。为学习CCNA课程的网络初学者提供了网络模拟环境。Cisco Packet Tracer中文版是思科最新7.0模拟器，以前的5.5和5.3的版本只能做NA的实验，现在这个可以做NP的实验，里边的IOS也升级了，思科在save里面保存有很多学习用的拓扑，值得研究。</p>
+</blockquote>
+<p>常见抓包工具：</p>
+<blockquote>
+<p> <b><a href="https://dl.pconline.com.cn/download/363657.html">fiddler（fiddler中文版）</a></b>是一个http协议Web调试代理工具。fiddler能够记录并检查所有你的电脑和互联网之间的http通讯，设置断点查看所有的“进出”Fiddler的数据（指html,cookie,css，js等文件，这些都可以让你胡乱修改的意思）。Fiddler（fiddler中文版）要比其他的网络调试器要更加简单，因为它不仅仅可以帮助用户提供暴露http通讯，还提供了一个友好的用户格式。Fiddler包含了一个强大的基于事件脚本的子系统，并且能使用.net语言进行扩展，适用于：开发环境的host配置；前后端接口调试；线上bugfix；性能分析和优化等等。本站提供fiddler下载。</p>
+</blockquote>
+<blockquote>
+<p><b><a href="https://www.cr173.com/soft/5937.html">Wireshark</a></b>（前称Ethereal）是一个网络封包分析软件。网络封包分析软件的功能是撷取网络封包, 并尽可能显示出最为详细的网络封包资料。网络封包分析软件的功能可想像成 “电工技师使用电表来量测电流、电压、电阻” 的工作 - 只是将场景移植到网络上，并将电线替换成网络线。</p>
+<p>在过去，网络封包分析软件是非常昂贵，或是专门属于营利用的软件。Ethereal的出现改变了这一切。在GNU GPL通用许可证的保障范围底下，使用者可以以免费的代价取得软件与其程式码，并拥有针对其原始码修改及客制化的权利。Ethereal是目前全世界最广泛的网络封包分析软件之一</p>
+</blockquote>
+</blockquote>
+<h1 id="五层网络协议、功能"><a href="#五层网络协议、功能" class="headerlink" title="五层网络协议、功能"></a>五层网络协议、功能</h1><p><img src="https://tva1.sinaimg.cn/large/0072YHp3ly1gl18e39ln5j30go0b10wv.jpg"></p>
 <h2 id="OSI七层模型"><a href="#OSI七层模型" class="headerlink" title="OSI七层模型"></a>OSI七层模型</h2><p>OSI七层协议模型主要是：应用层（Application）、表示层（Presentation）、会话层（Session）、传输层（Transport）、网络层（Network）、数据链路层（Data Link）、物理层（Physical）。</p>
 <p>三种模型结构：</p>
 <hr>
@@ -3548,24 +3577,32 @@ old_price修改后的值： 50.0<br>
 <td align="left">ssh传统的网络服务程序，如ftp、pop和teInet在本质上都是不安全的，因为它们在网络上用明文传送口令和数据</td>
 </tr>
 <tr>
-<td align="left"></td>
-<td align="left"></td>
+<td align="left">23</td>
+<td align="left">Telnet服务</td>
+</tr>
+<tr>
+<td align="left">25</td>
+<td align="left">SMTP服务</td>
 </tr>
 <tr>
 <td align="left"></td>
 <td align="left"></td>
 </tr>
 <tr>
-<td align="left"></td>
-<td align="left"></td>
+<td align="left">80</td>
+<td align="left">HTTP服务器</td>
 </tr>
 <tr>
-<td align="left"></td>
-<td align="left"></td>
+<td align="left">110</td>
+<td align="left">POP3</td>
 </tr>
 <tr>
-<td align="left"></td>
-<td align="left"></td>
+<td align="left">1158</td>
+<td align="left">Oracle EmCTL</td>
+</tr>
+<tr>
+<td align="left">1521</td>
+<td align="left">Oracle数据库</td>
 </tr>
 <tr>
 <td align="left"></td>
@@ -3574,6 +3611,30 @@ old_price修改后的值： 50.0<br>
 <tr>
 <td align="left">3036</td>
 <td align="left">MySQL</td>
+</tr>
+<tr>
+<td align="left">3389</td>
+<td align="left">WIN2003远程登录</td>
+</tr>
+<tr>
+<td align="left">8080</td>
+<td align="left">JBOSS</td>
+</tr>
+<tr>
+<td align="left">8080</td>
+<td align="left">TOMCAT</td>
+</tr>
+<tr>
+<td align="left">9080</td>
+<td align="left">Webshpere应用程序</td>
+</tr>
+<tr>
+<td align="left">9090</td>
+<td align="left">webshpere</td>
+</tr>
+<tr>
+<td align="left"></td>
+<td align="left"></td>
 </tr>
 </tbody></table>
 <p><strong>1、按端口号分布划分</strong></p>
@@ -3591,7 +3652,7 @@ old_price修改后的值： 50.0<br>
 ]]></content>
       <tags>
         <tag>网络协议</tag>
-        <tag>计网</tag>
+        <tag>网络编程</tag>
       </tags>
   </entry>
   <entry>

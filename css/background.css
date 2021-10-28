@@ -102,11 +102,11 @@ figure.highlight{
 
 
 #web_bg {
-  background-color: black;
+    /* background-color: black; */
     animation: sun ease-in-out infinite;
-    background-image: url(https://tva1.sinaimg.cn/large/0072YHp3ly1grz82tfm7sj32yo1o0teg.jpg);
+    background-image: /* url(https://tva1.sinaimg.cn/large/0072YHp3ly1grz82tfm7sj32yo1o0teg.jpg); */
       /* 标准的语法 */
-     /*background: -webkit-linear-gradient(
+     background: -webkit-linear-gradient(
       0deg,
       rgba(247, 149, 51, 0.1) 0,
       rgba(243, 112, 85, 0.1) 15%,
@@ -160,7 +160,7 @@ figure.highlight{
       rgba(16, 152, 173, 0.1) 72%,
       rgba(7, 179, 155, 0.1) 86%,
       rgba(109, 186, 130, 0.1) 100%
-    );*/
+    );
   }
   @keyframes sun {
     0% {
