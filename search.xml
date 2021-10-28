@@ -146,7 +146,7 @@
   <entry>
     <title>明明是我</title>
     <url>/2021/03/18/%E8%87%AA%E8%BF%B0/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="我的故事"><a href="#我的故事" class="headerlink" title="我的故事"></a>我的故事</h1><div class="timeline"><p class='p h2'>2021</p> 
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="“M-Y-L-I-F-E”"><a href="#“M-Y-L-I-F-E”" class="headerlink" title="“M Y L I F E”"></a><span  style="text-align:center;font-size:20px;font:30px 书体坊兰亭体;color:blueviolent;word-spacing:30px;">“M Y L I F E”</span></h1><div class="timeline"><p class='p h2'>2021</p> 
 
 
 <div class="timenode"><div class="meta"><p><p>2021-03-18</p>
@@ -9955,8 +9955,8 @@ dq2的大小为：3<br>
     <url>/2020/10/02/A_%E7%A8%8B%E5%BA%8F%E5%91%98%E5%86%85%E5%8A%9F/B_%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E8%A1%8C%E4%B8%BA%E5%9E%8B%E6%A8%A1%E5%BC%8F/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="行为型模式"><a href="#行为型模式" class="headerlink" title="行为型模式"></a>行为型模式</h1><blockquote>
 <p>学习笔记之C++设计模式——创建型模式</p>
-<p>📑 <a href="#">Post not found: 程序员内功/设计模式/结构型模式</a> <br></p>
-<p>📑 <a href="#">Post not found: 程序员内功/设计模式/创建型模式</a></p>
+<p>📑 <a href="/2020/10/01/A_%E7%A8%8B%E5%BA%8F%E5%91%98%E5%86%85%E5%8A%9F/B_%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E7%BB%93%E6%9E%84%E5%9E%8B%E6%A8%A1%E5%BC%8F/" title="设计模式之结构型模式">设计模式之结构型模式</a> <br></p>
+<p>📑 <a href="/2020/09/25/A_%E7%A8%8B%E5%BA%8F%E5%91%98%E5%86%85%E5%8A%9F/B_%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E5%88%9B%E5%BB%BA%E5%9E%8B%E6%A8%A1%E5%BC%8F/" title="设计模式之创建型模式">设计模式之创建型模式</a></p>
 </blockquote>
 ]]></content>
       <categories>
@@ -9972,8 +9972,8 @@ dq2的大小为：3<br>
     <url>/2020/10/01/A_%E7%A8%8B%E5%BA%8F%E5%91%98%E5%86%85%E5%8A%9F/B_%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E7%BB%93%E6%9E%84%E5%9E%8B%E6%A8%A1%E5%BC%8F/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="结构型模式"><a href="#结构型模式" class="headerlink" title="结构型模式"></a>结构型模式</h1><blockquote>
 <p> 学习笔记之C++设计模式——创建型模式</p>
-<p>📑 <a href="#">Post not found: 程序员内功/设计模式/结构型模式</a> <br></p>
-<p>📑 <a href="#">Post not found: 程序员内功/设计模式/行为型模式</a></p>
+<p>📑 <a href="/2020/10/01/A_%E7%A8%8B%E5%BA%8F%E5%91%98%E5%86%85%E5%8A%9F/B_%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E7%BB%93%E6%9E%84%E5%9E%8B%E6%A8%A1%E5%BC%8F/" title="设计模式之结构型模式">设计模式之结构型模式</a> <br></p>
+<p>📑 <a href="/2020/10/02/A_%E7%A8%8B%E5%BA%8F%E5%91%98%E5%86%85%E5%8A%9F/B_%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E8%A1%8C%E4%B8%BA%E5%9E%8B%E6%A8%A1%E5%BC%8F/" title="设计模式之行为型模式">设计模式之行为型模式</a></p>
 </blockquote>
 <p>Proxy模式又叫做代理模式，是构造型的设计模式之一， 它可以为其他对象提供-种代理( Proxy )以控制对这个对象的访问。所谓代理，是指具有与代理元(被代理的对象)具有相同的接口的类，客户端必须通过代理与被代理的目标类交互，而代理一-般在交互的过程中 (交互前后) , 进行某些特别的处理。</p>
 ]]></content>
@@ -11285,8 +11285,8 @@ dq2的大小为：3<br>
     <url>/2020/09/25/A_%E7%A8%8B%E5%BA%8F%E5%91%98%E5%86%85%E5%8A%9F/B_%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E5%88%9B%E5%BB%BA%E5%9E%8B%E6%A8%A1%E5%BC%8F/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="设计模式"><a href="#设计模式" class="headerlink" title="设计模式"></a>设计模式</h1><blockquote>
 <p> 学习笔记之C++设计模式——创建型模式</p>
-<p>📑 <a href="#">Post not found: 程序员内功/设计模式/结构型模式</a> <br></p>
-<p>📑 <a href="#">Post not found: 程序员内功/设计模式/行为型模式</a></p>
+<p>📑 <a href="/2020/10/01/A_%E7%A8%8B%E5%BA%8F%E5%91%98%E5%86%85%E5%8A%9F/B_%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E7%BB%93%E6%9E%84%E5%9E%8B%E6%A8%A1%E5%BC%8F/" title="设计模式之结构型模式">设计模式之结构型模式</a> <br></p>
+<p>📑 <a href="/2020/10/02/A_%E7%A8%8B%E5%BA%8F%E5%91%98%E5%86%85%E5%8A%9F/B_%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E8%A1%8C%E4%B8%BA%E5%9E%8B%E6%A8%A1%E5%BC%8F/" title="设计模式之行为型模式">设计模式之行为型模式</a></p>
 </blockquote>
 <span id="more"></span>
 
