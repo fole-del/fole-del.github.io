@@ -9825,52 +9825,52 @@ dq2的大小为：3<br>
 
 <p>This is my website, click the button <a class="btn-beautify button--animated " href="http://www.jerryc.me" 
   title="JerryC"><span>JerryC</span></a><br>This is my website, click the button <a class="btn-beautify button--animated " href="http://www.jerryc.me" 
-  title="JerryC"><i class="far fa-hand-point-right fa-fw"></i><span>JerryC</span></a><br>This is my website, click the button <a class="btn-beautify button--animated outline" href="http://www.jerryc.me" 
+  title="JerryC"><i class="far fa-hand-point-right"></i><span>JerryC</span></a><br>This is my website, click the button <a class="btn-beautify button--animated outline" href="http://www.jerryc.me" 
   title="JerryC"><span>JerryC</span></a><br>This is my website, click the button <a class="btn-beautify button--animated outline" href="http://www.jerryc.me" 
-  title="JerryC"><i class="far fa-hand-point-right fa-fw"></i><span>JerryC</span></a><br>This is my website, click the button <a class="btn-beautify button--animated larger" href="http://www.jerryc.me" 
-  title="JerryC"><i class="far fa-hand-point-right fa-fw"></i><span>JerryC</span></a></p>
+  title="JerryC"><i class="far fa-hand-point-right"></i><span>JerryC</span></a><br>This is my website, click the button <a class="btn-beautify button--animated larger" href="http://www.jerryc.me" 
+  title="JerryC"><i class="far fa-hand-point-right"></i><span>JerryC</span></a></p>
 <figure class="highlight markdown"><table><tr><td class="code"><pre><code class="hljs markdown">&#123;% btn &#x27;http://www.jerryc.me&#x27;,JerryC,far fa-hand-point-right,block %&#125;<br>&#123;% btn &#x27;http://www.jerryc.me&#x27;,JerryC,far fa-hand-point-right,block center larger %&#125;<br>&#123;% btn &#x27;http://www.jerryc.me&#x27;,JerryC,far fa-hand-point-right,block right outline larger %&#125;<br></code></pre></td></tr></table></figure>
 
 <a class="btn-beautify button--animated block" href="http://www.jerryc.me" 
-  title="JerryC"><i class="far fa-hand-point-right fa-fw"></i><span>JerryC</span></a>
+  title="JerryC"><i class="far fa-hand-point-right"></i><span>JerryC</span></a>
 <a class="btn-beautify button--animated block center larger" href="http://www.jerryc.me" 
-  title="JerryC"><i class="far fa-hand-point-right fa-fw"></i><span>JerryC</span></a>
+  title="JerryC"><i class="far fa-hand-point-right"></i><span>JerryC</span></a>
 <a class="btn-beautify button--animated block right outline larger" href="http://www.jerryc.me" 
-  title="JerryC"><i class="far fa-hand-point-right fa-fw"></i><span>JerryC</span></a>
+  title="JerryC"><i class="far fa-hand-point-right"></i><span>JerryC</span></a>
 
 <figure class="highlight markdown"><table><tr><td class="code"><pre><code class="hljs markdown">&#123;% btn &#x27;http://www.jerryc.me&#x27;,JerryC,far fa-hand-point-right,larger %&#125;<br>&#123;% btn &#x27;http://www.jerryc.me&#x27;,JerryC,far fa-hand-point-right,blue larger %&#125;<br>&#123;% btn &#x27;http://www.jerryc.me&#x27;,JerryC,far fa-hand-point-right,pink larger %&#125;<br>&#123;% btn &#x27;http://www.jerryc.me&#x27;,JerryC,far fa-hand-point-right,red larger %&#125;<br>&#123;% btn &#x27;http://www.jerryc.me&#x27;,JerryC,far fa-hand-point-right,purple larger %&#125;<br>&#123;% btn &#x27;http://www.jerryc.me&#x27;,JerryC,far fa-hand-point-right,orange larger %&#125;<br>&#123;% btn &#x27;http://www.jerryc.me&#x27;,JerryC,far fa-hand-point-right,green larger %&#125;<br></code></pre></td></tr></table></figure>
 
 <a class="btn-beautify button--animated larger" href="http://www.jerryc.me" 
-  title="JerryC"><i class="far fa-hand-point-right fa-fw"></i><span>JerryC</span></a>
+  title="JerryC"><i class="far fa-hand-point-right"></i><span>JerryC</span></a>
 <a class="btn-beautify button--animated blue larger" href="http://www.jerryc.me" 
-  title="JerryC"><i class="far fa-hand-point-right fa-fw"></i><span>JerryC</span></a>
+  title="JerryC"><i class="far fa-hand-point-right"></i><span>JerryC</span></a>
 <a class="btn-beautify button--animated pink larger" href="http://www.jerryc.me" 
-  title="JerryC"><i class="far fa-hand-point-right fa-fw"></i><span>JerryC</span></a>
+  title="JerryC"><i class="far fa-hand-point-right"></i><span>JerryC</span></a>
 <a class="btn-beautify button--animated red larger" href="http://www.jerryc.me" 
-  title="JerryC"><i class="far fa-hand-point-right fa-fw"></i><span>JerryC</span></a>
+  title="JerryC"><i class="far fa-hand-point-right"></i><span>JerryC</span></a>
 <a class="btn-beautify button--animated purple larger" href="http://www.jerryc.me" 
-  title="JerryC"><i class="far fa-hand-point-right fa-fw"></i><span>JerryC</span></a>
+  title="JerryC"><i class="far fa-hand-point-right"></i><span>JerryC</span></a>
 <a class="btn-beautify button--animated orange larger" href="http://www.jerryc.me" 
-  title="JerryC"><i class="far fa-hand-point-right fa-fw"></i><span>JerryC</span></a>
+  title="JerryC"><i class="far fa-hand-point-right"></i><span>JerryC</span></a>
 <a class="btn-beautify button--animated green larger" href="http://www.jerryc.me" 
-  title="JerryC"><i class="far fa-hand-point-right fa-fw"></i><span>JerryC</span></a>
+  title="JerryC"><i class="far fa-hand-point-right"></i><span>JerryC</span></a>
 
 <figure class="highlight markdown"><table><tr><td class="code"><pre><code class="hljs markdown"><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;btn-center&quot;</span>&gt;</span></span><br>&#123;% btn &#x27;http://www.jerryc.me&#x27;,Jerry1,far fa-hand-point-right,outline larger %&#125;<br>&#123;% btn &#x27;http://www.jerryc.me&#x27;,Jerry2,far fa-hand-point-right,outline blue larger %&#125;<br>&#123;% btn &#x27;http://www.jerryc.me&#x27;,Jerry3,far fa-hand-point-right,outline pink larger %&#125;<br>&#123;% btn &#x27;http://www.jerryc.me&#x27;,Jerry4,far fa-hand-point-right,outline red larger %&#125;<br>&#123;% btn &#x27;http://www.jerryc.me&#x27;,Jerry5,far fa-hand-point-right,outline purple larger %&#125;<br>&#123;% btn &#x27;http://www.jerryc.me&#x27;,Jerry6,far fa-hand-point-right,outline orange larger %&#125;<br>&#123;% btn &#x27;http://www.jerryc.me&#x27;,Jerry7,far fa-hand-point-right,outline green larger %&#125;<br><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span><br></code></pre></td></tr></table></figure>
 <div class="btn-center">
 <a class="btn-beautify button--animated outline larger" href="http://www.jerryc.me" 
-  title="Jerry1"><i class="far fa-hand-point-right fa-fw"></i><span>Jerry1</span></a>
+  title="Jerry1"><i class="far fa-hand-point-right"></i><span>Jerry1</span></a>
 <a class="btn-beautify button--animated outline blue larger" href="http://www.jerryc.me" 
-  title="Jerry2"><i class="far fa-hand-point-right fa-fw"></i><span>Jerry2</span></a>
+  title="Jerry2"><i class="far fa-hand-point-right"></i><span>Jerry2</span></a>
 <a class="btn-beautify button--animated outline pink larger" href="http://www.jerryc.me" 
-  title="Jerry3"><i class="far fa-hand-point-right fa-fw"></i><span>Jerry3</span></a>
+  title="Jerry3"><i class="far fa-hand-point-right"></i><span>Jerry3</span></a>
 <a class="btn-beautify button--animated outline red larger" href="http://www.jerryc.me" 
-  title="Jerry4"><i class="far fa-hand-point-right fa-fw"></i><span>Jerry4</span></a>
+  title="Jerry4"><i class="far fa-hand-point-right"></i><span>Jerry4</span></a>
 <a class="btn-beautify button--animated outline purple larger" href="http://www.jerryc.me" 
-  title="Jerry5"><i class="far fa-hand-point-right fa-fw"></i><span>Jerry5</span></a>
+  title="Jerry5"><i class="far fa-hand-point-right"></i><span>Jerry5</span></a>
 <a class="btn-beautify button--animated outline orange larger" href="http://www.jerryc.me" 
-  title="Jerry6"><i class="far fa-hand-point-right fa-fw"></i><span>Jerry6</span></a>
+  title="Jerry6"><i class="far fa-hand-point-right"></i><span>Jerry6</span></a>
 <a class="btn-beautify button--animated outline green larger" href="http://www.jerryc.me" 
-  title="Jerry7"><i class="far fa-hand-point-right fa-fw"></i><span>Jerry7</span></a>
+  title="Jerry7"><i class="far fa-hand-point-right"></i><span>Jerry7</span></a>
 </div>
 
 
