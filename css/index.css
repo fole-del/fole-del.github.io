@@ -2181,7 +2181,7 @@ blockquote footer cite:before {
   flex: 1 auto;
   margin: 0 auto;
   padding: 2rem 15px;
-  max-width: 1200px;
+  max-width: 1350px;
   width: 100%;
 }
 @media screen and (max-width: 900px) {
@@ -3270,7 +3270,7 @@ ul.categoryBar-list {
 li.categoryBar-list-item {
   font-weight: bold;
   display: inline-block;
-  height: 180px !important;
+  height: 125px !important;
   margin: 5px 0.5% 0 0.5% !important;
   background-image: -webkit-linear-gradient(rgba(0,0,0,0.4) 25%, rgba(16,16,16,0) 100%);
   background-image: -moz-linear-gradient(rgba(0,0,0,0.4) 25%, rgba(16,16,16,0) 100%);
@@ -3311,7 +3311,7 @@ a.categoryBar-list-link {
   font-size: 20px !important;
 }
 a.categoryBar-list-link::before {
-  content: '|' !important;
+  content: "| " !important;
   color: #fff !important;
   font-size: 20px !important;
 }
@@ -3392,6 +3392,69 @@ li.categoryBar-list-item:nth-child(6) {
   background: -o-linear-gradient(left,rgba(241, 39, 17, 0.8),rgba(245, 175, 25, 0.9));
   background: -ms-linear-gradient(left,rgba(241, 39, 17, 0.8),rgba(245, 175, 25, 0.9));
   background: linear-gradient(to right,rgba(241, 39, 17, 0.8),rgba(245, 175, 25, 0.9));
+}
+li.categoryBar-list-item:nth-child(7) {
+  background: -webkit-linear-gradient(left,rgba(54, 79, 107, 0.9),rgba(63, 194, 201, 0.9));
+  background: -moz-linear-gradient(left,rgba(54, 79, 107, 0.9),rgba(63, 194, 201, 0.9));
+  background: -o-linear-gradient(left,rgba(54, 79, 107, 0.9),rgba(63, 194, 201, 0.9));
+  background: -ms-linear-gradient(left,rgba(54, 79, 107, 0.9),rgba(63, 194, 201, 0.9));
+  background: linear-gradient(to right,rgba(54, 79, 107, 0.9),rgba(63, 194, 201, 0.9));
+}
+li.categoryBar-list-item:nth-child(8) {
+  background: -webkit-linear-gradient(left,rgba(185, 82, 237, 0.9),rgba(255, 153, 253, 0.8));
+  background: -moz-linear-gradient(left,rgba(185, 82, 237, 0.9),rgba(255, 153, 253, 0.8));
+  background: -o-linear-gradient(left,rgba(185, 82, 237, 0.9),rgba(255, 153, 253, 0.8));
+  background: -ms-linear-gradient(left,rgba(185, 82, 237, 0.9),rgba(255, 153, 253, 0.8));
+  background: linear-gradient(to right,rgba(185, 82, 237, 0.9),rgba(255, 153, 253, 0.8));
+}
+li.categoryBar-list-item:nth-child(9) {
+  background: -webkit-linear-gradient(left,rgba(102, 57, 166, 0.8),rgba(52, 143, 222, 0.8));
+  background: -moz-linear-gradient(left,rgba(102, 57, 166, 0.8),rgba(52, 143, 222, 0.8));
+  background: -o-linear-gradient(left,rgba(102, 57, 166, 0.8),rgba(52, 143, 222, 0.8));
+  background: -ms-linear-gradient(left,rgba(102, 57, 166, 0.8),rgba(52, 143, 222, 0.8));
+  background: linear-gradient(to right,rgba(102, 57, 166, 0.8),rgba(52, 143, 222, 0.8));
+}
+li.categoryBar-list-item:nth-child(10) {
+  background: -webkit-linear-gradient(right,rgba(56, 239, 126, 0.9),rgba(17, 153, 142, 0.8));
+  background: -moz-linear-gradient(right,rgba(56, 239, 126, 0.9),rgba(17, 153, 142, 0.8));
+  background: -o-linear-gradient(right,rgba(56, 239, 126, 0.9),rgba(17, 153, 142, 0.8));
+  background: -ms-linear-gradient(right,rgba(56, 239, 126, 0.9),rgba(17, 153, 142, 0.8));
+  background: linear-gradient(to left,rgba(56, 239, 126, 0.9),rgba(17, 153, 142, 0.8));
+}
+li.categoryBar-list-item:nth-child(11) {
+  background: -webkit-linear-gradient(left,rgba(185, 29, 115, 0.8),rgba(249, 83, 199, 0.8));
+  background: -moz-linear-gradient(left,rgba(185, 29, 115, 0.8),rgba(249, 83, 199, 0.8));
+  background: -o-linear-gradient(left,rgba(185, 29, 115, 0.8),rgba(249, 83, 199, 0.8));
+  background: -ms-linear-gradient(left,rgba(185, 29, 115, 0.8),rgba(249, 83, 199, 0.8));
+  background: linear-gradient(to right,rgba(185, 29, 115, 0.8),rgba(249, 83, 199, 0.8));
+}
+li.categoryBar-list-item:nth-child(12) {
+  background: -webkit-linear-gradient(left,rgba(241, 39, 17, 0.8),rgba(245, 175, 25, 0.9));
+  background: -moz-linear-gradient(left,rgba(241, 39, 17, 0.8),rgba(245, 175, 25, 0.9));
+  background: -o-linear-gradient(left,rgba(241, 39, 17, 0.8),rgba(245, 175, 25, 0.9));
+  background: -ms-linear-gradient(left,rgba(241, 39, 17, 0.8),rgba(245, 175, 25, 0.9));
+  background: linear-gradient(to right,rgba(241, 39, 17, 0.8),rgba(245, 175, 25, 0.9));
+}
+li.categoryBar-list-item:nth-child(13) {
+  background: -webkit-linear-gradient(left,rgba(54, 79, 107, 0.9),rgba(63, 194, 201, 0.9));
+  background: -moz-linear-gradient(left,rgba(54, 79, 107, 0.9),rgba(63, 194, 201, 0.9));
+  background: -o-linear-gradient(left,rgba(54, 79, 107, 0.9),rgba(63, 194, 201, 0.9));
+  background: -ms-linear-gradient(left,rgba(54, 79, 107, 0.9),rgba(63, 194, 201, 0.9));
+  background: linear-gradient(to right,rgba(54, 79, 107, 0.9),rgba(63, 194, 201, 0.9));
+}
+li.categoryBar-list-item:nth-child(14) {
+  background: -webkit-linear-gradient(left,rgba(185, 82, 237, 0.9),rgba(255, 153, 253, 0.8));
+  background: -moz-linear-gradient(left,rgba(185, 82, 237, 0.9),rgba(255, 153, 253, 0.8));
+  background: -o-linear-gradient(left,rgba(185, 82, 237, 0.9),rgba(255, 153, 253, 0.8));
+  background: -ms-linear-gradient(left,rgba(185, 82, 237, 0.9),rgba(255, 153, 253, 0.8));
+  background: linear-gradient(to right,rgba(185, 82, 237, 0.9),rgba(255, 153, 253, 0.8));
+}
+li.categoryBar-list-item:nth-child(15) {
+  background: -webkit-linear-gradient(left,rgba(102, 57, 166, 0.8),rgba(52, 143, 222, 0.8));
+  background: -moz-linear-gradient(left,rgba(102, 57, 166, 0.8),rgba(52, 143, 222, 0.8));
+  background: -o-linear-gradient(left,rgba(102, 57, 166, 0.8),rgba(52, 143, 222, 0.8));
+  background: -ms-linear-gradient(left,rgba(102, 57, 166, 0.8),rgba(52, 143, 222, 0.8));
+  background: linear-gradient(to right,rgba(102, 57, 166, 0.8),rgba(52, 143, 222, 0.8));
 }
 li.categoryBar-list-item:nth-child(1)>span::after {
   content: '一路艰难C++' !important;
