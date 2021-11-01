@@ -1691,14 +1691,14 @@
   </url>
   
   <url>
-    <loc>https://www.mingsrc.xyz/tags/set/</loc>
+    <loc>https://www.mingsrc.xyz/tags/deque/</loc>
     <lastmod>2021-11-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://www.mingsrc.xyz/tags/deque/</loc>
+    <loc>https://www.mingsrc.xyz/tags/set/</loc>
     <lastmod>2021-11-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -1733,14 +1733,14 @@
   </url>
   
   <url>
-    <loc>https://www.mingsrc.xyz/tags/%E4%BA%8C%E5%88%86%E6%B3%95/</loc>
+    <loc>https://www.mingsrc.xyz/tags/%E5%88%86%E6%B2%BB%E7%AE%97%E6%B3%95/</loc>
     <lastmod>2021-11-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://www.mingsrc.xyz/tags/%E5%88%86%E6%B2%BB%E7%AE%97%E6%B3%95/</loc>
+    <loc>https://www.mingsrc.xyz/tags/%E4%BA%8C%E5%88%86%E6%B3%95/</loc>
     <lastmod>2021-11-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -1754,14 +1754,14 @@
   </url>
   
   <url>
-    <loc>https://www.mingsrc.xyz/tags/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95/</loc>
+    <loc>https://www.mingsrc.xyz/tags/%E5%93%88%E5%B8%8C/</loc>
     <lastmod>2021-11-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://www.mingsrc.xyz/tags/%E5%93%88%E5%B8%8C/</loc>
+    <loc>https://www.mingsrc.xyz/tags/%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95/</loc>
     <lastmod>2021-11-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -1775,14 +1775,14 @@
   </url>
   
   <url>
-    <loc>https://www.mingsrc.xyz/tags/%E4%BA%8C%E5%8F%89%E6%A0%91/</loc>
+    <loc>https://www.mingsrc.xyz/tags/%E6%A0%88/</loc>
     <lastmod>2021-11-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://www.mingsrc.xyz/tags/%E6%A0%88/</loc>
+    <loc>https://www.mingsrc.xyz/tags/%E4%BA%8C%E5%8F%89%E6%A0%91/</loc>
     <lastmod>2021-11-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -1810,6 +1810,13 @@
   </url>
   
   <url>
+    <loc>https://www.mingsrc.xyz/tags/Linux%E6%8C%87%E4%BB%A4/</loc>
+    <lastmod>2021-11-01</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://www.mingsrc.xyz/tags/%E5%8F%8C%E6%8C%87%E9%92%88/</loc>
     <lastmod>2021-11-01</lastmod>
     <changefreq>daily</changefreq>
@@ -1825,13 +1832,6 @@
   
   <url>
     <loc>https://www.mingsrc.xyz/tags/%E9%93%BE%E8%A1%A8/</loc>
-    <lastmod>2021-11-01</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.mingsrc.xyz/tags/Linux%E6%8C%87%E4%BB%A4/</loc>
     <lastmod>2021-11-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -1887,13 +1887,6 @@
   </url>
   
   <url>
-    <loc>https://www.mingsrc.xyz/tags/%E6%B5%AE%E7%82%B9%E5%9E%8B/</loc>
-    <lastmod>2021-11-01</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://www.mingsrc.xyz/tags/class/</loc>
     <lastmod>2021-11-01</lastmod>
     <changefreq>daily</changefreq>
@@ -1902,6 +1895,13 @@
   
   <url>
     <loc>https://www.mingsrc.xyz/tags/struct/</loc>
+    <lastmod>2021-11-01</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.mingsrc.xyz/tags/%E6%B5%AE%E7%82%B9%E5%9E%8B/</loc>
     <lastmod>2021-11-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -2372,14 +2372,14 @@
   </url>
   
   <url>
-    <loc>https://www.mingsrc.xyz/categories/%E5%AE%9E%E9%AA%8C%E6%A5%BC/%E5%AE%9E%E7%8E%B0STL/</loc>
+    <loc>https://www.mingsrc.xyz/categories/%E7%A8%8B%E5%BA%8F%E5%91%98%E5%86%85%E5%8A%9F/%E7%AE%97%E6%B3%95%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</loc>
     <lastmod>2021-11-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://www.mingsrc.xyz/categories/%E7%A8%8B%E5%BA%8F%E5%91%98%E5%86%85%E5%8A%9F/%E7%AE%97%E6%B3%95%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</loc>
+    <loc>https://www.mingsrc.xyz/categories/%E5%AE%9E%E9%AA%8C%E6%A5%BC/%E5%AE%9E%E7%8E%B0STL/</loc>
     <lastmod>2021-11-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -2407,13 +2407,6 @@
   </url>
   
   <url>
-    <loc>https://www.mingsrc.xyz/categories/C-%E7%AC%94%E8%AE%B0/C-Primer-Plus/%E9%99%84%E5%BD%95G-%E6%A0%87%E5%87%86%E6%A8%A1%E6%9D%BF%E5%BA%93%E6%96%B9%E6%B3%95%E5%92%8C%E5%87%BD%E6%95%B0/</loc>
-    <lastmod>2021-11-01</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://www.mingsrc.xyz/categories/%E5%AE%9E%E9%AA%8C%E6%A5%BC/Vim/</loc>
     <lastmod>2021-11-01</lastmod>
     <changefreq>daily</changefreq>
@@ -2429,6 +2422,13 @@
   
   <url>
     <loc>https://www.mingsrc.xyz/categories/%E6%9D%82%E8%AE%B0/%E5%88%86%E4%BA%AB/%E4%B9%A6%E7%B1%8D/</loc>
+    <lastmod>2021-11-01</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.mingsrc.xyz/categories/C-%E7%AC%94%E8%AE%B0/C-Primer-Plus/%E9%99%84%E5%BD%95G-%E6%A0%87%E5%87%86%E6%A8%A1%E6%9D%BF%E5%BA%93%E6%96%B9%E6%B3%95%E5%92%8C%E5%87%BD%E6%95%B0/</loc>
     <lastmod>2021-11-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>

@@ -4,8 +4,6 @@ body {
     default;
 }
 
-
-
 /* 背景宇宙星光  */
 #universe{
   display: block;
@@ -5833,7 +5831,7 @@ div.timenode .meta:before {
   background: 0 0;
 }
 [data-theme="dark"] #web_bg {
-  background-image: url(../../../images/top_image/bgdark.jpg) !important;
+  background-image: url(../../../images/top_image/darkmode.webp) !important;
   background-position: center;
   background-size: cover;
 }
@@ -6320,17 +6318,39 @@ div.timenode .meta:before {
   0% {
     opacity: 0.3;
     transform: translateY(0px);
-    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 3px rgba(255,5,124, 1);
   }
   50% {
     opacity: 1;
     transform: translateY(-10px);
     background-color: #fc2f70;
-    box-shadow: 0px 20px 3px rgba(0, 0, 0, 0.05);
+    box-shadow: 0px 20px 3px rgba(141,11,147, 1);
   }
   100% {
     opacity: 0.3;
     transform: translateY(0px);
-    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 3px rgba(50,21,117, 1);
   }
+}
+
+#subtitleHref {
+  position: relative;
+}
+
+#subtitleHref::before {
+  content: '';
+  position: absolute;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #3cefff;
+  transform-origin: bottom left;
+  transform: scaleX(1);
+  transition: transform 0.3s ease-in-out;
+}
+
+#subtitleHref:hover::before {
+  transform: scaleX(0);
+  transform-origin: bottom right;
 }
