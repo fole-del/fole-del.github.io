@@ -97,15 +97,15 @@ canvas {
   color: #ff7242;
 }
 
-/**/
-.author-info__description {}
+/*.author-info__description {}*/
+
 
 /* 博主头像动画 */
 img.avatar-img {
   background-color: #3cefff;
   margin: 10px auto;
-  -webkit-animation: rotateplane 10s infinite ease-in-out;
-  animation: rotateplane 10s infinite ease-in-out;
+  /* -webkit-animation: rotateplane 10s infinite ease-in-out; */
+  /* animation: rotateplane 10s infinite ease-in-out; */
 }
 
 @-webkit-keyframes rotateplane {
@@ -155,7 +155,7 @@ figure.highlight {
 #web_bg {
   /* background-color: black; */
   animation: sun ease-in-out infinite;
-  background-image:
+ /* background-image: unset;*/
     /* url(https://tva1.sinaimg.cn/large/0072YHp3ly1grz82tfm7sj32yo1o0teg.jpg); */
     /* 标准的语法 */
     background: -webkit-linear-gradient(0deg,
@@ -3700,11 +3700,11 @@ div.videos[col="4"] iframe {
   color: #99a9bf;
   text-decoration: none;
   word-wrap: break-word;
-  -webkit-transition: all 0.2s;
+  /* -webkit-transition: all 0.2s;
   -moz-transition: all 0.2s;
-  -o-transition: all 0.2s;
+  -o-transition: all 0.2s; 
   -ms-transition: all 0.2s;
-  transition: all 0.2s;
+  transition: all 0.2s;*/
   overflow-wrap: break-word;
 }
 .nota:hover {
@@ -4336,7 +4336,6 @@ span.nota:hover:before {
 }
 .site-card .info .title {
   font-weight: 600;
-  font-size: $fontsize-list;
   color: #444;
   display: -webkit-box;
   -webkit-box-orient: vertical;
@@ -4352,7 +4351,6 @@ span.nota:hover:before {
   -o-transition: all 0.28s ease;
 }
 .site-card .info .desc {
-  font-size: $fontsize-footnote;
   word-wrap: break-word;
   line-height: 1.2;
   color: #888;
@@ -6278,18 +6276,18 @@ div.timenode .meta:before {
   }
 }
 
-
 /* cssfx 标题栏动画 */
 .snake-spinner {
   width: 100px;
   height: 20px;
   position: relative;
+  left: 33%;
 }
 .snake-spinner span {
   position: absolute;
   width: 20px;
   height: 20px;
-  background-color: #3cefff;
+  background-color: #7de6a9;
   opacity: 0.5;
   border-radius: 20px;
   animation: snake 1s infinite ease-in-out;
@@ -6329,8 +6327,30 @@ div.timenode .meta:before {
   100% {
     opacity: 0.3;
     transform: translateY(0px);
-    box-shadow: 0px 0px 3px rgba(50,21,117, 1);
+    box-shadow: 0px 0px 3px rgb(104, 58, 212);
   }
+}
+
+.subtitlehref {
+  position: relative;
+}
+
+.subtitlehref::before {
+  content: '';
+  position: absolute;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #71dde7;
+  transform-origin: bottom left;
+  transform: scaleX(1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.subtitlehref:hover::before {
+  transform: scaleX(0);
+  transform-origin: bottom right;
 }
 
 #subtitleHref {
@@ -6354,3 +6374,85 @@ div.timenode .meta:before {
   transform: scaleX(0);
   transform-origin: bottom right;
 }
+
+/* 公告文字特效 */
+
+#balls {
+  width: 100%;
+  display: inline-frid;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+}
+
+#balls div:nth-of-type(1) {
+  transform: translateX(0%);
+  animation: left-swing 3s ease-in alternate infinite;
+}
+
+#balls div:nth-of-type(2) {
+  transform: translateX(0%);
+  animation: center-swing 3s ease-out alternate infinite;
+}
+#balls div:nth-of-type(3) {
+  transform: translateX(0%);
+  animation: right-swing 3s ease-out alternate infinite;
+}
+
+@keyframes left-swing {
+  0%{
+    transform: translateX(-45%);
+    filter: brightness(2);
+    filter: drop-shadow(2px 4px 16px white);
+    -webkit-filter: drop-shadow(0 0 5px #FFF);
+  }
+  50%{
+    letter-spacing: 10px;
+    filter: drop-shadow(2px 4px 0px white);
+    -webkit-filter: drop-shadow(0 0 0px #FFF);
+  }
+  100% {
+    transform: translateX(45%);
+    filter: brightness(2);
+    filter: drop-shadow(2px 4px 16px white);
+    -webkit-filter: drop-shadow(0 0 5px #FFF);
+  }
+}
+
+@keyframes center-swing {
+  0%{
+    filter: drop-shadow(2px 4px 16px white);
+    -webkit-filter: drop-shadow(0 0 5px #FFF);
+  }
+  50%{
+    filter: brightness(2);
+    filter: drop-shadow(2px 4px 0px white);
+    -webkit-filter: drop-shadow(0 0 0px #FFF);
+  }
+  100% {
+    filter: drop-shadow(2px 4px 16px white);
+    -webkit-filter: drop-shadow(0 0 5px #FFF);
+  }
+}
+
+@keyframes right-swing {
+  0%{
+    transform: translateX(40%);
+    filter: brightness(2);
+    filter: drop-shadow(2px 4px 16px white);
+    -webkit-filter: drop-shadow(0 0 5px #FFF);
+  }
+  50%{
+    letter-spacing: 10px;
+    filter: drop-shadow(2px 4px 0px white);
+    -webkit-filter: drop-shadow(0 0 0px #FFF);
+  }
+  100% {
+    transform: translateX(-37%);
+    filter: brightness(2);
+    filter: drop-shadow(2px 4px 16px white);
+    -webkit-filter: drop-shadow(0 0 5px #FFF);
+  }
+}
+

@@ -3032,11 +3032,11 @@ blockquote footer cite:before {
   object-fit: cover;
 }
 .avatar-img img:hover {
-  -webkit-transform: rotate(360deg);
-  -moz-transform: rotate(360deg);
-  -o-transform: rotate(360deg);
-  -ms-transform: rotate(360deg);
-  transform: rotate(360deg);
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
 }
 @media screen and (min-width: 900px) {
   html.hide-aside .layout {
@@ -3300,11 +3300,11 @@ li.categoryBar-list-item:hover span.categoryBar-list-count::after {
   -o-transition: all 0.5s;
   -ms-transition: all 0.5s;
   transition: all 0.5s;
-  -webkit-transform: translate(-100%, 0);
-  -moz-transform: translate(-100%, 0);
-  -o-transform: translate(-100%, 0);
-  -ms-transform: translate(-100%, 0);
-  transform: translate(-100%, 0);
+  -webkit-transform: translate(-200%, 0);
+  -moz-transform: translate(-200%, 0);
+  -o-transform: translate(-200%, 0);
+  -ms-transform: translate(-200%, 0);
+  transform: translate(-200%, 0);
 }
 a.categoryBar-list-link {
   color: #fff !important;
@@ -3345,11 +3345,11 @@ span.categoryBar-list-count::before {
 }
 span.categoryBar-list-count::after {
   padding: 5px;
-  display: block !important;
+  display: inline-block !important;
   color: #fff !important;
   font-size: 20px !important;
   position: relative;
-  right: -100%;
+  left: 100% !important;
 }
 li.categoryBar-list-item:nth-child(1) {
   background: -webkit-linear-gradient(left,rgba(54, 79, 107, 0.9),rgba(63, 194, 201, 0.9));
