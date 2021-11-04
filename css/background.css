@@ -62,9 +62,10 @@ h1#site-title {
 canvas {
   display: block;
   margin: 0 auto;
-  cursor: move
 }
-
+canvas#canvas {
+  cursor: inherit!important;
+}
 /* 页脚心图标 */
 #authorfooter {
   color: rgb(255, 106, 106);
@@ -106,6 +107,14 @@ img.avatar-img {
   margin: 10px auto;
   /* -webkit-animation: rotateplane 10s infinite ease-in-out; */
   /* animation: rotateplane 10s infinite ease-in-out; */
+}
+img.avatar-img::hover {
+  background-color: #3cefff;
+  margin: 10px auto;
+  /* -webkit-animation: rotateplane 10s infinite ease-in-out; */
+  /* animation: rotateplane 10s infinite ease-in-out; */
+  filter: drop-shadow(4px 4px 16px white);
+  -webkit-filter: drop-shadow(0 0 5px #FFF);
 }
 
 @-webkit-keyframes rotateplane {
@@ -6456,3 +6465,7 @@ div.timenode .meta:before {
   }
 }
 
+#mouseMove {
+  z-index: 99;
+  position: absolute;
+}
