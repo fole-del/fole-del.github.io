@@ -39,7 +39,7 @@ h1#site-title {
 }
 
 h1#site-title::first-letter {
-  
+
 }
 
 @keyframes bgbreath {
@@ -168,6 +168,7 @@ figure.highlight {
 #web_bg {
   /* background-color: black; */
   animation: sun ease-in-out infinite;
+  animation: to_show ease-in-out;
  /* background-image: unset;*/
     /* url(https://tva1.sinaimg.cn/large/0072YHp3ly1grz82tfm7sj32yo1o0teg.jpg); */
     /* 标准的语法 */
@@ -458,7 +459,7 @@ h6::before {
   content: "⊙ ";
 }
 
-
+/* 动画 */
 
 @-moz-keyframes to_show {
   0% {
@@ -5836,6 +5837,7 @@ div.timenode .meta:before {
   /* content: ""; */
 }
 
+/* 黑暗模式 */
 [data-theme="dark"] #page-header.full_page,
 [data-theme="dark"] footer#footer {
   background-image: unset !important;
@@ -5845,6 +5847,7 @@ div.timenode .meta:before {
   background-image: url(../../../images/top_image/darkmode.webp) !important;
   background-position: center;
   background-size: cover;
+  animation: ribbon_to_show 1.8s ease-in-out ;
 }
 [data-theme="dark"] #footer:before {
   background-color: unset !important;

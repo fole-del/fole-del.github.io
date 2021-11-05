@@ -20,19 +20,23 @@ const cursorSettings = {
     'triggerElements': {
         'trigger1': {
             'className': 'blog-slider__content',
-            'icon': '<i class="fa fa-child"></i>'
+            'icon': '<i class="fa fa-child fa-3x"></i>'
         },
         'trigger2': {
             'className': 'recent-post-info',
-            'icon': '<i class="fa fa-external-link-square fa-flip-horizontal"></i>'
+            'icon': '<i class="fa fa-external-link-square fa-flip-horizontal fa-3x"></i>'
         },
         'trigger3': {
             'className': 'categoryBar-list-item',
-            'icon': '<i class="fa fa-arrows-v"></i>'
+            'icon': '<i class="fa fa-arrows-v fa-3x"></i>'
         },
         'trigger4': {
             'className': 'post_bg',
-            'icon': '<i class="fa fa-external-link-square fa-flip-horizontal"></i>'
+            'icon': '<i class="fa fa-external-link-square fa-flip-horizontal fa-3x"></i>'
+        },
+        'trigger5': {
+            'className': 'illo',
+            'icon': '<i class="fa fa-arrows fa-3x"></i>'
         }
     }
 };
