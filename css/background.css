@@ -38,6 +38,10 @@ h1#site-title {
   animation: bgbreath 4s infinite;
 }
 
+h1#site-title::first-letter {
+  
+}
+
 @keyframes bgbreath {
   0% {
     filter: drop-shadow(1px 1px 1px black);
@@ -6468,4 +6472,22 @@ div.timenode .meta:before {
 #mouseMove {
   z-index: 99;
   position: absolute;
+  animation: breather 2s ease infinite;
+}
+
+@keyframes breather {
+  0%{
+    filter: brightness(2);
+    filter: drop-shadow(2px 4px 16px white);
+    -webkit-filter: drop-shadow(0 0 5px #FFF);
+  }
+  50%{
+    filter: drop-shadow(2px 4px 0px white);
+    -webkit-filter: drop-shadow(0 0 0px #FFF);
+  }
+  100% {
+    filter: brightness(2);
+    filter: drop-shadow(2px 4px 16px white);
+    -webkit-filter: drop-shadow(0 0 5px #FFF);
+  }
 }

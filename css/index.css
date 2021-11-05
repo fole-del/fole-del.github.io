@@ -3300,11 +3300,11 @@ li.categoryBar-list-item:hover span.categoryBar-list-count::after {
   -o-transition: all 0.5s;
   -ms-transition: all 0.5s;
   transition: all 0.5s;
-  -webkit-transform: translate(-200%, 0);
-  -moz-transform: translate(-200%, 0);
-  -o-transform: translate(-200%, 0);
-  -ms-transform: translate(-200%, 0);
-  transform: translate(-200%, 0);
+  -webkit-transform: translate(0, 100%);
+  -moz-transform: translate(0, 100%);
+  -o-transform: translate(0, 100%);
+  -ms-transform: translate(0, 100%);
+  transform: translate(0, 100%);
 }
 a.categoryBar-list-link {
   color: #fff !important;
@@ -3349,7 +3349,7 @@ span.categoryBar-list-count::after {
   color: #fff !important;
   font-size: 20px !important;
   position: relative;
-  left: 100% !important;
+  top: 100% !important;
 }
 li.categoryBar-list-item:nth-child(1) {
   background: -webkit-linear-gradient(left,rgba(54, 79, 107, 0.9),rgba(63, 194, 201, 0.9));

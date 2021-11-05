@@ -19,19 +19,27 @@ var cursorSettings = {
   'iconSize': '11px',
   'iconColor': 'white',
   'triggerElements': {
-    'trigger': {
-      'className': 'trigger',
-      'icon': '<i class="fa fa-plus"></i>'
+    'trigger1': {
+      'className': 'blog-slider__content',
+      'icon': '<i class="fa fa-child"></i>'
     },
     'trigger2': {
-      'className': 'slider_inner',
-      'icon': '<i class="fa fa-arrows-h"></i>'
+      'className': 'recent-post-info',
+      'icon': '<i class="fa fa-external-link-square fa-flip-horizontal"></i>'
+    },
+    'trigger3': {
+      'className': 'categoryBar-list-item',
+      'icon': '<i class="fa fa-arrows-v"></i>'
+    },
+    'trigger4': {
+      'className': 'post_bg',
+      'icon': '<i class="fa fa-external-link-square fa-flip-horizontal"></i>'
     }
   }
 };
 
 function dynamicCursor(options) {
-  // document.write('<link rel="stylesheet" href="https://maxcdn.icons8.com/fonts/line-awesome/1.1/css/line-awesome-font-awesome.min.css">');
+  // document.write('<link rel="stylesheet" href="从fonts/line-awesome/1.1/css/line-awesome-font-awesome.min.css">');
   var hold;
   cursor = document.createElement('div');
   var cursorIcon = document.createElement('div');
@@ -66,6 +74,7 @@ function dynamicCursor(options) {
     cursor.style.opacity = options.opacity;
   }, 500);
   var idle;
+  var idle1;
 
   document.onmousemove = function (e) {
     e = e || window.e;
@@ -75,6 +84,8 @@ function dynamicCursor(options) {
 
     cursor.style.opacity = options.opacity;
     clearInterval(idle);
+    clearInterval(idle1);
+    idle1 = setInterval(function () {}, 10);
     idle = setTimeout(function () {
       cursor.style.opacity = 0;
     }, 4000);
