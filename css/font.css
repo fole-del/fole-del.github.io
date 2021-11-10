@@ -3,11 +3,11 @@ body {
 	font-family: 'Mulish', -apple-system, 'Noto Serif SC', "PingFang SC", "Microsoft Yahei UI", "Microsoft Yahei", sans-serif;
 	font-size: 15px;
 }
-
+/*
 #post a {
 	color: #00c4b6!important
 }
-
+*/
 .toc-content a {
 	color: #666261!important
 }
@@ -15,10 +15,6 @@ body {
 .toc-link.active {
 	color: #fff!important
 }
-
-body * {
-}
-
 
 #article-container.post-content h1:before,h2:before,h3:before,h4:before,h5:before,h6:before {
 	-webkit-animation: avatar_turn_around 1s linear infinite;
