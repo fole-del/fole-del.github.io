@@ -583,6 +583,12 @@ document.addEventListener('DOMContentLoaded', function () {
       // document.getElementById('font-text').innerText = newValue
     }
   }
+  
+  document.querySelector('#darkmodebutton').addEventListener('click', function (e) {
+    const $target = e.target.id || e.target.parentNode.id
+        rightSideFn.switchDarkMode()
+
+  })
 
   document.getElementById('rightside').addEventListener('click', function (e) {
     const $target = e.target.id || e.target.parentNode.id

@@ -185,6 +185,53 @@
 </div>]]></content>
   </entry>
   <entry>
+    <title>按钮样式整理</title>
+    <url>/2021/11/10/E_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%89%8D%E7%AB%AF/HTML/%E6%8C%89%E9%92%AE%E6%A0%B7%E5%BC%8F%E6%95%B4%E7%90%86/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
+      <categories>
+        <category>学习笔记</category>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>HTML</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>初识VUE</title>
+    <url>/2021/11/10/E_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%89%8D%E7%AB%AF/VUE%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
+<p>总想学点什么，又不知道学点什么的好，刚好一直也在美化博客，就学点前端的知识，总比不学的好。希望能把自己的学习经验和学习经历记录整理，也便于以后用的时候复习该方面的知识。</p>
+</blockquote>
+<p><img src="../../../images/VUE%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20211110150615949.png" alt="image-20211110150615949"></p>
+]]></content>
+      <categories>
+        <category>学习笔记，前端</category>
+      </categories>
+      <tags>
+        <tag>VUE</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>《Effective C++》条款20~21</title>
+    <url>/2021/11/10/E_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/C++/Effective_C++/%E6%9D%A1%E6%AC%BE20~21/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><ul>
+<li>条款20：宁以<code>pass-by-reference-to-const</code>替换<code>pass-by-value</code></li>
+<li>条款21：必须返回对象时，别往相反其reference</li>
+</ul>
+<blockquote>
+<p><code>pass-by-value</code>和<code>pass-by-reference</code></p>
+<p>20、21章 讲了<b>函数传参</b>过程<b>引用传值</b>和<b>值传递</b>应该以什么样的形式去处理。从函数的<u>入口</u>和<u>出口</u>两个方面讲了</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>C++笔记</category>
+        <category>Effective C++</category>
+      </categories>
+      <tags>
+        <tag>Effective C++</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>软件分享</title>
     <url>/2021/06/25/F_%E6%9D%82%E8%AE%B0/%E8%BD%AF%E4%BB%B6/AllOFSW/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="Utools"><a href="#Utools" class="headerlink" title="Utools"></a>Utools</h1><p>可能是Windows里边最好的快捷方式呼出工具了，个人使用非常顺手。具体看<a href="https://u.tools/">官网</a>介绍吧！我只能说确实好用，也是把这个软件放在第一位的原因。</p>
@@ -1162,7 +1209,7 @@ Name: city, Length: 98, dtype: object
   </entry>
   <entry>
     <title>HTML图片位置相关设置</title>
-    <url>/2021/05/17/E_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/HTML/%E5%9B%BE%E7%89%87%E7%9B%B8%E5%85%B3/</url>
+    <url>/2021/05/17/E_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%89%8D%E7%AB%AF/HTML/%E5%9B%BE%E7%89%87%E7%9B%B8%E5%85%B3/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="HTML-img标签"><a href="#HTML-img标签" class="headerlink" title="HTML  img标签"></a>HTML  img标签</h1><h2 id="1-相关属性"><a href="#1-相关属性" class="headerlink" title="1. 相关属性"></a>1. 相关属性</h2><ul>
 <li><input disabled="" type="checkbox"> </li>
 </ul>
@@ -1175,7 +1222,7 @@ Name: city, Length: 98, dtype: object
     </div>
 ]]></content>
       <categories>
-        <category>学习笔记，HTML</category>
+        <category>学习笔记，前端</category>
       </categories>
       <tags>
         <tag>HTML</tag>
@@ -1225,7 +1272,7 @@ return a.exec();
     <title>❤️</title>
     <url>/2021/04/01/%E6%83%85%E8%AF%9D/</url>
     <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="抱歉, 这个密码看着不太对, 请再试试." data-whm="抱歉, 这个文章不能被校验, 不过您还是能看看解密后的内容.">
-  <script id="hbeData" type="hbeData" data-hmacdigest="53cb73a6336a5d736b90d1d0e4bbaaffcec79433efee35ac3d5c5d9e7a3a5060">2646008611039267779636211e2b6d356a06c3e8940674e2f04af63ed97317e69bcc9fcea5ace838cea5e3ed7b9d75f18982507b067c70f06bf36aec0ebe8d868b6f07221f0a5cdf1e0250738934cbca4f85d2efaccd86f91d8076274429e5b25a287fc5c4148c440ead78d8f8791577d2a23ba6a792a970bda06c5a1d992264782d0564afeacca0fd5059f1c5c46cac901632c6ad09155361e7c0373e68d787ad2bb6e96a26e0728392382ce0a482bce00b35453d628ebc1c112ef66741bd08f8a4dcb90c2f456f8b52995d8d43f5eddbd427c02e01125ae3359c6e6a1d937b60637a40b349a475ad64a0bbd87dad3d352e1ae6ca50dae1f5370fc08c32389f449793e49a5fc6421c389d09d844288101c59e6760f69fe59b3ae292c3846226e48a46d5f36812fb30661a93840f3dc0b424c5cf1befae71d59d4437563ee6e000203df904cab1945f5982db22bdfc4b046a2551b789c1ecf8b2a1a6c77ac930e7e0e49efbec3a72b375e888d9ab60d87adcbdc0c55a429e2d1711fb7744075d35e093be5ca9c0f94c488ddfffe788d9ba3866aca69b3ad5ce5575b1b4d6f9ab00e492cd003039c8cfc1e4b60128cb2979fd1f7145f46ea636167e3561f891d9ef404d87dde3a6c0c430ab7c9c23a2e2c9077f29c2a51c5681252e5dca5053ecfabe7bb6d7af1a370950d401e10bab610917f004eab0f93f5b3acfb7748bd0e1c14277c74240d37f21f7cd5cd20a1260df92a4687b8006a4592984d4ef1c339bd76d5196bf4e9b1d0cb19ed62207720af0678ca62b1b26d7bd7a0d18e0a87c681bc8640eb4037921bd10e5aefcc14f90201ee115c7ef5748213f351b630977dd33f9cb8890c7ecd509abdb6e3b1ba9ca0c00e0658fb730c565676680357e057b69e4711fcb2b3e629e50c40c4b563847221464218d7dd1dc39b0387b156f5d14ed159df9411f199cfd8085d5270aac8bea9bcefb88102840d2afba920f5040f81d578598dd671f26dd531ef2d8d2ff57191a74fd1ca7ab2d92f426ee4e5b29d481eeb3797748cb6929ad38eed665fd4bbdced9add08d9a0e381cc6a7357672b44fdb1e91031a347eb7970771af5434dd767dae3c055f5ae6a42e8903ae1dfa481acc56c11c3b87e375c2af33456ae0bc6ca41ea5e45ba04e71b52ab96d3368da84798c2593d21446427e9dda913b1f5d8098c1f18e240a0277d42aab9985884034cb2aed2e4bb668aff7b8c8b010edf353e1fa4df1394539a67aeb6bd4e72583c8f665b8bd07b36296470ac334f8c7ce1f0c6bbcf8d9fb68be870b7bbe8410ef0bfa2b388f064020f4c62241a19d189c4cf2c5c01127ef3dc88a0c09f8f0402ee909d77c15ce027c0906e3d6b8db7f5ac9379162248f5f62dbb8529d941e876cf33112b075fc8a2f6778852c9be75b0aa8a4ff61ee4d2ad57701831233609660ae861a4ec2bd930fff4ec0c93f4fee4619862469f4d41778d85d5e66e4d7a29e7b190e7c157a726af74855a2ebd45b47b443375988e1702a117277689d735f9929d518d9319d9d01264c01a91554e37b75e6b49e41026233e35b21605a4f8cddc00b49f11a655666ee9aa26da181cc028f22f72434a38fd50d6e1081bbc9c03c660a504368e5b54111df9ccdd44b8f1b1785376107a74caee1ff24c9d9246f67c69388040a691922319dd6a4e444427de0cf2f855d86a8b99efcb37c9a1c0612c303c9dfb230ef32468a72949ab255e0b574e41e1f9dff52a4b8b31cd8286740158b368282d9973e6b59a0c34e63362d477d38e70a42a9d342ecaf32ab4a51909aad09bf188ea27efa6d493562ef11518d9a9e12c44fe46b18f475437fb949f5c5828a7078aa4135b2d4da32cc38f67c55c7e0f9fa61bdd8a5631b4ebb72b0394003b3acd3de817426a6899091a03454b64d05a835e4ebc2a2735ea4290df50d00d475aef62b7eb5c9841d3545885c2d4aae8678d7a76d1f7982e7d892e9fd919e88fd8f6faeef8ea07c9830da47d75be9a228905fab0863227a5e27cc04b614fb82889c5d3293ad2f56a67f434ec3fa915a9c7d76a9cafd8fe6022792a815aa8108054ceae974445a36aaba15f7fa1302ce004b376c11a9b690499668d24226e7dbd55738149559e7e3840e0e33e22893fb2dec417521cc9e04126d9c56880bd348aa50a44815b7787e41e2c76cc8ed4fea7b0f85f1a1449c5b4cd348e5acb418200af6a4f9ab63c319219c0ef6750ea0aacda205b0f56d6160b0f770b636992b9fd5f16008e5c109c0e8220a990f553a62518d78fd43153dadebbb5b971ca0c7c2b72a2d362eeceb5c9e72a5f09d1f68192fe5be8e5ef16d4eabaf29d183e6862d23458d02569b259e7bc775c5fa4ab25b9e682431794f7a59a47cd6cb80e748e7de29940c92851d2cf87d4cb6c6d4c2aa02757162f606bf4a391ee00019d7d1d9d06a52be31fcf0ca6be8f50b58e37b1fab142b2fb7e82262e63e182bbefb3a15937a10a412a80f1c62625258dd46e58eeb5e588087317441d6449b7a1f512434d8489e2a7cfd169b3c0f7392a774c6e9b2170d72145a830a58e23f45565fbc4b0af426a9a65586a03ac88daab1c2e9d083f501773cac13ebfad1331d658b027b80de05786eb11b7eaef17d781010d96616c8ae1d5741cb59f7db22f56ed022ab9d1fa59e19d4f6f44c6481f4eea1f23b71dd7c27cfafeb1490d0296e3756b8810b8d9476870b0e51dc66011d307eaff4d73276c3a0c2b2c00cad2d900c670e856689b2b6058509b8e381bd7090bcd3efb2124df74d9ffb5068d78867f08d3810e606d57e47528e3ad7e3e7b235a4767176ef8ea4abd1b120c01d570c471129a4666df1b149e4372150ba75c5c1d87520df0bd2fd1e091239db1a6186f78097b097831f73cee2a68eb5fb58674187593ce6364ab305c38511d2c90030480f880439b6eb40e6880af888eb4269609e2309096dbe56d531d23d8abd098eae8408a9c74ece1e80d5faa8d43859f9d000bacab9819c7c39700faca28c228a028a26bcaefaeed18bf0feb34af4b1457059d4b16482c0790e9baa161dff32d05a6529b304e762cc5c11d9b2bd2674e545dfc53dda16b65baf425cd4b6a36045ede4ea654900557a8c79f5f1adbc2b4c7a114575cc12141883960048d6b85b93c39619343743380acad832a715cd74ca1f18ed2013735b65bf08249cd0ab5941825755c7a66599f1cabbd5e7a47813de49805786b5aeafbec62fee0bad7df8b7ed92c71f5058cc509c9002bc7129f006f9b97883c7928792d485b9fa474d6aadc91174411cdf01a4c11eec77914b6ef57e3eb9f261ef658862cc2885f3468f54f73335015337244554f28d04848ee7ad847b00df887f106cea165d2af44d1b85dd67b38c2a3e8827ec2bb64cef14ba774b9a53f98bf8b8b2e5f09517107c7c7ed6fc047990b27cb15f1f1086db0818ecd94ba994ab4e1ab042558e7032209d687f0a</script>
+  <script id="hbeData" type="hbeData" data-hmacdigest="90c0d417443955e0564d1035cceafe924a7ec09898977f5fe769602b82828e95">2646008611039267779636211e2b6d356a06c3e8940674e2f04af63ed97317e69bcc9fcea5ace838cea5e3ed7b9d75f18982507b067c70f06bf36aec0ebe8d868b6f07221f0a5cdf1e0250738934cbca4f85d2efaccd86f91d8076274429e5b25a287fc5c4148c440ead78d8f8791577d2a23ba6a792a970bda06c5a1d992264782d0564afeacca0fd5059f1c5c46cac901632c6ad09155361e7c0373e68d787ad2bb6e96a26e0728392382ce0a482bce00b35453d628ebc1c112ef66741bd08f8a4dcb90c2f456f8b52995d8d43f5eddbd427c02e01125ae3359c6e6a1d937b60637a40b349a475ad64a0bbd87dad3d352e1ae6ca50dae1f5370fc08c32389f449793e49a5fc6421c389d09d844288101c59e6760f69fe59b3ae292c3846226e48a46d5f36812fb30661a93840f3dc0b424c5cf1befae71d59d4437563ee6e000203df904cab1945f5982db22bdfc4b046a2551b789c1ecf8b2a1a6c77ac930e7e0e49efbec3a72b375e888d9ab60d87adcbdc0c55a429e2d1711fb7744075d35e093be5ca9c0f94c488ddfffe788d9ba3866aca69b3ad5ce5575b1b4d6f9ab00e492cd003039c8cfc1e4b60128cb2979fd1f7145f46ea636167e3561f891d9ef404d87dde3a6c0c430ab7c9c23a2e2c9077f29c2a51c5681252e5dca5053ecfabe7bb6d7af1a370950d401e10bab610917f004eab0f93f5b3acfb7748bd0e1c14277c74240d37f21f7cd5cd20a1260df92a4687b8006a4592984d4ef1c339bd76d5196bf4e9b1d0cb19ed62207720af0678ca62b1b26d7bd7a0d18e0a87c681bc8640eb4037921bd10e5aefcc14f90201ee115c7ef5748213f351b630977dd33f9cb8890c7ecd509abdb6e3b1ba9ca0c00e0658fb730c565676680357e057b69e4711fcb2b3e629e50c40c4b563847221464218d7dd1dc39b0387b156f5d14ed159df9411f199cfd8085d5270aac8bea9bcefb88102840d2afba920f5040f81d578598dd671f26dd531ef2d8d2ff57191a74fd1ca7ab2d92f426ee4e5b29d481eeb3797748cb6929ad38eed665fd4bbdced9add08d9a0e381cc6a7357672b44fdb1e91031a347eb7970771af5434dd1eb6d168421063a32a1abd4bbbd68372edf11c3b4472f9d93157e63b1ccb2dfd156bb9b7f70ffeca8b16b1ba830782a160e171237afa5d0838e98487d41ac2c763cca62edfec2c10a4b13c7624511719741c35e5377e6f60a21b8ee5f7b7dbda7616d62966a08259dbe4c24adffa5bc04b84e3df0517e2100a2288faa24dced30456cc16acea11fc12f637bf65c0b386b6b9789c586034c13697e960270a35d0c69436e677af60eed8e5019fb63083e7f4ce0daf285caa7012bb8357a69396938f05e0bc9901f96b6b3434b82f0868356d6c48b1f2414c6f430578de00d9b4380aed8c8668468659ebf26fb8fa10992ce411470d766000735d6eaffba010e1ed80b75ee270a9f69adec6e3f63a98eb983d6f271f66aa563e662cfc9f70835b46ca1946bcf12ad243b8f9619eeeebe5753383ca2929a972c155ffe21bad953ca6b1c5312666ad5c12ac5a32174811ff3f765f230abc488c2766ef2410f036ef7ff68a72d0477ab39d1fdb9dc66063a97466c5bde26ecdfd38c9477b6d907b74d8582cdd938acc7d7112047515c8b232ed4a6776ed4d7897756927f8dbe344dd0ef2ebb2197ef26667580728b1bc0cf58d70aa722f83af3d8c08444ddc21c6c62dd143842153c8d608ef5642ba9205fb78598b0853d76af898352583583564e43bfcb7e31fb44061b2944cfbe54cd0ffc796779562818d303d6ec560f5e889d174127ef6561849f5e77690d1ca6da4f337cc8885a55a248c6a0c221981270c743521093fef9df08a1ed467805d2661d03445c7adad715df1ce3037cc7f95f2d3fb572823dd5349ff579b187e60e94e891b2bb5a64611ac75423c04054e6ae43f90ac11a3e2fd693c87cd2d72d851982abd2273bd45d925d862de70684b470d3fca309c4c044700f2a02f389f78d44dd44eeb844dfa13f8b8cb5a39a5b0faac974ad84c92b52504b4eadc84997605170f7ecd541876d50fcf281a5a0579b65ce4e515b872e9b99bbd685b6d3b418fbd7bf8f1878dacbbe2d77f21963508896f62d75d2d1e81b7fcfd9435dadca94555d09e9c39345178d1d9c6936a7582e6930214d7c10e374ed73945fbb1718e8980c4d846ac898244259244142b200dd256b0500a530d20235858e80be610f90579bbeb9004af80ef472766b399d57f48e39e6214ec7ef94085eaf9cdc9258c1b47d65fd85cdc6991864a45325c60005a7c47b4baed44635aeaa1e437d213fd7166d177d5e9287c417d3d0b9ec40700c51006397e622ee0bef85d4fceb3befdb0fec56cf9299f5ca0dae50e9cce4f22fcfc05c49c31124879b62b4b396adaee4e47f2cd86125b9f5dfa1f2f6a317809ccf3d6cfd69255ee8fee7b978fb0f7e4b908687cc4d0e3a2e214e2f226fbfa0c77fc81524b2b1f8b72e228741306f56cd2eee3718942560c568909416c544ac8df1ca35d9d0298dc3f38d9409c7b94bd720213c0257fda2be7f441bb4ebba3eac0286b13f95cb91fc6de25d9917a73df5b82f0fbb0081eabf366dd0eae30513da1343581e17014c35f76f3a8cc3547005c42d16a691e82dea20e0545fd794c982c66ae4ddc475d646524ec11320a9fed631c13293d12a9769a0425a15eebf2a96746337a2850201341efdf1a3c09f064128c9ba04c9abbe88e3881ffa771aebf9d580d842b039cb8c9bdd70427b3b155ca2e87d266b64dabbff14a1a68e826d2f2794e95ebeaeaa2242bf905411d686d85d75a7f15e0716f5acfc095df8c37d0ef7a7f939667330ce3e080820438e9a64a264a3e902e355b1ebcf5c079deaeff13db2c94495919c35a57ab72e96bae58453bc6a1c205ef47420f1a2f3b27d5e1a584ad394054deb763689ed50312cdb3ca2cae189fea97c0d96b9efcd84bddc9b5328e1208fc70682b04c38a72f2399aa61d73e3d63a4ca3098de41128dad01d50ea5bbebbdfeb6154578f0586e48a30e2f53b88142140bac676e29b121a8e37df8668e8ae8b5b261a70f163d8e6d0a9a164f71862935e1e4f83ca1c6cde05943d2eac84f250961e2adade65ed55ab6cebb9b8bdb06fa310d011ef1e0f891b956901f9863add519bc228d848db1a529802d47ab5dc1df3a06506f40c1c74894ec123fcbc5e58a92fe46f38c97cfaaadb0f1cd06e051bc5e3155a2076a15c57927cde4eb6</script>
   <div class="hbe hbe-content">
     <div class="hbe hbe-input hbe-input-default">
       <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
@@ -1921,7 +1968,10 @@ bbb 的工作时长为：3</div>
   <entry>
     <title>《Effective C++》条款50~59</title>
     <url>/2021/01/12/E_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/C++/Effective_C++/%E6%9D%A1%E6%AC%BE50~59/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="条款54：让自己熟悉包括TR1在内的标准程序库"><a href="#条款54：让自己熟悉包括TR1在内的标准程序库" class="headerlink" title="条款54：让自己熟悉包括TR1在内的标准程序库"></a>条款54：让自己熟悉包括TR1在内的标准程序库</h1><p>TR1指的是Technical Report 1，是C++程序库工作小组对该份文档的称呼。</p>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><blockquote>
+<p>条款54：让自己熟悉包括TR1在内的标准程序库</p>
+</blockquote>
+<p>TR1指的是Technical Report 1，是C++程序库工作小组对该份文档的称呼。</p>
 <p>主要说明了C++标准程序库的各个成分：STL、Iostream、国际化支持（wchar_t、wstring）、数值处理、异常阶层体系。C89标准程序库。</p>
 <p>条款54则就命名空间tr1内的部分新组件的使用进行了详尽的介绍。</p>
 <hr>
@@ -4963,7 +5013,7 @@ dq2的大小为：3<br>
   </entry>
   <entry>
     <title>HTML和Markdown设置下换线</title>
-    <url>/2020/11/07/E_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/HTML/HTML%E4%B9%8B%E4%B8%8B%E5%88%92%E7%BA%BF/</url>
+    <url>/2020/11/07/E_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%89%8D%E7%AB%AF/HTML/HTML%E4%B9%8B%E4%B8%8B%E5%88%92%E7%BA%BF/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="HTML以及编辑的Markdown如何设置下划线样式"><a href="#HTML以及编辑的Markdown如何设置下划线样式" class="headerlink" title="HTML以及编辑的Markdown如何设置下划线样式"></a>HTML以及编辑的Markdown如何设置下划线样式</h1><p>本篇文章就给大家介绍css添加文字下划线样式的方法。有一定的参考价值，有需要的朋友可以参考一下，希望对大家有所帮助。</p>
 <h2 id="常规办法"><a href="#常规办法" class="headerlink" title="常规办法"></a>常规办法</h2><figure class="highlight markdown"><table><tr><td class="code"><pre><code class="hljs markdown"><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">u</span>&gt;</span></span>这里是常规办法添加下划线<span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">u</span>&gt;</span></span><br></code></pre></td></tr></table></figure>
 
@@ -4996,7 +5046,7 @@ dq2的大小为：3<br>
 ]]></content>
       <categories>
         <category>学习笔记</category>
-        <category>HTML</category>
+        <category>前端</category>
       </categories>
       <tags>
         <tag>HTML</tag>
@@ -7785,6 +7835,270 @@ dq2的大小为：3<br>
       </tags>
   </entry>
   <entry>
+    <title>二、环境变量与文件查找</title>
+    <url>/2020/10/15/E_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Linux/Linux_%E5%AE%9E%E9%AA%8C%E6%A5%BC/2-%E4%BA%8C%E3%80%81%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E4%B8%8E%E6%96%87%E4%BB%B6%E6%9F%A5%E6%89%BE/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>将 <code>shiyanlou.zip</code> 解压到当前目录：</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><code class="hljs sh">$ unzip shiyanlou.zip<br></code></pre></td></tr></table></figure>
+
+<p>使用安静模式，将文件解压到指定目录：</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><code class="hljs sh">$ unzip -q shiyanlou.zip -d ziptest<br></code></pre></td></tr></table></figure>
+
+<p>上述指定目录不存在，将会自动创建。如果你不想解压只想查看压缩包的内容你可以使用 <code>-l</code> 参数：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><code class="hljs plain">$ unzip -l shiyanlou.zip<br></code></pre></td></tr></table></figure>
+
+<p><strong>注意：</strong> 使用 unzip 解压文件时我们同样应该注意兼容问题，不过这里我们关心的不再是上面的问题，而是中文编码的问题，通常 Windows 系统上面创建的压缩文件，如果有有包含中文的文档或以中文作为文件名的文件时默认会采用 GBK 或其它编码，而 Linux 上面默认使用的是 UTF-8 编码，如果不加任何处理，直接解压的话可能会出现中文乱码的问题（有时候它会自动帮你处理），为了解决这个问题，我们可以在解压时指定编码类型。</p>
+<p>使用 <code>-O</code>（英文字母，大写 o）参数指定编码类型：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><code class="hljs plain">unzip -O GBK 中文压缩文件.zip<br></code></pre></td></tr></table></figure>
+
+<h1 id="环境变量与文件查找"><a href="#环境变量与文件查找" class="headerlink" title="环境变量与文件查找"></a>环境变量与文件查找</h1><h1 id="1-环境变量"><a href="#1-环境变量" class="headerlink" title="1.环境变量"></a>1.环境变量</h1><p><img src="https://doc.shiyanlou.com/linux_base/5-2.png"></p>
+<blockquote>
+<p>通常涉及的变量有三种：</p>
+<pre><code>1. 当前Shell进程私有用户自定义变量，如上面所创建的tmp变量。只有在当前Shell中有效》
+ 2. Shell本身内建的变量。
+ 3. 自定义变量导出的环境变量。
+</code></pre>
+</blockquote>
+<p>与上述三种环境变量相关的命令，都是用于==打印环境变量信息==，区别在于涉及的变量范围不同。</p>
+<table>
+<thead>
+<tr>
+<th>命令</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>==set==</td>
+<td>显示当前Shell所有变量，包括其内建环境变量（与Shell外观等相关），用户自定义变量及导出的环境变量。</td>
+</tr>
+<tr>
+<td>==env==</td>
+<td>显示与当前用户相关的环境变量，还可以让命令在指定环境中运行。</td>
+</tr>
+<tr>
+<td>==export==</td>
+<td>显示从Shell中导出成环境变量的变量，也能通过他将自定义变量导出为环境变量。</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p><img src="https://doc.shiyanlou.com/linux_base/5-3.png"></p>
+<p>关于哪些变量是环境变量，可以简单地理解成在当前进程的子进程有效则为环境变量，否则不是（有些人也将所有变量统称为环境变量，只是以全局环境变量和局部环境变量进行区分，我们只要理解它们的实质区别即可）。</p>
+<p>按变量的生存周期来划分，Linux 变量可分为两类：</p>
+<ol>
+<li>永久的：需要修改配置文件，变量永久生效；</li>
+<li>临时的：使用 export 命令行声明即可，变量在关闭 shell 时失效。</li>
+</ol>
+<p>这里介绍两个重要文件 <code>/etc/bashrc</code>（有的 Linux 没有这个文件） 和 <code>/etc/profile</code> ，它们分别存放的是 shell 变量和环境变量。还有要注意区别的是每个用户目录下的一个隐藏文件：</p>
+<p>​    .profile只对当前用户永久生效。</p>
+<p>==添加永久变量，只需打开<u>/etc/profile</u>,在最后加上想要添加的环境变量就行==</p>
+<h2 id="1-命令的查找路径与顺序"><a href="#1-命令的查找路径与顺序" class="headerlink" title="1. 命令的查找路径与顺序"></a>1. 命令的查找路径与顺序</h2><p>你可能很早之前就有疑问，我们在 Shell 中输入一个命令，Shell 是怎么知道去哪找到这个命令然后执行的呢？这是通过环境变量 <code>PATH</code> 来进行搜索的，熟悉 Windows 的用户可能知道 Windows 中的也是有这么一个 PATH 环境变量。这个 <code>PATH</code> 里面就保存了 Shell 中执行的命令的搜索路径。</p>
+<p>查看 <code>PATH</code> 环境变量的内容：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">echo</span> <span class="hljs-variable">$PATH</span><br></code></pre></td></tr></table></figure>
+
+<p>默认情况下你会看到如下输出：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">/usr/<span class="hljs-built_in">local</span>/sbin:/usr/<span class="hljs-built_in">local</span>/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/<span class="hljs-built_in">local</span>/games<br></code></pre></td></tr></table></figure>
+
+<p>如果你还记得 Linux 目录结构那一节的内容，你就应该知道上面这些目录下放的是哪一类文件了。通常这一类目录下放的都是可执行文件，当我们在 Shell 中执行一个命令时，系统就会按照 PATH 中设定的路径按照顺序依次到目录中去查找，如果存在同名的命令，则执行先找到的那个。</p>
+<blockquote>
+<p>下面我们将练习创建一个最简单的可执行 Shell 脚本和一个使用 C 语言创建的“ hello world ”程序，如果这两部分内容你之前没有学习过，那么你可以进行一个入门学习：</p>
+</blockquote>
+<ul>
+<li><a href="https://www.lanqiao.cn/courses/57">C 语言入门教程</a></li>
+<li><a href="https://www.lanqiao.cn/courses/5">高级 Bash 脚本编程指南</a></li>
+<li><a href="http://bash.cyberciti.biz/guide/Main_Page">Linux Shell Scripting Tutorial (LSST) v2.0</a></li>
+</ul>
+<p>创建一个 Shell 脚本文件，你可以使用 gedit，vim，sublime 等工具编辑。如果你是直接复制的话，建议使用 gedit 或者 sublime，否则可能导致代码缩进混乱。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cd</span> /home/shiyanlou<br>touch hello_shell.sh<br>gedit hello_shell.sh<br></code></pre></td></tr></table></figure>
+
+<p>在脚本中添加如下内容，保存并退出。</p>
+<p><strong>注意不要省掉第一行，这不是注释，论坛有用户反映有语法错误，就是因为没有了第一行</strong></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash"><span class="hljs-meta">#!/bin/bash</span><br><span class="hljs-keyword">for</span> ((i=0; i&lt;10; i++));<span class="hljs-keyword">do</span><br>    <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;hello shell&quot;</span><br><span class="hljs-keyword">done</span><br><br><span class="hljs-built_in">exit</span> 0<br></code></pre></td></tr></table></figure>
+
+<p>为文件添加可执行权限，否则执行会报错没有权限：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">chmod 755 hello_shell.sh<br></code></pre></td></tr></table></figure>
+
+<p>执行脚本：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cd</span> /home/shiyanlou<br>./hello_shell.sh<br></code></pre></td></tr></table></figure>
+
+<p>创建一个 C 语言“ hello world ”程序：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cd</span> /home/shiyanlou<br>gedit hello_world.c<br><span class="hljs-comment">#include &lt;stdio.h&gt;</span><br><br>int main(void)<br>&#123;<br>    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;hello world!\n&quot;</span>);<br>    <span class="hljs-built_in">return</span> 0;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>保存后使用 gcc 生成可执行文件：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">gcc -o hello_world hello_world.c<br></code></pre></td></tr></table></figure>
+
+<blockquote>
+<p><strong>gcc 生成二进制文件默认具有可执行权限，不需要修改</strong></p>
+</blockquote>
+<p>在 /home/shiyanlou 家目录创建一个 <code>mybin</code> 目录，并将上述 hello_shell.sh 和 hello_world 文件移动到其中：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cd</span> /home/shiyanlou<br>mkdir mybin<br>mv hello_shell.sh hello_world mybin/<br></code></pre></td></tr></table></figure>
+
+<p>现在你可以在 <code>mybin</code> 目录中分别运行你刚刚创建的两个程序：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cd</span> mybin<br>./hello_shell.sh<br>./hello_world<br></code></pre></td></tr></table></figure>
+
+<p><img src="https://doc.shiyanlou.com/document-uid735639labid60timestamp1532339433567.png"></p>
+<p>回到上一级目录，也就是 <code>shiyanlou</code> 家目录，当再想运行那两个程序时，会发现提示命令找不到，除非加上命令的完整路径，但那样很不方便，如何做到像使用系统命令一样执行自己创建的脚本文件或者程序呢？那就要将命令所在路径添加到 <code>PATH</code> 环境变量了。</p>
+<h2 id="2-添加自定义路径到“path”环境变量"><a href="#2-添加自定义路径到“path”环境变量" class="headerlink" title="2. 添加自定义路径到“path”环境变量"></a>2. 添加自定义路径到“path”环境变量</h2><p>在前面我们应该注意到 <code>PATH</code> 里面的路径是以 <code>:</code> 作为分割符的，所以我们可以这样添加自定义路径：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">PATH=<span class="hljs-variable">$PATH</span>:/home/shiyanlou/mybin<br></code></pre></td></tr></table></figure>
+
+<p><strong>注意这里一定要使用绝对路径。</strong></p>
+<p>现在你就可以在任意目录执行那两个命令了（注意需要去掉前面的 <code>./</code>）。你可能会意识到这样还并没有很好的解决问题，因为我给 PATH 环境变量追加了一个路径，它也只是在当前 Shell 有效，我一旦退出终端，再打开就会发现又失效了。有没有方法让添加的环境变量全局有效？或者每次启动 Shell 时自动执行上面添加自定义路径到 PATH 的命令？下面我们就来说说后一种方式——让它自动执行。</p>
+<p>在每个用户的 home 目录中有一个 Shell 每次启动时会默认执行一个配置脚本，以初始化环境，包括添加一些用户自定义环境变量等等。实验楼的环境使用的 Shell 是 zsh，它的配置文件是 <code>.zshrc</code>，相应的如果使用的 Shell 是 Bash，则配置文件为 <code>.bashrc</code>。它们在 <code>etc</code> 下还都有一个或多个全局的配置文件，不过我们一般只修改用户目录下的配置文件。Shell 的种类有很多，可以使用 <code>cat /etc/shells</code> 命令查看当前系统已安装的 Shell。</p>
+<p><img src="https://doc.shiyanlou.com/courses/uid871732-20200303-1583223324878"></p>
+<p>我们可以简单地使用下面命令直接添加内容到 <code>.zshrc</code> 中：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;PATH=<span class="hljs-variable">$PATH</span>:/home/shiyanlou/mybin&quot;</span> &gt;&gt; .zshrc<br></code></pre></td></tr></table></figure>
+
+<p><strong>上述命令中 <code>&gt;&gt;</code> 表示将标准输出以追加的方式重定向到一个文件中，注意前面用到的 <code>&gt;</code> 是以覆盖的方式重定向到一个文件中，使用的时候一定要注意分辨。在指定文件不存在的情况下都会创建新的文件。</strong> </p>
+<h2 id="3-修改和删除已有变量"><a href="#3-修改和删除已有变量" class="headerlink" title="3. 修改和删除已有变量"></a>3. 修改和删除已有变量</h2><h4 id="变量修改"><a href="#变量修改" class="headerlink" title="变量修改"></a>变量修改</h4><p>变量的修改有以下几种方式：</p>
+<table>
+<thead>
+<tr>
+<th>变量设置方式</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>$&#123;变量名#匹配字串&#125;</code></td>
+<td>从头向后开始匹配，删除符合匹配字串的最短数据</td>
+</tr>
+<tr>
+<td><code>$&#123;变量名##匹配字串&#125;</code></td>
+<td>从头向后开始匹配，删除符合匹配字串的最长数据</td>
+</tr>
+<tr>
+<td><code>$&#123;变量名%匹配字串&#125;</code></td>
+<td>从尾向前开始匹配，删除符合匹配字串的最短数据</td>
+</tr>
+<tr>
+<td><code>$&#123;变量名%%匹配字串&#125;</code></td>
+<td>从尾向前开始匹配，删除符合匹配字串的最长数据</td>
+</tr>
+<tr>
+<td><code>$&#123;变量名/旧的字串/新的字串&#125;</code></td>
+<td>将符合旧字串的第一个字串替换为新的字串</td>
+</tr>
+<tr>
+<td><code>$&#123;变量名//旧的字串/新的字串&#125;</code></td>
+<td>将符合旧字串的全部字串替换为新的字串</td>
+</tr>
+</tbody></table>
+<p>比如我们可以修改前面添加到 PATH 的环境变量，将添加的 mybin 目录从环境变量里删除。为了避免操作失误导致命令找不到，我们先将 PATH 赋值给一个新的自定义变量 mypath：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">mypath=<span class="hljs-variable">$PATH</span><br><span class="hljs-built_in">echo</span> <span class="hljs-variable">$mypath</span><br>mypath=<span class="hljs-variable">$&#123;mypath%/home/shiyanlou/mybin&#125;</span><br><span class="hljs-comment"># 或使用通配符,*表示任意多个任意字符</span><br>mypath=<span class="hljs-variable">$&#123;mypath%*/mybin&#125;</span><br></code></pre></td></tr></table></figure>
+
+<p>可以看到路径已经不存在了。</p>
+<p><img src="https://doc.shiyanlou.com/courses/uid871732-20200303-1583224278229"></p>
+<h4 id="变量删除"><a href="#变量删除" class="headerlink" title="变量删除"></a>变量删除</h4><p>可以使用 <code>unset</code> 命令删除一个环境变量：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">unset</span> mypath<br></code></pre></td></tr></table></figure>
+
+<p><img src="https://doc.shiyanlou.com/courses/uid871732-20200303-1583224422523"></p>
+<h2 id="4-如何让环境变量生效"><a href="#4-如何让环境变量生效" class="headerlink" title="4. 如何让环境变量生效"></a>4. 如何让环境变量生效</h2><p>前面我们在 Shell 中修改了一个配置脚本文件之后（比如 zsh 的配置文件 home 目录下的 <code>.zshrc</code>），每次都要退出终端重新打开甚至重启主机之后其才能生效，很是麻烦，我们可以使用 <code>source</code> 命令来让其立即生效，如：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cd</span> /home/shiyanlou<br><span class="hljs-built_in">source</span> .zshrc<br></code></pre></td></tr></table></figure>
+
+<p><code>source</code> 命令还有一个别名就是 <code>.</code>，上面的命令如果替换成 <code>.</code> 的方式就该是：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">. ./.zshrc<br></code></pre></td></tr></table></figure>
+
+<p><img src="https://doc.shiyanlou.com/courses/uid871732-20200303-1583225164807"></p>
+<p>在使用<code>.</code>的时候，需要注意与表示当前路径的那个点区分开。</p>
+<p>注意第一个点后面有一个空格，而且后面的文件必须指定完整的绝对或相对路径名，source 则不需要。</p>
+<h1 id="2-搜索文件"><a href="#2-搜索文件" class="headerlink" title="2. 搜索文件"></a>2. 搜索文件</h1><p>与搜索相关的命令常用的有 <code>whereis</code>，<code>which</code>，<code>find</code> 和 <code>locate</code>。</p>
+<ul>
+<li><strong><code>whereis</code>简单快速</strong></li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">whereis who<br>whereis find<br></code></pre></td></tr></table></figure>
+
+<p><img src="https://doc.shiyanlou.com/document-uid735639labid60timestamp1532339453618.png"></p>
+<p>你会看到 <code>whereis find</code> 找到了三个路径，两个可执行文件路径和一个 man 在线帮助文件所在路径，这个搜索很快，因为它并没有从硬盘中依次查找，而是直接从数据库中查询。</p>
+<p><code>whereis</code> 只能搜索二进制文件(-b)，man 帮助文件(-m)和源代码文件(-s)。如果想要获得更全面的搜索结果可以使用 <code>locate</code> 命令。</p>
+<ul>
+<li><strong><code>locate</code>快而全</strong></li>
+</ul>
+<p>使用 <code>locate</code> 命令查找文件也不会遍历硬盘，它通过查询 <code>/var/lib/mlocate/mlocate.db</code> 数据库来检索信息。不过这个数据库也不是实时更新的，系统会使用定时任务每天自动执行 <code>updatedb</code> 命令来更新数据库。所以有时候你刚添加的文件，它可能会找不到，需要手动执行一次 <code>updatedb</code> 命令（在我们的环境中必须先执行一次该命令）。注意这个命令也不是内置的命令，例如在我们的环境中就需要手动安装，然后执行更新。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">sudo apt-get update<br>sudo apt-get install locate<br>sudo updatedb<br></code></pre></td></tr></table></figure>
+
+<p>它可以用来查找指定目录下的不同文件类型，如查找 /etc 下所有以 sh 开头的文件：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">locate /etc/sh<br></code></pre></td></tr></table></figure>
+
+<blockquote>
+<p><strong>注意，它不只是在 /etc 目录下查找，还会自动递归子目录进行查找。</strong></p>
+</blockquote>
+<p><img src="https://doc.shiyanlou.com/courses/uid871732-20200303-1583225846911"></p>
+<p>查找 /usr/share/ 下所有 jpg 文件：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">locate /usr/share/\*.jpg<br></code></pre></td></tr></table></figure>
+
+<blockquote>
+<p><strong>注意要添加 <code>\*</code> 号前面的反斜杠转义，否则会无法找到。</strong></p>
+</blockquote>
+<p><img src="https://doc.shiyanlou.com/courses/uid871732-20200303-1583226161762"></p>
+<p>如果想只统计数目可以加上 <code>-c</code> 参数，<code>-i</code> 参数可以忽略大小写进行查找，whereis 的 <code>-b</code>、<code>-m</code>、<code>-s</code> 同样可以使用。</p>
+<ul>
+<li><strong><code>which</code>小而精</strong></li>
+</ul>
+<p><code>which</code> 本身是 Shell 内建的一个命令，我们通常使用 <code>which</code> 来确定是否安装了某个指定的程序，因为它只从 <code>PATH</code> 环境变量指定的路径中去搜索命令并且返回第一个搜索到的结果。也就是说，我们可以看到某个系统命令是否存在以及执行的到底是哪一个地方的命令。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">which</span> man<br><span class="hljs-built_in">which</span> nginx<br><span class="hljs-built_in">which</span> ping<br></code></pre></td></tr></table></figure>
+
+<p><img src="https://doc.shiyanlou.com/courses/uid871732-20200303-1583226577160"></p>
+<ul>
+<li><strong><code>find</code>精而细</strong></li>
+</ul>
+<p><code>find</code> 应该是这几个命令中最强大的了，它不但可以通过文件类型、文件名进行查找而且可以根据文件的属性（如文件的时间戳，文件的权限等）进行搜索。<code>find</code> 命令强大到，要把它讲明白至少需要单独好几节课程才行，我们这里只介绍一些常用的内容。</p>
+<p>这条命令表示去 /etc/ 目录下面 ，搜索名字叫做 interfaces 的文件或者目录。这是 find 命令最常见的格式，千万记住 find 的第一个参数是要搜索的地方。命令前面加上 <code>sudo</code> 是因为 shiyanlou 只是普通用户，对 /etc 目录下的很多文件都没有访问的权限，如果是 root 用户则不用使用。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">sudo find /etc/ -name interfaces<br></code></pre></td></tr></table></figure>
+
+<p><img src="https://doc.shiyanlou.com/courses/uid871732-20200303-1583226847941"></p>
+<blockquote>
+<p><strong>注意 find 命令的路径是作为第一个参数的， 基本命令格式为 find [path][option] [action] 。</strong></p>
+</blockquote>
+<p>与时间相关的命令参数：</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>-atime</code></td>
+<td>最后访问时间</td>
+</tr>
+<tr>
+<td><code>-ctime</code></td>
+<td>最后修改文件内容的时间</td>
+</tr>
+<tr>
+<td><code>-mtime</code></td>
+<td>最后修改文件属性的时间</td>
+</tr>
+</tbody></table>
+<p>下面以 <code>-mtime</code> 参数举例：</p>
+<ul>
+<li><code>-mtime n</code>：n 为数字，表示为在 n 天之前的“一天之内”修改过的文件</li>
+<li><code>-mtime +n</code>：列出在 n 天之前（不包含 n 天本身）被修改过的文件</li>
+<li><code>-mtime -n</code>：列出在 n 天之内（包含 n 天本身）被修改过的文件</li>
+<li><code>-newer file</code>：file 为一个已存在的文件，列出比 file 还要新的文件名</li>
+</ul>
+<p><img src="https://doc.shiyanlou.com/linux_base/5-8.png" alt="1"></p>
+<p>列出 home 目录中，当天（24 小时之内）有改动的文件：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">find ~ -mtime 0<br></code></pre></td></tr></table></figure>
+
+<p><img src="https://doc.shiyanlou.com/courses/uid871732-20200303-1583226953512"></p>
+<p>列出用户家目录下比 /etc 目录新的文件：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">find ~ -newer /etc<br></code></pre></td></tr></table></figure>
+
+<p><img src="https://doc.shiyanlou.com/courses/uid871732-20200303-1583227074890"></p>
+]]></content>
+      <categories>
+        <category>学习笔记</category>
+        <category>Linux</category>
+        <category>实验楼</category>
+        <category>Linux</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+        <tag>实验楼</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>三、文件打包与文件查找</title>
     <url>/2020/10/15/E_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Linux/Linux_%E5%AE%9E%E9%AA%8C%E6%A5%BC/3-%E4%B8%89%E3%80%81%E6%96%87%E4%BB%B6%E6%89%93%E5%8C%85%E4%B8%8E%E5%8E%8B%E7%BC%A9/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="1、实验介绍"><a href="#1、实验介绍" class="headerlink" title="1、实验介绍"></a>1、实验介绍</h1><h2 id="1-1-实验内容"><a href="#1-1-实验内容" class="headerlink" title="1.1 实验内容"></a>1.1 实验内容</h2><p>介绍 Linux 上常用的压缩/解压工具，主要讲解 zip，tar 的使用。</p>
@@ -8095,270 +8409,6 @@ dq2的大小为：3<br>
 <figure class="highlight shell"><table><tr><td class="code"><pre><code class="hljs shell"><span class="hljs-meta">$</span><span class="bash"> df -h</span><br></code></pre></td></tr></table></figure>
 
 <p><img src="https://doc.shiyanlou.com/linux_base/7-16.png" alt="img"></p>
-]]></content>
-      <categories>
-        <category>学习笔记</category>
-        <category>Linux</category>
-        <category>实验楼</category>
-        <category>Linux</category>
-      </categories>
-      <tags>
-        <tag>Linux</tag>
-        <tag>实验楼</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>二、环境变量与文件查找</title>
-    <url>/2020/10/15/E_%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Linux/Linux_%E5%AE%9E%E9%AA%8C%E6%A5%BC/2-%E4%BA%8C%E3%80%81%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E4%B8%8E%E6%96%87%E4%BB%B6%E6%9F%A5%E6%89%BE/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>将 <code>shiyanlou.zip</code> 解压到当前目录：</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><code class="hljs sh">$ unzip shiyanlou.zip<br></code></pre></td></tr></table></figure>
-
-<p>使用安静模式，将文件解压到指定目录：</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><code class="hljs sh">$ unzip -q shiyanlou.zip -d ziptest<br></code></pre></td></tr></table></figure>
-
-<p>上述指定目录不存在，将会自动创建。如果你不想解压只想查看压缩包的内容你可以使用 <code>-l</code> 参数：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><code class="hljs plain">$ unzip -l shiyanlou.zip<br></code></pre></td></tr></table></figure>
-
-<p><strong>注意：</strong> 使用 unzip 解压文件时我们同样应该注意兼容问题，不过这里我们关心的不再是上面的问题，而是中文编码的问题，通常 Windows 系统上面创建的压缩文件，如果有有包含中文的文档或以中文作为文件名的文件时默认会采用 GBK 或其它编码，而 Linux 上面默认使用的是 UTF-8 编码，如果不加任何处理，直接解压的话可能会出现中文乱码的问题（有时候它会自动帮你处理），为了解决这个问题，我们可以在解压时指定编码类型。</p>
-<p>使用 <code>-O</code>（英文字母，大写 o）参数指定编码类型：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><code class="hljs plain">unzip -O GBK 中文压缩文件.zip<br></code></pre></td></tr></table></figure>
-
-<h1 id="环境变量与文件查找"><a href="#环境变量与文件查找" class="headerlink" title="环境变量与文件查找"></a>环境变量与文件查找</h1><h1 id="1-环境变量"><a href="#1-环境变量" class="headerlink" title="1.环境变量"></a>1.环境变量</h1><p><img src="https://doc.shiyanlou.com/linux_base/5-2.png"></p>
-<blockquote>
-<p>通常涉及的变量有三种：</p>
-<pre><code>1. 当前Shell进程私有用户自定义变量，如上面所创建的tmp变量。只有在当前Shell中有效》
- 2. Shell本身内建的变量。
- 3. 自定义变量导出的环境变量。
-</code></pre>
-</blockquote>
-<p>与上述三种环境变量相关的命令，都是用于==打印环境变量信息==，区别在于涉及的变量范围不同。</p>
-<table>
-<thead>
-<tr>
-<th>命令</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>==set==</td>
-<td>显示当前Shell所有变量，包括其内建环境变量（与Shell外观等相关），用户自定义变量及导出的环境变量。</td>
-</tr>
-<tr>
-<td>==env==</td>
-<td>显示与当前用户相关的环境变量，还可以让命令在指定环境中运行。</td>
-</tr>
-<tr>
-<td>==export==</td>
-<td>显示从Shell中导出成环境变量的变量，也能通过他将自定义变量导出为环境变量。</td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-</tr>
-</tbody></table>
-<p><img src="https://doc.shiyanlou.com/linux_base/5-3.png"></p>
-<p>关于哪些变量是环境变量，可以简单地理解成在当前进程的子进程有效则为环境变量，否则不是（有些人也将所有变量统称为环境变量，只是以全局环境变量和局部环境变量进行区分，我们只要理解它们的实质区别即可）。</p>
-<p>按变量的生存周期来划分，Linux 变量可分为两类：</p>
-<ol>
-<li>永久的：需要修改配置文件，变量永久生效；</li>
-<li>临时的：使用 export 命令行声明即可，变量在关闭 shell 时失效。</li>
-</ol>
-<p>这里介绍两个重要文件 <code>/etc/bashrc</code>（有的 Linux 没有这个文件） 和 <code>/etc/profile</code> ，它们分别存放的是 shell 变量和环境变量。还有要注意区别的是每个用户目录下的一个隐藏文件：</p>
-<p>​    .profile只对当前用户永久生效。</p>
-<p>==添加永久变量，只需打开<u>/etc/profile</u>,在最后加上想要添加的环境变量就行==</p>
-<h2 id="1-命令的查找路径与顺序"><a href="#1-命令的查找路径与顺序" class="headerlink" title="1. 命令的查找路径与顺序"></a>1. 命令的查找路径与顺序</h2><p>你可能很早之前就有疑问，我们在 Shell 中输入一个命令，Shell 是怎么知道去哪找到这个命令然后执行的呢？这是通过环境变量 <code>PATH</code> 来进行搜索的，熟悉 Windows 的用户可能知道 Windows 中的也是有这么一个 PATH 环境变量。这个 <code>PATH</code> 里面就保存了 Shell 中执行的命令的搜索路径。</p>
-<p>查看 <code>PATH</code> 环境变量的内容：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">echo</span> <span class="hljs-variable">$PATH</span><br></code></pre></td></tr></table></figure>
-
-<p>默认情况下你会看到如下输出：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">/usr/<span class="hljs-built_in">local</span>/sbin:/usr/<span class="hljs-built_in">local</span>/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/<span class="hljs-built_in">local</span>/games<br></code></pre></td></tr></table></figure>
-
-<p>如果你还记得 Linux 目录结构那一节的内容，你就应该知道上面这些目录下放的是哪一类文件了。通常这一类目录下放的都是可执行文件，当我们在 Shell 中执行一个命令时，系统就会按照 PATH 中设定的路径按照顺序依次到目录中去查找，如果存在同名的命令，则执行先找到的那个。</p>
-<blockquote>
-<p>下面我们将练习创建一个最简单的可执行 Shell 脚本和一个使用 C 语言创建的“ hello world ”程序，如果这两部分内容你之前没有学习过，那么你可以进行一个入门学习：</p>
-</blockquote>
-<ul>
-<li><a href="https://www.lanqiao.cn/courses/57">C 语言入门教程</a></li>
-<li><a href="https://www.lanqiao.cn/courses/5">高级 Bash 脚本编程指南</a></li>
-<li><a href="http://bash.cyberciti.biz/guide/Main_Page">Linux Shell Scripting Tutorial (LSST) v2.0</a></li>
-</ul>
-<p>创建一个 Shell 脚本文件，你可以使用 gedit，vim，sublime 等工具编辑。如果你是直接复制的话，建议使用 gedit 或者 sublime，否则可能导致代码缩进混乱。</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cd</span> /home/shiyanlou<br>touch hello_shell.sh<br>gedit hello_shell.sh<br></code></pre></td></tr></table></figure>
-
-<p>在脚本中添加如下内容，保存并退出。</p>
-<p><strong>注意不要省掉第一行，这不是注释，论坛有用户反映有语法错误，就是因为没有了第一行</strong></p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash"><span class="hljs-meta">#!/bin/bash</span><br><span class="hljs-keyword">for</span> ((i=0; i&lt;10; i++));<span class="hljs-keyword">do</span><br>    <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;hello shell&quot;</span><br><span class="hljs-keyword">done</span><br><br><span class="hljs-built_in">exit</span> 0<br></code></pre></td></tr></table></figure>
-
-<p>为文件添加可执行权限，否则执行会报错没有权限：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">chmod 755 hello_shell.sh<br></code></pre></td></tr></table></figure>
-
-<p>执行脚本：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cd</span> /home/shiyanlou<br>./hello_shell.sh<br></code></pre></td></tr></table></figure>
-
-<p>创建一个 C 语言“ hello world ”程序：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cd</span> /home/shiyanlou<br>gedit hello_world.c<br><span class="hljs-comment">#include &lt;stdio.h&gt;</span><br><br>int main(void)<br>&#123;<br>    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;hello world!\n&quot;</span>);<br>    <span class="hljs-built_in">return</span> 0;<br>&#125;<br></code></pre></td></tr></table></figure>
-
-<p>保存后使用 gcc 生成可执行文件：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">gcc -o hello_world hello_world.c<br></code></pre></td></tr></table></figure>
-
-<blockquote>
-<p><strong>gcc 生成二进制文件默认具有可执行权限，不需要修改</strong></p>
-</blockquote>
-<p>在 /home/shiyanlou 家目录创建一个 <code>mybin</code> 目录，并将上述 hello_shell.sh 和 hello_world 文件移动到其中：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cd</span> /home/shiyanlou<br>mkdir mybin<br>mv hello_shell.sh hello_world mybin/<br></code></pre></td></tr></table></figure>
-
-<p>现在你可以在 <code>mybin</code> 目录中分别运行你刚刚创建的两个程序：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cd</span> mybin<br>./hello_shell.sh<br>./hello_world<br></code></pre></td></tr></table></figure>
-
-<p><img src="https://doc.shiyanlou.com/document-uid735639labid60timestamp1532339433567.png"></p>
-<p>回到上一级目录，也就是 <code>shiyanlou</code> 家目录，当再想运行那两个程序时，会发现提示命令找不到，除非加上命令的完整路径，但那样很不方便，如何做到像使用系统命令一样执行自己创建的脚本文件或者程序呢？那就要将命令所在路径添加到 <code>PATH</code> 环境变量了。</p>
-<h2 id="2-添加自定义路径到“path”环境变量"><a href="#2-添加自定义路径到“path”环境变量" class="headerlink" title="2. 添加自定义路径到“path”环境变量"></a>2. 添加自定义路径到“path”环境变量</h2><p>在前面我们应该注意到 <code>PATH</code> 里面的路径是以 <code>:</code> 作为分割符的，所以我们可以这样添加自定义路径：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">PATH=<span class="hljs-variable">$PATH</span>:/home/shiyanlou/mybin<br></code></pre></td></tr></table></figure>
-
-<p><strong>注意这里一定要使用绝对路径。</strong></p>
-<p>现在你就可以在任意目录执行那两个命令了（注意需要去掉前面的 <code>./</code>）。你可能会意识到这样还并没有很好的解决问题，因为我给 PATH 环境变量追加了一个路径，它也只是在当前 Shell 有效，我一旦退出终端，再打开就会发现又失效了。有没有方法让添加的环境变量全局有效？或者每次启动 Shell 时自动执行上面添加自定义路径到 PATH 的命令？下面我们就来说说后一种方式——让它自动执行。</p>
-<p>在每个用户的 home 目录中有一个 Shell 每次启动时会默认执行一个配置脚本，以初始化环境，包括添加一些用户自定义环境变量等等。实验楼的环境使用的 Shell 是 zsh，它的配置文件是 <code>.zshrc</code>，相应的如果使用的 Shell 是 Bash，则配置文件为 <code>.bashrc</code>。它们在 <code>etc</code> 下还都有一个或多个全局的配置文件，不过我们一般只修改用户目录下的配置文件。Shell 的种类有很多，可以使用 <code>cat /etc/shells</code> 命令查看当前系统已安装的 Shell。</p>
-<p><img src="https://doc.shiyanlou.com/courses/uid871732-20200303-1583223324878"></p>
-<p>我们可以简单地使用下面命令直接添加内容到 <code>.zshrc</code> 中：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;PATH=<span class="hljs-variable">$PATH</span>:/home/shiyanlou/mybin&quot;</span> &gt;&gt; .zshrc<br></code></pre></td></tr></table></figure>
-
-<p><strong>上述命令中 <code>&gt;&gt;</code> 表示将标准输出以追加的方式重定向到一个文件中，注意前面用到的 <code>&gt;</code> 是以覆盖的方式重定向到一个文件中，使用的时候一定要注意分辨。在指定文件不存在的情况下都会创建新的文件。</strong> </p>
-<h2 id="3-修改和删除已有变量"><a href="#3-修改和删除已有变量" class="headerlink" title="3. 修改和删除已有变量"></a>3. 修改和删除已有变量</h2><h4 id="变量修改"><a href="#变量修改" class="headerlink" title="变量修改"></a>变量修改</h4><p>变量的修改有以下几种方式：</p>
-<table>
-<thead>
-<tr>
-<th>变量设置方式</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><code>$&#123;变量名#匹配字串&#125;</code></td>
-<td>从头向后开始匹配，删除符合匹配字串的最短数据</td>
-</tr>
-<tr>
-<td><code>$&#123;变量名##匹配字串&#125;</code></td>
-<td>从头向后开始匹配，删除符合匹配字串的最长数据</td>
-</tr>
-<tr>
-<td><code>$&#123;变量名%匹配字串&#125;</code></td>
-<td>从尾向前开始匹配，删除符合匹配字串的最短数据</td>
-</tr>
-<tr>
-<td><code>$&#123;变量名%%匹配字串&#125;</code></td>
-<td>从尾向前开始匹配，删除符合匹配字串的最长数据</td>
-</tr>
-<tr>
-<td><code>$&#123;变量名/旧的字串/新的字串&#125;</code></td>
-<td>将符合旧字串的第一个字串替换为新的字串</td>
-</tr>
-<tr>
-<td><code>$&#123;变量名//旧的字串/新的字串&#125;</code></td>
-<td>将符合旧字串的全部字串替换为新的字串</td>
-</tr>
-</tbody></table>
-<p>比如我们可以修改前面添加到 PATH 的环境变量，将添加的 mybin 目录从环境变量里删除。为了避免操作失误导致命令找不到，我们先将 PATH 赋值给一个新的自定义变量 mypath：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">mypath=<span class="hljs-variable">$PATH</span><br><span class="hljs-built_in">echo</span> <span class="hljs-variable">$mypath</span><br>mypath=<span class="hljs-variable">$&#123;mypath%/home/shiyanlou/mybin&#125;</span><br><span class="hljs-comment"># 或使用通配符,*表示任意多个任意字符</span><br>mypath=<span class="hljs-variable">$&#123;mypath%*/mybin&#125;</span><br></code></pre></td></tr></table></figure>
-
-<p>可以看到路径已经不存在了。</p>
-<p><img src="https://doc.shiyanlou.com/courses/uid871732-20200303-1583224278229"></p>
-<h4 id="变量删除"><a href="#变量删除" class="headerlink" title="变量删除"></a>变量删除</h4><p>可以使用 <code>unset</code> 命令删除一个环境变量：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">unset</span> mypath<br></code></pre></td></tr></table></figure>
-
-<p><img src="https://doc.shiyanlou.com/courses/uid871732-20200303-1583224422523"></p>
-<h2 id="4-如何让环境变量生效"><a href="#4-如何让环境变量生效" class="headerlink" title="4. 如何让环境变量生效"></a>4. 如何让环境变量生效</h2><p>前面我们在 Shell 中修改了一个配置脚本文件之后（比如 zsh 的配置文件 home 目录下的 <code>.zshrc</code>），每次都要退出终端重新打开甚至重启主机之后其才能生效，很是麻烦，我们可以使用 <code>source</code> 命令来让其立即生效，如：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cd</span> /home/shiyanlou<br><span class="hljs-built_in">source</span> .zshrc<br></code></pre></td></tr></table></figure>
-
-<p><code>source</code> 命令还有一个别名就是 <code>.</code>，上面的命令如果替换成 <code>.</code> 的方式就该是：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">. ./.zshrc<br></code></pre></td></tr></table></figure>
-
-<p><img src="https://doc.shiyanlou.com/courses/uid871732-20200303-1583225164807"></p>
-<p>在使用<code>.</code>的时候，需要注意与表示当前路径的那个点区分开。</p>
-<p>注意第一个点后面有一个空格，而且后面的文件必须指定完整的绝对或相对路径名，source 则不需要。</p>
-<h1 id="2-搜索文件"><a href="#2-搜索文件" class="headerlink" title="2. 搜索文件"></a>2. 搜索文件</h1><p>与搜索相关的命令常用的有 <code>whereis</code>，<code>which</code>，<code>find</code> 和 <code>locate</code>。</p>
-<ul>
-<li><strong><code>whereis</code>简单快速</strong></li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">whereis who<br>whereis find<br></code></pre></td></tr></table></figure>
-
-<p><img src="https://doc.shiyanlou.com/document-uid735639labid60timestamp1532339453618.png"></p>
-<p>你会看到 <code>whereis find</code> 找到了三个路径，两个可执行文件路径和一个 man 在线帮助文件所在路径，这个搜索很快，因为它并没有从硬盘中依次查找，而是直接从数据库中查询。</p>
-<p><code>whereis</code> 只能搜索二进制文件(-b)，man 帮助文件(-m)和源代码文件(-s)。如果想要获得更全面的搜索结果可以使用 <code>locate</code> 命令。</p>
-<ul>
-<li><strong><code>locate</code>快而全</strong></li>
-</ul>
-<p>使用 <code>locate</code> 命令查找文件也不会遍历硬盘，它通过查询 <code>/var/lib/mlocate/mlocate.db</code> 数据库来检索信息。不过这个数据库也不是实时更新的，系统会使用定时任务每天自动执行 <code>updatedb</code> 命令来更新数据库。所以有时候你刚添加的文件，它可能会找不到，需要手动执行一次 <code>updatedb</code> 命令（在我们的环境中必须先执行一次该命令）。注意这个命令也不是内置的命令，例如在我们的环境中就需要手动安装，然后执行更新。</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">sudo apt-get update<br>sudo apt-get install locate<br>sudo updatedb<br></code></pre></td></tr></table></figure>
-
-<p>它可以用来查找指定目录下的不同文件类型，如查找 /etc 下所有以 sh 开头的文件：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">locate /etc/sh<br></code></pre></td></tr></table></figure>
-
-<blockquote>
-<p><strong>注意，它不只是在 /etc 目录下查找，还会自动递归子目录进行查找。</strong></p>
-</blockquote>
-<p><img src="https://doc.shiyanlou.com/courses/uid871732-20200303-1583225846911"></p>
-<p>查找 /usr/share/ 下所有 jpg 文件：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">locate /usr/share/\*.jpg<br></code></pre></td></tr></table></figure>
-
-<blockquote>
-<p><strong>注意要添加 <code>\*</code> 号前面的反斜杠转义，否则会无法找到。</strong></p>
-</blockquote>
-<p><img src="https://doc.shiyanlou.com/courses/uid871732-20200303-1583226161762"></p>
-<p>如果想只统计数目可以加上 <code>-c</code> 参数，<code>-i</code> 参数可以忽略大小写进行查找，whereis 的 <code>-b</code>、<code>-m</code>、<code>-s</code> 同样可以使用。</p>
-<ul>
-<li><strong><code>which</code>小而精</strong></li>
-</ul>
-<p><code>which</code> 本身是 Shell 内建的一个命令，我们通常使用 <code>which</code> 来确定是否安装了某个指定的程序，因为它只从 <code>PATH</code> 环境变量指定的路径中去搜索命令并且返回第一个搜索到的结果。也就是说，我们可以看到某个系统命令是否存在以及执行的到底是哪一个地方的命令。</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">which</span> man<br><span class="hljs-built_in">which</span> nginx<br><span class="hljs-built_in">which</span> ping<br></code></pre></td></tr></table></figure>
-
-<p><img src="https://doc.shiyanlou.com/courses/uid871732-20200303-1583226577160"></p>
-<ul>
-<li><strong><code>find</code>精而细</strong></li>
-</ul>
-<p><code>find</code> 应该是这几个命令中最强大的了，它不但可以通过文件类型、文件名进行查找而且可以根据文件的属性（如文件的时间戳，文件的权限等）进行搜索。<code>find</code> 命令强大到，要把它讲明白至少需要单独好几节课程才行，我们这里只介绍一些常用的内容。</p>
-<p>这条命令表示去 /etc/ 目录下面 ，搜索名字叫做 interfaces 的文件或者目录。这是 find 命令最常见的格式，千万记住 find 的第一个参数是要搜索的地方。命令前面加上 <code>sudo</code> 是因为 shiyanlou 只是普通用户，对 /etc 目录下的很多文件都没有访问的权限，如果是 root 用户则不用使用。</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">sudo find /etc/ -name interfaces<br></code></pre></td></tr></table></figure>
-
-<p><img src="https://doc.shiyanlou.com/courses/uid871732-20200303-1583226847941"></p>
-<blockquote>
-<p><strong>注意 find 命令的路径是作为第一个参数的， 基本命令格式为 find [path][option] [action] 。</strong></p>
-</blockquote>
-<p>与时间相关的命令参数：</p>
-<table>
-<thead>
-<tr>
-<th>参数</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><code>-atime</code></td>
-<td>最后访问时间</td>
-</tr>
-<tr>
-<td><code>-ctime</code></td>
-<td>最后修改文件内容的时间</td>
-</tr>
-<tr>
-<td><code>-mtime</code></td>
-<td>最后修改文件属性的时间</td>
-</tr>
-</tbody></table>
-<p>下面以 <code>-mtime</code> 参数举例：</p>
-<ul>
-<li><code>-mtime n</code>：n 为数字，表示为在 n 天之前的“一天之内”修改过的文件</li>
-<li><code>-mtime +n</code>：列出在 n 天之前（不包含 n 天本身）被修改过的文件</li>
-<li><code>-mtime -n</code>：列出在 n 天之内（包含 n 天本身）被修改过的文件</li>
-<li><code>-newer file</code>：file 为一个已存在的文件，列出比 file 还要新的文件名</li>
-</ul>
-<p><img src="https://doc.shiyanlou.com/linux_base/5-8.png" alt="1"></p>
-<p>列出 home 目录中，当天（24 小时之内）有改动的文件：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">find ~ -mtime 0<br></code></pre></td></tr></table></figure>
-
-<p><img src="https://doc.shiyanlou.com/courses/uid871732-20200303-1583226953512"></p>
-<p>列出用户家目录下比 /etc 目录新的文件：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">find ~ -newer /etc<br></code></pre></td></tr></table></figure>
-
-<p><img src="https://doc.shiyanlou.com/courses/uid871732-20200303-1583227074890"></p>
 ]]></content>
       <categories>
         <category>学习笔记</category>
@@ -15559,7 +15609,7 @@ lambda表达式： </li>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>Vim常规命令</p>
 <span id="more"></span>
 
-<h6 id=""><a href="#" class="headerlink" title=""></a><img src="../../../images/Vim/image-20210107145450588.png"></h6><h2 id="二-删除-移动"><a href="#二-删除-移动" class="headerlink" title="二 删除|移动"></a>二 删除|移动</h2><p><img src="../../../images/Vim/image-20200812140608611.png" alt="image-20200812140608611"></p>
+<h6 id=""><a href="#" class="headerlink" title=""></a><img src="../../../images/Vim/20210107145450588.png"></h6><h2 id="二-删除-移动"><a href="#二-删除-移动" class="headerlink" title="二 删除|移动"></a>二 删除|移动</h2><p><img src="../../../images/Vim/20200812140608611.png"></p>
 <ol>
 <li>撤销 u</li>
 <li>粘贴 p</li>
@@ -15574,11 +15624,11 @@ lambda表达式： </li>
 <li> 查找字符串 /： 向前查 ？：向后查</li>
 <li></li>
 </ol>
-<h2 id="三-更改类操作符"><a href="#三-更改类操作符" class="headerlink" title="三 更改类操作符"></a>三 更改类操作符</h2><p><img src="../../../images/Vim/image-20200812144221541.png" alt="更改类操作总结"></p>
-<h2 id="四-查找-替换-匹配"><a href="#四-查找-替换-匹配" class="headerlink" title="四 查找|替换|匹配"></a>四 查找|替换|匹配</h2><p><img src="../../../images/Vim/image-20200812144023800.png" alt="image-20200812144023800"></p>
-<h2 id="五-外部命令"><a href="#五-外部命令" class="headerlink" title="五 外部命令"></a>五 外部命令</h2><p><img src="../../../images/Vim/image-20200812145646832.png" alt="image-20200812145646832"></p>
-<h2 id="六-查找-插入-复制-粘贴-替换"><a href="#六-查找-插入-复制-粘贴-替换" class="headerlink" title="六 查找|插入|复制|粘贴|替换"></a>六 查找|插入|复制|粘贴|替换</h2><p><img src="../../../images/Vim/image-20200812151045457.png" alt="image-20200812151045457"></p>
-<h2 id="七-帮助-自动补全"><a href="#七-帮助-自动补全" class="headerlink" title="七 帮助|自动补全"></a>七 帮助|自动补全</h2><p><img src="../../../images/Vim/image-20200812161242116.png" alt="image-20200812161242116"></p>
+<h2 id="三-更改类操作符"><a href="#三-更改类操作符" class="headerlink" title="三 更改类操作符"></a>三 更改类操作符</h2><p><img src="../../../images/Vim/20200812144221541.png" alt="更改类操作总结"></p>
+<h2 id="四-查找-替换-匹配"><a href="#四-查找-替换-匹配" class="headerlink" title="四 查找|替换|匹配"></a>四 查找|替换|匹配</h2><p><img src="../../../images/Vim/20200812144023800.png"></p>
+<h2 id="五-外部命令"><a href="#五-外部命令" class="headerlink" title="五 外部命令"></a>五 外部命令</h2><p><img src="../../../images/Vim/20200812145646832.png"></p>
+<h2 id="六-查找-插入-复制-粘贴-替换"><a href="#六-查找-插入-复制-粘贴-替换" class="headerlink" title="六 查找|插入|复制|粘贴|替换"></a>六 查找|插入|复制|粘贴|替换</h2><p><img src="../../../images/Vim/20200812151045457.png"></p>
+<h2 id="七-帮助-自动补全"><a href="#七-帮助-自动补全" class="headerlink" title="七 帮助|自动补全"></a>七 帮助|自动补全</h2><p><img src="../../../images/Vim/20200812161242116.png"></p>
 ]]></content>
       <categories>
         <category>Linux学习笔记</category>
