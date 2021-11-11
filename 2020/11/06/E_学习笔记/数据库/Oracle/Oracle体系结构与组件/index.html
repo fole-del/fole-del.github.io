@@ -182,8 +182,7 @@
 <h2 id="1-共享池-SHARE-POOL"><a href="#1-共享池-SHARE-POOL" class="headerlink" title="1. 共享池(SHARE POOL)"></a>1. 共享池(SHARE POOL)</h2><div style="float:right"><img src="https://tvax2.sinaimg.cn/large/0072YHp3ly1gkhduw53bzj306z09j3ye.jpg" alt="共享池" width="251" data-width="251" data-height="343"></div>
 
 <pre><code> 共享池包括`库高速缓存`和`数据字典高速缓存`，共享池的主要作用和功能如下：
-</code></pre>
-<ol>
+</code></pre><ol>
 <li><p>共享池是对SQL、PL/SQL程序进行语法分析、编译、执行的内存区域。</p>
 </li>
 <li><p>共享池由库缓存和数据字典缓存组成。</p>
@@ -197,7 +196,8 @@
 <li><p>查询语句：<code>SQL &gt; show parameter shared_pool_size</code></p>
 </li>
 <li><p>用如下命令可以调整，参数为<code>SHARED_POOL_SIZE</code>：</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">ALTER</span> <span class="hljs-keyword">SYSTEM</span> <span class="hljs-keyword">SET</span><br>SHARED_POOL_SIZE <span class="hljs-operator">=</span> <span class="hljs-number">64</span>M;<br></code></pre></td></tr></table></figure></li>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">ALTER</span> <span class="hljs-keyword">SYSTEM</span> <span class="hljs-keyword">SET</span><br>SHARED_POOL_SIZE <span class="hljs-operator">=</span> <span class="hljs-number">64</span>M;<br></code></pre></td></tr></table></figure>
+</li>
 </ol>
 <h2 id="2-数据高速缓冲区-DATABASE-BUFFER-CACHE"><a href="#2-数据高速缓冲区-DATABASE-BUFFER-CACHE" class="headerlink" title="2. 数据高速缓冲区(DATABASE BUFFER CACHE)"></a>2. 数据高速缓冲区(DATABASE BUFFER CACHE)</h2><ol>
 <li>由<mark style="background:pink;border-radius:10px;font-weight:600">最近最少使用（LRU）算法</mark>来管理</li>
@@ -210,7 +210,6 @@
 <li>可以使用<code>ALTER_SYSTEM</code>动态调节大小，包括增加或减小</li>
 </ol>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs SQL"><span class="hljs-keyword">ALTER</span> <span class="hljs-keyword">SYSTEM</span> <span class="hljs-keyword">SET</span> DB_CACHE_SIZE <span class="hljs-number">96</span>M;<br></code></pre></td></tr></table></figure>
-
 <h2 id="3-重做日志缓冲区-REDO-LOG-BUFFER"><a href="#3-重做日志缓冲区-REDO-LOG-BUFFER" class="headerlink" title="3. 重做日志缓冲区(REDO LOG BUFFER)"></a><strong>3.</strong> 重做日志缓冲区(REDO LOG BUFFER)</h2><ol>
 <li>日志记录数据库的所有修改信息，日志信息首先产生于日志缓冲区。 </li>
 <li>当日志缓冲区的日志数据达到一定数量时，由后台进程将日志数据写入日志文件中。</li>
@@ -254,16 +253,13 @@
 <li>大小由<code>LARGE_POOL_SIZE</code>确定</li>
 </ol>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs SQL"><span class="hljs-keyword">ALTER</span> <span class="hljs-keyword">SYSTEM</span> <span class="hljs-keyword">SET</span> LARGE_POOL_SIZE <span class="hljs-operator">=</span> <span class="hljs-number">64</span>M;<br></code></pre></td></tr></table></figure>
-
-
-
 <h1 id="程序全局区"><a href="#程序全局区" class="headerlink" title="程序全局区"></a>程序全局区</h1><blockquote>
 <p>除此之外，还有程序全局区(PGA)，是为每一个连接到Oracle数据库的用户进程预留的内存</p>
 </blockquote>
 <p><img src="https://tva4.sinaimg.cn/large/0072YHp3ly1gkfoilc1sjj30kt0abaam.jpg" alt="PGA"></p>
 <h2 id="1-用户进程"><a href="#1-用户进程" class="headerlink" title="1. 用户进程"></a>1. 用户进程</h2><p>用户进程是一个程序，它请求与Oracle服务器的连接</p>
 <ul>
-<li> 它必须首先建立一个连接</li>
+<li>它必须首先建立一个连接</li>
 <li>它不直接与Oracle服务器进行交互</li>
 </ul>
 <h2 id="2-服务器进程"><a href="#2-服务器进程" class="headerlink" title="2. 服务器进程"></a>2. 服务器进程</h2><p>服务器进程是一个程序，它与Oracle服务器直接作用</p>
@@ -275,6 +271,7 @@
 <ul>
 <li>必须的后台进程</li>
 </ul>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -283,15 +280,19 @@
 <th>CKPT</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>LGWR</td>
 <td>SMON</td>
 <td>RECO</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <ul>
 <li>可选的后台进程</li>
 </ul>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -300,7 +301,8 @@
 <th>Snnn</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>QMNn</td>
 <td>LMDn</td>
 <td></td>
@@ -313,9 +315,10 @@
 <tr>
 <td>LCKn</td>
 <td>Dnnn</td>
-<td></td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <h3 id="1-数据库写进程（DBWn）"><a href="#1-数据库写进程（DBWn）" class="headerlink" title="1. 数据库写进程（DBWn）"></a>1. 数据库写进程（DBWn）</h3><p>DBWn延迟写入数据文件,直到发生下列事件之一：</p>
 <ol>
 <li>增量或正常检查点</li>

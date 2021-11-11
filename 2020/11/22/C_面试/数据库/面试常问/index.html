@@ -162,16 +162,14 @@
 <p>example:</p>
 <p>某网站包含两个表，Customers 表和 Orders 表。编写一个 SQL 查询，找出所有从不订购任何东西的客户。</p>
 <p>Customers 表：</p>
-<p>+—-+——-+<br>| Id | Name  |<br>+—-+——-+<br>| 1  | Joe   |<br>| 2  | Henry |<br>| 3  | Sam   |<br>| 4  | Max   |<br>+—-+——-+<br>Orders 表：</p>
-<p>+—-+————+<br>| Id | CustomerId |<br>+—-+————+<br>| 1  | 3          |<br>| 2  | 1          |<br>+—-+————+<br>例如给定上述表格，你的查询应返回：</p>
-<p>+———–+<br>| Customers |<br>+———–+<br>| Henry     |<br>| Max       |<br>+———–+</p>
+<p>+——+———-+<br>| Id | Name  |<br>+——+———-+<br>| 1  | Joe   |<br>| 2  | Henry |<br>| 3  | Sam   |<br>| 4  | Max   |<br>+——+———-+<br>Orders 表：</p>
+<p>+——+——————+<br>| Id | CustomerId |<br>+——+——————+<br>| 1  | 3          |<br>| 2  | 1          |<br>+——+——————+<br>例如给定上述表格，你的查询应返回：</p>
+<p>+—————-+<br>| Customers |<br>+—————-+<br>| Henry     |<br>| Max       |<br>+—————-+</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-keyword">select</span> c.Name <span class="hljs-keyword">as</span> Customers<br><span class="hljs-keyword">from</span> Customers c<br><span class="hljs-keyword">left</span> <span class="hljs-keyword">join</span> Orders d <br><span class="hljs-keyword">on</span> c.Id <span class="hljs-operator">=</span> d.CustomerId<br><span class="hljs-keyword">where</span> d.CustomerId <span class="hljs-keyword">is</span> <span class="hljs-keyword">null</span><br></code></pre></td></tr></table></figure>
-
-
-
 <h2 id="数据库事务的一致性"><a href="#数据库事务的一致性" class="headerlink" title="数据库事务的一致性"></a>数据库事务的一致性</h2><p>事务是由一系列对系统中数据进行访问与更新的操作所组成的一个程序执行逻辑单元。事务时DBMA中最基础的单位，事务不可分割。</p>
 <p>事务具有四个特征：分别是原子性、一致性、隔离性、持续性。简称ACID。</p>
 <h2 id="mysql的四种隔离状态"><a href="#mysql的四种隔离状态" class="headerlink" title="mysql的四种隔离状态"></a>mysql的四种隔离状态</h2><p>Mysql主要包含四种隔离状态：读未提交、不可重复读、可重复读、串行化</p>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -181,7 +179,8 @@
 <th>幻读</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>读未提交（read-uncommitted）</td>
 <td>是</td>
 <td>是</td>
@@ -205,7 +204,9 @@
 <td>否</td>
 <td>否</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <h2 id="请你介绍一下mysql的MVCC机制"><a href="#请你介绍一下mysql的MVCC机制" class="headerlink" title="请你介绍一下mysql的MVCC机制"></a>请你介绍一下mysql的MVCC机制</h2><p>MVCC是一种多版本并发控制机制，是MySQL的InnoDB存储引擎实现隔离级别的一种具体方式，用于实现提交读和可重复读这两种隔离级别。MVCC是通过<mark>保存数据在某个时间点的快照来实现该机制，其在每行记录后面保存两个隐藏的列，分别保存这个行的创建版本号和删除版本号</mark>，然后Innodb的MVCC使用到的快照存储在Undo日志中，该日志通过回滚指针把一个数据行所有快照连接起来。</p>
 <h2 id="数据库默认端口"><a href="#数据库默认端口" class="headerlink" title="数据库默认端口"></a>数据库默认端口</h2><p>1、mysql的默认端口是3306，可以编辑用户目录下的 .my.cnf 文件进行修改；</p>
 <p>2、sqlserver默认端口号为：1433；</p>

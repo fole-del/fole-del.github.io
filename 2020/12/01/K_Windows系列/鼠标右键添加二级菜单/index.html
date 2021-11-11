@@ -156,7 +156,6 @@
 <p>2、第二步就要先创建一个儿子，也就是二级菜单里面的每一个子文件。</p>
 <p>划重点：<code>按照这个路径去寻找shell：</code></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs plain">HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell<br></code></pre></td></tr></table></figure>
-
 <p>找到shell之后右键单击找到新建，然后在新建的子菜单中选择项，创建一个项（没懂看图）</p>
 <p><img src="https://tva3.sinaimg.cn/large/0072YHp3ly1gmbyfpzjmzj30cc06mmx4.jpg" alt="小步骤"><br>然后，你会看见有一个新建的<code>新项 #1</code>，这个就是你创建儿子（二级菜单子文件），现在右键单击重命名，对你创建的儿子起个好记的名字（这个名字不会出现在桌面二级菜单，内部使用），<code>自定义、尽量字母或英文</code>，避免出现不必要的麻烦。（no懂得看图）<br><img src="https://tva3.sinaimg.cn/large/0072YHp3ly1gmbyfpzjmzj30cc06mmx4.jpg" alt="小步骤">这里我改为了<code>CSDN</code>，新建项的右方会有一个默认的字符串值，双击打开编辑，这里创建自定义名称，就是桌面你想显示的软件名称（no懂看图）<br><img src="https://tva4.sinaimg.cn/large/0072YHp3ly1gmbyfnw1fbj30rd074wer.jpg" alt="小步骤"><br>在这个新建的文件内右键点击新建一个字符串值（重命名为<code>Icon</code>），来存放二级菜单内要显示的软件的图标。（no懂得看图）<img src="https://tva1.sinaimg.cn/large/0072YHp3ly1gmbyfqk30dj30qf07kjrm.jpg" alt="小步骤"><br>双击打开创建的<code>Icon</code>字符串进行编辑，放入软件路径默认显示软件图标，可以自己制作icon图标进行自定义。（no懂得看图）<br><img src="https://tva1.sinaimg.cn/large/0072YHp3ly1gmbyfnj5hlj30sc07x75h.jpg" alt="小步骤"></p>
 <p>接着按相同的步骤在自己刚创建儿子（二级菜单子文件）里面创建一个<code>项</code>，no<code>字符串值</code>，是<code>项</code>！是<code>项</code>！是<code>项</code>！项的名字重命名为<code>command</code>，这个里面存放二级菜单子文件软件路径。（no懂看图）<img src="https://tva2.sinaimg.cn/large/0072YHp3ly1gmbyfqa7ajj30po07jaaa.jpg" alt="小步骤"><br>重命名为<code>command</code>（no懂得看图）<br><img src="https://tvax4.sinaimg.cn/large/0072YHp3ly1gmbyluj7whj30t702igma.jpg" alt="小步骤"><br>双击command右边框中的字符串值，在弹出的编辑框中，数值数据输入你所要在二级菜单目录下显示的软件的路径，这里我放的Xshell的路径。（no懂看图）</p>
@@ -164,7 +163,6 @@
 <p>3、找爸爸：</p>
 <p>在注册表中找到这个地方：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs plain">HKEY_CLASSES_ROOT\Directory\Background\shell<br></code></pre></td></tr></table></figure>
-
 <p>然后新建一个爸爸（项），名字自定义<br><img src="https://tva2.sinaimg.cn/large/0072YHp3ly1gmbyfo1el7j30gc07c0sq.jpg" alt="小步骤"><br>在这个项里面创建两个字符串值文件，一个重命名<code>Icon</code>，放图标路径，自定义，这个就参照上面详细介绍。<br>另一个是把儿子链接过来的，重命名<code>SubCommands</code>，注意大小写，把刚才创建的儿子名字输入到这个里面，如果要放多个的话，英文分号隔开。（no懂看图）</p>
 <h2 id="单个："><a href="#单个：" class="headerlink" title="单个："></a>单个：</h2><p><img src="https://tvax1.sinaimg.cn/large/0072YHp3ly1gmbyfo72gvj30r508h0t3.jpg" alt="小步骤"></p>
 <h2 id="多个："><a href="#多个：" class="headerlink" title="多个："></a>多个：</h2><p><img src="https://tvax1.sinaimg.cn/large/0072YHp3ly1gmbyfpqi8nj30ay04kjr8.jpg" alt="小步骤"><br>慢慢一步一步来，看不懂去个厕所，回来再看一遍</p>

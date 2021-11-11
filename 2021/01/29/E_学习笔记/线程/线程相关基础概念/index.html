@@ -157,7 +157,8 @@
 <blockquote>
 <p>例如：假设用户启动了一个窗口中的数据库应用程序，操作系统就将对数据库的调用表示为一个进程。假设用户要从数据库中产生一份工资单报表，并传到一个文件中，这是一个子任务；在产生工资单报表的过程中，用户又可以输入数据库查询请求，这又是一个子任务。这样，操作系统则把每一个请求——工资单报表和新输入的数据查询表示为数据库进程中的独立的线程。线程可以在处理器上独立调度执行，这样，在多处理器环境下就允许几个线程各自在单独处理器上进行。操作系统提供线程就是为了方便而有效地实现这种并发性。</p>
 </blockquote>
-<h1 id="多进程与多线程的区别"><a href="#多进程与多线程的区别" class="headerlink" title="多进程与多线程的区别"></a>多进程与多线程的区别</h1><table>
+<h1 id="多进程与多线程的区别"><a href="#多进程与多线程的区别" class="headerlink" title="多进程与多线程的区别"></a>多进程与多线程的区别</h1><div class="table-container">
+<table>
 <thead>
 <tr>
 <th>对比维度</th>
@@ -166,7 +167,8 @@
 <th>总结</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>数据共享、同步</td>
 <td>数据共享复杂，需要用IPC；数据是分开的，同步简单</td>
 <td>因为共享进程数据，数据共享简单，但也是因为这个原因导致同步复杂</td>
@@ -202,8 +204,11 @@
 <td>适应于多核分布式</td>
 <td>进程占优</td>
 </tr>
-</tbody></table>
-<h2 id="优劣对比"><a href="#优劣对比" class="headerlink" title="优劣对比"></a>优劣对比</h2><table>
+</tbody>
+</table>
+</div>
+<h2 id="优劣对比"><a href="#优劣对比" class="headerlink" title="优劣对比"></a>优劣对比</h2><div class="table-container">
+<table>
 <thead>
 <tr>
 <th>优劣</th>
@@ -211,7 +216,8 @@
 <th>多线程</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>优点</td>
 <td>编程、调试简单，可靠性较高</td>
 <td>创建、销毁、切换速度快，内存、资源占用小</td>
@@ -221,7 +227,9 @@
 <td>创建、销毁、切换速度慢，内存、资源占用大</td>
 <td>编程、调试复杂，可靠性较差</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <h2 id="如何选择"><a href="#如何选择" class="headerlink" title="如何选择"></a>如何选择</h2><ul>
 <li>需要频繁创建销毁的优先用线程</li>
 <li>需要进行大量计算的优先使用线程</li>

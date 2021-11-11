@@ -154,24 +154,20 @@
 </blockquote>
 <h1 id="内联函数"><a href="#内联函数" class="headerlink" title="内联函数"></a>内联函数</h1><p>对于一个频繁使用的短小函数，在C语言中应该用<code>宏定义</code>实现，在C++中用<code>inline</code>实现。宏定义与内联函数的不同用法000。</p>
 <h2 id="宏定义"><a href="#宏定义" class="headerlink" title="宏定义"></a>宏定义</h2><p>在c语言中，写一手漂亮的宏定义是非常有必要的，方式出错；提高代码的移植性和可读性等。尤其是一些常用或通用的功能函数或者代码段，这些功能既可以写成函数，也可以封装为宏定义。就功能性上来讲，用宏定义自然有函数无法比拟的优势所在。</p>
-<p>*<em>要点：变量都用括号括起来，防止出错，结尾不需要;。在实际编程中，不推荐把复杂的函数使用宏，不容易调试。多行用\*</em></p>
+<p><strong>要点：变量都用括号括起来，防止出错，结尾不需要;。在实际编程中，不推荐把复杂的函数使用宏，不容易调试。多行用\</strong></p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs C"><span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> max(a,b) ((a)&gt;(b)？(a):(b)) <span class="hljs-comment">//一个简单的大小比较的宏定义函数</span></span><br></code></pre></td></tr></table></figure>
-
 <p>但是如果用函数实现的话，你可能得先声明，并且定义，尤其是对变量类型的局限性上：</p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs C"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">max</span><span class="hljs-params">(<span class="hljs-keyword">int</span> a ,<span class="hljs-keyword">int</span> b)</span></span>; <span class="hljs-comment">//声明</span><br><span class="hljs-comment">//定义</span><br><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">max</span><span class="hljs-params">(<span class="hljs-keyword">int</span> a, <span class="hljs-keyword">int</span> b)</span> </span>&#123;<br>    <span class="hljs-keyword">return</span> a&gt;b?a:b;<br>&#125;<br></code></pre></td></tr></table></figure>
-
 <p>比较明显，宏定义简单又方便；同时，<mark>函数地调用会带来额外的开销，他需要开辟一片栈空间，记录返回地址，函数返回还要释放</mark>。这种开销很明显地会降低代码效率，而且代码量也会大大增加，而使用宏定义则在代码规模和速度方面都有优势。其次就是变量类型上，在C++中因为有模板还可以实现多类型变量的比较，但是在上述代码中仅仅支持int类型的变量进行比较。但宏定义就有所不同，可以用于整形、长整型、单浮点型、双浮点型以及其他一些可以用<code>&gt;</code>操作符进行比较的变量类型，就是说，宏定义是不需要考虑类型的。</p>
 <p>在具体使用中，较多场合会因为使用宏定义重命名函数名以及定义一些变量。</p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs C"><span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> MALLOC(n, type) \</span><br>((type *) <span class="hljs-built_in">malloc</span>((n)* <span class="hljs-keyword">sizeof</span>(type))<br></code></pre></td></tr></table></figure>
-
 <p>利用这个宏，我们就可以简单的为任何类型分配一段我们指定的空间大小，并返回指向这段空间的指针。</p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs C"><span class="hljs-keyword">int</span> *ptr;<br>ptr = MALLOC( <span class="hljs-number">5</span>, <span class="hljs-keyword">int</span> );<span class="hljs-comment">//申请5int大小的空间</span><br></code></pre></td></tr></table></figure>
-
 <p>关于宏定义还会有一些小问题，可能也会导致你使用上的错误，例如：</p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs C"><span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> SQUARE_SUM(x,y) x*x+y*y</span><br><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;stdio.h&gt;</span></span><br> <br><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span><br><span class="hljs-function"></span>&#123;<br>    <span class="hljs-keyword">int</span> i = <span class="hljs-number">1</span>,j = <span class="hljs-number">2</span>,k ;<br>    k = SQUARE_SUM(i+<span class="hljs-number">1</span>,j);<br>    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%d&quot;</span>,k);<br>    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
-
 <p>上述代码真实的调用是<code>1+1*1+1+2*2=7</code>，这一点需要注意，所以如果有需要的话，建议给变量小括号带上。</p>
-<h2 id="宏定义小结"><a href="#宏定义小结" class="headerlink" title="宏定义小结"></a>宏定义小结</h2><table>
+<h2 id="宏定义小结"><a href="#宏定义小结" class="headerlink" title="宏定义小结"></a>宏定义小结</h2><div class="table-container">
+<table>
 <thead>
 <tr>
 <th>属性</th>
@@ -179,7 +175,8 @@
 <th>函数</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>代码长度</td>
 <td>每次使用时，宏代码都被插入到程序中。除了非常小的宏之外，程序的长度将大幅度增长。</td>
 <td>函数代码只出现于一个地方：每次使用这个函数时，都调用那个地方的同一份代码</td>
@@ -204,12 +201,13 @@
 <td>宏与类型无关，只要参数的操作是合法的，它可以用于任何参数类型。</td>
 <td>函数的参数是与类型有关系的，如果参数的类型不同，就需要使用不同的函数，即使它们执行的任务是相同的。</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <hr>
 <h1 id="inline函数"><a href="#inline函数" class="headerlink" title="inline函数"></a><code>inline</code>函数</h1><p>在系统下，栈空间是有限的，加入频繁大量的使用就会造成因栈空间不足所造成的程序出错的问题，内联函数的引入也是为了解决一些频繁调用的小函数大量消耗栈空间的问题。</p>
 <p>看一个例子：</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs C++"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;stdio.h&gt;</span>  </span><br><span class="hljs-comment">//函数定义为inline即:内联函数  </span><br><span class="hljs-function"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">char</span>* <span class="hljs-title">dbtest</span><span class="hljs-params">(<span class="hljs-keyword">int</span> a)</span> </span>&#123;  <br>    <span class="hljs-keyword">return</span> (i % <span class="hljs-number">2</span> &gt; <span class="hljs-number">0</span>) ? <span class="hljs-string">&quot;奇&quot;</span> : <span class="hljs-string">&quot;偶&quot;</span>;  <br>&#125;   <br><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span>  </span><br><span class="hljs-function"></span>&#123;  <br>   <span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>;  <br>   <span class="hljs-keyword">for</span> (i=<span class="hljs-number">1</span>; i &lt; <span class="hljs-number">100</span>; i++) &#123;  <br>       <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;i:%d    奇偶性:%s /n&quot;</span>, i, <span class="hljs-built_in">dbtest</span>(i));      <br>   &#125;  <br>&#125;  <br></code></pre></td></tr></table></figure>
-
 <p>在这种情况时当在下表调用函数时，会变成<code>(i%2&gt;0)?&quot;奇&quot;:&quot;偶&quot;</code>；避免了函数的重复调用对栈内存重复开辟所带来的消耗；当然，inline函数不是在任何条件下都可以使用的，只有函数本身没有调用本身并且函数不是复杂函数（<strong>当函数中存在while循环或swich语句时为复杂函数</strong>，但是不是复杂函数还要看编译器对它的判断）时，才可以使用；</p>
 <hr>
 <p><strong>注意点：</strong><div class="note purple no-icon simple"><p>inline函数仅仅是一个建议,对编译器的建议,所以最后能否真正内联,看编译器的意思,它如果认为函数不复杂,能在调用点展开,就会真正内联,并不是说声明了内联就会内联,声明内联只是一个建议而已。</p>
