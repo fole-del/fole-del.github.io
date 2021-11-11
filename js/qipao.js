@@ -1,9 +1,9 @@
 
 function qipao() {
     $('#page-header').circleMagic({
-        radius: 10,
-        density: .2,
-        color: 'rgba(255,255,255,.4)',
+        radius: 8,
+        density: .1,
+        color: 'rgba(255,255,255,.3)',
         clearOffset: 0.99
     });
 } ! function (p) {
