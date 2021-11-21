@@ -1,0 +1,284 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="dark"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>五、Linux下的帮助命令 | A u r o r a</title><meta name="keywords" content="Linux,实验楼"><meta name="author" content="AuroraMg"><meta name="copyright" content="AuroraMg"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#0d0d0d"><meta name="description" content="Linux下的帮助命令一、实验介绍1 实验内容我们时常使用 Linux 的命令，一些常用的命令即使不背我们也能记住，而一些较长的命令或是一些不常用的参数甚至是不常用的命令需要用时怎么也想不出来。本课程将带你好好利用 Linux 系统自带的帮助工具与文档。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="五、Linux下的帮助命令">
+<meta property="og:url" content="https://www.mingsrc.work/posts/31620285">
+<meta property="og:site_name" content="A u r o r a">
+<meta property="og:description" content="Linux下的帮助命令一、实验介绍1 实验内容我们时常使用 Linux 的命令，一些常用的命令即使不背我们也能记住，而一些较长的命令或是一些不常用的参数甚至是不常用的命令需要用时怎么也想不出来。本课程将带你好好利用 Linux 系统自带的帮助工具与文档。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://tvax3.sinaimg.cn/large/0072YHp3ly1gk49mupfb7j30m80evdh8.jpg">
+<meta property="article:published_time" content="2020-09-04T10:19:54.877Z">
+<meta property="article:modified_time" content="2021-11-21T13:29:21.922Z">
+<meta property="article:author" content="AuroraMg">
+<meta property="article:tag" content="Linux">
+<meta property="article:tag" content="实验楼">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://tvax3.sinaimg.cn/large/0072YHp3ly1gk49mupfb7j30m80evdh8.jpg"><link rel="shortcut icon" href="/../../../images/Logo_stop.png"><link rel="canonical" href="https://www.mingsrc.work/posts/31620285"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"简"},
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式🌙🌙","night_to_day":"你已切换为浅色模式🌝🌝","bgLight":"#49b1f5","bgDark":"#121212","position":"top-center"},
+  source: {
+    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+    },
+    fancybox: {
+      js: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css'
+    }
+  },
+  isPhotoFigcaption: true,
+  islazyload: false,
+  isanchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '五、Linux下的帮助命令',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2021-11-21 21:29:21'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if (GLOBAL_CONFIG_SITE.isHome && /iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><link rel="stylesheet" href="/css/hbe.style.css"><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="/css/var.css"><link rel="stylesheet" href="/css/background.css"><link rel="stylesheet" href="/css/taglink.css"><link rel="stylesheet" href="/css/hideCategory.css"><link rel="stylesheet" href="/css/font.css"><link rel="stylesheet" href="/css/code.css"><link rel="stylesheet" href="/css/buttons.css"><link href="https://.googleapis.com/css2?family=Noto+Serif+SC:wght@400;900&display=swap" rel="stylesheet" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/sviptzk/StaticFile_HEXO@latest/butterfly/css/font-awesome-animation.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/l-lin/font-awesome-animation/dist/font-awesome-animation.min.css"  media="defer" onload="this.media='all'"><!-- hexo injector head_end start --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.1.6/css/swiper.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-butterfly-swiper/lib/swiperstyle.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/l-lin/font-awesome-animation/dist/font-awesome-animation.min.css" media="defer" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-butterfly-tag-plugins-plus@latest/lib/tag_plugins.min.css" media="defer" onload="this.media='all'"><script async src="https://cdn.jsdelivr.net/npm/hexo-butterfly-tag-plugins-plus@latest/lib/carousel-touch.min.js"></script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="A u r o r a" type="application/atom+xml">
+</head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/../../../images/Logo_stop.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">186</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">96</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">55</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/ming/"><i class="fa-fw fa-fw fas fa-desktop faa-vertical animated-hover"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa-fw fas fa-home faa-vertical animated-hover"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fa fa-book faa-pulse animated-hover"></i><span> 找文章</span><i class="fas fa-chevron-down expand hide"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="fa-fw fa fa-archive faa-tada animated-hover"></i><span> 时间</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fa fa-tags faa-tada animated-hover"></i><span> 标签</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fa fa-folder-open faa-tada animated-hover"></i><span> 分类</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fa fa-heartbeat faa-pulse animated-hover"></i><span> 清单</span><i class="fas fa-chevron-down expand hide"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fa fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/Gallery/"><i class="fa-fw fa fa-picture-o"></i><span> 照片</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fa fa-film"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fa fa-flask faa-vertical animated-hover"></i><span> 皮一下</span><i class="fas fa-chevron-down expand hide"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/test/demo"><i class="fa-fw fa fa-thermometer-empty faa-vertical animated-hover"></i><span> 测试</span></a></li><li><a class="site-page child" href="/player/"><i class="fa-fw fa fa-play-circle"></i><span> 播放器</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-heart faa-vertical animated-hover"></i><span> 关于</span></a></div><div class="menus_item"><a class="site-page" href="/messageboard/"><i class="fa-fw fa fa-link faa-tada animated-hover"></i><span> 留言板</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://tvax3.sinaimg.cn/large/0072YHp3ly1gk49mupfb7j30m80evdh8.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">A u r o r a</a></span><div id="menus"><button id="darkmodebutton" type="button" title="浅色和深色模式转换"><a class="site-page social-icon search"><i class="fas fa-adjust fa-fw"></i></a></button><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/ming/"><i class="fa-fw fa-fw fas fa-desktop faa-vertical animated-hover"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa-fw fas fa-home faa-vertical animated-hover"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fa fa-book faa-pulse animated-hover"></i><span> 找文章</span><i class="fas fa-chevron-down expand hide"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="fa-fw fa fa-archive faa-tada animated-hover"></i><span> 时间</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fa fa-tags faa-tada animated-hover"></i><span> 标签</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fa fa-folder-open faa-tada animated-hover"></i><span> 分类</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fa fa-heartbeat faa-pulse animated-hover"></i><span> 清单</span><i class="fas fa-chevron-down expand hide"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fa fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/Gallery/"><i class="fa-fw fa fa-picture-o"></i><span> 照片</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fa fa-film"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fa fa-flask faa-vertical animated-hover"></i><span> 皮一下</span><i class="fas fa-chevron-down expand hide"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/test/demo"><i class="fa-fw fa fa-thermometer-empty faa-vertical animated-hover"></i><span> 测试</span></a></li><li><a class="site-page child" href="/player/"><i class="fa-fw fa fa-play-circle"></i><span> 播放器</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-heart faa-vertical animated-hover"></i><span> 关于</span></a></div><div class="menus_item"><a class="site-page" href="/messageboard/"><i class="fa-fw fa fa-link faa-tada animated-hover"></i><span> 留言板</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">五、Linux下的帮助命令</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2020-09-04T10:19:54.877Z" title="发表于 2020-09-04 18:19:54">2020-09-04</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2021-11-21T13:29:21.922Z" title="更新于 2021-11-21 21:29:21">2021-11-21</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a><i class="fas fa-angle-right post-meta-separator"></i><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Linux/">Linux</a><i class="fas fa-angle-right post-meta-separator"></i><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E5%AE%9E%E9%AA%8C%E6%A5%BC/">实验楼</a><i class="fas fa-angle-right post-meta-separator"></i><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E5%AE%9E%E9%AA%8C%E6%A5%BC/Linux/">Linux</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">1.6k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>4分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="五、Linux下的帮助命令"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="Linux下的帮助命令"><a href="#Linux下的帮助命令" class="headerlink" title="Linux下的帮助命令"></a>Linux下的帮助命令</h1><h2 id="一、实验介绍"><a href="#一、实验介绍" class="headerlink" title="一、实验介绍"></a>一、实验介绍</h2><h3 id="1-实验内容"><a href="#1-实验内容" class="headerlink" title="1 实验内容"></a>1 实验内容</h3><p>我们时常使用 Linux 的命令，一些常用的命令即使不背我们也能记住，而一些较长的命令或是一些不常用的参数甚至是不常用的命令需要用时怎么也想不出来。本课程将带你好好利用 Linux 系统自带的帮助工具与文档。</p>
+<span id="more"></span>
+
+<h3 id="1-实验知识点"><a href="#1-实验知识点" class="headerlink" title="1 实验知识点"></a>1 实验知识点</h3><ul>
+<li>内建命令与外部命令之分</li>
+<li>help , man , info 命令的使用以及区别</li>
+</ul>
+<h2 id="二、内建命令与外部命令"><a href="#二、内建命令与外部命令" class="headerlink" title="二、内建命令与外部命令"></a>二、内建命令与外部命令</h2><p>什么是内建命令，什么是外部命令呢？这和帮助命令又有什么关系呢？</p>
+<p>因为有一些查看帮助的工具在内建命令与外建命令上是有区别对待的。</p>
+<blockquote>
+<p><strong>内建命令</strong>实际上是 shell 程序的一部分，其中包含的是一些比较简单的 Linux 系统命令，这些命令是写在 bash 源码的 builtins 里面的，由 shell 程序识别并在 shell 程序内部完成运行，通常在 Linux 系统加载运行时 shell 就被加载并驻留在系统内存中。而且解析内部命令 shell 不需要创建子进程，因此其执行速度比外部命令快。比如：history、cd、exit 等等。</p>
+</blockquote>
+<blockquote>
+<p><strong>外部命令</strong>是 Linux 系统中的实用程序部分，因为实用程序的功能通常都比较强大，所以其包含的程序量也会很大，在系统加载时并不随系统一起被加载到内存中，而是在需要时才将其调入内存。虽然其不包含在 shell 中，但是其命令执行过程是由 shell 程序控制的。外部命令是在 Bash 之外额外安装的，通常放在/bin，/usr/bin，/sbin，/usr/sbin 等等。比如：ls、vi 等。</p>
+</blockquote>
+<p>简单来说就是：一个是天生自带的天赋技能，一个是后天得来的附加技能。我们可以使用　 type 命令来区分命令是内建的还是外部的。例如这两个得出的结果是不同的</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">type</span> <span class="hljs-built_in">exit</span><br><br><span class="hljs-built_in">type</span> vim<br></code></pre></td></tr></table></figure>
+
+<p>得到的是两种结果，若是对 ls 你还能得到第三种结果</p>
+<p><img src="https://doc.shiyanlou.com/document-uid600404labid6123timestamp1523930371175.png" alt="此处输入图片的描述"></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment">#得到这样的结果说明是内建命令，正如上文所说内建命令都是在 bash 源码中的 builtins 的.def中</span><br>xxx is a shell <span class="hljs-built_in">builtin</span><br><span class="hljs-comment">#得到这样的结果说明是外部命令，正如上文所说，外部命令在/usr/bin or /usr/sbin等等中</span><br>xxx is /usr/bin/xxx<br><span class="hljs-comment">#若是得到alias的结果，说明该指令为命令别名所设定的名称；</span><br>xxx is an <span class="hljs-built_in">alias</span> <span class="hljs-keyword">for</span> xx --xxx<br></code></pre></td></tr></table></figure>
+
+<h2 id="三、帮助命令的使用"><a href="#三、帮助命令的使用" class="headerlink" title="三、帮助命令的使用"></a>三、帮助命令的使用</h2><h3 id="1-help命令"><a href="#1-help命令" class="headerlink" title="1. help命令"></a>1. help命令</h3><p>本实验环境是 zsh，而 zsh 中内置并没有 help 命令，我们可以进入 bash 中，在 bash 中内置有该命令</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">bash<br></code></pre></td></tr></table></figure>
+
+<p>做好了以上的准备，我们就可以愉快的使用 help 命令了，我们可以尝试下这个命令:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">help</span> ls<br></code></pre></td></tr></table></figure>
+
+<p>得到的结果如图所示，为什么是这样的结果？</p>
+<p><img src="https://doc.shiyanlou.com/document-uid600404labid6123timestamp1523930924973.png" alt="此处输入图片的描述"></p>
+<p>因为 help 命令是用于显示 shell 内建命令的简要帮助信息。帮助信息中显示有该命令的简要说明以及一些参数的使用以及说明，一定记住 help 命令只能用于显示内建命令的帮助信息，不然就会得到你刚刚得到的结果。</p>
+<p>那如果是外部命令怎么办，不能就这么抛弃它呀。其实外部命令基本上都有一个参数–help,这样就可以得到相应的帮助，看到你想要的东西了。试试下面这个命令是不是能看到你想要的东西了。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">ls --<span class="hljs-built_in">help</span><br></code></pre></td></tr></table></figure>
+
+<p><img src="https://doc.shiyanlou.com/document-uid600404labid6123timestamp1523931303648.png" alt="此处输入图片的描述"></p>
+<h3 id="3-man命令"><a href="#3-man命令" class="headerlink" title="3. man命令"></a>3. man命令</h3><p>你可以尝试下这个命令</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">man ls<br></code></pre></td></tr></table></figure>
+
+<p><img src="https://dn-simplecloud.shiyanlou.com/1135081467871829217" alt="实验楼"></p>
+<p>得到的内容比用 help 更多更详细，而且　 man 　没有内建与外部命令的区分，因为 man 工具是显示系统手册页中的内容，也就是一本电子版的字典，这些内容大多数都是对命令的解释信息，还有一些相关的描述。通过查看系统文档中的 man 也可以得到程序的更多相关信息和 Linux 的更多特性。</p>
+<p>是不是好用许多，当然也不代表 help 就没有存在的必要，当你非常紧急只是忘记该用哪个参数的时候，help 这种显示简单扼要的信息就特别实用，若是不太紧急的时候就可以用 man 这种详细描述的查询方式</p>
+<p>在尝试上面这个命令时我们会发现最左上角显示“ LS （1）”，在这里，“ LS ”表示手册名称，而“（1）”表示该手册位于第一章节。这个章节又是什么？在 man 手册中一共有这么几个章节</p>
+<table>
+<thead>
+<tr>
+<th>章节数</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>1</code></td>
+<td>Standard commands （标准命令）</td>
+</tr>
+<tr>
+<td><code>2</code></td>
+<td>System calls （系统调用）</td>
+</tr>
+<tr>
+<td><code>3</code></td>
+<td>Library functions （库函数）</td>
+</tr>
+<tr>
+<td><code>4</code></td>
+<td>Special devices （设备说明）</td>
+</tr>
+<tr>
+<td><code>5</code></td>
+<td>File formats （文件格式）</td>
+</tr>
+<tr>
+<td><code>6</code></td>
+<td>Games and toys （游戏和娱乐）</td>
+</tr>
+<tr>
+<td><code>7</code></td>
+<td>Miscellaneous （杂项）</td>
+</tr>
+<tr>
+<td><code>8</code></td>
+<td>Administrative Commands （管理员命令）</td>
+</tr>
+<tr>
+<td><code>9</code></td>
+<td>其他（Linux 特定的）， 用来存放内核例行程序的文档。</td>
+</tr>
+</tbody></table>
+<p>打开手册之后我们可以通过 pgup 与 pgdn 或者上下键来上下翻看，可以按 q 退出当前页面</p>
+<h3 id="3-info命令"><a href="#3-info命令" class="headerlink" title="3. info命令"></a>3. info命令</h3><p>要是你觉得 man 显示的信息都还不够，满足不了你的需求，那试试 info 命令，注意实验楼的环境中没有安装 info，可以手动安装，安装和操作步骤如下：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 安装 info</span><br>$ sudo apt-get update<br>$ sudo apt-get install info<br><span class="hljs-comment"># 查看 ls 命令的 info</span><br>$ info ls<br></code></pre></td></tr></table></figure>
+
+<p><img src="https://dn-simplecloud.shiyanlou.com/1135081468210358613" alt="Info_for_ls"></p>
+<p>得到的信息是不是比 man 还要多了，info 来自自由软件基金会的 GNU 项目，是 GNU 的超文本帮助系统，能够更完整的显示出 GNU 信息。所以得到的信息当然更多</p>
+<p>man 和 info 就像两个集合，它们有一个交集部分，但与 man 相比，info 工具可显示更完整的　 GNU 　工具信息。若 man 页包含的某个工具的概要信息在 info 中也有介绍，那么 man 页中会有“请参考 info 页更详细内容”的字样。</p>
+</article><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/Linux/">Linux</a><a class="post-meta__tags" href="/tags/%E5%AE%9E%E9%AA%8C%E6%A5%BC/">实验楼</a></div><div class="post_share"><div class="social-share" data-image="https://tvax3.sinaimg.cn/large/0072YHp3ly1gk49mupfb7j30m80evdh8.jpg" data-sites="wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/posts/433d7c09"><img class="prev-cover" src="https://tvax3.sinaimg.cn/large/0072YHp3ly1gk49mupfb7j30m80evdh8.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">六、Linux任务计划crontab</div></div></a></div><div class="next-post pull-right"><a href="/posts/de6197c0"><img class="next-cover" src="https://tvax3.sinaimg.cn/large/0072YHp3ly1gk49mupfb7j30m80evdh8.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">十四、Linux 日志系统</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/posts/ae600674" title="Linux—从创建用户开始"><img class="cover" src="https://tvax3.sinaimg.cn/large/0072YHp3ly1gk49mupfb7j30m80evdh8.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-10-15</div><div class="title">Linux—从创建用户开始</div></div></a></div><div><a href="/posts/ed589a8" title="一、Linux目录结构及文件基本操作"><img class="cover" src="https://tvax3.sinaimg.cn/large/0072YHp3ly1gk49mupfb7j30m80evdh8.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-10-15</div><div class="title">一、Linux目录结构及文件基本操作</div></div></a></div><div><a href="/posts/2e2434d7" title="二、环境变量与文件查找"><img class="cover" src="https://tvax3.sinaimg.cn/large/0072YHp3ly1gk49mupfb7j30m80evdh8.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-10-15</div><div class="title">二、环境变量与文件查找</div></div></a></div><div><a href="/posts/573df444" title="三、文件打包与文件查找"><img class="cover" src="https://tvax3.sinaimg.cn/large/0072YHp3ly1gk49mupfb7j30m80evdh8.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-10-15</div><div class="title">三、文件打包与文件查找</div></div></a></div><div><a href="/posts/2f64ad03" title="四、文件系统与磁盘操作"><img class="cover" src="https://tvax3.sinaimg.cn/large/0072YHp3ly1gk49mupfb7j30m80evdh8.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-10-15</div><div class="title">四、文件系统与磁盘操作</div></div></a></div><div><a href="/posts/dae6345" title="Linux-Bash"><img class="cover" src="https://tvax3.sinaimg.cn/large/0072YHp3ly1gjvw20n7otj31hc0zdgxz.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-09-04</div><div class="title">Linux-Bash</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/../../../images/Logo_stop.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">AuroraMg</div><div class="author-info__description">信仰就是力量<br><a class="subtitlehref" target="_blank" rel="noopener" href="https://yesido.icu/">yesido.icu</a></div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">186</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">标签</div><div class="length-num">96</div></a></div><div class="card-info-data-item is-center"><a href="/categories/"><div class="headline">分类</div><div class="length-num">55</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://gitee.com/fole-del"><i class="fab fa-github"></i><span>一些小Demo~</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="mailto:191099862@qq.com" target="_blank" title="Email"><i class="iconfont icon-Email"></i></a><a class="social-icon" href="https://tva3.sinaimg.cn/large/0072YHp3ly1gjtbxnamacj30e80e8dgx.jpg" target="_blank" title="weixin"><i class="iconfont icon-weixin"></i></a><a class="social-icon" href="http://wpa.qq.com/msgrd?v=3&amp;uin=191099862&amp;site=qq&amp;menu=yes" target="_blank" title="QQ"><i class="iconfont icon-QQ1"></i></a><a class="social-icon" href="https://blog.csdn.net/Fuel_Ming?spm=1001.2014.3001.5113" target="_blank" title="CSDN"><i class="iconfont icon-csdn"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content"><div id="balls"><div>固执无<span style="background:white;border-radius:25px;color:black">罪</span>❗❗❗</div><div class="snake-spinner"><span></span><span></span><span></span><span></span><span></span></div><div><span style="background:white;border-radius:25px;color:black">梦</span>想有价🌈🌈🌈</div></div><div class="twopeople"><div class="twopeople"><div class="container"style="height:200px;"><canvas class="illo"width="800"height="800"style="max-width:200px; max-height:200px; touch-action:none; width:640px; height:640px;"></canvas></div><script src="https://cdn.guole.fun/js/twopeople1.js"></script><script src="https://cdn.guole.fun/js/zdog.dist.js"></script><script id="rendered-js"src="https://cdn.guole.fun/js/twopeople.js"></script><style>.twopeople{margin:0;align-items:center;justify-content:center;text-align:center}canvas{display:block;margin:0 auto;cursor:move}</style></div></div></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Linux%E4%B8%8B%E7%9A%84%E5%B8%AE%E5%8A%A9%E5%91%BD%E4%BB%A4"><span class="toc-number">1.</span> <span class="toc-text">Linux下的帮助命令</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E5%AE%9E%E9%AA%8C%E4%BB%8B%E7%BB%8D"><span class="toc-number">1.1.</span> <span class="toc-text">一、实验介绍</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E5%AE%9E%E9%AA%8C%E5%86%85%E5%AE%B9"><span class="toc-number">1.1.1.</span> <span class="toc-text">1 实验内容</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E5%AE%9E%E9%AA%8C%E7%9F%A5%E8%AF%86%E7%82%B9"><span class="toc-number">1.1.2.</span> <span class="toc-text">1 实验知识点</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E5%86%85%E5%BB%BA%E5%91%BD%E4%BB%A4%E4%B8%8E%E5%A4%96%E9%83%A8%E5%91%BD%E4%BB%A4"><span class="toc-number">1.2.</span> <span class="toc-text">二、内建命令与外部命令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E5%B8%AE%E5%8A%A9%E5%91%BD%E4%BB%A4%E7%9A%84%E4%BD%BF%E7%94%A8"><span class="toc-number">1.3.</span> <span class="toc-text">三、帮助命令的使用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-help%E5%91%BD%E4%BB%A4"><span class="toc-number">1.3.1.</span> <span class="toc-text">1. help命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-man%E5%91%BD%E4%BB%A4"><span class="toc-number">1.3.2.</span> <span class="toc-text">3. man命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-info%E5%91%BD%E4%BB%A4"><span class="toc-number">1.3.3.</span> <span class="toc-text">3. info命令</span></a></li></ol></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/posts/352e7838" title="windows Terminal 打开 Git Bash"><img src="https://tvax3.sinaimg.cn/large/0072YHp3ly1gjvw20n7otj31hc0zdgxz.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="windows Terminal 打开 Git Bash"/></a><div class="content"><a class="title" href="/posts/352e7838" title="windows Terminal 打开 Git Bash">windows Terminal 打开 Git Bash</a><time datetime="2021-11-21T13:36:49.259Z" title="更新于 2021-11-21 21:36:49">2021-11-21</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/234402f4" title="🎨剑指offer🎨"><img src="https://tvax3.sinaimg.cn/large/0072YHp3ly1gjvw20n7otj31hc0zdgxz.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="🎨剑指offer🎨"/></a><div class="content"><a class="title" href="/posts/234402f4" title="🎨剑指offer🎨">🎨剑指offer🎨</a><time datetime="2021-11-21T13:29:22.135Z" title="更新于 2021-11-21 21:29:22">2021-11-21</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/ecf76003" title="STL基本概念"><img src="/../../images/cover/STL.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="STL基本概念"/></a><div class="content"><a class="title" href="/posts/ecf76003" title="STL基本概念">STL基本概念</a><time datetime="2021-11-21T13:29:22.131Z" title="更新于 2021-11-21 21:29:22">2021-11-21</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/5ec0a1e5" title="红黑树🌲"><img src="https://tvax3.sinaimg.cn/large/0072YHp3ly1gjvw20n7otj31hc0zdgxz.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="红黑树🌲"/></a><div class="content"><a class="title" href="/posts/5ec0a1e5" title="红黑树🌲">红黑树🌲</a><time datetime="2021-11-21T13:29:22.127Z" title="更新于 2021-11-21 21:29:22">2021-11-21</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/c7968c37" title="Python基础语法一遍过"><img src="/../../../images/python.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Python基础语法一遍过"/></a><div class="content"><a class="title" href="/posts/c7968c37" title="Python基础语法一遍过">Python基础语法一遍过</a><time datetime="2021-11-21T13:29:22.125Z" title="更新于 2021-11-21 21:29:22">2021-11-21</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/ac7c815e" title="Oracle存储结构"><img src="/../../../images/Oracle%E5%AD%98%E5%82%A8%E7%BB%93%E6%9E%84/%E5%85%B3%E7%B3%BB%E5%9B%BE.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Oracle存储结构"/></a><div class="content"><a class="title" href="/posts/ac7c815e" title="Oracle存储结构">Oracle存储结构</a><time datetime="2021-11-21T13:29:22.120Z" title="更新于 2021-11-21 21:29:22">2021-11-21</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/2a450757" title="根据地名获取经纬度"><img src="https://cdn.jsdelivr.net/gh/fole-del/img/image-20210525183050457.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="根据地名获取经纬度"/></a><div class="content"><a class="title" href="/posts/2a450757" title="根据地名获取经纬度">根据地名获取经纬度</a><time datetime="2021-11-21T13:29:22.117Z" title="更新于 2021-11-21 21:29:22">2021-11-21</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/de6197c0" title="十四、Linux 日志系统"><img src="https://tvax3.sinaimg.cn/large/0072YHp3ly1gk49mupfb7j30m80evdh8.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="十四、Linux 日志系统"/></a><div class="content"><a class="title" href="/posts/de6197c0" title="十四、Linux 日志系统">十四、Linux 日志系统</a><time datetime="2021-11-21T13:29:22.115Z" title="更新于 2021-11-21 21:29:22">2021-11-21</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/428e1ceb" title="十三、Linux 进程管理"><img src="https://tvax3.sinaimg.cn/large/0072YHp3ly1gk49mupfb7j30m80evdh8.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="十三、Linux 进程管理"/></a><div class="content"><a class="title" href="/posts/428e1ceb" title="十三、Linux 进程管理">十三、Linux 进程管理</a><time datetime="2021-11-21T13:29:22.108Z" title="更新于 2021-11-21 21:29:22">2021-11-21</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/bc91e4b2" title="十二、Linux进程概念"><img src="https://tvax3.sinaimg.cn/large/0072YHp3ly1gk49mupfb7j30m80evdh8.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="十二、Linux进程概念"/></a><div class="content"><a class="title" href="/posts/bc91e4b2" title="十二、Linux进程概念">十二、Linux进程概念</a><time datetime="2021-11-21T13:29:22.105Z" title="更新于 2021-11-21 21:29:22">2021-11-21</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2021 By AuroraMg</div><div class="footer_custom_text"><div id="mouseMove">&nbsp;</div><i class="fas faa-bounce animated-hover">勇敢就是接受发生在你身上的事，并把它尽力做到最好！</i><br> Power By <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/" style="animation:bgbreath 4s infinite;">Hexo</a> | 主题 <a target="_blank" rel="noopener" href="https://butterfly.js.org/" style="animation:bgbreath 4s infinite;">butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="chat_btn" type="button" title="rightside.chat_btn"><i class="fas fa-sms"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><div class="search-dialog__title" id="local-search-title">本地搜索</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div></div><hr/><div id="local-search-results"></div><span class="search-close-button"><i class="fas fa-times"></i></span></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><script src="/js/search/local-search.js"></script><div class="js-pjax"><script>if (document.getElementsByClassName('mermaid').length) {
+  if (window.mermaidJsLoad) mermaid.init()
+  else {
+    getScript('https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js').then(() => {
+      window.mermaidJsLoad = true
+      mermaid.initialize({
+        theme: 'dark',
+      })
+      false && mermaid.init()
+    })
+  }
+}</script></div><canvas id="universe"></canvas><script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script><script src="https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.0.8/js/instantclick-1.2.2.js" type="module"></script><script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script><script src="https://myhkw.cn/player/js/player.js" id="myhk" key="160318399252" m="0"></script><script defer src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="/js/zdoj.js"></script><script src="/js/twoPeople.js"></script><script src="/js/twoPeople1.js"></script><script src="/js/qipao.js"></script><script src="/js/universe.js"></script><script src="/js/mouseMove.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = false;
+POWERMODE.mobile = false;
+document.body.addEventListener('input', POWERMODE);
+</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/gh/metowolf/MetingJS@1.2/dist/Meting.min.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><!-- hexo injector body_end start --><script data-pjax>
+  function butterfly_swiper_injector_config(){
+    var parent_div_git = document.getElementById('recent-posts');
+    var item_html = '<div class="recent-post-item" style="height: auto;width: 100%"><div class="blog-slider swiper-container-fade swiper-container-horizontal" id="swiper_container"><div class="blog-slider__wrp swiper-wrapper" style="transition-duration: 0ms;"><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" href="posts/252a5848.html" alt=""><img width="48" height="48" src="../../../../images/自述/情感8.jpg" alt="" onerror="this.src=https://cdn.jsdelivr.net/npm/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2021-03-18</span><a class="blog-slider__title" href="posts/252a5848.html" alt="">痕迹</a><div class="blog-slider__text">不起眼分母</div><a class="blog-slider__button" href="posts/252a5848.html" alt="">详情   </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" href="posts/5487447e.html" alt=""><img width="48" height="48" src="../../../images/自动化部署项目hooks/git.jpg" alt="" onerror="this.src=https://cdn.jsdelivr.net/npm/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2021-03-09</span><a class="blog-slider__title" href="posts/5487447e.html" alt="">git命令手册💪_从新建项目开始</a><div class="blog-slider__text">git_新建项目并提交远程仓库|以及git强化命令手册</div><a class="blog-slider__button" href="posts/5487447e.html" alt="">详情   </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" href="posts/17750952.html" alt=""><img width="48" height="48" src="../../../images/五层协议及功能/对应协议.png" alt="" onerror="this.src=https://cdn.jsdelivr.net/npm/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2020-11-25</span><a class="blog-slider__title" href="posts/17750952.html" alt="">计算机网络协议</a><div class="blog-slider__text">再怎么看我也不知道怎么描述它的啦！</div><a class="blog-slider__button" href="posts/17750952.html" alt="">详情   </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" href="posts/32ba7a76.html" alt=""><img width="48" height="48" src="../../images/Windows平台下的内存泄露检测/AAAAA_01.jpg" alt="" onerror="this.src=https://cdn.jsdelivr.net/npm/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2020-11-25</span><a class="blog-slider__title" href="posts/32ba7a76.html" alt="">Windows平台下的内存泄露检测</a><div class="blog-slider__text">再怎么看我也不知道怎么描述它的啦！</div><a class="blog-slider__button" href="posts/32ba7a76.html" alt="">详情   </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" href="posts/7b9b5177.html" alt=""><img width="48" height="48" src="../../../images/自动化部署项目hooks/git.jpg" alt="" onerror="this.src=https://cdn.jsdelivr.net/npm/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2021-03-10</span><a class="blog-slider__title" href="posts/7b9b5177.html" alt="">自动化部署项目hook</a><div class="blog-slider__text">如何“自动化”部署git hook（C++项目）</div><a class="blog-slider__button" href="posts/7b9b5177.html" alt="">详情   </a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms;"><a class="blog-slider__img" href="posts/2c291b4d.html" alt=""><img width="48" height="48" src="../images/markdown.jpg" alt="" onerror="this.src=https://cdn.jsdelivr.net/npm/akilar-candyassets/image/loading.gif; this.onerror = null;"/></a><div class="blog-slider__content"><span class="blog-slider__code">2020-10-19</span><a class="blog-slider__title" href="posts/2c291b4d.html" alt="">Markdown用法</a><div class="blog-slider__text">所见即所得，总结的一些MarkDown常用方法</div><a class="blog-slider__button" href="posts/2c291b4d.html" alt="">详情   </a></div></div></div><div class="blog-slider__pagination swiper-pagination-clickable swiper-pagination-bullets"></div></div></div>';
+    console.log('已挂载butterfly_swiper')
+    parent_div_git.insertAdjacentHTML("afterbegin",item_html)
+    }
+  var elist = 'undefined'.split(',');
+  var cpage = location.pathname;
+  var epage = 'all';
+  var flag = 0;
+
+  for (var i=0;i<elist.length;i++){
+    if (cpage.includes(elist[i])){
+      flag++;
+    }
+  }
+
+  if ((epage ==='all')&&(flag == 0)){
+    butterfly_swiper_injector_config();
+  }
+  else if (epage === cpage){
+    butterfly_swiper_injector_config();
+  }
+  </script><script defer src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.1.6/js/swiper.min.js"></script><script defer data-pjax src="https://cdn.jsdelivr.net/npm/hexo-butterfly-swiper/lib/swiper_init.js"></script><script async src="//at.alicdn.com/t/font_2032782_8d5kxvn09md.js"></script><!-- hexo injector body_end end --></body></html>
