@@ -138,8 +138,8 @@
         <category>设计模式</category>
       </categories>
       <tags>
-        <tag>C++</tag>
         <tag>设计模式</tag>
+        <tag>C++</tag>
         <tag>创建型模式</tag>
       </tags>
   </entry>
@@ -13878,8 +13878,8 @@ tar -zxvf dest.tar.gz -C /opt/tmp       //-C指定到目录，tmp必须先存在
         <category>github</category>
       </categories>
       <tags>
-        <tag>C++</tag>
         <tag>位运算</tag>
+        <tag>C++</tag>
         <tag>力扣</tag>
       </tags>
   </entry>
