@@ -261,9 +261,55 @@
       </tags>
   </entry>
   <entry>
-    <title>按钮样式整理</title>
+    <title>前端样式整理</title>
     <url>/posts/3ec63883.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="span-list"><a href="#span-list" class="headerlink" title="span list"></a>span list</h1>   <figure class="highlight html"><table><tr><td class="code"><pre><code class="hljs html">1<br><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;fas faa-ring animated-hover&quot;</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;border-bottom:3px solid green&quot;</span>&gt;</span>《半小时漫画中国哲学史》<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><br>2<br><span class="hljs-tag">&lt;<span class="hljs-name">span</span>  <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;text-align:center;font-size:20px;font:30px 书体坊兰亭体;color:blueviolent;word-spacing:30px;&quot;</span>&gt;</span>“ 既许一人以偏爱，愿尽余生之慷慨 ”<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><br>3<br><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;class: faa-bounce animated-hover;border-bottom: 5px solid #8F81EF;&quot;</span>&gt;</span>[data.json文件链接](https://pan.baidu.com/s/1omzU65YMpJr0jPPFItZ7SA )<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><br> 4  <br><span class="hljs-tag">&lt;<span class="hljs-name">mark</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;background:royalBlue;border-bottom:lightblue 2px solid;color:white;font-family:consolas&quot;</span>&gt;</span>当使用重做日志文件来进行数据库恢复时，ORACLE将读取其中的重做记录(包括其中的修改向量)，并且将这些修改用于相关的块中。<span class="hljs-tag">&lt;/<span class="hljs-name">mark</span>&gt;</span><br>5<br><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;background: PaleVioletRed;border-radius:10px;padding:1px 5px;color:white;font-weight:900&quot;</span>&gt;</span>存储结构管理主要就是通过对表空间的管理来实现的<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><br>6<br><span class="hljs-tag">&lt;<span class="hljs-name">mark</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;background:green;border-radius:10px;color:white&quot;</span>&gt;</span>效果如下：<span class="hljs-tag">&lt;/<span class="hljs-name">mark</span>&gt;</span><br>7<br><span class="hljs-tag">&lt;<span class="hljs-name">font</span> <span class="hljs-attr">size</span>=<span class="hljs-string">10px</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;font-weight:700;font-family:&#x27;华文彩云&#x27;;color:rgb(100,190,100)&quot;</span>&gt;</span>基本语言(一)<span class="hljs-tag">&lt;/<span class="hljs-name">font</span>&gt;</span><br>8<br><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;border-bottom: 2px dashed #000000&quot;</span>&gt;</span>代码段、数据段、BSS段、堆区、文件映射区以及栈区<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><br>9<br><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;background:black;font:conloas;color:white;&quot;</span>&gt;</span><br><span class="hljs-symbol">&amp;nbsp;</span>数组长度为：3<span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span><br><span class="hljs-symbol">&amp;nbsp;</span>请按任意键继续. . .<br><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br>10<br><span class="hljs-tag">&lt;<span class="hljs-name">mark</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;color:white;background:red;font-weight:600;border_radius:100px&quot;</span>&gt;</span>但效率更高<span class="hljs-tag">&lt;/<span class="hljs-name">mark</span>&gt;</span><br></code></pre></td></tr></table></figure>
+
+<hr>
+<ol>
+<li><span class="fas faa-ring animated-hover" style="border-bottom:3px solid green">《半小时漫画中国哲学史》</span></li>
+</ol>
+<hr>
+<ol start="2">
+<li><span style="text-align:center;font-size:20px;font:30px 书体坊兰亭体;color:blueviolent;word-spacing:30px;">“ 既许一人以偏爱，愿尽余生之慷慨 ”</span></li>
+</ol>
+<hr>
+<ol start="3">
+<li><span style="class: faa-bounce animated-hover;border-bottom: 5px solid #8F81EF;"><a href="https://pan.baidu.com/s/1omzU65YMpJr0jPPFItZ7SA">data.json文件链接</a></span></li>
+</ol>
+<hr>
+<ol start="4">
+<li><mark style="background:royalBlue;border-bottom:lightblue 2px solid;color:white;font-family:consolas">当使用重做日志文件来进行数据库恢复时，ORACLE将读取其中的重做记录(包括其中的修改向量)，并且将这些修改用于相关的块中。</mark></li>
+</ol>
+<hr>
+<ol start="5">
+<li><span style="background: PaleVioletRed;border-radius:10px;padding:1px 5px;color:white;font-weight:900">存储结构管理主要就是通过对表空间的管理来实现的</span></li>
+</ol>
+<hr>
+<ol start="6">
+<li><mark style="background:green;border-radius:10px;color:white;padding: 5px">效果如下：</mark></li>
+</ol>
+<hr>
+<ol start="7">
+<li><font size="10px" style="font-weight:700;font-family:'华文彩云';color:rgb(100,190,100)">基本语言(一)</font></li>
+</ol>
+<hr>
+<ol start="8">
+<li><span style="border-bottom: 2px dashed #000000">代码段、数据段、BSS段、堆区、文件映射区以及栈区</span></li>
+</ol>
+<hr>
+<ol start="9">
+<li><div style="background:black;font:conloas;color:white;">
+&nbsp;
+ 数组长度为：3
+ <br>
+&nbsp;
+ 请按任意键继续. . .
+</div></li>
+<li><p><mark style="color:white;background:red;font-weight:600;border_radius:100px">但效率更高</mark></p>
+</li>
+</ol>
+]]></content>
       <categories>
         <category>学习笔记</category>
         <category>前端</category>
@@ -435,6 +481,31 @@
 <h1 id="浏览器插件类"><a href="#浏览器插件类" class="headerlink" title="浏览器插件类"></a>浏览器插件类</h1><h2 id="油猴"><a href="#油猴" class="headerlink" title="油猴"></a>油猴</h2><p>可以下载和使用各种脚本，目前已经有大量的脚本可以直接去下载使用，非常方便</p>
 <h2 id="微博图床"><a href="#微博图床" class="headerlink" title="微博图床"></a>微博图床</h2><p>可以建一个免费的专属于你个人的图床</p>
 <h2 id="infinity-Pro"><a href="#infinity-Pro" class="headerlink" title="infinity Pro"></a>infinity Pro</h2><p>一个极简风格的标签页</p>
+<h1 id="笔记类软件"><a href="#笔记类软件" class="headerlink" title="笔记类软件"></a>笔记类软件</h1><p>一款好用的markdown软件（可以配合百度云实现同步功能）</p>
+<p><a href="https://typora.io/#">https://typora.io/#</a></p>
+<p><img src="../../../images/AllOFSW/image-20201012181725937.png" alt="image-20201012181725937"></p>
+<p>博客框架Hexo</p>
+<p><a href="https://hexo.io/zh-cn/">https://hexo.io/zh-cn/</a></p>
+<p><img src="../../../images/AllOFSW/image-20201012181648993.png"></p>
+<p><img src="../../../images/AllOFSW/image-20201012181701043.png"></p>
+<p>在线图片处理</p>
+<p><a href="https://www.yasuotu.com/">https://www.yasuotu.com/</a></p>
+<p><img src="../../../images/AllOFSW/image-20201012181632367.png"></p>
+<p>快用工具（文档、视频、图片、文件解压缩、数据分析）</p>
+<p><a href="https://www.fastools.cn/doc">https://www.fastools.cn/doc</a></p>
+<p><img src="../../../images/AllOFSW/image-20201012182144932.png"></p>
+<p>奶牛快传（文件快传）</p>
+<p><a href="https://cowtransfer.com/?utm_source=nicelinks.site">https://cowtransfer.com/?utm_source=nicelinks.site</a></p>
+<p><img src="../../../images/AllOFSW/image-20201012182128085.png"></p>
+<p>PPT网站资源整合</p>
+<p><a href="https://www.hippter.com/?utm_source=nicelinks.site">https://www.hippter.com/?utm_source=nicelinks.site</a></p>
+<p><img src="../../../images/AllOFSW/image-20201012182235016.png"></p>
+<p>标签生成器（shields.io）</p>
+<p><img src="../../../images/AllOFSW/image-20201012182319292.png"></p>
+<p><img src="../../../images/AllOFSW/image-20201012182346086.png"></p>
+<p>语雀（在线笔记平台-阿里开发）</p>
+<p><a href="https://www.yuque.com/dashboard">https://www.yuque.com/dashboard</a></p>
+<p><img src="../../../images/AllOFSW/yuque.png"></p>
 ]]></content>
   </entry>
   <entry>
@@ -3563,15 +3634,15 @@ old_price修改后的值： 50.0<br>
 
 <img src="https://tvax2.sinaimg.cn/large/0072YHp3ly1gjvu0bmutej31430htgqp.jpg" alt="TCP图解2" width="1443" data-width="1443" data-height="641">
 
-<h2 id="1-服务器端"><a href="#1-服务器端" class="headerlink" title="1. 服务器端"></a>1. 服务器端</h2><p><img src="http://qgqlbe4fd.hb-bkt.clouddn.com/image-20200811204053089.png" alt="image-20200811204053089"></p>
-<p><img src="http://qgqlbe4fd.hb-bkt.clouddn.com/image-20200811204123538.png" alt="image-20200811204123538"></p>
+<h2 id="1-服务器端"><a href="#1-服务器端" class="headerlink" title="1. 服务器端"></a>1. 服务器端</h2><p><img src="../../../images/TCPIP/image-20200811204053089.png"></p>
+<p><img src="../../../images/TCPIP/image-20200811204123538.png"></p>
 <figure class="highlight c++"><table><tr><td class="code"><pre><code class="hljs C++"><span class="hljs-comment">//断开链接</span><br>tcpSocket-&gt;<span class="hljs-built_in">disconnectFromHost</span>();<br>tcpSocket-&gt;<span class="hljs-built_in">close</span>();<br></code></pre></td></tr></table></figure>
 
 
 
 <h2 id="2-客户端"><a href="#2-客户端" class="headerlink" title="2. 客户端"></a>2. 客户端</h2><figure class="highlight c++"><table><tr><td class="code"><pre><code class="hljs C++"><span class="hljs-comment">//客户端链接服务器端</span><br><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">clientWidget::on_buttonConnect_clicked</span><span class="hljs-params">()</span></span><br><span class="hljs-function"></span>&#123;<br>    <span class="hljs-comment">//获取服务器ip和端口</span><br>    <br>    QString ip = ui-&gt;lineEditIP-&gt;<span class="hljs-built_in">text</span>();<br>    qint16 port = ui-&gt;lineEditPort-&gt;<span class="hljs-built_in">text</span>().<span class="hljs-built_in">toInt</span>();<br>    tcpSocket-&gt;<span class="hljs-built_in">connectToHost</span>(<span class="hljs-built_in">QHostAdderss</span>(ip),port);<br>    <br>&#125;<br></code></pre></td></tr></table></figure>
 
-<p><img src="http://qgqlbe4fd.hb-bkt.clouddn.com/image-20200812105738859.png" alt="建立好链接反馈"></p>
+<p><img src="../../../images/TCPIP/image-20200812105738859.png"></p>
 <figure class="highlight c++"><table><tr><td class="code"><pre><code class="hljs C++"><span class="hljs-comment">//发送数据</span><br><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">send</span><span class="hljs-params">()</span></span>&#123;<br>    <span class="hljs-comment">//获取编辑框内容</span><br>    QString str = ui-&gt;textEditWrite-&gt;<span class="hljs-built_in">toPlainText</span>();<br>    <span class="hljs-comment">//发送数据</span><br>    tcpSocket-&gt;<span class="hljs-built_in">write</span>( str.<span class="hljs-built_in">toUtf8</span>().<span class="hljs-built_in">data</span>() );<br>    <br>&#125;<br><br><br><span class="hljs-comment">//构造函数读取内容</span><br><br><span class="hljs-built_in">connect</span>(tcpSocket,&amp;QTcpSocket::readyRead,<br>       [=]()<br>        &#123;<br>            <span class="hljs-comment">//获取对方发送的内容</span><br>            QByteArray array = tcpSocket-&gt;<span class="hljs-built_in">readAll</span>();<br>            <span class="hljs-comment">//追加到编辑框</span><br>            ui.TextEditRead-&gt;<span class="hljs-built_in">append</span>(array);<br>        &#125;<br>       )<br></code></pre></td></tr></table></figure>
 
 <div class="note orange icon flat"><i class="note-icon fa fa-battery-quarter"></i><p>这篇文章还在编辑中······</p>
@@ -6001,7 +6072,7 @@ dq2的大小为：3<br>
   <entry>
     <title>OJ在线编程常见输入输出练习</title>
     <url>/posts/2ead30ec.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="OJ在线编程常见输入输出练习"><a href="#OJ在线编程常见输入输出练习" class="headerlink" title="OJ在线编程常见输入输出练习"></a>OJ在线编程常见输入输出练习</h1><p><img src="../../../images/%E7%89%9B%E5%AE%A2%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BAbg.jpg" alt="img"></p>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="OJ在线编程常见输入输出练习"><a href="#OJ在线编程常见输入输出练习" class="headerlink" title="OJ在线编程常见输入输出练习"></a>OJ在线编程常见输入输出练习</h1><p><img src="../../../images/cover/niukebg.jpg" alt="img"></p>
 <p>ACM的时候才知道自己连基本的输入都难以搞定！！！耻辱柱定死了~~~😭😭😭</p>
 <p>如果大家有更好的方法一定给我分享一下，我太菜了👤</p>
 <h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p><a href="#A+B(1)">A+B(1)</a><font style="font-size:30px;color:lightblue;font-weight:900">||</font><a href="#A+B(2)">A+B(2)</a><font style="font-size:30px;color:lightblue;font-weight:900">||</font><a href="#A+B(3)">A+B(3)</a><font style="font-size:30px;color:lightblue;font-weight:900">||</font><a href="#A+B(4)">A+B(4)</a><font style="font-size:30px;color:lightblue;font-weight:900">||</font><a href="#A+B(5)">A+B(5)</a><font style="font-size:30px;color:lightblue;font-weight:900">||</font><a href="#A+B(6)">A+B(6)</a><font style="font-size:30px;color:lightblue;font-weight:900">||</font><a href="#A+B(7)">A+B(7)</a><font style="font-size:30px;color:lightblue;font-weight:900">||</font><a href="#%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%8E%92%E5%BA%8F(1)">字符串排序(1)</a><font style="font-size:30px;color:lightblue;font-weight:900">||</font><a href="#%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%8E%92%E5%BA%8F(2)">字符串排序(2)</a><font style="font-size:30px;color:lightblue;font-weight:900">||</font><a href="#%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%8E%92%E5%BA%8F(3)">字符串排序(3)</a></p>
@@ -7761,7 +7832,7 @@ dq2的大小为：3<br>
     <title>Qt线程</title>
     <url>/posts/40b71726.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="Qt线程"><a href="#Qt线程" class="headerlink" title="Qt线程"></a>Qt线程</h1><p><code>#include &lt; QThread&gt;</code></p>
-<p><img src="../../../images/Qt.jpg" alt="img"></p>
+<p><img src="../../../images/cover/Qt.jpg" alt="img"></p>
 <div class="note orange icon flat"><i class="note-icon fa fa-battery-empty"></i><p>这篇文章还在编辑中······</p>
 </div>
 
@@ -8640,7 +8711,7 @@ dq2的大小为：3<br>
 <h2 id="具体使用"><a href="#具体使用" class="headerlink" title="具体使用"></a>具体使用</h2><p>如下所示：</p>
 <figure class="highlight c++"><table><tr><td class="code"><pre><code class="hljs C++"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;iostream&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&quot;main.h&quot;</span></span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;<br><span class="hljs-comment">//创建一个共用体</span><br><span class="hljs-class"><span class="hljs-keyword">union</span> <span class="hljs-title">one4all</span> &#123;</span><br>	<span class="hljs-keyword">int</span> int_val;<br>	<span class="hljs-keyword">long</span> long_val;<br>	<span class="hljs-keyword">double</span> double_val;<br>&#125;;<br><br><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span><br><span class="hljs-function"></span>&#123;<br>	<span class="hljs-comment">//在同一时间只能之勇union中变量的一种</span><br>	one4all temp;<br>	temp.int_val = <span class="hljs-number">10</span>;<br>	cout &lt;&lt; temp.int_val &lt;&lt; endl;<br>	temp.double_val = <span class="hljs-number">3.1415926</span>;<br>	cout &lt;&lt; temp.double_val &lt;&lt; endl;<br>	cout &lt;&lt; &amp;temp.double_val &lt;&lt; endl;<br>	cout &lt;&lt; &amp;temp.long_val &lt;&lt; endl;<br>	cout &lt;&lt; &amp;temp.int_val &lt;&lt; endl;<br>	<span class="hljs-built_in">system</span>(<span class="hljs-string">&quot;pause&quot;</span>);<br>	<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
 
-<p><img src="../../../images/%E5%85%B1%E7%94%A8%E4%BD%931.png" alt="image-20201024211844953"></p>
+<p><img src="../../../../images/5%E3%80%81%E5%85%B1%E7%94%A8%E4%BD%93%EF%BC%88union%EF%BC%89/%E5%85%B1%E7%94%A8%E4%BD%931.png"></p>
 <p>为什么每次只能使用一个，直接打印地址可以发现，<code>union</code>中变量共同使用一个地址，所以每次也只能存储一种类型的值。那么，共用体在什么时候才会用到呢？</p>
 <hr>
 <p>《C++ primer 第六版》中给的定义是：</p>
@@ -10200,6 +10271,57 @@ dq2的大小为：3<br>
 <p>📑 <a href="/posts/eea0cb26.html" title="设计模式之结构型模式">设计模式之结构型模式</a> <br></p>
 <p>📑 <a href="/posts/3dfd8b5b.html" title="设计模式之创建型模式">设计模式之创建型模式</a></p>
 </blockquote>
+<p>总的来说，行为型模式就是用来对类或对象怎样交互和怎样分配职责进行描述。</p>
+<h1 id="模板方法模式"><a href="#模板方法模式" class="headerlink" title="模板方法模式"></a>模板方法模式</h1><p><img src="../../../images/%E8%A1%8C%E4%B8%BA%E5%9E%8B%E6%A8%A1%E5%BC%8F/2c18c4285cbf4282316903b5c3f07dbd.svg" alt="模板方法"></p>
+<div class="note green simple"><p><mark style="background:green;border-radius:10px;color:white;padding:0px 3px">AbstractClass（抽象类）：</mark>在抽象类中定义了一系列基本操作（PrimitiveOperations），这些基本操作可以是具体的，也可以是抽象的，每一个基本操作对应算法的一个步骤，在其子类中可以重定义或实现这些步骤。同时，在抽象类中实现了一个模板方法（Template Method），用于定义一个算法的框架，模板方法不仅可以调用在抽象类中实现的基本方法，也可以调用在抽象类的子类中实现的基本方法，还可以调用其他对象中的方法。</p>
+<p><mark style="background:green;border-radius:10px;color:white;padding:0px 3px">ConcreteClass（具体子类）：</mark>它是抽象类的子类，用于是现在父类中声明的抽象基本操作以完成子类特定算法的步骤，也可以覆盖在父类中的已经实现的具体基本操作。</p>
+</div>
+
+<h2 id="模板方法案例"><a href="#模板方法案例" class="headerlink" title="模板方法案例"></a>模板方法案例</h2><p><img src="../../../images/%E8%A1%8C%E4%B8%BA%E5%9E%8B%E6%A8%A1%E5%BC%8F/model_demo.svg" alt="模板方法案例"></p>
+<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><div class="hide-toggle"><div class="hide-button toggle-title" style><i class="fas fa-caret-right fa-fw"></i><span>点击展开</span></div>
+    <div class="hide-content"><figure class="highlight cpp"><table><tr><td class="code"><pre><code class="hljs cpp"><span class="hljs-comment">// 模板方法.cpp : 定义控制台应用程序的入口点。</span><br><span class="hljs-comment">//</span><br><br><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&quot;stdafx.h&quot;</span></span><br><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;iostream&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;string&gt;</span></span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;<br><br><span class="hljs-comment">// 制作饮料</span><br><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Beverage</span></span><br><span class="hljs-class">&#123;</span><br><span class="hljs-keyword">public</span>:<br>	<span class="hljs-comment">// 煮水</span><br>	<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">BoilWater</span><span class="hljs-params">()</span> </span>&#123;<br>		cout &lt;&lt; <span class="hljs-string">&quot;烧开水&quot;</span> &lt;&lt; endl;<br>	&#125;<br>	<span class="hljs-comment">// 冲泡 特殊接口</span><br>	<span class="hljs-function"><span class="hljs-keyword">virtual</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Brew</span><span class="hljs-params">()</span> </span>= <span class="hljs-number">0</span>;<br>	<span class="hljs-comment">// 倒入杯中</span><br>	<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">PourinVup</span><span class="hljs-params">()</span> </span>&#123;<br>		cout &lt;&lt; <span class="hljs-string">&quot;倒入杯中&quot;</span> &lt;&lt; endl;<br>	&#125;<br>	<span class="hljs-comment">// 添加料 特殊接口</span><br>	<span class="hljs-function"><span class="hljs-keyword">virtual</span> <span class="hljs-keyword">void</span> <span class="hljs-title">AddCondiments</span><span class="hljs-params">()</span> </span>= <span class="hljs-number">0</span>;<br><br>	<span class="hljs-comment">// hook 方法，决定某些算法步骤是否挂钩在算法中</span><br>	<span class="hljs-function"><span class="hljs-keyword">virtual</span> <span class="hljs-keyword">bool</span> <span class="hljs-title">CustomWantsCondiments</span><span class="hljs-params">()</span> </span>&#123;<br>		<span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;<br>	&#125;<br><br>	<span class="hljs-comment">// 模板方法</span><br>	<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">PrepareBeverage</span><span class="hljs-params">()</span> </span>&#123;<br>		<span class="hljs-built_in">BoilWater</span>();<br>		<span class="hljs-built_in">Brew</span>();<br>		<span class="hljs-built_in">PourinVup</span>();<br>		<span class="hljs-keyword">if</span> (<span class="hljs-built_in">CustomWantsCondiments</span>()) &#123;<br>			<span class="hljs-built_in">AddCondiments</span>();<br>		&#125;<br>	&#125;<br><span class="hljs-keyword">protected</span>:<br>	<br><span class="hljs-keyword">private</span>:<br>&#125;;<br><br><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Coffee</span> :</span> <span class="hljs-keyword">public</span> Beverage<br>&#123;<br><span class="hljs-keyword">public</span>:<br>	<span class="hljs-function"><span class="hljs-keyword">virtual</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Brew</span><span class="hljs-params">()</span> </span>&#123;<br>		cout &lt;&lt; <span class="hljs-string">&quot;冲泡咖啡豆&quot;</span> &lt;&lt; endl;<br>	&#125;<br>	<span class="hljs-function"><span class="hljs-keyword">virtual</span> <span class="hljs-keyword">void</span> <span class="hljs-title">AddCondiments</span><span class="hljs-params">()</span> </span>&#123;<br>		cout &lt;&lt; <span class="hljs-string">&quot;添加糖和牛奶&quot;</span> &lt;&lt; endl;<br>	&#125;<br><span class="hljs-keyword">protected</span>:<br><span class="hljs-keyword">private</span>:<br>&#125;;<br><br><br><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Tea</span> :</span> <span class="hljs-keyword">public</span> Beverage<br>&#123;<br><span class="hljs-keyword">public</span>:<br>	<span class="hljs-function"><span class="hljs-keyword">virtual</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Brew</span><span class="hljs-params">()</span> </span>&#123;<br>		cout &lt;&lt; <span class="hljs-string">&quot;冲泡茶叶&quot;</span> &lt;&lt; endl;<br>	&#125;<br>	<span class="hljs-function"><span class="hljs-keyword">virtual</span> <span class="hljs-keyword">void</span> <span class="hljs-title">AddCondiments</span><span class="hljs-params">()</span> </span>&#123;<br>		cout &lt;&lt; <span class="hljs-string">&quot;添加柠檬&quot;</span> &lt;&lt; endl;<br>	&#125;<br><span class="hljs-keyword">protected</span>:<br><span class="hljs-keyword">private</span>:<br>&#125;;<br><br><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span><br><span class="hljs-function"></span>&#123;<br>	Beverage *pTea = <span class="hljs-keyword">new</span> Tea;<br>	pTea-&gt;<span class="hljs-built_in">PrepareBeverage</span>();<br>	<span class="hljs-keyword">delete</span> pTea;<br><br>	cout &lt;&lt; <span class="hljs-string">&quot;-----------------------&quot;</span> &lt;&lt; endl;<br><br>	Beverage *pCoffee = <span class="hljs-keyword">new</span> Tea;<br>	pCoffee-&gt;<span class="hljs-built_in">PrepareBeverage</span>();<br>	<span class="hljs-keyword">delete</span> pCoffee;<br><br>    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<div style="background:black;font:conloas;color:white;">
+烧开水<br>
+冲泡茶叶<br>
+倒入杯中<br>
+添加柠檬<br>
+-----------------------<br>
+烧开水<br>
+冲泡茶叶<br>
+倒入杯中<br>
+添加柠檬<br>
+请按任意键继续. . .    
+</div>
+</div></div>
+
+<h2 id="模板方法的优缺点"><a href="#模板方法的优缺点" class="headerlink" title="模板方法的优缺点"></a>模板方法的优缺点</h2><div class="note success simple"><ol>
+<li>在父类中形式化地定义一个算法，而由它的子类来实现细节的处理，在子类实现详细的处理算法时并不会改变算法中步骤的执行次序。</li>
+<li>模板方法模式是一种代码复用技术，它在类库设计中尤为重要，它提取了类库中的公共行为，将公共行为放在父类中，而通过其子类来实现不同的行为，它鼓励我们恰当使用继承来实现代码复用。</li>
+<li>可实现一种反向控制结构，通过子类覆盖父类的钩子方法来决定某一特定步骤是否需要执行。</li>
+<li>在模板方法模式中可以通过子类来覆盖父类的基本方法，不同的子类可以提供基本方法的不同实现，更换和增加新的子类很方便，符合单一职责原则和开闭原则</li>
+</ol>
+</div>
+
+<div class="note danger simple"><p>需要为每一个基本方法的不同实现提供一个子类，如果父类中可变的基本方法太多，将会导致类的个数增加，系统更加庞大，设计也更加抽象。</p>
+</div>
+
+<h2 id="适用场景"><a href="#适用场景" class="headerlink" title="适用场景"></a>适用场景</h2><ol>
+<li><p>具有统一的操作步骤或操作过程；</p>
+</li>
+<li><p>具有不同的操作细节；</p>
+</li>
+<li><p>存在多个具有同样操作步骤的应用场景，但某些具体的操作细节却各不相同</p>
+</li>
+</ol>
+<blockquote>
+<p>在抽象类中统一操作步骤，并规定好接口；让子类实现接口。这样可以吧各个具体的子类和操作步骤解耦合。</p>
+</blockquote>
+<hr>
+<h1 id="命令模式"><a href="#命令模式" class="headerlink" title="命令模式"></a>命令模式</h1><hr>
+<h1 id="策略模式"><a href="#策略模式" class="headerlink" title="策略模式"></a>策略模式</h1><hr>
+<h1 id="观察者模式"><a href="#观察者模式" class="headerlink" title="观察者模式"></a>观察者模式</h1><hr>
 ]]></content>
       <categories>
         <category>程序员内功</category>
@@ -10421,7 +10543,9 @@ dq2的大小为：3<br>
 2. 在声明变量时，加上关键字static
 </code></pre>
 <h2 id="3、动态存储（堆）"><a href="#3、动态存储（堆）" class="headerlink" title="3、动态存储（堆）"></a>3、动态存储（堆）</h2><p>==new和delete==的应用，其管理着一个<code>内存池</code>（在C++中也被称为自由存储空间或<code>堆</code>），所创建的变量同存储静态存储的内存是分开的。</p>
-<img src="https://tvax4.sinaimg.cn/large/0072YHp3ly1gjvu5y7zguj310908jamo.jpg" alt="动态存储" width="1305" data-width="1305" data-height="307">]]></content>
+<img src="https://tvax4.sinaimg.cn/large/0072YHp3ly1gjvu5y7zguj310908jamo.jpg" alt="动态存储" width="1305" data-width="1305" data-height="307">
+
+]]></content>
       <categories>
         <category>C++笔记</category>
         <category>C++_Primer_Plus</category>
@@ -10971,13 +11095,13 @@ dq2的大小为：3<br>
 </blockquote>
 <figure class="highlight c++"><table><tr><td class="code"><pre><code class="hljs C++"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;iostream&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;vector&gt;</span></span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;<br><br><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(<span class="hljs-keyword">int</span> arhc, <span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span> * argv[])</span></span><br><span class="hljs-function"></span>&#123;<br>	<span class="hljs-keyword">int</span> a[] = &#123; <span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>,<span class="hljs-number">5</span> &#125;;<br>	<span class="hljs-keyword">int</span> b[] = &#123;<span class="hljs-number">0</span>&#125;;<br>    <span class="hljs-comment">//	b[1] = 5;</span><br>	<span class="hljs-comment">//cout &lt;&lt; &quot;b1:&quot; &lt;&lt; b[1] &lt;&lt;endl;</span><br>	vector&lt;<span class="hljs-keyword">int</span>&gt; v1;<br>	<span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> j = <span class="hljs-number">1</span>; j &lt;= <span class="hljs-number">5</span>; j++)<br>	&#123;<br>		v1.<span class="hljs-built_in">push_back</span>(j);<br>	&#125;<br>	cout &lt;&lt; <span class="hljs-string">&quot;v1:&quot;</span> &lt;&lt; v1.<span class="hljs-built_in">size</span>() &lt;&lt; endl;<br><br>	<span class="hljs-function">vector&lt;<span class="hljs-keyword">int</span>&gt; <span class="hljs-title">v2</span><span class="hljs-params">(<span class="hljs-number">3</span>, <span class="hljs-number">7</span>)</span></span>;<br><br>	cout &lt;&lt; <span class="hljs-string">&quot;v2:&quot;</span> &lt;&lt; v2.<span class="hljs-built_in">size</span>() &lt;&lt; endl;<br><br>	<span class="hljs-comment">//获取v1的下标为【1】的元素复制给i1</span><br>	vector&lt;<span class="hljs-keyword">int</span>&gt;::iterator i1 = v1.<span class="hljs-built_in">begin</span>() + <span class="hljs-number">1</span>;<br>	<span class="hljs-function">vector&lt;<span class="hljs-keyword">int</span>&gt; <span class="hljs-title">v3</span><span class="hljs-params">(i1, i1 + <span class="hljs-number">3</span>)</span></span>;<br>	cout &lt;&lt; <span class="hljs-string">&quot;v3:&quot;</span> &lt;&lt; v3.<span class="hljs-built_in">at</span>(<span class="hljs-number">2</span>) &lt;&lt; endl;<br>	v3[<span class="hljs-number">1</span>] = v3.<span class="hljs-built_in">front</span>();<br>	<span class="hljs-keyword">for</span> (SIZE_T i = <span class="hljs-number">0</span>; i &lt; v3.<span class="hljs-built_in">size</span>(); i++) &#123;<br>		cout &lt;&lt; <span class="hljs-string">&quot;V3[&quot;</span> &lt;&lt; i &lt;&lt; <span class="hljs-string">&quot;]&quot;</span> &lt;&lt; v3[i] &lt;&lt; endl;<br>	&#125;<br><br>	<span class="hljs-function">vector&lt;<span class="hljs-keyword">int</span>&gt; <span class="hljs-title">v4</span><span class="hljs-params">(v1)</span></span>; <span class="hljs-comment">// v4=(1 2 3 4 5),size=5,capacity=5</span><br>	<span class="hljs-function">vector&lt;<span class="hljs-keyword">int</span>&gt; <span class="hljs-title">v5</span><span class="hljs-params">(<span class="hljs-number">5</span>)</span></span>; <span class="hljs-comment">// v5=&#123;0 0 0 0 0&#125;</span><br>	v5[<span class="hljs-number">1</span>] = v5.<span class="hljs-built_in">at</span>(<span class="hljs-number">3</span>)=<span class="hljs-number">9</span>;  <span class="hljs-comment">// v5 = (0 9 0 9 0)</span><br>	v3.<span class="hljs-built_in">reserve</span>(<span class="hljs-number">6</span>); <span class="hljs-comment">// v3=(2 3),size= 2,capacity=6</span><br>	v4.<span class="hljs-built_in">resize</span>(<span class="hljs-number">7</span>); <span class="hljs-comment">// v4=(1234500),size=7,capacity=10</span><br>	v4.<span class="hljs-built_in">resize</span>(<span class="hljs-number">3</span>); <span class="hljs-comment">// v4=(123),size=3,capacity=10</span><br>	v4.<span class="hljs-built_in">clear</span>(); <span class="hljs-comment">// v4 is empty,size=0,capacity=10(!)</span><br>	v4.<span class="hljs-built_in">insert</span>(v4.<span class="hljs-built_in">end</span>(), v3[<span class="hljs-number">1</span>]);  <span class="hljs-comment">// v4 = (3)</span><br>	v4.<span class="hljs-built_in">insert</span>(v4.<span class="hljs-built_in">end</span>(), v3.<span class="hljs-built_in">at</span>(<span class="hljs-number">1</span>));  <span class="hljs-comment">// v - (33)</span><br>	v4.<span class="hljs-built_in">insert</span>(v4.<span class="hljs-built_in">end</span>(), <span class="hljs-number">2</span>, <span class="hljs-number">4</span>); <span class="hljs-comment">// 4=(3344)</span><br>	v4.<span class="hljs-built_in">insert</span>(v4.<span class="hljs-built_in">end</span>(), v1.<span class="hljs-built_in">begin</span>() + <span class="hljs-number">1</span>, v1.<span class="hljs-built_in">end</span>() - <span class="hljs-number">1</span>);<span class="hljs-comment">// v4=(3 3 4 4 2 3 4)</span><br>	v4.<span class="hljs-built_in">erase</span>(v4.<span class="hljs-built_in">end</span>() - <span class="hljs-number">2</span>); <span class="hljs-comment">//v4=(3 3 4 4 2 4)</span><br>	v4.<span class="hljs-built_in">erase</span>(v4.<span class="hljs-built_in">begin</span>(), v4.<span class="hljs-built_in">begin</span>() + <span class="hljs-number">4</span>); <span class="hljs-comment">// v4 = (2 4)</span><br>	v4.<span class="hljs-built_in">assign</span>(<span class="hljs-number">3</span>, <span class="hljs-number">8</span>); <span class="hljs-comment">// v4 = (8 8 8)</span><br>	v4.<span class="hljs-built_in">assign</span>(a, a + <span class="hljs-number">3</span>);  <span class="hljs-comment">// v4 = (1 2 3)</span><br><br>	<span class="hljs-built_in">replace</span>(v5.<span class="hljs-built_in">begin</span>(), v5.<span class="hljs-built_in">end</span>(), <span class="hljs-number">0</span>, <span class="hljs-number">7</span>);<br>	<span class="hljs-built_in">printVector</span>(v5);<br><br>	<span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span> *s = <span class="hljs-string">&quot;Green&quot;</span>;<br>	<span class="hljs-function">vector&lt;Person&gt; <span class="hljs-title">v6</span><span class="hljs-params">(<span class="hljs-number">1</span>,Person(s,<span class="hljs-number">25</span>))</span></span>;<br>	v6.<span class="hljs-built_in">push_back</span>(<span class="hljs-built_in">Person</span>(<span class="hljs-string">&quot;Ann&quot;</span>, <span class="hljs-number">30</span>));<br>	v6.<span class="hljs-built_in">push_back</span>(<span class="hljs-built_in">Person</span>(<span class="hljs-string">&quot;Bill&quot;</span>, <span class="hljs-number">20</span>));<br><br>	<span class="hljs-built_in">sort</span>(v6.<span class="hljs-built_in">begin</span>(), v6.<span class="hljs-built_in">end</span>(),greater&lt;Person&gt;());<br><br><br>	<span class="hljs-keyword">for</span> (<span class="hljs-keyword">size_t</span> i = <span class="hljs-number">0</span>; i &lt; v6.<span class="hljs-built_in">size</span>(); i++)<br>	&#123;<br>		info manInfo = v6[i].<span class="hljs-built_in">getInfo</span>(v6[i]);<br>		cout &lt;&lt; manInfo.name &lt;&lt; <span class="hljs-string">&quot;今年&quot;</span> &lt;&lt; manInfo.age &lt;&lt; <span class="hljs-string">&quot;了&quot;</span> &lt;&lt; endl;<br>	&#125;<br><br>	<span class="hljs-built_in">sort</span>(v6.<span class="hljs-built_in">begin</span>(), v6.<span class="hljs-built_in">end</span>(),lesserAge);<br><br><br>	<span class="hljs-keyword">for</span> (<span class="hljs-keyword">size_t</span> i = <span class="hljs-number">0</span>; i &lt; v6.<span class="hljs-built_in">size</span>(); i++)<br>	&#123;<br>		info manInfo = v6[i].<span class="hljs-built_in">getInfo</span>(v6[i]);<br>		cout &lt;&lt; manInfo.name &lt;&lt; <span class="hljs-string">&quot;今年&quot;</span> &lt;&lt; manInfo.age &lt;&lt; <span class="hljs-string">&quot;了&quot;</span> &lt;&lt; endl;<br>	&#125;<br><br>	<span class="hljs-keyword">return</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
 
-<p><img src="./images/image-20200908075126062.png" alt="image-20200908075126062"></p>
-<p><img src="./images/image-20200908075157346.png" alt="image-20200908075157346"></p>
-<p><img src="./images/image-20200908075434653.png" alt="image-20200908075434653"></p>
-<p><img src="./images/image-20200908075524946.png" alt="image-20200908075524946"></p>
-<p><img src="./images/image-20200908075611896.png" alt="image-20200908075611896"></p>
-<p><img src="./images/image-20200908075627415.png" alt="image-20200908075627415"></p>
-<p><img src="./images/image-20200908075652847.png" alt="image-20200908075652847"></p>
+<p><img src="../../../images/STL%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0/image-20200908075126062.png"></p>
+<p><img src="../../../images/STL%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0/image-20200908075157346.png"></p>
+<p><img src="../../../images/STL%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0/image-20200908075434653.png"></p>
+<p><img src="../../../images/STL%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0/image-20200908075524946.png"></p>
+<p><img src="../../../images/STL%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0/image-20200908075611896.png" alt="image-20200908075611896"></p>
+<p><img src="../../../images/STL%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0/image-20200908075627415.png" alt="image-20200908075627415"></p>
+<p><img src="../../../images/STL%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0/image-20200908075652847.png"></p>
 ]]></content>
       <categories>
         <category>C++笔记</category>
@@ -14724,25 +14848,6 @@ lambda表达式： </li>
       </tags>
   </entry>
   <entry>
-    <title>C++实战—飞机大战</title>
-    <url>/posts/4dd9514e.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="C-项目实战"><a href="#C-项目实战" class="headerlink" title="C++项目实战"></a>C++项目实战</h1><h2 id="飞机大战"><a href="#飞机大战" class="headerlink" title="飞机大战"></a>飞机大战</h2><span id="more"></span>
-
-<p><img src="/.work//Users\明明\AppData\Roaming\Typora\typora-user-images\image-20200918204540702.png" alt="image-20200918204540702"></p>
-<p><img src="/.work//Users\明明\AppData\Roaming\Typora\typora-user-images\image-20200918213344224.png" alt="image-20200918213344224"></p>
-<p><img src="/.work//Users\明明\AppData\Roaming\Typora\typora-user-images\image-20200918213518139.png" alt="image-20200918213518139"></p>
-<p><img src="/.work//Users\明明\AppData\Roaming\Typora\typora-user-images\image-20200918214017735.png" alt="image-20200918214017735"></p>
-<p><img src="/.work//Users\明明\AppData\Roaming\Typora\typora-user-images\image-20200918220327686.png" alt="image-20200918220327686"></p>
-<p><img src="/.work//Users\明明\AppData\Roaming\Typora\typora-user-images\image-20200918220801803.png" alt="image-20200918220801803"></p>
-<p><img src="/.work//Users\明明\AppData\Roaming\Typora\typora-user-images\image-20200918221614252.png" alt="image-20200918221614252"></p>
-<p><img src="/.work//Users\明明\AppData\Roaming\Typora\typora-user-images\image-20200918221947915.png" alt="image-20200918221947915"></p>
-<p><img src="/.work//Users\明明\AppData\Roaming\Typora\typora-user-images\image-20200918222203466.png" alt="image-20200918222203466"></p>
-]]></content>
-      <tags>
-        <tag>C++</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>设计实例（顿开）</title>
     <url>/posts/aeb1f9a9.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><figure class="highlight c++"><table><tr><td class="code"><pre><code class="hljs C++"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;iostream&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;map&gt;</span></span><br><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;<br><br><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Worker</span></span><br><span class="hljs-class">&#123;</span><br><span class="hljs-keyword">public</span>:<br>    <span class="hljs-built_in">Worker</span>(string name,<span class="hljs-keyword">int</span> salary,<span class="hljs-keyword">int</span> age,string tel):_name(name),_tel(tel),_age(age),_salary(salary)&#123;&#125;<br>    <br>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">show</span><span class="hljs-params">()</span></span><br><span class="hljs-function">    </span>&#123;<br>        cout &lt;&lt; _name &lt;&lt; <span class="hljs-string">&#x27;\t&#x27;</span> &lt;&lt; _age &lt;&lt; <span class="hljs-string">&#x27;\t&#x27;</span> &lt;&lt; _tel &lt;&lt; <span class="hljs-string">&#x27;\t&#x27;</span> &lt;&lt; _salary &lt;&lt;endl;<br>    &#125;<br><span class="hljs-keyword">private</span>:<br> <br>    string _name;<br>    <span class="hljs-keyword">int</span> _salary;<br>    <span class="hljs-keyword">int</span> _age;<br>    string _tel;<br>&#125;;<br><br><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span><br><span class="hljs-function"></span>&#123;<br>    Worker w1(&quot;p1&quot;,2000,20,&quot;17790017583&quot;),<br>    <span class="hljs-built_in">w2</span>(<span class="hljs-string">&quot;p2&quot;</span>,<span class="hljs-number">3000</span>,<span class="hljs-number">60</span>,<span class="hljs-string">&quot;17790017587&quot;</span>),<br>    <span class="hljs-built_in">w3</span>(<span class="hljs-string">&quot;p7&quot;</span>,<span class="hljs-number">4000</span>,<span class="hljs-number">70</span>,<span class="hljs-string">&quot;17790017589&quot;</span>),<br>    <span class="hljs-built_in">w4</span>(<span class="hljs-string">&quot;p4&quot;</span>,<span class="hljs-number">5000</span>,<span class="hljs-number">30</span>,<span class="hljs-string">&quot;17790017512&quot;</span>);<br>    <span class="hljs-built_in">w4</span>(<span class="hljs-string">&quot;p9&quot;</span>,<span class="hljs-number">5050</span>,<span class="hljs-number">120</span>,<span class="hljs-string">&quot;17790412512&quot;</span>);<br>    <br>    multimap&lt;string , Worker&gt; mm;<br>    mm.<span class="hljs-built_in">insert</span>(pair&lt;string , Worker&gt;(<span class="hljs-string">&quot;sale&quot;</span>,w1));<br>    mm.<span class="hljs-built_in">insert</span>(pair&lt;string , Worker&gt;(<span class="hljs-string">&quot;sale&quot;</span>,w2))<br>    mm.<span class="hljs-built_in">insert</span>(pair&lt;string , Worker&gt;(<span class="hljs-string">&quot;financial&quot;</span>,w3))<br>    mm.<span class="hljs-built_in">insert</span>(air&lt;string , Worker&gt;(<span class="hljs-string">&quot;technology&quot;</span>,w4))<br>    mm.<span class="hljs-built_in">insert</span>(air&lt;string , Worker&gt;(<span class="hljs-string">&quot;finanical&quot;</span>,w5))<br>&#125;<br></code></pre></td></tr></table></figure>
@@ -14933,7 +15038,7 @@ lambda表达式： </li>
     <url>/posts/79effa92.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>本篇讲述class与struct的区别与用法</p>
 <span id="more"></span>
-<h3 id="命名常识"><a href="#命名常识" class="headerlink" title="命名常识"></a>命名常识</h3><img src="http://qgqlbe4fd.hb-bkt.clouddn.com/image-20200808135010677.png" style="zoom:60%">
+<h3 id="命名常识"><a href="#命名常识" class="headerlink" title="命名常识"></a>命名常识</h3><img src="../../../../images/3-struct%E4%B8%8Eclass%E7%9A%84%E5%8C%BA%E5%88%AB/image-20200808135010677.png" style="zoom:60%">
 
 
 
@@ -14949,7 +15054,7 @@ lambda表达式： </li>
 <p>decltype类似于typedef，但是typedef加类型，decltype加变量</p>
 <figure class="highlight c++"><table><tr><td class="code"><pre><code class="hljs C++"><span class="hljs-keyword">int</span> n = <span class="hljs-number">0</span>;<br><span class="hljs-keyword">decltype</span>(n) n2;<span class="hljs-comment">//n2是int类型</span><br><br><span class="hljs-keyword">typedef</span> <span class="hljs-keyword">int</span> INT;<br>INT n3;<span class="hljs-comment">//n3也是int类型</span><br><br><span class="hljs-function"><span class="hljs-keyword">typedef</span> <span class="hljs-title">void</span><span class="hljs-params">(*pfun)</span><span class="hljs-params">()</span></span>;<br><span class="hljs-comment">//类外声明</span><br><span class="hljs-keyword">auto</span> add（<span class="hljs-keyword">int</span> a,<span class="hljs-keyword">int</span> b）<br>&#123;<br>    <span class="hljs-keyword">return</span> a+b;<br>&#125;<br><br><span class="hljs-built_in">itn</span> (*p)(<span class="hljs-keyword">int</span> ,<span class="hljs-keyword">int</span>) = add;<br><span class="hljs-keyword">using</span> PFUN = <span class="hljs-built_in"><span class="hljs-keyword">void</span></span> (*)();<br><br></code></pre></td></tr></table></figure>
 
-<p><img src="http://qgqlbe4fd.hb-bkt.clouddn.com/image-20200907213340088.png" alt="image-20200907213340088"></p>
+<p><img src="../../../../images/3-struct%E4%B8%8Eclass%E7%9A%84%E5%8C%BA%E5%88%AB/image-20200907213340088.png"></p>
 <p>typedef 重定义类型时不能用于vector</p>
 <p>此时就需要using</p>
 <figure class="highlight c++"><table><tr><td class="code"><pre><code class="hljs C++"><span class="hljs-keyword">typedef</span> vector&lt;<span class="hljs-keyword">int</span>&gt; int_vec;<span class="hljs-comment">//此时就会报错</span><br><br><span class="hljs-keyword">using</span> int_vec = vector&lt;<span class="hljs-keyword">int</span>&gt;;<br><br></code></pre></td></tr></table></figure>
@@ -15330,9 +15435,9 @@ lambda表达式： </li>
     <url>/posts/298f7eb8.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><span id="more"></span>
 
-<h1 id="C-IO流"><a href="#C-IO流" class="headerlink" title="C++IO流"></a>C++IO流</h1><p><img src="/.work//Users\明明\AppData\Roaming\Typora\typora-user-images\image-20200906180036033.png" alt="image-20200906180036033"></p>
+<h1 id="C-IO流"><a href="#C-IO流" class="headerlink" title="C++IO流"></a>C++IO流</h1><p><img src="../../../images/09-06-%E7%AC%AC%E4%B8%83%E8%8A%82-IO%E6%B5%81/image-20200906180036033.png"></p>
 <p>通过#include <iomanip>提供的控制符，进行输入输出格式控制</iomanip></p>
-<p><img src="/.work//Users\明明\AppData\Roaming\Typora\typora-user-images\image-20200906180804728.png" alt="image-20200906180804728"></p>
+<p><img src="../../../images/09-06-%E7%AC%AC%E4%B8%83%E8%8A%82-IO%E6%B5%81/image-20200906180804728.png"></p>
 <figure class="highlight c++"><table><tr><td class="code"><pre><code class="hljs C++"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;iostream&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;iomanip&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;string&gt;</span></span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;<br><br><span class="hljs-function"><span class="hljs-keyword">int</span>  <span class="hljs-title">main</span><span class="hljs-params">()</span></span><br><span class="hljs-function"></span>&#123;<br>	cout &lt;&lt; <span class="hljs-string">&quot;1&quot;</span> &lt;&lt; endl;<br>	cerr &lt;&lt; <span class="hljs-string">&quot;标准错误&quot;</span> &lt;&lt; endl;<br>	clog &lt;&lt; <span class="hljs-string">&quot;标准信息&quot;</span> &lt;&lt; endl;<br><br>	cout.<span class="hljs-built_in">put</span>(<span class="hljs-string">&#x27;a&#x27;</span>);<br>	cout.<span class="hljs-built_in">put</span>(<span class="hljs-string">&#x27;\n&#x27;</span>);<br>	<span class="hljs-comment">//不够不空格，多了就截取</span><br>	cout.<span class="hljs-built_in">write</span>(<span class="hljs-string">&quot;LOVEYOU\n&quot;</span>, <span class="hljs-number">10</span>); <span class="hljs-comment">// 10可现实元素个数</span><br><br><br>	<span class="hljs-keyword">bool</span> b = <span class="hljs-number">1.1</span>;<br>	cout &lt;&lt; boolalpha &lt;&lt; b &lt;&lt; endl;<br>	b = <span class="hljs-literal">false</span>;<br>	cout.<span class="hljs-built_in">width</span>(<span class="hljs-number">8</span>);<br><br>	<span class="hljs-comment">//serw(8)默认方式是右对齐</span><br>	cout.<span class="hljs-built_in">unsetf</span>(ios::boolalpha);<br>	cout &lt;&lt; <span class="hljs-built_in">setw</span>(<span class="hljs-number">8</span>) &lt;&lt; b &lt;&lt; <span class="hljs-number">12</span> &lt;&lt; <span class="hljs-string">&quot;Love&quot;</span> &lt;&lt; endl;<br><br>	<span class="hljs-built_in">system</span>(<span class="hljs-string">&quot;pause&quot;</span>);<br>	<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
 
 <h1 id="文件读取与输出"><a href="#文件读取与输出" class="headerlink" title="文件读取与输出"></a>文件读取与输出</h1><figure class="highlight c++"><table><tr><td class="code"><pre><code class="hljs C++"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;string&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;iostream&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;fstream&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;string&gt;</span></span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;<br><span class="hljs-class"><span class="hljs-keyword">struct</span> <span class="hljs-title">girl</span> &#123;</span>	<br>	<span class="hljs-keyword">char</span> name[<span class="hljs-number">20</span>];<br>	<span class="hljs-keyword">int</span> age;<br>	<span class="hljs-keyword">int</span> num;<br>	<span class="hljs-comment">/*girl(const char name[20],int age, int num) </span><br><span class="hljs-comment">	&#123;</span><br><span class="hljs-comment">		this-&gt;name = (char*)name;</span><br><span class="hljs-comment">		this-&gt;age = age;</span><br><span class="hljs-comment">		this-&gt;num = num;</span><br><span class="hljs-comment">	&#125;</span><br><span class="hljs-comment">	*/</span><br>&#125;;<br><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span><br><span class="hljs-function"></span>&#123;<br><br>	fstream fileOut;<br>	<span class="hljs-comment">//位或操作组合打开文件</span><br>	fileOut.<span class="hljs-built_in">open</span>(<span class="hljs-string">&quot;test.txt&quot;</span>,ios::out | ios::in | ios_base::binary | ios::app);<br>	<span class="hljs-keyword">if</span> (!fileOut) <span class="hljs-comment">//file.eof() 文件末尾标记</span><br>	&#123;<br>		cout &lt;&lt; <span class="hljs-string">&quot;文件打开失败~&quot;</span> &lt;&lt; endl;<br>	&#125;<br>	fileOut &lt;&lt; <span class="hljs-string">&quot;这是写入的内容：&quot;</span> &lt;&lt; <span class="hljs-string">&quot;\n&quot;</span> &lt;&lt; <span class="hljs-string">&quot;Hello new file!&quot;</span> &lt;&lt; <span class="hljs-string">&quot;\n&quot;</span> &lt;&lt; <span class="hljs-string">&quot;这是最后一行&quot;</span>;<br><br><br>	fileOut.<span class="hljs-built_in">close</span>();<br><br><br><br>	<span class="hljs-comment">//fstream ofstream ifstream</span><br>	<span class="hljs-comment">//子类对象去操作</span><br>	<span class="hljs-class"><span class="hljs-keyword">struct</span> <span class="hljs-title">girl</span> <span class="hljs-title">MM</span>[3] =</span> &#123; <span class="hljs-string">&quot;girlbaby&quot;</span> ,<span class="hljs-number">12</span> ,<span class="hljs-number">23</span>, <span class="hljs-string">&quot;girlanni&quot;</span> ,<span class="hljs-number">12</span> ,<span class="hljs-number">23</span> ,<span class="hljs-string">&quot;girlthird&quot;</span> ,<span class="hljs-number">12</span> ,<span class="hljs-number">23</span> &#125;;<br>	ofstream out;<br>	out.<span class="hljs-built_in">open</span>(<span class="hljs-string">&quot;test.txt&quot;</span>, ios::binary | ios::app);<br><br>	<span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i =<span class="hljs-number">0</span>; i &lt; <span class="hljs-number">3</span>; i++)<br>	&#123;<br>		<span class="hljs-comment">//必须做强制转换</span><br>		out.<span class="hljs-built_in">write</span>((<span class="hljs-keyword">char</span>*)&amp;MM[i],<span class="hljs-built_in"><span class="hljs-keyword">sizeof</span></span>(MM[i]));<br>	&#125;<br>	out.<span class="hljs-built_in">close</span>();<br><br><br><br>	<span class="hljs-comment">//从文件中读取</span><br>	<span class="hljs-comment">//fseek </span><br>	<span class="hljs-comment">//seekg操作输入流对象get</span><br>	<span class="hljs-comment">//seekp put</span><br>	<span class="hljs-comment">//操作函数的改变</span><br>	cout &lt;&lt; <span class="hljs-string">&quot;操作文件输出：&quot;</span> &lt;&lt; endl;<br><br>	ifstream file;<br>	file.<span class="hljs-built_in">open</span>(<span class="hljs-string">&quot;test.txt&quot;</span>, ios::in);<br><br>	file.<span class="hljs-built_in">seekg</span>(ios::beg);  <span class="hljs-comment">//ios::cur ios::end  ios::beg</span><br>	<span class="hljs-keyword">char</span> strFile[<span class="hljs-number">1024</span>];<br>	<span class="hljs-keyword">while</span> (!file.<span class="hljs-built_in">eof</span>())<br>	&#123;<br>		file.<span class="hljs-built_in">getline</span>(strFile, <span class="hljs-number">1024</span>);<br>		<span class="hljs-comment">//file.getline(strFile, 1024);</span><br>		cout &lt;&lt; strFile;<br>	&#125;<br><br>	file.<span class="hljs-built_in">close</span>();<br><br><br><br>	<span class="hljs-built_in">system</span>(<span class="hljs-string">&quot;pause&quot;</span>);<br>	<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
@@ -15631,8 +15736,7 @@ lambda表达式： </li>
     <url>/posts/298f7eb8.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><span id="more"></span>
 
-<h1 id="template"><a href="#template" class="headerlink" title="template"></a>template</h1><p><img src="/.work//Users\明明\AppData\Roaming\Typora\typora-user-images\image-20200904210953420.png" alt="image-20200904210953420"></p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><code class="hljs C++"><span class="hljs-comment">//重载&lt;&lt;(左移)运算符</span><br><span class="hljs-keyword">friend</span> ostream&amp; operate&lt;&lt;(ostream <span class="hljs-keyword">const</span>&amp; out,people worker)<br>&#123;<br>    out &lt;&lt; worker.name  &lt;&lt; worker.age;<br>    <span class="hljs-keyword">return</span> out;<br>&#125;<br></code></pre></td></tr></table></figure>
+<h1 id="template"><a href="#template" class="headerlink" title="template"></a>template</h1><figure class="highlight c++"><table><tr><td class="code"><pre><code class="hljs C++"><span class="hljs-comment">//重载&lt;&lt;(左移)运算符</span><br><span class="hljs-keyword">friend</span> ostream&amp; operate&lt;&lt;(ostream <span class="hljs-keyword">const</span>&amp; out,people worker)<br>&#123;<br>    out &lt;&lt; worker.name  &lt;&lt; worker.age;<br>    <span class="hljs-keyword">return</span> out;<br>&#125;<br></code></pre></td></tr></table></figure>
 
 
 
@@ -15731,7 +15835,7 @@ lambda表达式： </li>
 <li><p>静态成员存在与全局区，但是作用域有限制</p>
 <figure class="highlight c++"><table><tr><td class="code"><pre><code class="hljs C++"><span class="hljs-comment">//静态成员访问的两种方式</span><br><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">stu</span>&#123;</span><br>    <span class="hljs-keyword">public</span>:<br>    	<span class="hljs-keyword">static</span> <span class="hljs-keyword">int</span> age = <span class="hljs-number">0</span>;<br>&#125;<br><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span>&#123;<br>    stu s1;<br>    <span class="hljs-comment">//方法一</span><br>    stu::age;<br>    <span class="hljs-comment">//方法二</span><br>    s1.age;<br>&#125;<br></code></pre></td></tr></table></figure></li>
 </ol>
-<h2 id="二、友元类"><a href="#二、友元类" class="headerlink" title="二、友元类"></a>二、友元类</h2><p><img src="/.work//Users\明明\AppData\Roaming\Typora\typora-user-images\image-20200824222044787.png" alt="image-20200824222044787"></p>
+<h2 id="二、友元类"><a href="#二、友元类" class="headerlink" title="二、友元类"></a>二、友元类</h2><p><img src="../../../images/08-24-%E7%AC%AC%E5%9B%9B%E8%AF%BE-%E5%8A%A8%E6%80%81%E5%86%85%E5%AD%98%E5%88%86%E9%85%8D/image-20200824222044787.png"></p>
 <figure class="highlight c++"><table><tr><td class="code"><pre><code class="hljs C++"><span class="hljs-comment">//静态成员访问的两种方式</span><br><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">stu</span>&#123;</span><br>  <span class="hljs-keyword">friend</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">tea</span>；//类<span class="hljs-title">tea</span>声明为类<span class="hljs-title">stu</span>的友元类，在<span class="hljs-title">tea</span>中就可以访问<span class="hljs-title">a</span>的私有成员</span><br><span class="hljs-class">    <span class="hljs-title">public</span>:</span><br>    	<span class="hljs-keyword">static</span> <span class="hljs-keyword">int</span> age = <span class="hljs-number">0</span>;<br>&#125;；<br><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">tea</span>&#123;</span><br>&#125;；<br><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span>&#123;<br>    stu s1;<br>    <span class="hljs-comment">//方法一</span><br>    stu::age;<br>    <span class="hljs-comment">//方法二</span><br>    s1.age;<br>&#125;<br></code></pre></td></tr></table></figure>
 
 ]]></content>
@@ -15758,12 +15862,11 @@ lambda表达式： </li>
 </blockquote>
 <h2 id="3、拷贝构造函数"><a href="#3、拷贝构造函数" class="headerlink" title="3、拷贝构造函数"></a>3、拷贝构造函数</h2><p>用一个对象初始化另一个对象</p>
 <pre><code>1. 编译器会提供默认的拷贝构造函数 
- 2. 参数必须使用==`&amp;`==否则会无限递归
- 3. 
+2. 参数必须使用==`&amp;`==否则会无限递归
+3. 
 </code></pre>
 <figure class="highlight c++"><table><tr><td class="code"><pre><code class="hljs C++"><span class="hljs-comment">//声明</span><br><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Stu</span>&#123;</span><br><br><span class="hljs-keyword">public</span>:<br>	<span class="hljs-built_in">Stu</span>(Stu&amp; a)&#123;<br>   		m_age = a.m_age;<br>    	name = a.name;<br>	&#125;<br>&#125;<br></code></pre></td></tr></table></figure>
 
-<p><img src="/.work//Users\明明\AppData\Roaming\Typora\typora-user-images\image-20200821221314971.png" alt="image-20200821221314971"></p>
 ]]></content>
       <categories>
         <category>C++笔记</category>
@@ -15815,8 +15918,6 @@ lambda表达式： </li>
 <p>细节隐藏：编译过程中若发现对const使用了&amp;操作符，则给对应的常量分配对应的常量分配存储空间（为了兼容c）</p>
 <p>​                    C++中的const常量，存在符号表中， 没有存储空间，当对常量取地址符时，会另外开辟内存空间</p>
 </blockquote>
-<img src="/.work//Users\明明\AppData\Roaming\Typora\typora-user-images\image-20200817220904834.png" alt="image-20200817220904834" style="zoom:50%;">
-
 ]]></content>
       <categories>
         <category>C++笔记</category>
@@ -15832,7 +15933,7 @@ lambda表达式： </li>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>哈希、红黑树、B+树、二叉树、平衡算法</p>
 <span id="more"></span>
 
-<h1 id="搜索算法"><a href="#搜索算法" class="headerlink" title="搜索算法"></a>搜索算法</h1><p><img src="../../../../images/%E7%AE%97%E6%B3%95%E5%A4%8D%E6%9D%82%E5%BA%A6/image-20200813082005539.png"></p>
+<h1 id="搜索算法"><a href="#搜索算法" class="headerlink" title="搜索算法"></a>搜索算法</h1><p><img src="../../../../images/%E7%AE%97%E6%B3%95%E5%A4%8D%E6%9D%82%E5%BA%A6/image-20200813082005539-16381534443523.png"></p>
 <h2 id="二分查找"><a href="#二分查找" class="headerlink" title="二分查找"></a>二分查找</h2><p>二分查找一定是有序的：target ? (left+right)/2</p>
 <p>如果说二分查找转换成数据结构展示—-&gt;==二叉树—&gt;二叉查找树、二叉搜索树==</p>
 <h2 id="二叉搜索树"><a href="#二叉搜索树" class="headerlink" title="二叉搜索树"></a>二叉搜索树</h2><h5 id="1-时间复杂度："><a href="#1-时间复杂度：" class="headerlink" title="1. 时间复杂度："></a>1. 时间复杂度：</h5><p>二分：log(n)</p>
