@@ -6,7 +6,7 @@
   <link href="https://www.mingsrc.work/atom.xml" rel="self"/>
   
   <link href="https://www.mingsrc.work/"/>
-  <updated>2021-11-29T02:54:23.024Z</updated>
+  <updated>2021-12-12T09:59:05.994Z</updated>
   <id>https://www.mingsrc.work/</id>
   
   <author>
@@ -15,6 +15,52 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>explicit关键字</title>
+    <link href="https://www.mingsrc.work/posts/58412853"/>
+    <id>https://www.mingsrc.work/posts/58412853</id>
+    <published>2021-12-12T09:08:36.576Z</published>
+    <updated>2021-12-12T09:59:05.994Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h1><p>如下代码收拾</p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Weight</span> &#123;</span><br><span class="hljs-built_in">Weight</span>(<span class="hljs-keyword">int</span> wh, <span class="hljs-keyword">double</span> lbs);<br>    <span class="hljs-built_in">Weight</span>(<span class="hljs-keyword">double</span> lbs);<br><span class="hljs-keyword">private</span>:<br>    <span class="hljs-keyword">int</span> m_wh;<br>    <span class="hljs-keyword">double</span> m_lbs;<br>&#125;;<br><br>Weight::<span class="hljs-built_in">Weight</span>(<span class="hljs-keyword">int</span> wh, <span class="hljs-keyword">double</span> lbs)<br>&#123;<br>    m_wh = wh;<br>    m_lbs = lbs;<br>&#125;<br><br>Weight::<span class="hljs-built_in">Weight</span>(<span class="hljs-keyword">double</span> lbs)<br>&#123;<br>    m_wh = lbs / <span class="hljs-number">2</span>;<br>    m_lbs = lbs;<br>&#125;<br></code></pre></td></tr></table></figure><p><code>Weight</code>类并非真的需要声明构造函数，因为自动生成的默认构造函数就很好。但是<code>Weight</code>类提供了两个构造函数。一个是<code>int,double</code>类型的，一个是<code>double</code>类型的，每个构造函数都给私有成员全部赋了值。因为创建<code>Weight</code>对象时，将会自动设置这两种重量表示。</p><p>因为<code>Weight</code>对象表示一个重量，因为可以提供一种整数值或者浮点值转换为<code>Weight</code>对象的方法。即：</p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs cpp">Weight wh;<br>wh = <span class="hljs-number">19.6</span>;<br></code></pre></td></tr></table></figure><p>程序将使用构造函数<code>Weight(double)</code>来创建一个临时的<code>Weight</code>对象。随后采用逐成员赋值方式将该临时对象的内容复制到<code>wh</code>中。这一过程称为隐式转换，因为它是自动进行的，而不需要显式强制类型转换。</p><p>但情况是，只有接受一个参数的构造函数才能作为转换函数。如<code>Weight(int,double)</code>就不可以。</p><p>然而，如果第二个参数提供了==默认值==，它便可以用于转换<code>int</code>。</p><p><code>Weight(int, double lbs = 0);</code></p><p>在这个时候，便会导致意外的类型转换。因此，C++新增了关键字<code>explicit</code>，用于关闭这种特性。也就是在声明构造函数时加上<code>explicit</code>关键字。</p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Weight</span> &#123;</span><br><span class="hljs-function"><span class="hljs-keyword">explicit</span> <span class="hljs-title">Weight</span><span class="hljs-params">(<span class="hljs-keyword">int</span> wh, <span class="hljs-keyword">double</span> lbs)</span></span>;<br>    <span class="hljs-function"><span class="hljs-keyword">explicit</span> <span class="hljs-title">Weight</span><span class="hljs-params">(<span class="hljs-keyword">double</span> lbs)</span></span>;<br><span class="hljs-keyword">private</span>:<br>    <span class="hljs-keyword">int</span> m_wh;<br>    <span class="hljs-keyword">double</span> m_lbs;<br>&#125;;<br></code></pre></td></tr></table></figure><p>添加<code>explicit</code>关键字之后，便可以关闭上述中的隐式转换，但仍然允许显式转换，即显式强制类型转换。</p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs cpp">Weight weight; <span class="hljs-comment">// create a Stonewt object</span><br>weight = <span class="hljs-number">19.6</span>;<span class="hljs-comment">// not valid if Stonevt(double) is declared as expliclt</span><br>weight = <span class="hljs-built_in">Weight</span>(<span class="hljs-number">19.61</span>);<span class="hljs-comment">// ok,an explicit corversion</span><br>weight = (Weight)<span class="hljs-number">19.6</span>;<span class="hljs-comment">//ok,old form for explicit typecat</span><br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    <summary type="html">explicit关键字说明</summary>
+    
+    
+    
+    <category term="学习笔记" scheme="https://www.mingsrc.work/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+    <category term="C++" scheme="https://www.mingsrc.work/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/C/"/>
+    
+    
+    <category term="C++" scheme="https://www.mingsrc.work/tags/C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>QPROPETRY属性</title>
+    <link href="https://www.mingsrc.work/posts/8aa93b6e"/>
+    <id>https://www.mingsrc.work/posts/8aa93b6e</id>
+    <published>2021-12-12T08:10:57.058Z</published>
+    <updated>2021-12-12T08:14:42.796Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h1><p>Q_PROPERTY 是 Qt 中的一个宏，是用类中声明属性。如果需要使用该宏，必须要继承 QObject 类或者其子类。QPushButton 则是 QObject 的间接子类，所以继承 QPushButton 类后同样可以使用 Q_PROPERTY 宏。</p><p>Q_PROPERTY 属性自带了一些属性，同样程序可以自定义。本实验中只讲解 Q_PROPERTY 自带的属性。</p><p>在自定义导航按钮的程序中同样使用了 Q_PROPERTY，且程序中只使用了 Q_PROPERTY 的 READ 属性和 WRITE 属性。</p><h1 id="用法"><a href="#用法" class="headerlink" title="用法"></a>用法</h1><p>Q_PROPERTY 自带属性：</p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs Cpp"><span class="hljs-built_in">Q_PROPERTY</span>(type name<br>           READ getFunction<br>           [WRITE setFunction]<br>           [RESET resetFunction]<br>           [NOTIFY notifySignal]<br>           [DESIGNABLE <span class="hljs-keyword">bool</span>]<br>           [SCRIPTABLE <span class="hljs-keyword">bool</span>]<br>           [STORED <span class="hljs-keyword">bool</span>]<br>           [USER <span class="hljs-keyword">bool</span>]<br>           [CONSTANT]<br>           [FINAL])<br></code></pre></td></tr></table></figure><ul><li>在上面的代码中，方括号 [] 中的内容属性可选。</li><li>必选 <code>READ</code> 属性：用来读取属性值，因此使用 const 限制，返回值类型必须为属性类型或者属性类型的引用或者指针。</li><li>可选 <code>WRITE</code> 属性：用来设置属性值，返回值必须为 void 类型，需要一个参数。</li><li>可选 <code>RESET</code> 属性：能够将值设置为默认状态，返回值为 void 类型且不带参数。</li><li>可选 <code>NOTIFY</code> 属性：提供一个信号，当值发送改变是该信号会自动被触发。</li><li>可选 <code>DESIGNABLE</code> 属性：是否在界面设计器的属性编辑器中出现。大多数属性是可见的，除了可以为变量传入 true 或 false 还可以执行一个 bool 行的成员函数。</li><li>可选 <code>SCRIPTABLE</code> 属性：是够可以被脚本引擎操作（默认为 true）。可以赋予 true 或者 false 或 bool 类型的函数。</li><li>可选 <code>STORED</code> 属性：是否被认为是独立存在还是依赖于其他的值而存在，也可以表明是否在保存对象状态时保存此属性的值。大多数属性都是需要保存的，但也有例外，例如 <code>QWidget::minimumWidth()</code> 就是不被保存的，因为它的值是从另一个属性 <code>QWidget::minimumSize()</code> 得来的。</li><li>可选 <code>USER</code> 属性：是否被设计为面向用户的或用户可修改的类属性。通常，每个类只有一个 USER 属性。例如 <code>QAbstractButton::checked</code> 是按钮类的用户可修改属性。注意 QItemDelegate 获取和设置 widget 的 USER 属性。</li><li>可选 <code>CONSTANT</code> 属性：表示属性的值是不变的。</li><li>可选 <code>FINAL</code> 属性：表示属性不能被派生类所重写。</li></ul>]]></content>
+    
+    
+    <summary type="html">Q_PROPERT属性的说明</summary>
+    
+    
+    
+    <category term="学习笔记" scheme="https://www.mingsrc.work/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+    <category term="Qt" scheme="https://www.mingsrc.work/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Qt/"/>
+    
+    
+    <category term="Qt" scheme="https://www.mingsrc.work/tags/Qt/"/>
+    
+  </entry>
   
   <entry>
     <title>Windows Cmd命令整理</title>
@@ -429,40 +475,6 @@
       
     <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla</summary>
       
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>❤️</title>
-    <link href="https://www.mingsrc.work/posts/f2745b45"/>
-    <id>https://www.mingsrc.work/posts/f2745b45</id>
-    <published>2021-04-01T05:13:15.513Z</published>
-    <updated>2021-11-21T13:29:21.579Z</updated>
-    
-    <content type="html"><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="抱歉, 这个密码看着不太对, 请再试试." data-whm="抱歉, 这个文章不能被校验, 不过您还是能看看解密后的内容.">  <script id="hbeData" type="hbeData" data-hmacdigest="335cd170dc887faa37f09c11f4dbef24ff811c5ab9897030f14be92b3d32c30a">2646008611039267779636211e2b6d356a06c3e8940674e2f04af63ed97317e69bcc9fcea5ace838cea5e3ed7b9d75f18982507b067c70f06bf36aec0ebe8d868b6f07221f0a5cdf1e0250738934cbca4f85d2efaccd86f91d8076274429e5b25a287fc5c4148c440ead78d8f8791577d2a23ba6a792a970bda06c5a1d992264782d0564afeacca0fd5059f1c5c46cac901632c6ad09155361e7c0373e68d787ad2bb6e96a26e0728392382ce0a482bce00b35453d628ebc1c112ef66741bd08f8a4dcb90c2f456f8b52995d8d43f5eddbd427c02e01125ae3359c6e6a1d937b60637a40b349a475ad64a0bbd87dad3d352e1ae6ca50dae1f5370fc08c32389f449793e49a5fc6421c389d09d844288101c59e6760f69fe59b3ae292c3846226e48a46d5f36812fb30661a93840f3dc0b424c5cf1befae71d59d4437563ee6e000203df904cab1945f5982db22bdfc4b046a2551b789c1ecf8b2a1a6c77ac930e7e0e49efbec3a72b375e888d9ab60d87adcbdc0c55a429e2d1711fb7744075d35e093be5ca9c0f94c488ddfffe788d9ba3866aca69b3ad5ce5575b1b4d6f9ab00e492cd003039c8cfc1e4b60128cb2979fd1f7145f46ea636167e3561f891d9ef404d87dde3a6c0c430ab7c9c23a2e2c9077f29c2a51c5681252e5dca5053ecfabe7bb6d7af1a370950d401e10bab610917f004eab0f93f5b3acfb7748bd0e1c14277c74240d37f21f7cd5cd20a1260df92a4687b8006a4592984d4ef1c339bd76d5196bf4e9b1d0cb19ed62207720af0678ca62b1b26d7bd7a0d18e0a87c681bc8640eb4037921bd10e5aefcc14f90201ee115c7ef5748213f351b630977dd33f9cb8890c7ecd509abdb6e3b1ba9ca0c00e0658fb730c565676680357e057b69e4711fcb2b3e629e50c40c4b563847221464218d7dd1dc39b0387b156f5d14ed159df9411f199cfd8085d5270aac8bea9bcefb88102840d2afba920f5040f81d578598dd671f26dd531ef2d8d2ff57191a74fd1ca7ab2d92f426ee4e5b29d481eeb3797748cb6929ad38eed665fd4bbdced9add08d9a0e381cc6a7357672b44fdb1e91031a347eb7970771af5434dd1eb6d168421063a32a1abd4bbbd68372edf11c3b4472f9d93157e63b1ccb2dfd156bb9b7f70ffeca8b16b1ba830782a160e171237afa5d0838e98487d41ac2c7497c9045ba070438a17f8b198b39b49961ffc372a5d818c0d0a23197d5470d2898067396c8498e2de42d3a7e8390b68985c658df214be61a68d3ae83aa76515ce4b2469d941a6cb3d1e2d7224af6b34052a47c3154ec66701700cbc7c228ba2efe22de1d023c573218b7d87c221dfcfe3417b946b729373eb5c9c62f1b22a9a2f8153e7e68c89c506f5e0a4e73f9836e94baf719bd5695ad11db5f4598dfbe4b66ca16d2fd202fc6cae0dba1d471ed414f09199405771eb9ad3c021847c31673442f754aadd63cd51512f07d05d9be43b4dfb56b23273ecfae2d314fad999b399d616cfc14286245fc37b4dde823bd668523c7fcf1e75c59f7f2ba9752a182730e07526ae0cd1251c120d6a485a27f3710cf83fc950240d115f59dd96fd4f4ff83392819091f2844d8391f62286355a40ab82972d9e642995a9834be2649bda5e58b3ce50b32e2a63bf31fc4c98d92f9dd60415a9380d224234ffce1bd871bf956dc82c44d935b5098851f67147b2dc4a0b6c5bdf3595bc6b2344fd341f732e803fc96c385dba5b2053e0a3f6206cba725d7e164c20d515f86f0ecbb60009d0570505e274fda9eecaf5b456b8e295eba122b1a14d1dffc3145c483b18e148aedc22e4291e656b04baaf652f33b9729c50582d1f5a2be9c9c9f75b2023d8a10f325993490b15de03425a5948e5372827cb2999ca8e7aef72969c91dd0f6d58c4cada85e86cdb6df0005b5388fdb455fbd0eb11e57ef25d7e2366f0f1c783f5c114e8e2fc95bb8b46e339587227bd1bec1dca47553d9d5fefd56249fb3594d45e906d550d129ca99a94e9a470af0c055dc5ef5a305c0d8005b6c812ff0867488c1b9ea31411d21333c66790dd548d1fd0c17a1acfab09a0ea7310e18c6b1c568cedbfbebf8e335895742c26a5b5b008a1781012a2cb27b15b465a3f35d434d03e1ac12f7f1bc1bec430e501db6cc201abce61bea74cd4e89abbe6c735fdf56473717531ea5810d1a3a53da2ec9420ef123b7327d0f36e20575a9b21c1cf0bb6593ba6adf43d186fcb332173aea086cb8c53fa44e216e34376c838e2b6c7ecba1b68d29178716f9e6ac2f58155fcdc3e286c315024704b18b903919256ad247c0b30bc62abefe43e6f3146754be519adfd5a9f77e6b7bcaa1d33a509650e287ad48a867aa4526560270e94723cd0dd0b3067a44db5f8138d67221fd4deabef43d070c1bba655992f47ac64ce400835da31d9f438f0cd30b78756825f485db6b67e74a1e0a95c3cdd1bd504bd9227a9734a08e9d46db1844e93c8501467addd8ef90dc306ed1d7ecace4c84332975f3e893e38a8d4089447b78e7da235bc8a7aca2aa2b57928d8f110adeeb39bb10ad714a88034cbe2d26fb93dbac1715aac49bc6a0ea79464cedd406d0947d40e0f9903bed437588e88392706bc6de0fbff3e7a6cde936695ceec532ae906ddbc3f931e786b438a337fe3c724be40475c71d045adfa5c99a0fe93ac1968f1819525dc96b928723f0f42ab9977e29c7e45bcb8cb9bfa92ad34a08cda4608b30018afd496cc1c9a8a709cfe4c872de60f2fc21d1ef7e4d0f6a545c6400ada15bb024d2fd49fe0fc61ae56726355c76ac714a4b4bed252a2f83fd5238befcaf62201650ce3d9d513a342a4569a3232fa8803a1cd9506c4ff674cc5fbd8e9907212e0ffe27ec29ec03e254db45089a83fa43d87f5f2af6bba5cbc2ab8a2d21e68e00f277d1f28bdc148cd5e83b444b83841a3aaecdfae813986ad3ed78b7a826388f3de0198cde5024212f8eb31e021535264bb7b26c6e9f25a4625259e3602f7e2d0e243cde8e660f3b8201604e4a3226c009fc6b9554134795288f9b0def43c22b01f5411bb42ff192bfa772205941feb95df499f2deae7351f8d49e29bd8232b9725cfe86c62c0581c278b2425582aa3ac9457ce9f9f2d1ec61403defe1895165bf5770db8494003227520f2b44a65d60fae43867e83e82bf46ae6f527e0d59ecfc86534e5e632840905cc37c0aec2b36f99cf4b63392372340eed3f303bbc47c5f17b301a105d412ee3ed6d90b46ef120c74087fa265eba0a81a1c84905df4a48d1e1602779788910cbb1ea59821b2261be4ba75a</script>  <div class="hbe hbe-content">    <div class="hbe hbe-input hbe-input-default">      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">        <span class="hbe hbe-input-label-content hbe-input-label-content-default">您好, 这里需要密码.</span>      </label>    </div>  </div></div><script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
-    
-    
-    <summary type="html">有感而发，也关你我</summary>
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Hexo 搭建博客</title>
-    <link href="https://www.mingsrc.work/posts/b6159bfb"/>
-    <id>https://www.mingsrc.work/posts/b6159bfb</id>
-    <published>2021-03-31T08:44:03.517Z</published>
-    <updated>2021-11-21T13:29:21.594Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="使用hexo搭建博客"><a href="#使用hexo搭建博客" class="headerlink" title="使用hexo搭建博客"></a>使用hexo搭建博客</h1><p>首先安装</p><ul><li><a href="https://npm.taobao.org/mirrors/node">Node.js Mirror</a><ul><li><a href="https://www.cnblogs.com/jianguo221/p/11487532.html">Node.js安装教程</a></li></ul></li><li><a href="https://git-scm.com/download/win">Git - Downloading Package</a></li></ul><hr>]]></content>
-    
-    
-    <summary type="html">针对2021/3/13日及之前时间的版本</summary>
     
     
     
