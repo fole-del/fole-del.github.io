@@ -1560,12 +1560,14 @@ Name: city, Length: 98, dtype: object
       </tags>
   </entry>
   <entry>
-    <title>一些学习过程中的想法</title>
+    <title>函数指针与指针函数</title>
     <url>/posts/a4d65dab.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="函数指针和指针函数"><a href="#函数指针和指针函数" class="headerlink" title="函数指针和指针函数"></a>函数指针和指针函数</h1><p>参考了@<a href="https://blog.csdn.net/luoyayun361/article/details/80428882">函数指针和指针函数用法和区别_luoyayun361的专栏-CSDN博客_指针函数</a></p>
 <blockquote>
 <ul>
-<li><p>指针函数：简单的来说，就是一个返回指针的函数，其本质是一个函数，而该函数的返回值是一个指针。</p>
+<li>指针函数：简单的来说，就是一个返回指针的函数，其本质是一个函数，而该函数的返回值是一个指针。</li>
+</ul>
+</blockquote>
 <ul>
 <li>~~~cpp<br>int <em>fun(int x,int y);<br>int * fun(int x,int y)；<br>int</em> fun(int x,int y);// 使用<br>typedef struct _Data{<pre><code>int a;
 int b;
@@ -1575,17 +1577,16 @@ data-&gt;a = a;
 data-&gt;b = b;
 return data;
 </code></pre>
-}int main(int argc, char *argv[])<br>{<pre><code>QApplication a(argc, argv);
-//调用指针函数
-Data * myData = f(4,5);
-qDebug() &lt;&lt; &quot;f(4,5) = &quot; &lt;&lt; myData-&gt;a &lt;&lt; myData-&gt;b;
-
-return a.exec();
+}int main(int argc, char *argv[])<br>{<pre><code> QApplication a(argc, argv);
+ //调用指针函数
+ Data * myData = f(4,5);
+ qDebug() &lt;&lt; &quot;f(4,5) = &quot; &lt;&lt; myData-&gt;a &lt;&lt; myData-&gt;b;
+       
+ return a.exec();
 </code></pre>
-}<figure class="highlight plain"><table><tr><td class="code"><pre><code class="hljs plain"><br>- 函数指针：其本质是一个指针变量，该指针指向这个函数。总结来说，函数指针就是指向函数的指针。<br><br>  - ~~~cpp<br>    int (*fun)(int x,int y);<br>            <br>    &#x2F;&#x2F; 使用<br>    int add(int x,int y)&#123;<br>        return x+y;<br>    &#125;<br>    int sub(int x,int y)&#123;<br>        return x-y;<br>    &#125;<br>    &#x2F;&#x2F;函数指针<br>    int (*fun)(int x,int y);<br>            <br>    int main(int argc, char *argv[])<br>    &#123;<br>        QApplication a(argc, argv);<br>        &#x2F;&#x2F;第一种写法<br>        fun &#x3D; add;<br>        qDebug() &lt;&lt; &quot;(*fun)(1,2) &#x3D; &quot; &lt;&lt; (*fun)(1,2) ;<br>    	&#x2F;&#x2F;第二种写法<br>        fun &#x3D; &amp;sub;<br>        qDebug() &lt;&lt; &quot;(*fun)(5,3) &#x3D; &quot; &lt;&lt; (*fun)(5,3)  &lt;&lt; fun(5,3)；<br>            <br>        return a.exec();<br>    &#125;<br></code></pre></td></tr></table></figure></li>
+ }<figure class="highlight plain"><table><tr><td class="code"><pre><code class="hljs plain"><br>&gt; - 函数指针：其本质是一个指针变量，该指针指向这个函数。总结来说，函数指针就是指向函数的指针。<br><br>~~~cpp<br>int (*fun)(int x,int y);                  <br>    &#x2F;&#x2F; 使用<br>int add(int x,int y)&#123;<br>    return x+y;<br>&#125;<br>int sub(int x,int y)&#123;<br>    return x-y;<br>&#125;<br>&#x2F;&#x2F;函数指针<br>int (*fun)(int x,int y);<br>                     <br>int main(int argc, char *argv[])<br>&#123;<br>    QApplication a(argc, argv);<br>    &#x2F;&#x2F;第一种写法<br>    fun &#x3D; add;<br>    qDebug() &lt;&lt; &quot;(*fun)(1,2) &#x3D; &quot; &lt;&lt; (*fun)(1,2) ;<br>   	&#x2F;&#x2F;第二种写法<br>    fun &#x3D; &amp;sub;<br>    qDebug() &lt;&lt; &quot;(*fun)(5,3) &#x3D; &quot; &lt;&lt; (*fun)(5,3)  &lt;&lt; fun(5,3)；<br>                     <br>    return a.exec();<br>&#125;<br></code></pre></td></tr></table></figure></li>
 </ul>
-</li>
-</ul>
+<blockquote>
 <p>如果你对这两个概念的区分不是很清晰也可以这么记：</p>
 <p>指针函数与整型函数一样，都是返回一个东西，不同的是指针函数返回的是一个指针。</p>
 </blockquote>
@@ -1600,20 +1601,50 @@ return a.exec();
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="函数指针与指针函数"><a href="#函数指针与指针函数" class="headerlink" title="函数指针与指针函数"></a>函数指针与指针函数</h1>]]></content>
   </entry>
   <entry>
-    <title>❤️</title>
+    <title>我|❤️</title>
     <url>/posts/f2745b45.html</url>
-    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="抱歉, 这个密码看着不太对, 请再试试." data-whm="抱歉, 这个文章不能被校验, 不过您还是能看看解密后的内容.">
-  <script id="hbeData" type="hbeData" data-hmacdigest="335cd170dc887faa37f09c11f4dbef24ff811c5ab9897030f14be92b3d32c30a">2646008611039267779636211e2b6d356a06c3e8940674e2f04af63ed97317e69bcc9fcea5ace838cea5e3ed7b9d75f18982507b067c70f06bf36aec0ebe8d868b6f07221f0a5cdf1e0250738934cbca4f85d2efaccd86f91d8076274429e5b25a287fc5c4148c440ead78d8f8791577d2a23ba6a792a970bda06c5a1d992264782d0564afeacca0fd5059f1c5c46cac901632c6ad09155361e7c0373e68d787ad2bb6e96a26e0728392382ce0a482bce00b35453d628ebc1c112ef66741bd08f8a4dcb90c2f456f8b52995d8d43f5eddbd427c02e01125ae3359c6e6a1d937b60637a40b349a475ad64a0bbd87dad3d352e1ae6ca50dae1f5370fc08c32389f449793e49a5fc6421c389d09d844288101c59e6760f69fe59b3ae292c3846226e48a46d5f36812fb30661a93840f3dc0b424c5cf1befae71d59d4437563ee6e000203df904cab1945f5982db22bdfc4b046a2551b789c1ecf8b2a1a6c77ac930e7e0e49efbec3a72b375e888d9ab60d87adcbdc0c55a429e2d1711fb7744075d35e093be5ca9c0f94c488ddfffe788d9ba3866aca69b3ad5ce5575b1b4d6f9ab00e492cd003039c8cfc1e4b60128cb2979fd1f7145f46ea636167e3561f891d9ef404d87dde3a6c0c430ab7c9c23a2e2c9077f29c2a51c5681252e5dca5053ecfabe7bb6d7af1a370950d401e10bab610917f004eab0f93f5b3acfb7748bd0e1c14277c74240d37f21f7cd5cd20a1260df92a4687b8006a4592984d4ef1c339bd76d5196bf4e9b1d0cb19ed62207720af0678ca62b1b26d7bd7a0d18e0a87c681bc8640eb4037921bd10e5aefcc14f90201ee115c7ef5748213f351b630977dd33f9cb8890c7ecd509abdb6e3b1ba9ca0c00e0658fb730c565676680357e057b69e4711fcb2b3e629e50c40c4b563847221464218d7dd1dc39b0387b156f5d14ed159df9411f199cfd8085d5270aac8bea9bcefb88102840d2afba920f5040f81d578598dd671f26dd531ef2d8d2ff57191a74fd1ca7ab2d92f426ee4e5b29d481eeb3797748cb6929ad38eed665fd4bbdced9add08d9a0e381cc6a7357672b44fdb1e91031a347eb7970771af5434dd1eb6d168421063a32a1abd4bbbd68372edf11c3b4472f9d93157e63b1ccb2dfd156bb9b7f70ffeca8b16b1ba830782a160e171237afa5d0838e98487d41ac2c7497c9045ba070438a17f8b198b39b49961ffc372a5d818c0d0a23197d5470d2898067396c8498e2de42d3a7e8390b68985c658df214be61a68d3ae83aa76515ce4b2469d941a6cb3d1e2d7224af6b34052a47c3154ec66701700cbc7c228ba2efe22de1d023c573218b7d87c221dfcfe3417b946b729373eb5c9c62f1b22a9a2f8153e7e68c89c506f5e0a4e73f9836e94baf719bd5695ad11db5f4598dfbe4b66ca16d2fd202fc6cae0dba1d471ed414f09199405771eb9ad3c021847c31673442f754aadd63cd51512f07d05d9be43b4dfb56b23273ecfae2d314fad999b399d616cfc14286245fc37b4dde823bd668523c7fcf1e75c59f7f2ba9752a182730e07526ae0cd1251c120d6a485a27f3710cf83fc950240d115f59dd96fd4f4ff83392819091f2844d8391f62286355a40ab82972d9e642995a9834be2649bda5e58b3ce50b32e2a63bf31fc4c98d92f9dd60415a9380d224234ffce1bd871bf956dc82c44d935b5098851f67147b2dc4a0b6c5bdf3595bc6b2344fd341f732e803fc96c385dba5b2053e0a3f6206cba725d7e164c20d515f86f0ecbb60009d0570505e274fda9eecaf5b456b8e295eba122b1a14d1dffc3145c483b18e148aedc22e4291e656b04baaf652f33b9729c50582d1f5a2be9c9c9f75b2023d8a10f325993490b15de03425a5948e5372827cb2999ca8e7aef72969c91dd0f6d58c4cada85e86cdb6df0005b5388fdb455fbd0eb11e57ef25d7e2366f0f1c783f5c114e8e2fc95bb8b46e339587227bd1bec1dca47553d9d5fefd56249fb3594d45e906d550d129ca99a94e9a470af0c055dc5ef5a305c0d8005b6c812ff0867488c1b9ea31411d21333c66790dd548d1fd0c17a1acfab09a0ea7310e18c6b1c568cedbfbebf8e335895742c26a5b5b008a1781012a2cb27b15b465a3f35d434d03e1ac12f7f1bc1bec430e501db6cc201abce61bea74cd4e89abbe6c735fdf56473717531ea5810d1a3a53da2ec9420ef123b7327d0f36e20575a9b21c1cf0bb6593ba6adf43d186fcb332173aea086cb8c53fa44e216e34376c838e2b6c7ecba1b68d29178716f9e6ac2f58155fcdc3e286c315024704b18b903919256ad247c0b30bc62abefe43e6f3146754be519adfd5a9f77e6b7bcaa1d33a509650e287ad48a867aa4526560270e94723cd0dd0b3067a44db5f8138d67221fd4deabef43d070c1bba655992f47ac64ce400835da31d9f438f0cd30b78756825f485db6b67e74a1e0a95c3cdd1bd504bd9227a9734a08e9d46db1844e93c8501467addd8ef90dc306ed1d7ecace4c84332975f3e893e38a8d4089447b78e7da235bc8a7aca2aa2b57928d8f110adeeb39bb10ad714a88034cbe2d26fb93dbac1715aac49bc6a0ea79464cedd406d0947d40e0f9903bed437588e88392706bc6de0fbff3e7a6cde936695ceec532ae906ddbc3f931e786b438a337fe3c724be40475c71d045adfa5c99a0fe93ac1968f1819525dc96b928723f0f42ab9977e29c7e45bcb8cb9bfa92ad34a08cda4608b30018afd496cc1c9a8a709cfe4c872de60f2fc21d1ef7e4d0f6a545c6400ada15bb024d2fd49fe0fc61ae56726355c76ac714a4b4bed252a2f83fd5238befcaf62201650ce3d9d513a342a4569a3232fa8803a1cd9506c4ff674cc5fbd8e9907212e0ffe27ec29ec03e254db45089a83fa43d87f5f2af6bba5cbc2ab8a2d21e68e00f277d1f28bdc148cd5e83b444b83841a3aaecdfae813986ad3ed78b7a826388f3de0198cde5024212f8eb31e021535264bb7b26c6e9f25a4625259e3602f7e2d0e243cde8e660f3b8201604e4a3226c009fc6b9554134795288f9b0def43c22b01f5411bb42ff192bfa772205941feb95df499f2deae7351f8d49e29bd8232b9725cfe86c62c0581c278b2425582aa3ac9457ce9f9f2d1ec61403defe1895165bf5770db8494003227520f2b44a65d60fae43867e83e82bf46ae6f527e0d59ecfc86534e5e632840905cc37c0aec2b36f99cf4b63392372340eed3f303bbc47c5f17b301a105d412ee3ed6d90b46ef120c74087fa265eba0a81a1c84905df4a48d1e1602779788910cbb1ea59821b2261be4ba75a</script>
-  <div class="hbe hbe-content">
-    <div class="hbe hbe-input hbe-input-default">
-      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
-      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
-        <span class="hbe hbe-input-label-content hbe-input-label-content-default">您好, 这里需要密码.</span>
-      </label>
-    </div>
-  </div>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><style>body {background:white}
+    h1.post-title{color:red;}div#post {
+    background: fixed;
+    color: antiquewhite;
+}.meta {
+    background: black;
+    width: fit-content;
+    padding-right: 10px;
+    border-radius: 50px;
+    filter: drop-shadow(2px 4px 6px black);
+}
+.meta p {
+    color: white;
+}
+div.timenode .body {
+    margin: 14px 0 16px 24px;
+}
+</style>
+<script>var t2 = window.setInterval(function () {
+        divMe.className = imglist[index];
+        index++;
+        index %= imglist.length;
+        console.log('每隔5秒钟执行一次')    }, 5000)</script>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=33756016&auto=0&height=66"></iframe>
+
+<div class="timeline"><p class="p h2">2021</p> 
+
+<div class="timenode"><div class="meta"><p></p><p>2021-04-02 从今天开始啦</p>
+<p></p></div><div class="body"><p><span style="text-align:center;font-size:20px;font:30px 书体坊兰亭体;color:blueviolent;word-spacing:30px;">“ 既许一人以偏爱，愿尽余生之慷慨 ”</span></p></div></div>
+
+<div class="timenode"><div class="meta"><p></p><p>2021-04-02 闲着就容易犯愁</p>
+<p></p></div><div class="body"><p><span class="animated-hover" style="font-size:20px;font:30px 书体坊兰亭体;color:blueviolent;word-spacing:30px;">“ 如果运气不行那就试试勇气 ”</span></p><img src="https://cdn.jsdelivr.net/gh/fole-del/img/20210403154845.jpg" style="zoom: 25%; border-radius: 50px;"></div></div>
+
+<div class="timenode"><div class="meta"><p></p><p>2021-05-17 营养</p>
+<p></p></div><div class="body"><p><span class="faa-passing-reverse animated-hover" style="font-size:20px;font:30px 书体坊兰亭体;color:blueviolent;word-spacing:30px;">“ 你说，营养是什么！ ”</span></p></div></div>
+
+<div class="timenode"><div class="meta"><p></p><p>2021-10-25 DAY100</p>
+<p></p></div><div class="body"><p><span class="faa-passing-reverse animated-hover" style="font-size:20px;font:30px 汉仪尚巍手书简;color:blueviolent;word-spacing:30px;">“ One For You ”</span></p></div></div>
+
 </div>
-<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
+
+]]></content>
   </entry>
   <entry>
     <title>Hexo 搭建博客</title>
@@ -1939,10 +1970,6 @@ bbb 的工作时长为：3</div>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><img src="../../../images/proto%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/pic4.zhimg.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg" alt="img"></p>
 <p>使用命令行生成proto文件</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><code class="hljs shell">proto -I ./ --cpp_out=./ proto文件<br></code></pre></td></tr></table></figure>
-
-
-
-
 
 <p><img src="../../../images/proto%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/Net.png" alt="网络通信"></p>
 ]]></content>
@@ -16687,8 +16714,8 @@ lambda表达式： </li>
       </categories>
       <tags>
         <tag>Linux</tag>
-        <tag>bash</tag>
         <tag>实验楼</tag>
+        <tag>bash</tag>
       </tags>
   </entry>
   <entry>
