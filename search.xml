@@ -185,6 +185,158 @@
 </div>]]></content>
   </entry>
   <entry>
+    <title>Go_Easy_Algorithm</title>
+    <url>/posts/a0a70754.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>[toc]</p>
+<h1 id="7-整数反转-for-整型"><a href="#7-整数反转-for-整型" class="headerlink" title="7. 整数反转 #for #整型"></a><a href="https://leetcode-cn.com/problems/reverse-integer/">7. 整数反转</a> #for #整型</h1><p>Difficulty: **给你一个 32 位的有符号整数 x ，返回将 x 中的数字部分反转后的结果。 如果反转后整数超过 32 位的有符号整数的范围 [−231,  231 − 1] ，就返回 0。 假设环境不允许存储 64 位整数（有符号或无符号）。   示例 1： 输入：x = 123 输出：321 示例 2： 输入：x = -123 输出：-321 示例 3： 输入：x = 120 输出：21 示例 4： 输入：x = 0 输出：0   提示： -231 &lt;= x &lt;= 231 - 1 **</p>
+<p>给你一个 32 位的有符号整数 <code>x</code> ，返回将 <code>x</code> 中的数字部分反转后的结果。</p>
+<p>如果反转后整数超过 32 位的有符号整数的范围 <code>[−2&lt;sup&gt;31&lt;/sup&gt;,  2&lt;sup&gt;31 &lt;/sup&gt;− 1]</code> ，就返回 0。</p>
+<p><strong>假设环境不允许存储 64 位整数（有符号或无符号）。</strong></p>
+<p><strong>示例 1：</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><code class="hljs plain">输入：x &#x3D; 123<br>输出：321<br></code></pre></td></tr></table></figure>
+
+<p><strong>示例 2：</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><code class="hljs plain">输入：x &#x3D; -123<br>输出：-321<br></code></pre></td></tr></table></figure>
+
+<p><strong>示例 3：</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><code class="hljs plain">输入：x &#x3D; 120<br>输出：21<br></code></pre></td></tr></table></figure>
+
+<p><strong>示例 4：</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><code class="hljs plain">输入：x &#x3D; 0<br>输出：0<br></code></pre></td></tr></table></figure>
+
+<p><strong>提示：</strong></p>
+<ul>
+<li>  <code>-2&lt;sup&gt;31&lt;/sup&gt; &lt;= x &lt;= 2&lt;sup&gt;31&lt;/sup&gt; - 1</code></li>
+</ul>
+<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><p>Language: <strong>go</strong></p>
+<figure class="highlight go"><table><tr><td class="code"><pre><code class="hljs go"><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">reverse</span><span class="hljs-params">(x <span class="hljs-keyword">int</span>)</span> <span class="hljs-params">(rev <span class="hljs-keyword">int</span>)</span></span> &#123;<br>    <span class="hljs-keyword">for</span> x != <span class="hljs-number">0</span> &#123;<br>        <span class="hljs-keyword">if</span> rev &lt; math.MinInt32/<span class="hljs-number">10</span> || rev &gt; math.MaxInt32/<span class="hljs-number">10</span> &#123;<br>            <span class="hljs-keyword">return</span> <span class="hljs-number">0</span><br>        &#125;<br><br>        digit := x % <span class="hljs-number">10</span><br>        x /= <span class="hljs-number">10</span><br>        rev = rev*<span class="hljs-number">10</span> + digit<br>    &#125;<br>    <span class="hljs-keyword">return</span> <br>&#125;<br></code></pre></td></tr></table></figure>
+
+<h1 id="1614-括号的最大嵌套深度-字符串-for"><a href="#1614-括号的最大嵌套深度-字符串-for" class="headerlink" title="1614. 括号的最大嵌套深度 #字符串 #for"></a><a href="https://leetcode-cn.com/problems/maximum-nesting-depth-of-the-parentheses/">1614. 括号的最大嵌套深度</a> #字符串 #for</h1><p>如果字符串满足以下条件之一，则可以称之为 <strong>有效括号字符串****（valid parentheses string</strong>，可以简写为 <strong>VPS</strong>）：</p>
+<ul>
+<li>  字符串是一个空字符串 <code>&quot;&quot;</code>，或者是一个不为 <code>&quot;(&quot;</code> 或 <code>&quot;)&quot;</code> 的单字符。</li>
+<li>  字符串可以写为 <code>AB</code>（<code>A</code> 与 <code>B</code> 字符串连接），其中 <code>A</code> 和 <code>B</code> 都是 <strong>有效括号字符串</strong> 。</li>
+<li>  字符串可以写为 <code>(A)</code>，其中 <code>A</code> 是一个 <strong>有效括号字符串</strong> 。</li>
+</ul>
+<p>类似地，可以定义任何有效括号字符串 <code>S</code> 的 <strong>嵌套深度</strong> <code>depth(S)</code>：</p>
+<ul>
+<li>  <code>depth(&quot;&quot;) = 0</code></li>
+<li>  <code>depth(C) = 0</code>，其中 <code>C</code> 是单个字符的字符串，且该字符不是 <code>&quot;(&quot;</code> 或者 <code>&quot;)&quot;</code></li>
+<li>  <code>depth(A + B) = max(depth(A), depth(B))</code>，其中 <code>A</code> 和 <code>B</code> 都是 <strong>有效括号字符串</strong></li>
+<li>  <code>depth(&quot;(&quot; + A + &quot;)&quot;) = 1 + depth(A)</code>，其中 <code>A</code> 是一个 <strong>有效括号字符串</strong></li>
+</ul>
+<p>例如：<code>&quot;&quot;</code>、<code>&quot;()()&quot;</code>、<code>&quot;()(()())&quot;</code> 都是 <strong>有效括号字符串</strong>（嵌套深度分别为 0、1、2），而 <code>&quot;)(&quot;</code> 、<code>&quot;(()&quot;</code> 都不是 <strong>有效括号字符串</strong> 。</p>
+<p>给你一个 <strong>有效括号字符串</strong> <code>s</code>，返回该字符串的<code>s</code> <strong>嵌套深度</strong> 。</p>
+<p><strong>示例 1：</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><code class="hljs plain">输入：s &#x3D; &quot;(1+(2*3)+((8)&#x2F;4))+1&quot;<br>输出：3<br>解释：数字 8 在嵌套的 3 层括号中。<br></code></pre></td></tr></table></figure>
+
+<p><strong>示例 2：</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><code class="hljs plain">输入：s &#x3D; &quot;(1)+((2))+(((3)))&quot;<br>输出：3<br></code></pre></td></tr></table></figure>
+
+<p><strong>示例 3：</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><code class="hljs plain">输入：s &#x3D; &quot;1+(2*3)&#x2F;(2-1)&quot;<br>输出：1<br></code></pre></td></tr></table></figure>
+
+<p><strong>示例 4：</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><code class="hljs plain">输入：s &#x3D; &quot;1&quot;<br>输出：0<br></code></pre></td></tr></table></figure>
+
+<p><strong>提示：</strong></p>
+<ul>
+<li>  <code>1 &lt;= s.length &lt;= 100</code></li>
+<li>  <code>s</code> 由数字 <code>0-9</code> 和字符 <code>&#39;+&#39;</code>、<code>&#39;-&#39;</code>、<code>&#39;*&#39;</code>、<code>&#39;/&#39;</code>、<code>&#39;(&#39;</code>、<code>&#39;)&#39;</code> 组成</li>
+<li>  题目数据保证括号表达式 <code>s</code> 是 <strong>有效的括号表达式</strong></li>
+</ul>
+<h2 id="Solution-1"><a href="#Solution-1" class="headerlink" title="Solution"></a>Solution</h2><p>Language: <strong>go</strong></p>
+<figure class="highlight go"><table><tr><td class="code"><pre><code class="hljs go"><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">maxDepth</span><span class="hljs-params">(s <span class="hljs-keyword">string</span>)</span> <span class="hljs-params">(ans <span class="hljs-keyword">int</span>)</span></span> &#123;<br>    dept := <span class="hljs-number">0</span><br>    <span class="hljs-keyword">for</span> _,ch := <span class="hljs-keyword">range</span> s &#123;<br>        <span class="hljs-keyword">if</span> ch == <span class="hljs-string">&#x27;(&#x27;</span> &#123;<br>            dept++;<br>            <span class="hljs-keyword">if</span> dept &gt;= ans &#123;<br>                ans = dept<br>            &#125;<br>        &#125; <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> ch == <span class="hljs-string">&#x27;)&#x27;</span> &#123;<br>            dept--;<br>        &#125;<br>    &#125;<br>    <span class="hljs-keyword">return</span> <br>&#125;<br></code></pre></td></tr></table></figure>
+
+<h1 id="71-简化路径-字符串切割-栈"><a href="#71-简化路径-字符串切割-栈" class="headerlink" title="71. 简化路径 #字符串切割 #栈"></a><a href="https://leetcode-cn.com/problems/simplify-path/">71. 简化路径</a> #字符串切割 #栈</h1><p>给你一个字符串 <code>path</code> ，表示指向某一文件或目录的 Unix 风格 <strong>绝对路径</strong> （以 <code>&#39;/&#39;</code> 开头），请你将其转化为更加简洁的规范路径。</p>
+<p>在 Unix 风格的文件系统中，一个点（<code>.</code>）表示当前目录本身；此外，两个点 （<code>..</code>） 表示将目录切换到上一级（指向父目录）；两者都可以是复杂相对路径的组成部分。任意多个连续的斜杠（即，<code>&#39;//&#39;</code>）都被视为单个斜杠 <code>&#39;/&#39;</code> 。 对于此问题，任何其他格式的点（例如，<code>&#39;...&#39;</code>）均被视为文件/目录名称。</p>
+<p>请注意，返回的 <strong>规范路径</strong> 必须遵循下述格式：</p>
+<ul>
+<li>  始终以斜杠 <code>&#39;/&#39;</code> 开头。</li>
+<li>  两个目录名之间必须只有一个斜杠 <code>&#39;/&#39;</code> 。</li>
+<li>  最后一个目录名（如果存在）<strong>不能</strong> 以 <code>&#39;/&#39;</code> 结尾。</li>
+<li>  此外，路径仅包含从根目录到目标文件或目录的路径上的目录（即，不含 <code>&#39;.&#39;</code> 或 <code>&#39;..&#39;</code>）。</li>
+</ul>
+<p>返回简化后得到的 <strong>规范路径</strong> 。</p>
+<p><strong>示例 1：</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><code class="hljs plain">输入：path &#x3D; &quot;&#x2F;home&#x2F;&quot;<br>输出：&quot;&#x2F;home&quot;<br>解释：注意，最后一个目录名后面没有斜杠。 <br></code></pre></td></tr></table></figure>
+
+<p><strong>示例 2：</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><code class="hljs plain">输入：path &#x3D; &quot;&#x2F;..&#x2F;&quot;<br>输出：&quot;&#x2F;&quot;<br>解释：从根目录向上一级是不可行的，因为根目录是你可以到达的最高级。<br></code></pre></td></tr></table></figure>
+
+<p><strong>示例 3：</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><code class="hljs plain">输入：path &#x3D; &quot;&#x2F;home&#x2F;&#x2F;foo&#x2F;&quot;<br>输出：&quot;&#x2F;home&#x2F;foo&quot;<br>解释：在规范路径中，多个连续斜杠需要用一个斜杠替换。<br></code></pre></td></tr></table></figure>
+
+<p><strong>示例 4：</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><code class="hljs plain">输入：path &#x3D; &quot;&#x2F;a&#x2F;.&#x2F;b&#x2F;..&#x2F;..&#x2F;c&#x2F;&quot;<br>输出：&quot;&#x2F;c&quot;<br></code></pre></td></tr></table></figure>
+
+<p><strong>提示：</strong></p>
+<ul>
+<li>  <code>1 &lt;= path.length &lt;= 3000</code></li>
+<li>  <code>path</code> 由英文字母，数字，<code>&#39;.&#39;</code>，<code>&#39;/&#39;</code> 或 <code>&#39;_&#39;</code> 组成。</li>
+<li>  <code>path</code> 是一个有效的 Unix 风格绝对路径。</li>
+</ul>
+<h2 id="Solution-2"><a href="#Solution-2" class="headerlink" title="Solution"></a>Solution</h2><p>Language: <strong>go</strong></p>
+<figure class="highlight go"><table><tr><td class="code"><pre><code class="hljs go"><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">simplifyPath</span><span class="hljs-params">(path <span class="hljs-keyword">string</span>)</span> <span class="hljs-title">string</span></span> &#123;<br>    stack := []<span class="hljs-keyword">string</span>&#123;&#125;<br>    <span class="hljs-keyword">for</span> _,name := <span class="hljs-keyword">range</span> strings.Split(path, <span class="hljs-string">&quot;/&quot;</span>) &#123;<br>        <span class="hljs-keyword">if</span> name == <span class="hljs-string">&quot;..&quot;</span> &#123;<br>            <span class="hljs-keyword">if</span> <span class="hljs-built_in">len</span>(stack) &gt; <span class="hljs-number">0</span> &#123;<br>                stack = stack[:<span class="hljs-built_in">len</span>(stack)<span class="hljs-number">-1</span>]   <br>            &#125;<br>        &#125; <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> name != <span class="hljs-string">&quot;&quot;</span> &amp;&amp; name != <span class="hljs-string">&quot;.&quot;</span> &#123;<br>            stack = <span class="hljs-built_in">append</span>(stack, name)<br>        &#125;<br>    &#125;<br>    <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;/&quot;</span> + strings.Join(stack,<span class="hljs-string">&quot;/&quot;</span>)<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<h1 id="1576-替换所有的问号-字符串"><a href="#1576-替换所有的问号-字符串" class="headerlink" title="1576. 替换所有的问号 #字符串"></a><a href="https://leetcode-cn.com/problems/replace-all-s-to-avoid-consecutive-repeating-characters/">1576. 替换所有的问号</a> #字符串</h1><p>给你一个仅包含小写英文字母和 <code>&#39;?&#39;</code> 字符的字符串 <code>s</code>，请你将所有的 <code>&#39;?&#39;</code> 转换为若干小写字母，使最终的字符串不包含任何 <strong>连续重复</strong> 的字符。</p>
+<p>注意：你 <strong>不能</strong> 修改非 <code>&#39;?&#39;</code> 字符。</p>
+<p>题目测试用例保证 <strong>除</strong> <code>&#39;?&#39;</code> 字符 <strong>之外</strong>，不存在连续重复的字符。</p>
+<p>在完成所有转换（可能无需转换）后返回最终的字符串。如果有多个解决方案，请返回其中任何一个。可以证明，在给定的约束条件下，答案总是存在的。</p>
+<p><strong>示例 1：</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><code class="hljs plain">输入：s &#x3D; &quot;?zs&quot;<br>输出：&quot;azs&quot;<br>解释：该示例共有 25 种解决方案，从 &quot;azs&quot; 到 &quot;yzs&quot; 都是符合题目要求的。只有 &quot;z&quot; 是无效的修改，因为字符串 &quot;zzs&quot; 中有连续重复的两个 &#39;z&#39; 。<br></code></pre></td></tr></table></figure>
+
+<p><strong>示例 2：</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><code class="hljs plain">输入：s &#x3D; &quot;ubv?w&quot;<br>输出：&quot;ubvaw&quot;<br>解释：该示例共有 24 种解决方案，只有替换成 &quot;v&quot; 和 &quot;w&quot; 不符合题目要求。因为 &quot;ubvvw&quot; 和 &quot;ubvww&quot; 都包含连续重复的字符。<br></code></pre></td></tr></table></figure>
+
+<p><strong>示例 3：</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><code class="hljs plain">输入：s &#x3D; &quot;j?qg??b&quot;<br>输出：&quot;jaqgacb&quot;<br></code></pre></td></tr></table></figure>
+
+<p><strong>示例 4：</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><code class="hljs plain">输入：s &#x3D; &quot;??yw?ipkj?&quot;<br>输出：&quot;acywaipkja&quot;<br></code></pre></td></tr></table></figure>
+
+<p><strong>提示：</strong></p>
+<ul>
+<li><p>  <code>1 &lt;= s.length &lt;= 100</code></p>
+</li>
+<li><p>  <code>s</code> 仅包含小写英文字母和 <code>&#39;?&#39;</code> 字符</p>
+</li>
+</ul>
+<h2 id="Solution-3"><a href="#Solution-3" class="headerlink" title="Solution"></a>Solution</h2><p>Language: <strong>go</strong></p>
+<figure class="highlight go"><table><tr><td class="code"><pre><code class="hljs go"><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">modifyString</span><span class="hljs-params">(s <span class="hljs-keyword">string</span>)</span> <span class="hljs-title">string</span></span> &#123;<br>    res := []<span class="hljs-keyword">byte</span>(s)<br>    n := <span class="hljs-built_in">len</span>(res)<br>    <span class="hljs-keyword">for</span> i,ch := <span class="hljs-keyword">range</span> res &#123;<br>        <span class="hljs-keyword">if</span> ch == <span class="hljs-string">&#x27;?&#x27;</span> &#123;<br>            <span class="hljs-keyword">for</span> b := <span class="hljs-keyword">byte</span>(<span class="hljs-string">&#x27;a&#x27;</span>); b &lt;= <span class="hljs-string">&#x27;c&#x27;</span>; b++ &#123;<br>                <span class="hljs-keyword">if</span> !(i &gt; <span class="hljs-number">0</span> &amp;&amp; res[i<span class="hljs-number">-1</span>] == b || i &lt; n - <span class="hljs-number">1</span> &amp;&amp; res[i+<span class="hljs-number">1</span>] == b) &#123;<br>                    res[i] = b<br>                    <span class="hljs-keyword">break</span><br>                &#125;<br>            &#125;<br>        &#125;<br>    &#125;<br>    <span class="hljs-keyword">return</span> <span class="hljs-keyword">string</span>(res)<br>&#125;<br></code></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>学习笔记</category>
+        <category>Go</category>
+        <category>刷题笔记</category>
+      </categories>
+      <tags>
+        <tag>Go</tag>
+        <tag>LeetCode</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>gcc编译可执行文件的各个过程</title>
+    <url>/posts/d710f2d.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="编译过程"><a href="#编译过程" class="headerlink" title="编译过程"></a>编译过程</h1><ol>
+<li>【预处理阶段】：对源代码文件中文件包含关系（头文件）、预编译语句（宏定义）进行分析和替换，生成预编译文件🔻。</li>
+<li>【编译阶段】：将经过预处理后的预编译文件转换成特定汇编代码，生成汇编文件🔻。==根据当前源代码编译成二进制目标文件（即.obj文件）==</li>
+<li>【汇编阶段】：将编译阶段生成的汇编文件转化成机器码，生成可重定位目标文件🔻。</li>
+<li>【链接阶段】：将多个目标文件及所需要的库连接成最终的可执行目标文件。==将生成的.obj文件与库文件.lib等文件链接，生成可执行文件（.exe文件）。==</li>
+</ol>
+<h1 id="gcc的编译过程"><a href="#gcc的编译过程" class="headerlink" title="gcc的编译过程"></a>gcc的编译过程</h1><figure class="highlight shell"><table><tr><td class="code"><pre><code class="hljs shell"><span class="hljs-meta">#</span><span class="bash"> .i 中间文件，基本不会用到</span><br>gcc -E main.c -o main.i<br><span class="hljs-meta">#</span><span class="bash"> .s 汇编语言文件</span><br>gcc -S main.i -o main.s<br><span class="hljs-meta">#</span><span class="bash"> .o 汇编文件</span><br><span class="hljs-meta">#</span><span class="bash"> -c 只编译不链接，生成.obj文件也就是上述对应的汇编文件</span><br>gcc -c main.s -o main.o<br><span class="hljs-meta">#</span><span class="bash"> 生成可执行文件</span><br>gcc main.o -o main<br></code></pre></td></tr></table></figure>
+
+
+
+]]></content>
+      <categories>
+        <category>Linux</category>
+      </categories>
+      <tags>
+        <tag>gcc</tag>
+        <tag>linux</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>explicit关键字</title>
     <url>/posts/58412853.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h1><p>如下代码收拾</p>
@@ -14477,8 +14629,8 @@ lambda表达式： </li>
         <category>github</category>
       </categories>
       <tags>
-        <tag>Liux</tag>
         <tag>力扣</tag>
+        <tag>Liux</tag>
         <tag>多线程</tag>
       </tags>
   </entry>
