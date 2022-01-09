@@ -386,6 +386,83 @@
 </ul>
 <h2 id="Solution-3"><a href="#Solution-3" class="headerlink" title="Solution"></a>Solution</h2><p>Language: <strong>go</strong></p>
 <figure class="highlight go"><table><tr><td class="code"><pre><code class="hljs go"><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">modifyString</span><span class="hljs-params">(s <span class="hljs-keyword">string</span>)</span> <span class="hljs-title">string</span></span> &#123;<br>    res := []<span class="hljs-keyword">byte</span>(s)<br>    n := <span class="hljs-built_in">len</span>(res)<br>    <span class="hljs-keyword">for</span> i,ch := <span class="hljs-keyword">range</span> res &#123;<br>        <span class="hljs-keyword">if</span> ch == <span class="hljs-string">&#x27;?&#x27;</span> &#123;<br>            <span class="hljs-keyword">for</span> b := <span class="hljs-keyword">byte</span>(<span class="hljs-string">&#x27;a&#x27;</span>); b &lt;= <span class="hljs-string">&#x27;c&#x27;</span>; b++ &#123;<br>                <span class="hljs-keyword">if</span> !(i &gt; <span class="hljs-number">0</span> &amp;&amp; res[i<span class="hljs-number">-1</span>] == b || i &lt; n - <span class="hljs-number">1</span> &amp;&amp; res[i+<span class="hljs-number">1</span>] == b) &#123;<br>                    res[i] = b<br>                    <span class="hljs-keyword">break</span><br>                &#125;<br>            &#125;<br>        &#125;<br>    &#125;<br>    <span class="hljs-keyword">return</span> <span class="hljs-keyword">string</span>(res)<br>&#125;<br></code></pre></td></tr></table></figure>
+
+
+
+<h1 id="1629-按键持续时间最长的键-数组"><a href="#1629-按键持续时间最长的键-数组" class="headerlink" title="1629. 按键持续时间最长的键 #数组"></a><a href="https://leetcode-cn.com/problems/slowest-key/">1629. 按键持续时间最长的键</a> #数组</h1><p>LeetCode 设计了一款新式键盘，正在测试其可用性。测试人员将会点击一系列键（总计 <code>n</code> 个），每次一个。</p>
+<p>给你一个长度为 <code>n</code> 的字符串 <code>keysPressed</code> ，其中 <code>keysPressed[i]</code> 表示测试序列中第 <code>i</code> 个被按下的键。<code>releaseTimes</code> 是一个升序排列的列表，其中 <code>releaseTimes[i]</code> 表示松开第 <code>i</code> 个键的时间。字符串和数组的 <strong>下标都从 0 开始</strong> 。第 <code>0</code> 个键在时间为 <code>0</code> 时被按下，接下来每个键都 <strong>恰好</strong> 在前一个键松开时被按下。</p>
+<p>测试人员想要找出按键 <strong>持续时间最长</strong> 的键。第 <code>i</code>次按键的持续时间为 <code>releaseTimes[i] - releaseTimes[i - 1]</code> ，第 <code>0</code> 次按键的持续时间为 <code>releaseTimes[0]</code> 。</p>
+<p>注意，测试期间，同一个键可以在不同时刻被多次按下，而每次的持续时间都可能不同。</p>
+<p>请返回按键 <strong>持续时间最长</strong> 的键，如果有多个这样的键，则返回 <strong>按字母顺序排列最大</strong> 的那个键。</p>
+<p><strong>示例 1：</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><code class="hljs plain">输入：releaseTimes &#x3D; [9,29,49,50], keysPressed &#x3D; &quot;cbcd&quot;<br>输出：&quot;c&quot;<br>解释：按键顺序和持续时间如下：<br>按下 &#39;c&#39; ，持续时间 9（时间 0 按下，时间 9 松开）<br>按下 &#39;b&#39; ，持续时间 29 - 9 &#x3D; 20（松开上一个键的时间 9 按下，时间 29 松开）<br>按下 &#39;c&#39; ，持续时间 49 - 29 &#x3D; 20（松开上一个键的时间 29 按下，时间 49 松开）<br>按下 &#39;d&#39; ，持续时间 50 - 49 &#x3D; 1（松开上一个键的时间 49 按下，时间 50 松开）<br>按键持续时间最长的键是 &#39;b&#39; 和 &#39;c&#39;（第二次按下时），持续时间都是 20<br>&#39;c&#39; 按字母顺序排列比 &#39;b&#39; 大，所以答案是 &#39;c&#39;<br></code></pre></td></tr></table></figure>
+
+<p><strong>示例 2：</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><code class="hljs plain">输入：releaseTimes &#x3D; [12,23,36,46,62], keysPressed &#x3D; &quot;spuda&quot;<br>输出：&quot;a&quot;<br>解释：按键顺序和持续时间如下：<br>按下 &#39;s&#39; ，持续时间 12<br>按下 &#39;p&#39; ，持续时间 23 - 12 &#x3D; 11<br>按下 &#39;u&#39; ，持续时间 36 - 23 &#x3D; 13<br>按下 &#39;d&#39; ，持续时间 46 - 36 &#x3D; 10<br>按下 &#39;a&#39; ，持续时间 62 - 46 &#x3D; 16<br>按键持续时间最长的键是 &#39;a&#39; ，持续时间 16<br></code></pre></td></tr></table></figure>
+
+<p><strong>提示：</strong></p>
+<ul>
+<li>  <code>releaseTimes.length == n</code></li>
+<li>  <code>keysPressed.length == n</code></li>
+<li>  <code>2 &lt;= n &lt;= 1000</code></li>
+<li>  <code>1 &lt;= releaseTimes[i] &lt;= 10&lt;sup&gt;9&lt;/sup&gt;</code></li>
+<li>  <code>releaseTimes[i] &lt; releaseTimes[i+1]</code></li>
+<li>  <code>keysPressed</code> 仅由小写英文字母组成</li>
+</ul>
+<h2 id="Solution-4"><a href="#Solution-4" class="headerlink" title="Solution"></a>Solution</h2><p>Language: <strong>go</strong></p>
+<figure class="highlight go"><table><tr><td class="code"><pre><code class="hljs go"><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">slowestKey</span><span class="hljs-params">(releaseTimes []<span class="hljs-keyword">int</span>, keysPressed <span class="hljs-keyword">string</span>)</span> <span class="hljs-title">byte</span></span> &#123;<br>    n := <span class="hljs-built_in">len</span>(releaseTimes)<br>    <span class="hljs-keyword">var</span> ans <span class="hljs-keyword">byte</span> = keysPressed[<span class="hljs-number">0</span>]<br>    maxTime := releaseTimes[<span class="hljs-number">0</span>]<br>    <span class="hljs-keyword">for</span> i := <span class="hljs-keyword">int</span>(<span class="hljs-number">1</span>); i &lt; n; i++ &#123;<br>        key := keysPressed[i]<br>        time := releaseTimes[i] - releaseTimes[i<span class="hljs-number">-1</span>]<br><br>        <span class="hljs-keyword">if</span>(time &gt; maxTime || (time == maxTime &amp;&amp; key &gt; ans)) &#123;<br>            ans = key<br>            maxTime = time<br>        &#125;<br>    &#125;<br>    <span class="hljs-keyword">return</span> ans<br>&#125;<br></code></pre></td></tr></table></figure>
+
+
+
+<h1 id="206-反转链表-链表"><a href="#206-反转链表-链表" class="headerlink" title="206. 反转链表 #链表"></a><a href="https://leetcode-cn.com/problems/reverse-linked-list/">206. 反转链表</a> #链表</h1><p>给你单链表的头节点 <code>head</code> ，请你反转链表，并返回反转后的链表。</p>
+<p><strong>示例 1：</strong></p>
+<p><img src="https://assets.leetcode.com/uploads/2021/02/19/rev1ex1.jpg"></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><code class="hljs plain">输入：head &#x3D; [1,2,3,4,5]<br>输出：[5,4,3,2,1]<br></code></pre></td></tr></table></figure>
+
+<p><strong>示例 2：</strong></p>
+<p><img src="https://assets.leetcode.com/uploads/2021/02/19/rev1ex2.jpg"></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><code class="hljs plain">输入：head &#x3D; [1,2]<br>输出：[2,1]<br></code></pre></td></tr></table></figure>
+
+<p><strong>示例 3：</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><code class="hljs plain">输入：head &#x3D; []<br>输出：[]<br></code></pre></td></tr></table></figure>
+
+<p><strong>提示：</strong></p>
+<ul>
+<li>  链表中节点的数目范围是 <code>[0, 5000]</code></li>
+<li>  <code>-5000 &lt;= Node.val &lt;= 5000</code></li>
+</ul>
+<p><strong>进阶：</strong>链表可以选用迭代或递归方式完成反转。你能否用两种方法解决这道题？</p>
+<h2 id="Solution-5"><a href="#Solution-5" class="headerlink" title="Solution"></a>Solution</h2><figure class="highlight go"><table><tr><td class="code"><pre><code class="hljs go"><span class="hljs-comment">/**</span><br><span class="hljs-comment"> * Definition for singly-linked list.</span><br><span class="hljs-comment"> * type ListNode struct &#123;</span><br><span class="hljs-comment"> *     Val int</span><br><span class="hljs-comment"> *     Next *ListNode</span><br><span class="hljs-comment"> * &#125;</span><br><span class="hljs-comment"> */</span><br><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">reverseList</span><span class="hljs-params">(head *ListNode)</span> *<span class="hljs-title">ListNode</span></span> &#123;<br>    <span class="hljs-keyword">var</span> prev * ListNode<br>    curr := head<br>    <span class="hljs-keyword">for</span> curr != <span class="hljs-literal">nil</span> &#123;<br>        next := curr.Next<br><br>        curr.Next = prev<br>        prev = curr<br><br>        curr = next<br>    &#125;<br>    <span class="hljs-keyword">return</span> prev<br>&#125;<br></code></pre></td></tr></table></figure>
+
+
+
+<h1 id="121-买卖股票的最佳时机-数组-dp"><a href="#121-买卖股票的最佳时机-数组-dp" class="headerlink" title="121. 买卖股票的最佳时机 #数组 #dp"></a><a href="https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock/">121. 买卖股票的最佳时机</a> #数组 #dp</h1><p>给定一个数组 <code>prices</code> ，它的第 <code>i</code> 个元素 <code>prices[i]</code> 表示一支给定股票第 <code>i</code> 天的价格。</p>
+<p>你只能选择 <strong>某一天</strong> 买入这只股票，并选择在 <strong>未来的某一个不同的日子</strong> 卖出该股票。设计一个算法来计算你所能获取的最大利润。</p>
+<p>返回你可以从这笔交易中获取的最大利润。如果你不能获取任何利润，返回 <code>0</code> 。</p>
+<p><strong>示例 1：</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><code class="hljs plain">输入：[7,1,5,3,6,4]<br>输出：5<br>解释：在第 2 天（股票价格 &#x3D; 1）的时候买入，在第 5 天（股票价格 &#x3D; 6）的时候卖出，最大利润 &#x3D; 6-1 &#x3D; 5 。<br>     注意利润不能是 7-1 &#x3D; 6, 因为卖出价格需要大于买入价格；同时，你不能在买入前卖出股票。<br></code></pre></td></tr></table></figure>
+
+<p><strong>示例 2：</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><code class="hljs plain">输入：prices &#x3D; [7,6,4,3,1]<br>输出：0<br>解释：在这种情况下, 没有交易完成, 所以最大利润为 0。<br></code></pre></td></tr></table></figure>
+
+<p><strong>提示：</strong></p>
+<ul>
+<li>  <code>1 &lt;= prices.length &lt;= 10&lt;sup&gt;5&lt;/sup&gt;</code></li>
+<li>  <code>0 &lt;= prices[i] &lt;= 10&lt;sup&gt;4&lt;/sup&gt;</code></li>
+</ul>
+<h2 id="Solution-6"><a href="#Solution-6" class="headerlink" title="Solution"></a>Solution</h2><figure class="highlight go"><table><tr><td class="code"><pre><code class="hljs go"><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">maxProfit</span><span class="hljs-params">(prices []<span class="hljs-keyword">int</span>)</span> <span class="hljs-params">(max <span class="hljs-keyword">int</span>)</span></span> &#123;<br>    min := prices[<span class="hljs-number">0</span>]<br>    max = <span class="hljs-number">0</span><br>    <span class="hljs-keyword">for</span> _,price := <span class="hljs-keyword">range</span> prices &#123;<br>        <span class="hljs-keyword">if</span> price &lt; min &#123;<br>            min = price<br>        &#125; <span class="hljs-keyword">else</span> &#123;<br>            <span class="hljs-keyword">if</span> max &gt; price - min &#123;<br>                <span class="hljs-keyword">continue</span><br>            &#125; <span class="hljs-keyword">else</span> &#123;<br>                max = price - min<br>            &#125;<br>        &#125;<br>    &#125;<br>    <span class="hljs-keyword">return</span><br>&#125;<br></code></pre></td></tr></table></figure>
+
+
+
+<h1 id="剑指-Offer-03-数组中重复的数字-数组-坐标交换"><a href="#剑指-Offer-03-数组中重复的数字-数组-坐标交换" class="headerlink" title="剑指 Offer 03. 数组中重复的数字 #数组 #坐标交换"></a><a href="https://leetcode-cn.com/problems/shu-zu-zhong-zhong-fu-de-shu-zi-lcof/">剑指 Offer 03. 数组中重复的数字</a> #数组 #坐标交换</h1><p>找出数组中重复的数字。</p>
+<p>在一个长度为 n 的数组 nums 里的所有数字都在 0～n-1 的范围内。数组中某些数字是重复的，但不知道有几个数字重复了，也不知道每个数字重复了几次。请找出数组中任意一个重复的数字。</p>
+<p><strong>示例 1：</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><code class="hljs plain">输入：<br>[2, 3, 1, 0, 2, 5, 3]<br>输出：2 或 3 <br></code></pre></td></tr></table></figure>
+
+<p><strong>限制：</strong></p>
+<p><code>2 &lt;= n &lt;= 100000</code></p>
+<h2 id="Solution-7"><a href="#Solution-7" class="headerlink" title="Solution"></a>Solution</h2><p>坐标交换：通俗讲就是每个人都有一个自己位置，坐标交换就是先把每个人都放到自己的位置上，当发现自己的位置被人占了以后，就说明出现了重复元素。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><code class="hljs plain">func findRepeatNumber(nums []int) int &#123;<br>    i :&#x3D; 0<br>    for i &lt; len(nums) &#123;<br>        if nums[i] &#x3D;&#x3D; i &#123;<br>            i++<br>            continue<br>        &#125;<br><br>        if nums[nums[i]] &#x3D;&#x3D; nums[i] &#123;<br>            return nums[i]<br>        &#125;<br><br>        nums[nums[i]], nums[i] &#x3D; nums[i], nums[nums[i]]<br>    &#125;<br>    return -1<br>&#125;<br></code></pre></td></tr></table></figure>
 ]]></content>
       <categories>
         <category>学习笔记</category>
