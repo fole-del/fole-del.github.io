@@ -4,6 +4,12 @@ body {
     default;
 }
 
+
+/* 代码块宽度 */
+td.code {
+  width: 100%;
+}
+
 /* 背景宇宙星光  */
 #universe{
   display: block;
