@@ -1330,4 +1330,837 @@ function() {
         e.exports = '<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 28 32"><path d="M13.728 6.272v19.456q0 0.448-0.352 0.8t-0.8 0.32-0.8-0.32l-5.952-5.952h-4.672q-0.48 0-0.8-0.352t-0.352-0.8v-6.848q0-0.48 0.352-0.8t0.8-0.352h4.672l5.952-5.952q0.32-0.32 0.8-0.32t0.8 0.32 0.352 0.8zM20.576 16q0 1.344-0.768 2.528t-2.016 1.664q-0.16 0.096-0.448 0.096-0.448 0-0.8-0.32t-0.32-0.832q0-0.384 0.192-0.64t0.544-0.448 0.608-0.384 0.512-0.64 0.192-1.024-0.192-1.024-0.512-0.64-0.608-0.384-0.544-0.448-0.192-0.64q0-0.48 0.32-0.832t0.8-0.32q0.288 0 0.448 0.096 1.248 0.48 2.016 1.664t0.768 2.528z"></path></svg>'
     },
     function(e, t) {
-        e.exports = '<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 28 32"><path d="M13.728 6.272v19.456q0 0.448-0.352 0.8t-0.8 0.32-0.8-0.32l-5.952-5.952h-4.672q-0.48 0-0.8-0.352t-0.352-0.8v-6.848q0-0.48 0.352-0.8t0.8-0.352h4.672l5.952-5.952q0.32-0.32 0.8-0.32t0.8 0.32 0.352 0.8zM20.576 16q0 1.344-0.768 2.528t-2.016 1.664q-0.16 0.096-0.448 0.096-0.448 0-0.8-0.32t-0.32-0.832q0-0.384 0.192-0.64t0.544-0.448 0.608-0.384 0.512-0.64 0.192-1.024-0.192-1.024-0.512-0.64-0.608-0.384-0.544-0.448-0.192-0.64q0-0.48 0.32-0.832t0.8-0.32q0.288 0 0.448 0.096 1.248 0.48 2.016 1.664t0.768 2.528zM25.152 16q0 2.72-1.536 5.056t-4 3.36q
+        e.exports = '<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 28 32"><path d="M13.728 6.272v19.456q0 0.448-0.352 0.8t-0.8 0.32-0.8-0.32l-5.952-5.952h-4.672q-0.48 0-0.8-0.352t-0.352-0.8v-6.848q0-0.48 0.352-0.8t0.8-0.352h4.672l5.952-5.952q0.32-0.32 0.8-0.32t0.8 0.32 0.352 0.8zM20.576 16q0 1.344-0.768 2.528t-2.016 1.664q-0.16 0.096-0.448 0.096-0.448 0-0.8-0.32t-0.32-0.832q0-0.384 0.192-0.64t0.544-0.448 0.608-0.384 0.512-0.64 0.192-1.024-0.192-1.024-0.512-0.64-0.608-0.384-0.544-0.448-0.192-0.64q0-0.48 0.32-0.832t0.8-0.32q0.288 0 0.448 0.096 1.248 0.48 2.016 1.664t0.768 2.528zM25.152 16q0 2.72-1.536 5.056t-4 3.36q-0.256 0.096-0.448 0.096-0.48 0-0.832-0.352t-0.32-0.8q0-0.704 0.672-1.056 1.024-0.512 1.376-0.8 1.312-0.96 2.048-2.4t0.736-3.104-0.736-3.104-2.048-2.4q-0.352-0.288-1.376-0.8-0.672-0.352-0.672-1.056 0-0.448 0.32-0.8t0.8-0.352q0.224 0 0.48 0.096 2.496 1.056 4 3.36t1.536 5.056zM29.728 16q0 4.096-2.272 7.552t-6.048 5.056q-0.224 0.096-0.448 0.096-0.48 0-0.832-0.352t-0.32-0.8q0-0.64 0.704-1.056 0.128-0.064 0.384-0.192t0.416-0.192q0.8-0.448 1.44-0.896 2.208-1.632 3.456-4.064t1.216-5.152-1.216-5.152-3.456-4.064q-0.64-0.448-1.44-0.896-0.128-0.096-0.416-0.192t-0.384-0.192q-0.704-0.416-0.704-1.056 0-0.448 0.32-0.8t0.832-0.352q0.224 0 0.448 0.096 3.776 1.632 6.048 5.056t2.272 7.552z"></path></svg>'
+    },
+    function(e, t) {
+        e.exports = '<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 17 32"><path d="M14.080 4.8q2.88 0 2.88 2.048v18.24q0 2.112-2.88 2.112t-2.88-2.112v-18.24q0-2.048 2.88-2.048zM2.88 4.8q2.88 0 2.88 2.048v18.24q0 2.112-2.88 2.112t-2.88-2.112v-18.24q0-2.048 2.88-2.048z"></path></svg>'
+    },
+    function(e, t) {
+        e.exports = '<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 16 31"><path d="M15.552 15.168q0.448 0.32 0.448 0.832 0 0.448-0.448 0.768l-13.696 8.512q-0.768 0.512-1.312 0.192t-0.544-1.28v-16.448q0-0.96 0.544-1.28t1.312 0.192z"></path></svg>'
+    },
+    function(e, t, n) {
+        "use strict";
+        var i, a, r = e.exports = {};
+        function o() {
+            throw new Error("setTimeout has not been defined")
+        }
+        function s() {
+            throw new Error("clearTimeout has not been defined")
+        }
+        function l(e) {
+            if (i === setTimeout) return setTimeout(e, 0);
+            if ((i === o || !i) && setTimeout) return i = setTimeout,
+            setTimeout(e, 0);
+            try {
+                return i(e, 0)
+            } catch(t) {
+                try {
+                    return i.call(null, e, 0)
+                } catch(t) {
+                    return i.call(this, e, 0)
+                }
+            }
+        } !
+        function() {
+            try {
+                i = "function" == typeof setTimeout ? setTimeout: o
+            } catch(e) {
+                i = o
+            }
+            try {
+                a = "function" == typeof clearTimeout ? clearTimeout: s
+            } catch(e) {
+                a = s
+            }
+        } ();
+        var u, c = [],
+        p = !1,
+        d = -1;
+        function h() {
+            p && u && (p = !1, u.length ? c = u.concat(c) : d = -1, c.length && y())
+        }
+        function y() {
+            if (!p) {
+                var e = l(h);
+                p = !0;
+                for (var t = c.length; t;) {
+                    for (u = c, c = []; ++d < t;) u && u[d].run();
+                    d = -1,
+                    t = c.length
+                }
+                u = null,
+                p = !1,
+                function(e) {
+                    if (a === clearTimeout) return clearTimeout(e);
+                    if ((a === s || !a) && clearTimeout) return a = clearTimeout,
+                    clearTimeout(e);
+                    try {
+                        a(e)
+                    } catch(t) {
+                        try {
+                            return a.call(null, e)
+                        } catch(t) {
+                            return a.call(this, e)
+                        }
+                    }
+                } (e)
+            }
+        }
+        function f(e, t) {
+            this.fun = e,
+            this.array = t
+        }
+        function v() {}
+        r.nextTick = function(e) {
+            var t = new Array(arguments.length - 1);
+            if (arguments.length > 1) for (var n = 1; n < arguments.length; n++) t[n - 1] = arguments[n];
+            c.push(new f(e, t)),
+            1 !== c.length || p || l(y)
+        },
+        f.prototype.run = function() {
+            this.fun.apply(null, this.array)
+        },
+        r.title = "browser",
+        r.browser = !0,
+        r.env = {},
+        r.argv = [],
+        r.version = "",
+        r.versions = {},
+        r.on = v,
+        r.addListener = v,
+        r.once = v,
+        r.off = v,
+        r.removeListener = v,
+        r.removeAllListeners = v,
+        r.emit = v,
+        r.prependListener = v,
+        r.prependOnceListener = v,
+        r.listeners = function(e) {
+            return []
+        },
+        r.binding = function(e) {
+            throw new Error("process.binding is not supported")
+        },
+        r.cwd = function() {
+            return "/"
+        },
+        r.chdir = function(e) {
+            throw new Error("process.chdir is not supported")
+        },
+        r.umask = function() {
+            return 0
+        }
+    },
+    function(e, t, n) {
+        "use strict"; (function(e, t) { !
+            function(e, n) {
+                if (!e.setImmediate) {
+                    var i, a, r, o, s, l = 1,
+                    u = {},
+                    c = !1,
+                    p = e.document,
+                    d = Object.getPrototypeOf && Object.getPrototypeOf(e);
+                    d = d && d.setTimeout ? d: e,
+                    "[object process]" === {}.toString.call(e.process) ? i = function(e) {
+                        t.nextTick(function() {
+                            y(e)
+                        })
+                    }: !
+                    function() {
+                        if (e.postMessage && !e.importScripts) {
+                            var t = !0,
+                            n = e.onmessage;
+                            return e.onmessage = function() {
+                                t = !1
+                            },
+                            e.postMessage("", "*"),
+                            e.onmessage = n,
+                            t
+                        }
+                    } () ? e.MessageChannel ? ((r = new MessageChannel).port1.onmessage = function(e) {
+                        y(e.data)
+                    },
+                    i = function(e) {
+                        r.port2.postMessage(e)
+                    }) : p && "onreadystatechange" in p.createElement("script") ? (a = p.documentElement, i = function(e) {
+                        var t = p.createElement("script");
+                        t.onreadystatechange = function() {
+                            y(e),
+                            t.onreadystatechange = null,
+                            a.removeChild(t),
+                            t = null
+                        },
+                        a.appendChild(t)
+                    }) : i = function(e) {
+                        setTimeout(y, 0, e)
+                    }: (o = "setImmediate$" + Math.random() + "$", s = function(t) {
+                        t.source === e && "string" == typeof t.data && 0 === t.data.indexOf(o) && y( + t.data.slice(o.length))
+                    },
+                    e.addEventListener ? e.addEventListener("message", s, !1) : e.attachEvent("onmessage", s), i = function(t) {
+                        e.postMessage(o + t, "*")
+                    }),
+                    d.setImmediate = function(e) {
+                        "function" != typeof e && (e = new Function("" + e));
+                        for (var t = new Array(arguments.length - 1), n = 0; n < t.length; n++) t[n] = arguments[n + 1];
+                        var a = {
+                            callback: e,
+                            args: t
+                        };
+                        return u[l] = a,
+                        i(l),
+                        l++
+                    },
+                    d.clearImmediate = h
+                }
+                function h(e) {
+                    delete u[e]
+                }
+                function y(e) {
+                    if (c) setTimeout(y, 0, e);
+                    else {
+                        var t = u[e];
+                        if (t) {
+                            c = !0;
+                            try { !
+                                function(e) {
+                                    var t = e.callback,
+                                    i = e.args;
+                                    switch (i.length) {
+                                    case 0:
+                                        t();
+                                        break;
+                                    case 1:
+                                        t(i[0]);
+                                        break;
+                                    case 2:
+                                        t(i[0], i[1]);
+                                        break;
+                                    case 3:
+                                        t(i[0], i[1], i[2]);
+                                        break;
+                                    default:
+                                        t.apply(n, i)
+                                    }
+                                } (t)
+                            } finally {
+                                h(e),
+                                c = !1
+                            }
+                        }
+                    }
+                }
+            } ("undefined" == typeof self ? void 0 === e ? void 0 : e: self)
+        }).call(this, n(4), n(34))
+    },
+    function(e, t, n) {
+        "use strict";
+        var i = Function.prototype.apply;
+        function a(e, t) {
+            this._id = e,
+            this._clearFn = t
+        }
+        t.setTimeout = function() {
+            return new a(i.call(setTimeout, window, arguments), clearTimeout)
+        },
+        t.setInterval = function() {
+            return new a(i.call(setInterval, window, arguments), clearInterval)
+        },
+        t.clearTimeout = t.clearInterval = function(e) {
+            e && e.close()
+        },
+        a.prototype.unref = a.prototype.ref = function() {},
+        a.prototype.close = function() {
+            this._clearFn.call(window, this._id)
+        },
+        t.enroll = function(e, t) {
+            clearTimeout(e._idleTimeoutId),
+            e._idleTimeout = t
+        },
+        t.unenroll = function(e) {
+            clearTimeout(e._idleTimeoutId),
+            e._idleTimeout = -1
+        },
+        t._unrefActive = t.active = function(e) {
+            clearTimeout(e._idleTimeoutId);
+            var t = e._idleTimeout;
+            t >= 0 && (e._idleTimeoutId = setTimeout(function() {
+                e._onTimeout && e._onTimeout()
+            },
+            t))
+        },
+        n(35),
+        t.setImmediate = setImmediate,
+        t.clearImmediate = clearImmediate
+    },
+    function(e, t, n) {
+        "use strict"; (function(t) {
+            var n = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ?
+            function(e) {
+                return typeof e
+            }: function(e) {
+                return e && "function" == typeof Symbol && e.constructor === Symbol && e !== Symbol.prototype ? "symbol": typeof e
+            },
+            i = setTimeout;
+            function a() {}
+            function r(e) {
+                if (! (this instanceof r)) throw new TypeError("Promises must be constructed via new");
+                if ("function" != typeof e) throw new TypeError("not a function");
+                this._state = 0,
+                this._handled = !1,
+                this._value = void 0,
+                this._deferreds = [],
+                c(e, this)
+            }
+            function o(e, t) {
+                for (; 3 === e._state;) e = e._value;
+                0 !== e._state ? (e._handled = !0, r._immediateFn(function() {
+                    var n = 1 === e._state ? t.onFulfilled: t.onRejected;
+                    if (null !== n) {
+                        var i;
+                        try {
+                            i = n(e._value)
+                        } catch(e) {
+                            return void l(t.promise, e)
+                        }
+                        s(t.promise, i)
+                    } else(1 === e._state ? s: l)(t.promise, e._value)
+                })) : e._deferreds.push(t)
+            }
+            function s(e, t) {
+                try {
+                    if (t === e) throw new TypeError("A promise cannot be resolved with itself.");
+                    if (t && ("object" === (void 0 === t ? "undefined": n(t)) || "function" == typeof t)) {
+                        var i = t.then;
+                        if (t instanceof r) return e._state = 3,
+                        e._value = t,
+                        void u(e);
+                        if ("function" == typeof i) return void c((a = i, o = t,
+                        function() {
+                            a.apply(o, arguments)
+                        }), e)
+                    }
+                    e._state = 1,
+                    e._value = t,
+                    u(e)
+                } catch(t) {
+                    l(e, t)
+                }
+                var a, o
+            }
+            function l(e, t) {
+                e._state = 2,
+                e._value = t,
+                u(e)
+            }
+            function u(e) {
+                2 === e._state && 0 === e._deferreds.length && r._immediateFn(function() {
+                    e._handled || r._unhandledRejectionFn(e._value)
+                });
+                for (var t = 0,
+                n = e._deferreds.length; t < n; t++) o(e, e._deferreds[t]);
+                e._deferreds = null
+            }
+            function c(e, t) {
+                var n = !1;
+                try {
+                    e(function(e) {
+                        n || (n = !0, s(t, e))
+                    },
+                    function(e) {
+                        n || (n = !0, l(t, e))
+                    })
+                } catch(e) {
+                    if (n) return;
+                    n = !0,
+                    l(t, e)
+                }
+            }
+            r.prototype.
+            catch = function(e) {
+                return this.then(null, e)
+            },
+            r.prototype.then = function(e, t) {
+                var n = new this.constructor(a);
+                return o(this, new
+                function(e, t, n) {
+                    this.onFulfilled = "function" == typeof e ? e: null,
+                    this.onRejected = "function" == typeof t ? t: null,
+                    this.promise = n
+                } (e, t, n)),
+                n
+            },
+            r.prototype.
+            finally = function(e) {
+                var t = this.constructor;
+                return this.then(function(n) {
+                    return t.resolve(e()).then(function() {
+                        return n
+                    })
+                },
+                function(n) {
+                    return t.resolve(e()).then(function() {
+                        return t.reject(n)
+                    })
+                })
+            },
+            r.all = function(e) {
+                return new r(function(t, i) {
+                    if (!e || void 0 === e.length) throw new TypeError("Promise.all accepts an array");
+                    var a = Array.prototype.slice.call(e);
+                    if (0 === a.length) return t([]);
+                    var r = a.length;
+                    function o(e, s) {
+                        try {
+                            if (s && ("object" === (void 0 === s ? "undefined": n(s)) || "function" == typeof s)) {
+                                var l = s.then;
+                                if ("function" == typeof l) return void l.call(s,
+                                function(t) {
+                                    o(e, t)
+                                },
+                                i)
+                            }
+                            a[e] = s,
+                            0 == --r && t(a)
+                        } catch(e) {
+                            i(e)
+                        }
+                    }
+                    for (var s = 0; s < a.length; s++) o(s, a[s])
+                })
+            },
+            r.resolve = function(e) {
+                return e && "object" === (void 0 === e ? "undefined": n(e)) && e.constructor === r ? e: new r(function(t) {
+                    t(e)
+                })
+            },
+            r.reject = function(e) {
+                return new r(function(t, n) {
+                    n(e)
+                })
+            },
+            r.race = function(e) {
+                return new r(function(t, n) {
+                    for (var i = 0,
+                    a = e.length; i < a; i++) e[i].then(t, n)
+                })
+            },
+            r._immediateFn = "function" == typeof t &&
+            function(e) {
+                t(e)
+            } ||
+            function(e) {
+                i(e, 0)
+            },
+            r._unhandledRejectionFn = function(e) {
+                "undefined" != typeof console && console && console.warn("Possible Unhandled Promise Rejection:", e)
+            },
+            e.exports = r
+        }).call(this, n(36).setImmediate)
+    },
+    function(e, t, n) {
+        "use strict";
+        Object.defineProperty(t, "__esModule", {
+            value: !0
+        });
+        var i = function() {
+            function e(e, t) {
+                for (var n = 0; n < t.length; n++) {
+                    var i = t[n];
+                    i.enumerable = i.enumerable || !1,
+                    i.configurable = !0,
+                    "value" in i && (i.writable = !0),
+                    Object.defineProperty(e, i.key, i)
+                }
+            }
+            return function(t, n, i) {
+                return n && e(t.prototype, n),
+                i && e(t, i),
+                t
+            }
+        } (),
+        a = v(n(37)),
+        r = v(n(0)),
+        o = v(n(3)),
+        s = v(n(18)),
+        l = v(n(17)),
+        u = v(n(13)),
+        c = v(n(12)),
+        p = v(n(11)),
+        d = v(n(9)),
+        h = v(n(8)),
+        y = v(n(7)),
+        f = v(n(6));
+        function v(e) {
+            return e && e.__esModule ? e: {
+            default:
+                e
+            }
+        }
+        var m = [],
+        g = function() {
+            function e(t) {
+                if (function(e, t) {
+                    if (! (e instanceof t)) throw new TypeError("Cannot call a class as a function")
+                } (this, e), this.options = (0, s.
+            default)(t), this.container = this.options.container, this.paused = !0, this.playedPromise = a.
+            default.resolve(), this.mode = "normal", this.randomOrder = r.
+            default.randomOrder(this.options.audio.length), this.container.classList.add("aplayer"), this.options.lrcType && !this.options.fixed && this.container.classList.add("aplayer-withlrc"), this.options.audio.length > 1 && this.container.classList.add("aplayer-withlist"), r.
+            default.isMobile && this.container.classList.add("aplayer-mobile"), this.arrow = this.container.offsetWidth <= 300, this.arrow && this.container.classList.add("aplayer-arrow"), this.container = this.options.container, 2 === this.options.lrcType || !0 === this.options.lrcType) for (var n = this.container.getElementsByClassName("aplayer-lrc-content"), i = 0; i < n.length; i++) this.options.audio[i] && (this.options.audio[i].lrc = n[i].innerHTML);
+                this.template = new l.
+            default({
+                    container:
+                    this.container,
+                    options: this.options,
+                    randomOrder: this.randomOrder
+                }),
+                this.options.fixed && (this.container.classList.add("aplayer-fixed"), this.template.body.style.width = this.template.body.offsetWidth - 18 + "px"),
+                this.options.mini && (this.setMode("mini"), this.template.info.style.display = "block"),
+                this.template.info.offsetWidth < 200 && this.template.time.classList.add("aplayer-time-narrow"),
+                this.options.lrcType && (this.lrc = new p.
+            default({
+                    container:
+                    this.template.lrc,
+                    async: 3 === this.options.lrcType,
+                    player: this
+                })),
+                this.events = new y.
+            default,
+                this.storage = new c.
+            default(this),
+                this.bar = new u.
+            default(this.template),
+                this.controller = new d.
+            default(this),
+                this.timer = new h.
+            default(this),
+                this.list = new f.
+            default(this),
+                this.initAudio(),
+                this.bindEvents(),
+                "random" === this.options.order ? this.list.
+                switch (this.randomOrder[0]) : this.list.
+                switch (0),
+                this.options.autoplay && this.play(),
+                m.push(this)
+            }
+            return i(e, [{
+                key: "initAudio",
+                value: function() {
+                    var e = this;
+                    this.audio = document.createElement("audio"),
+					
+                    this.audio.preload = this.options.preload;
+                    for (var t = function(t) {
+                        e.audio.addEventListener(e.events.audioEvents[t],
+                        function(n) {
+                            e.events.trigger(e.events.audioEvents[t], n)
+                        })
+                    },
+                    n = 0; n < this.events.audioEvents.length; n++) t(n);
+                    this.volume(this.storage.get("volume"), !0)
+                }
+            },
+            {
+                key: "bindEvents",
+                value: function() {
+                    var e = this;
+                    this.on("play",
+                    function() {
+                        e.paused && e.setUIPlaying()
+                    }),
+                    this.on("pause",
+                    function() {
+                        e.paused || e.setUIPaused()
+                    }),
+                    this.on("timeupdate",
+                    function() {
+                        if (!e.disableTimeupdate) {
+                            e.bar.set("played", e.audio.currentTime / e.duration, "width"),
+                            e.lrc && e.lrc.update();
+                            var t = r.
+                        default.secondToTime(e.audio.currentTime);
+                            e.template.ptime.innerHTML !== t && (e.template.ptime.innerHTML = t)
+                        }
+                    }),
+                    this.on("durationchange",
+                    function() {
+                        1 !== e.duration && (e.template.dtime.innerHTML = r.
+                    default.secondToTime(e.duration))
+                    }),
+                    this.on("progress",
+                    function() {
+                        var t = e.audio.buffered.length ? e.audio.buffered.end(e.audio.buffered.length - 1) / e.duration: 0;
+                        e.bar.set("loaded", t, "width")
+                    });
+                    var t = void 0;
+                    this.on("error",
+                    function() {
+                        e.list.audios.length > 1 ? (e.notice("An audio error has occurred, player will skip forward in 2 seconds."), t = setTimeout(function() {
+                            e.skipForward(),
+                            e.paused || e.play()
+                        },
+                        2e3)) : 1 === e.list.audios.length && e.notice("An audio error has occurred.")
+                    }),
+                    this.events.on("listswitch",
+                    function() {
+                        t && clearTimeout(t)
+                    }),
+                    this.on("ended",
+                    function() {
+                        "none" === e.options.loop ? "list" === e.options.order ? e.list.index < e.list.audios.length - 1 ? (e.list.
+                        switch ((e.list.index + 1) % e.list.audios.length), e.play()) : (e.list.
+                        switch ((e.list.index + 1) % e.list.audios.length), e.pause()) : "random" === e.options.order && (e.randomOrder.indexOf(e.list.index) < e.randomOrder.length - 1 ? (e.list.
+                        switch (e.nextIndex()), e.play()) : (e.list.
+                        switch (e.nextIndex()), e.pause())) : "one" === e.options.loop ? (e.list.
+                        switch (e.list.index), e.play()) : "all" === e.options.loop && (e.skipForward(), e.play())
+						setTimeout(function(){	 
+                        jam.loadAudio(ap.audio.currentSrc);
+                        console.log(ap.audio.currentSrc)},500);
+						ap.pause()
+						setTimeout(function(){ap.play()},4000);
+                    })
+                }
+            },
+            {
+                key: "setAudio",
+                value: function(e) {
+                    this.hls && (this.hls.destroy(), this.hls = null);
+                    var t = e.type;
+                    this.options.customAudioType && this.options.customAudioType[t] ? "[object Function]" === Object.prototype.toString.call(this.options.customAudioType[t]) ? this.options.customAudioType[t](this.audio, e, this) : console.error("Illegal customType: " + t) : (t && "auto" !== t || (t = /m3u8(#|\?|$)/i.exec(e.url) ? "hls": "normal"), "hls" === t ? Hls.isSupported() ? (this.hls = new Hls, this.hls.loadSource(e.url), this.hls.attachMedia(this.audio)) : this.audio.canPlayType("application/x-mpegURL") || this.audio.canPlayType("application/vnd.apple.mpegURL") ? this.audio.src = e.url: this.notice("Error: HLS is not supported.") : "normal" === t && (this.audio.src = e.url)),
+                    this.seek(0),
+                    this.paused || this.audio.play()
+                }
+            },
+            {
+                key: "theme",
+                value: function() {
+                    var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : this.list.audios[this.list.index].theme || this.options.theme,
+                    t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.list.index; (!(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2]) && this.list.audios[t] && (this.list.audios[t].theme = e),
+                    this.template.listCurs[t] && (this.template.listCurs[t].style.backgroundColor = e),
+                    t === this.list.index && (this.template.pic.style.backgroundColor = e, this.template.played.style.background = e, this.template.thumb.style.background = e, this.template.volume.style.background = e)
+                }
+            },
+            {
+                key: "seek",
+                value: function(e) {
+                    e = Math.max(e, 0),
+                    e = Math.min(e, this.duration),
+                    this.audio.currentTime = e,
+                    this.bar.set("played", e / this.duration, "width"),
+                    this.template.ptime.innerHTML = r.
+                default.secondToTime(e)
+				jam.seek(e)
+                }
+            },
+            {
+                key: "setUIPlaying",
+                value: function() {
+                    var e = this;
+                    if (this.paused && (this.paused = !1, this.template.button.classList.remove("aplayer-play"), this.template.button.classList.add("aplayer-pause"), this.template.button.innerHTML = "", setTimeout(function() {
+                        e.template.button.innerHTML = o.
+                    default.pause
+                    },
+                    100), this.template.skipPlayButton.innerHTML = o.
+                default.pause), this.timer.enable("loading"), this.options.mutex) for (var t = 0; t < m.length; t++) this !== m[t] && m[t].pause()
+                }
+            },
+            {
+                key: "play",
+                value: function() {
+					jam.play();
+                    var e = this;
+                    this.setUIPlaying();
+                    var t = this.audio.play();
+                    t && t.
+                    catch(function(t) {
+                        console.warn(t),
+                        "NotAllowedError" === t.name && e.setUIPaused()
+                    })
+                }
+            },
+            {
+                key: "setUIPaused",
+                value: function() {
+                    var e = this;
+                    this.paused || (this.paused = !0, this.template.button.classList.remove("aplayer-pause"), this.template.button.classList.add("aplayer-play"), this.template.button.innerHTML = "", setTimeout(function() {
+                        e.template.button.innerHTML = o.
+                    default.play
+                    },
+                    100), this.template.skipPlayButton.innerHTML = o.
+                default.play),
+                    this.container.classList.remove("aplayer-loading"),
+                    this.timer.disable("loading")
+                }
+            },
+            {
+                key: "pause",
+                value: function() {
+					jam.pause();
+                    this.setUIPaused(),
+                    this.audio.pause()
+                }
+            },
+            {
+                key: "switchVolumeIcon",
+                value: function() {
+                    this.volume() >= .95 ? this.template.volumeButton.innerHTML = o.
+                default.volumeUp:
+                    this.volume() > 0 ? this.template.volumeButton.innerHTML = o.
+                default.volumeDown:
+                    this.template.volumeButton.innerHTML = o.
+                default.volumeOff
+                }
+            },
+            {
+                key: "volume",
+                value: function(e, t) {
+                    return e = parseFloat(e),
+                    isNaN(e) || (e = Math.max(e, 0), e = Math.min(e, 1), this.bar.set("volume", e, "height"), t || this.storage.set("volume", e), this.audio.volume = e, this.audio.muted && (this.audio.muted = !1), this.switchVolumeIcon()),
+                    this.audio.muted ? 0 : this.audio.volume
+                }
+            },
+            {
+                key: "on",
+                value: function(e, t) {
+                    this.events.on(e, t)
+                }
+            },
+            {
+                key: "toggle",
+                value: function() {
+                    this.template.button.classList.contains("aplayer-play") ? this.play() : this.template.button.classList.contains("aplayer-pause") && this.pause()
+                }
+            },
+            {
+                key: "switchAudio",
+                value: function(e) {
+					
+                  this.list.switch (e),
+				  setTimeout(function(){jam.loadAudio(ap.audio.currentSrc);console.log(ap.audio.currentSrc)},500),
+				  setTimeout(function(){ap.play();ap.seek(0);jam.seek(0)},4000)
+					
+                }
+            },
+            {
+                key: "addAudio",
+                value: function(e) {
+                    this.list.add(e)
+                }
+            },
+            {
+                key: "removeAudio",
+                value: function(e) {
+                    this.list.remove(e)
+                }
+            },
+            {
+                key: "destroy",
+                value: function() {
+                    m.splice(m.indexOf(this), 1),
+                    this.pause(),
+                    this.container.innerHTML = "",
+                    this.audio.src = "",
+                    this.timer.destroy(),
+                    this.events.trigger("destroy")
+                }
+            },
+            {
+                key: "setMode",
+                value: function() {
+                    var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "normal";
+                    this.mode = e,
+                    "mini" === e ? this.container.classList.add("aplayer-narrow") : "normal" === e && this.container.classList.remove("aplayer-narrow")
+                }
+            },
+            {
+                key: "notice",
+                value: function(e) {
+                    var t = this,
+                    n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 2e3,
+                    i = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : .8;
+                    this.template.notice.innerHTML = e,
+                    this.template.notice.style.opacity = i,
+                    this.noticeTime && clearTimeout(this.noticeTime),
+                    this.events.trigger("noticeshow", {
+                        text: e
+                    }),
+                    n && (this.noticeTime = setTimeout(function() {
+                        t.template.notice.style.opacity = 0,
+                        t.events.trigger("noticehide")
+                    },
+                    n))
+                }
+            },
+            {
+                key: "prevIndex",
+                value: function() {
+                    if (! (this.list.audios.length > 1)) return 0;
+                    if ("list" === this.options.order) return this.list.index - 1 < 0 ? this.list.audios.length - 1 : this.list.index - 1;
+                    if ("random" === this.options.order) {
+                        var e = this.randomOrder.indexOf(this.list.index);
+                        return 0 === e ? this.randomOrder[this.randomOrder.length - 1] : this.randomOrder[e - 1]
+                    }
+                }
+            },
+            {
+                key: "nextIndex",
+                value: function() {
+                    if (! (this.list.audios.length > 1)) return 0;
+                    if ("list" === this.options.order) return (this.list.index + 1) % this.list.audios.length;
+                    if ("random" === this.options.order) {
+                        var e = this.randomOrder.indexOf(this.list.index);
+                        return e === this.randomOrder.length - 1 ? this.randomOrder[0] : this.randomOrder[e + 1]
+                    }
+                }
+            },
+            {
+                key: "skipBack",
+                value: function() {
+                    this.list.
+                    switch (this.prevIndex())
+                }
+            },
+            {
+                key: "skipForward",
+                value: function() {
+                    this.list.
+                    switch (this.nextIndex())
+                }
+            },
+            {
+                key: "duration",
+                get: function() {
+                    return isNaN(this.audio.duration) ? 0 : this.audio.duration
+                }
+            }], [{
+                key: "version",
+                get: function() {
+                    return "1.10.1"
+                }
+            }]),
+            e
+        } ();
+        t.
+    default = g
+    },
+    ,
+    function(e, t, n) {},
+    function(e, t, n) {
+        "use strict";
+        Object.defineProperty(t, "__esModule", {
+            value: !0
+        }),
+        n(40);
+        var i, a = n(38),
+        r = (i = a) && i.__esModule ? i: {
+        default:
+            i
+        };
+        console.log("\n %c APlayer v1.10.1 af84efb %c http://aplayer.js.org \n", "color: #fadfa3; background: #030307; padding:5px 0;", "background: #fadfa3; padding:5px 0;"),
+        t.
+    default = r.
+    default
+    }]).
+default
+});
+//# sourceMappingURL=APlayer.min.js.map

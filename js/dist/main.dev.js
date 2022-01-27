@@ -450,4 +450,483 @@ document.addEventListener('DOMContentLoaded', function () {
     var updateAnchor = function updateAnchor(anchor) {
       if (window.history.replaceState && anchor !== window.location.hash) {
         if (!anchor) anchor = location.pathname;
-        var title = GLOBAL_CONFIG_
+        var title = GLOBAL_CONFIG_SITE.title;
+        window.history.replaceState({
+          url: location.href,
+          title: title
+        }, title, anchor);
+      }
+    };
+
+    var mobileToc = {
+      open: function open() {
+        $cardTocLayout.style.cssText = 'animation: toc-open .3s; opacity: 1; right: 45px';
+      },
+      close: function close() {
+        $cardTocLayout.style.animation = 'toc-close .2s';
+        setTimeout(function () {
+          $cardTocLayout.style.cssText = "opacity:''; animation: ''; right: ''";
+        }, 100);
+      }
+    };
+    document.getElementById('mobile-toc-button').addEventListener('click', function () {
+      if (window.getComputedStyle($cardTocLayout).getPropertyValue('opacity') === '0') mobileToc.open();else mobileToc.close();
+    }); // toc元素點擊
+
+    $cardToc.addEventListener('click', function (e) {
+      e.preventDefault();
+      var $target = e.target.classList.contains('toc-link') ? e.target : e.target.parentElement;
+      btf.scrollToDest(btf.getEleTop(document.getElementById(decodeURI($target.getAttribute('href')).replace('#', ''))), 300);
+
+      if (window.innerWidth < 900) {
+        mobileToc.close();
+      }
+    });
+
+    var autoScrollToc = function autoScrollToc(item) {
+      var activePosition = item.getBoundingClientRect().top;
+      var sidebarScrollTop = $cardToc.scrollTop;
+
+      if (activePosition > document.documentElement.clientHeight - 100) {
+        $cardToc.scrollTop = sidebarScrollTop + 150;
+      }
+
+      if (activePosition < 100) {
+        $cardToc.scrollTop = sidebarScrollTop - 150;
+      }
+    }; // find head position & add active class
+
+
+    var list = $article.querySelectorAll('h1,h2,h3,h4,h5,h6');
+    var detectItem = '';
+
+    var findHeadPosition = function findHeadPosition(top) {
+      if ($tocLink.length === 0 || top === 0) {
+        return false;
+      }
+
+      var currentId = '';
+      var currentIndex = '';
+      list.forEach(function (ele, index) {
+        if (top > btf.getEleTop(ele) - 80) {
+          currentId = '#' + encodeURI(ele.getAttribute('id'));
+          currentIndex = index;
+        }
+      });
+      if (detectItem === currentIndex) return;
+      if (isAnchor) updateAnchor(currentId);
+
+      if (currentId === '') {
+        $cardToc.querySelectorAll('.active').forEach(function (i) {
+          i.classList.remove('active');
+        });
+        detectItem = currentIndex;
+        return;
+      }
+
+      detectItem = currentIndex;
+      $cardToc.querySelectorAll('.active').forEach(function (item) {
+        item.classList.remove('active');
+      });
+      var currentActive = $tocLink[currentIndex];
+      currentActive.classList.add('active');
+      setTimeout(function () {
+        autoScrollToc(currentActive);
+      }, 0);
+      var parent = currentActive.parentNode;
+
+      for (; !parent.matches('.toc'); parent = parent.parentNode) {
+        if (parent.matches('li')) parent.classList.add('active');
+      }
+    };
+  };
+  /**
+  * Rightside
+  */
+
+
+  var rightSideFn = {
+    switchReadMode: function switchReadMode() {
+      // read-mode
+      var $body = document.body;
+      $body.classList.add('read-mode');
+      var newEle = document.createElement('button');
+      newEle.type = 'button';
+      newEle.className = 'fas fa-sign-out-alt exit-readmode';
+      $body.appendChild(newEle);
+
+      function clickFn() {
+        $body.classList.remove('read-mode');
+        newEle.remove();
+        newEle.removeEventListener('click', clickFn);
+      }
+
+      newEle.addEventListener('click', clickFn);
+    },
+    switchDarkMode: function switchDarkMode() {
+      // Switch Between Light And Dark Mode
+      var nowMode = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
+
+      if (nowMode === 'light') {
+        activateDarkMode();
+        saveToLocal.set('theme', 'dark', 2);
+        GLOBAL_CONFIG.Snackbar !== undefined && btf.snackbarShow(GLOBAL_CONFIG.Snackbar.day_to_night);
+      } else {
+        activateLightMode();
+        saveToLocal.set('theme', 'light', 2);
+        GLOBAL_CONFIG.Snackbar !== undefined && btf.snackbarShow(GLOBAL_CONFIG.Snackbar.night_to_day);
+      } // handle some cases
+
+
+      typeof utterancesTheme === 'function' && utterancesTheme();
+      (typeof FB === "undefined" ? "undefined" : _typeof(FB)) === 'object' && window.loadFBComment();
+      window.DISQUS && document.getElementById('disqus_thread').children.length && setTimeout(function () {
+        return window.disqusReset();
+      }, 200);
+    },
+    showOrHideBtn: function showOrHideBtn() {
+      // rightside 點擊設置 按鈕 展開
+      document.getElementById('rightside-config-hide').classList.toggle('show');
+    },
+    scrollToTop: function scrollToTop() {
+      // Back to top
+      btf.scrollToDest(0, 500);
+    },
+    hideAsideBtn: function hideAsideBtn() {
+      // Hide aside
+      var $htmlDom = document.documentElement.classList;
+      $htmlDom.contains('hide-aside') ? saveToLocal.set('aside-status', 'show', 2) : saveToLocal.set('aside-status', 'hide', 2);
+      $htmlDom.toggle('hide-aside');
+    },
+    adjustFontSize: function adjustFontSize(plus) {
+      var fontSizeVal = parseInt(window.getComputedStyle(document.documentElement).getPropertyValue('--global-font-size'));
+      var newValue = '';
+
+      if (plus) {
+        if (fontSizeVal >= 20) return;
+        newValue = fontSizeVal + 1;
+        document.documentElement.style.setProperty('--global-font-size', newValue + 'px');
+        !document.getElementById('nav').classList.contains('hide-menu') && adjustMenu(true);
+      } else {
+        if (fontSizeVal <= 10) return;
+        newValue = fontSizeVal - 1;
+        document.documentElement.style.setProperty('--global-font-size', newValue + 'px');
+        document.getElementById('nav').classList.contains('hide-menu') && adjustMenu(true);
+      }
+
+      saveToLocal.set('global-font-size', newValue, 2); // document.getElementById('font-text').innerText = newValue
+    }
+  };
+  document.querySelector('#darkmodebutton').addEventListener('click', function (e) {
+    var $target = e.target.id || e.target.parentNode.id;
+    rightSideFn.switchDarkMode();
+  });
+  document.getElementById('rightside').addEventListener('click', function (e) {
+    var $target = e.target.id || e.target.parentNode.id;
+
+    switch ($target) {
+      case 'go-up':
+        rightSideFn.scrollToTop();
+        break;
+
+      case 'rightside_config':
+        rightSideFn.showOrHideBtn();
+        break;
+
+      case 'readmode':
+        rightSideFn.switchReadMode();
+        break;
+
+      case 'darkmode':
+        rightSideFn.switchDarkMode();
+        break;
+
+      case 'hide-aside-btn':
+        rightSideFn.hideAsideBtn();
+        break;
+
+      case 'font-plus':
+        rightSideFn.adjustFontSize(true);
+        break;
+
+      case 'font-minus':
+        rightSideFn.adjustFontSize();
+        break;
+
+      default:
+        break;
+    }
+  });
+  /**
+  * menu
+  * 側邊欄sub-menu 展開/收縮
+  * 解決menus在觸摸屏下，滑動屏幕menus_item_child不消失的問題（手機hover的bug)
+  */
+
+  var clickFnOfSubMenu = function clickFnOfSubMenu() {
+    document.querySelectorAll('#sidebar-menus .expand').forEach(function (e) {
+      e.addEventListener('click', function () {
+        this.classList.toggle('hide');
+        var $dom = this.parentNode.nextElementSibling;
+
+        if (btf.isHidden($dom)) {
+          $dom.style.display = 'block';
+        } else {
+          $dom.style.display = 'none';
+        }
+      });
+    });
+    window.addEventListener('touchmove', function (e) {
+      var $menusChild = document.querySelectorAll('#nav .menus_item_child');
+      $menusChild.forEach(function (item) {
+        if (!btf.isHidden(item)) item.style.display = 'none';
+      });
+    });
+  };
+  /**
+  * 複製時加上版權信息
+  */
+
+
+  var addCopyright = function addCopyright() {
+    var copyright = GLOBAL_CONFIG.copyright;
+
+    document.body.oncopy = function (e) {
+      e.preventDefault();
+      var textFont;
+      var copyFont = window.getSelection(0).toString();
+
+      if (copyFont.length > copyright.limitCount) {
+        textFont = copyFont + '\n' + '\n' + '\n' + copyright.languages.author + '\n' + copyright.languages.link + window.location.href + '\n' + copyright.languages.source + '\n' + copyright.languages.info;
+      } else {
+        textFont = copyFont;
+      }
+
+      if (e.clipboardData) {
+        return e.clipboardData.setData('text', textFont);
+      } else {
+        return window.clipboardData.setData('text', textFont);
+      }
+    };
+  };
+  /**
+  * 網頁運行時間
+  */
+
+
+  var addRuntime = function addRuntime() {
+    var $runtimeCount = document.getElementById('runtimeshow');
+
+    if ($runtimeCount) {
+      var publishDate = $runtimeCount.getAttribute('data-publishDate');
+      $runtimeCount.innerText = btf.diffDate(publishDate) + ' ' + GLOBAL_CONFIG.runtime;
+    }
+  };
+  /**
+  * 最後一次更新時間
+  */
+
+
+  var addLastPushDate = function addLastPushDate() {
+    var $lastPushDateItem = document.getElementById('last-push-date');
+
+    if ($lastPushDateItem) {
+      var lastPushDate = $lastPushDateItem.getAttribute('data-lastPushDate');
+      $lastPushDateItem.innerText = btf.diffDate(lastPushDate, true);
+    }
+  };
+  /**
+  * table overflow
+  */
+
+
+  var addTableWrap = function addTableWrap() {
+    var $table = document.querySelectorAll('#article-container :not(.highlight) > table, #article-container > table');
+
+    if ($table.length) {
+      $table.forEach(function (item) {
+        btf.wrap(item, 'div', {
+          "class": 'table-wrap'
+        });
+      });
+    }
+  };
+  /**
+  * tag-hide
+  */
+
+
+  var clickFnOfTagHide = function clickFnOfTagHide() {
+    var $hideInline = document.querySelectorAll('#article-container .hide-button');
+
+    if ($hideInline.length) {
+      $hideInline.forEach(function (item) {
+        item.addEventListener('click', function (e) {
+          var $this = this;
+          var $hideContent = $this.nextElementSibling;
+          $this.classList.toggle('open');
+
+          if ($this.classList.contains('open')) {
+            if ($hideContent.querySelectorAll('.justified-gallery').length > 0) {
+              btf.initJustifiedGallery($hideContent.querySelectorAll('.justified-gallery'));
+            }
+          }
+        });
+      });
+    }
+  };
+
+  var tabsFn = {
+    clickFnOfTabs: function clickFnOfTabs() {
+      document.querySelectorAll('#article-container .tab > button').forEach(function (item) {
+        item.addEventListener('click', function (e) {
+          var $this = this;
+          var $tabItem = $this.parentNode;
+
+          if (!$tabItem.classList.contains('active')) {
+            var $tabContent = $tabItem.parentNode.nextElementSibling;
+            var $siblings = btf.siblings($tabItem, '.active')[0];
+            $siblings && $siblings.classList.remove('active');
+            $tabItem.classList.add('active');
+            var tabId = $this.getAttribute('data-href').replace('#', '');
+
+            var childList = _toConsumableArray($tabContent.children);
+
+            childList.forEach(function (item) {
+              if (item.id === tabId) item.classList.add('active');else item.classList.remove('active');
+            });
+            var $isTabJustifiedGallery = $tabContent.querySelectorAll("#".concat(tabId, " .justified-gallery"));
+
+            if ($isTabJustifiedGallery.length > 0) {
+              btf.initJustifiedGallery($isTabJustifiedGallery);
+            }
+          }
+        });
+      });
+    },
+    backToTop: function backToTop() {
+      document.querySelectorAll('#article-container .tabs .tab-to-top').forEach(function (item) {
+        item.addEventListener('click', function () {
+          btf.scrollToDest(btf.getEleTop(btf.getParents(this, '.tabs')), 300);
+        });
+      });
+    }
+  };
+
+  var toggleCardCategory = function toggleCardCategory() {
+    var $cardCategory = document.querySelectorAll('#aside-cat-list .card-category-list-item.parent i');
+
+    if ($cardCategory.length) {
+      $cardCategory.forEach(function (item) {
+        item.addEventListener('click', function (e) {
+          e.preventDefault();
+          var $this = this;
+          $this.classList.toggle('expand');
+          var $parentEle = $this.parentNode.nextElementSibling;
+
+          if (btf.isHidden($parentEle)) {
+            $parentEle.style.display = 'block';
+          } else {
+            $parentEle.style.display = 'none';
+          }
+        });
+      });
+    }
+  };
+
+  var switchComments = function switchComments() {
+    var switchDone = false;
+    var $switchBtn = document.querySelector('#comment-switch > .switch-btn');
+    $switchBtn && $switchBtn.addEventListener('click', function () {
+      this.classList.toggle('move');
+      document.querySelectorAll('#post-comment > .comment-wrap > div').forEach(function (item) {
+        if (btf.isHidden(item)) {
+          item.style.cssText = 'display: block;animation: tabshow .5s';
+        } else {
+          item.style.cssText = "display: none;animation: ''";
+        }
+      });
+
+      if (!switchDone && typeof loadOtherComment === 'function') {
+        switchDone = true;
+        loadOtherComment();
+      }
+    });
+  };
+
+  var addPostOutdateNotice = function addPostOutdateNotice() {
+    var data = GLOBAL_CONFIG.noticeOutdate;
+    var diffDay = btf.diffDate(GLOBAL_CONFIG_SITE.postUpdate);
+
+    if (diffDay >= data.limitDay) {
+      var ele = document.createElement('div');
+      ele.className = 'post-outdate-notice';
+      ele.textContent = data.messagePrev + ' ' + diffDay + ' ' + data.messageNext;
+      var $targetEle = document.getElementById('article-container');
+
+      if (data.position === 'top') {
+        $targetEle.insertBefore(ele, $targetEle.firstChild);
+      } else {
+        $targetEle.appendChild(ele);
+      }
+    }
+  };
+
+  var lazyloadImg = function lazyloadImg() {
+    window.lazyLoadInstance = new LazyLoad({
+      elements_selector: 'img',
+      threshold: 0,
+      data_src: 'lazy-src'
+    });
+  };
+
+  var relativeDate = function relativeDate(selector) {
+    selector.forEach(function (item) {
+      var $this = item;
+      var timeVal = $this.getAttribute('datetime');
+      $this.innerText = btf.diffDate(timeVal, true);
+      $this.style.display = 'inline';
+    });
+  };
+
+  var unRefreshFn = function unRefreshFn() {
+    window.addEventListener('resize', adjustMenu);
+    window.addEventListener('orientationchange', function () {
+      setTimeout(adjustMenu(true), 100);
+    });
+    clickFnOfSubMenu();
+    GLOBAL_CONFIG.islazyload && lazyloadImg();
+    GLOBAL_CONFIG.copyright !== undefined && addCopyright();
+  };
+
+  window.refreshFn = function () {
+    initAdjust();
+
+    if (GLOBAL_CONFIG_SITE.isPost) {
+      GLOBAL_CONFIG_SITE.isToc && tocFn();
+      GLOBAL_CONFIG.noticeOutdate !== undefined && addPostOutdateNotice();
+      GLOBAL_CONFIG.relativeDate.post && relativeDate(document.querySelectorAll('#post-meta time'));
+    } else {
+      GLOBAL_CONFIG.relativeDate.homepage && relativeDate(document.querySelectorAll('#recent-posts time'));
+      GLOBAL_CONFIG.runtime && addRuntime();
+      addLastPushDate();
+      toggleCardCategory();
+    }
+
+    sidebarFn();
+    GLOBAL_CONFIG_SITE.isHome && scrollDownInIndex();
+    addHighlightTool();
+    GLOBAL_CONFIG.isPhotoFigcaption && addPhotoFigcaption();
+    jqLoadAndRun();
+    GLOBAL_CONFIG.lightbox === 'mediumZoom' && addMediumZoom();
+    scrollFn();
+    addTableWrap();
+    clickFnOfTagHide();
+    tabsFn.clickFnOfTabs();
+    tabsFn.backToTop();
+    switchComments();
+  };
+
+  refreshFn();
+  unRefreshFn();
+});
