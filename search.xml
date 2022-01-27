@@ -616,6 +616,444 @@
       </tags>
   </entry>
   <entry>
+    <title>力扣高效算法入门</title>
+    <url>/posts/8cb5320c.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>[toc]</p>
+<hr>
+<h1 id="1-两数之和"><a href="#1-两数之和" class="headerlink" title="1. 两数之和"></a><a href="https://leetcode-cn.com/problems/two-sum/">1. 两数之和</a></h1><p>给定一个整数数组 <code>nums</code> 和一个整数目标值 <code>target</code>，请你在该数组中找出 <strong>和为目标值</strong> <em><code>target</code></em>  的那 <strong>两个</strong> 整数，并返回它们的数组下标。</p>
+<p>你可以假设每种输入只会对应一个答案。但是，数组中同一个元素在答案里不能重复出现。</p>
+<p>你可以按任意顺序返回答案。</p>
+<p><strong>示例 1：</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><code class="hljs plain">输入：nums &#x3D; [2,7,11,15], target &#x3D; 9<br>输出：[0,1]<br>解释：因为 nums[0] + nums[1] &#x3D;&#x3D; 9 ，返回 [0, 1] 。<br></code></pre></td></tr></table></figure>
+
+<p><strong>示例 2：</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><code class="hljs plain">输入：nums &#x3D; [3,2,4], target &#x3D; 6<br>输出：[1,2]<br></code></pre></td></tr></table></figure>
+
+<p><strong>示例 3：</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><code class="hljs plain">输入：nums &#x3D; [3,3], target &#x3D; 6<br>输出：[0,1]<br></code></pre></td></tr></table></figure>
+
+<p><strong>提示：</strong></p>
+<ul>
+<li>  <code>2 &lt;= nums.length &lt;= 10&lt;sup&gt;4&lt;/sup&gt;</code></li>
+<li>  <code>-10&lt;sup&gt;9&lt;/sup&gt; &lt;= nums[i] &lt;= 10&lt;sup&gt;9&lt;/sup&gt;</code></li>
+<li>  <code>-10&lt;sup&gt;9&lt;/sup&gt; &lt;= target &lt;= 10&lt;sup&gt;9&lt;/sup&gt;</code></li>
+<li>  <strong>只会存在一个有效答案</strong></li>
+</ul>
+<p><strong>进阶：</strong>你可以想出一个时间复杂度小于 <code>O(n&lt;sup&gt;2&lt;/sup&gt;)</code> 的算法吗？</p>
+<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><figure class="highlight go"><table><tr><td class="code"><pre><code class="hljs go"><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">twoSum</span><span class="hljs-params">(nums []<span class="hljs-keyword">int</span>, target <span class="hljs-keyword">int</span>)</span> []<span class="hljs-title">int</span></span> &#123;<br>    <span class="hljs-keyword">for</span> i,x := <span class="hljs-keyword">range</span> nums &#123;<br>        <span class="hljs-keyword">for</span> j := i + <span class="hljs-number">1</span>; j &lt; <span class="hljs-built_in">len</span>(nums); j++ &#123;<br>            <span class="hljs-keyword">if</span> x+nums[j] == target &#123;<br>                <span class="hljs-keyword">return</span> []<span class="hljs-keyword">int</span>&#123;i,j&#125; <br>            &#125;<br>        &#125;<br>    &#125;<br>    <span class="hljs-keyword">return</span> <span class="hljs-literal">nil</span><br>&#125;<br></code></pre></td></tr></table></figure>
+
+<hr>
+<h1 id="167-两数之和-II-输入有序数组"><a href="#167-两数之和-II-输入有序数组" class="headerlink" title="167. 两数之和 II - 输入有序数组"></a><a href="https://leetcode-cn.com/problems/two-sum-ii-input-array-is-sorted/">167. 两数之和 II - 输入有序数组</a></h1><p>给定一个已按照**非递减顺序排列 ** 的整数数组 <code>numbers</code> ，请你从数组中找出两个数满足相加之和等于目标数 <code>target</code> 。</p>
+<p>函数应该以长度为 <code>2</code> 的整数数组的形式返回这两个数的下标值_。_<code>numbers</code> 的下标 <strong>从 1 开始计数</strong> ，所以答案数组应当满足 <code>1 &lt;= answer[0] &lt; answer[1] &lt;= numbers.length</code> 。</p>
+<p>你可以假设每个输入 <strong>只对应唯一的答案</strong> ，而且你 <strong>不可以</strong> 重复使用相同的元素。</p>
+<p><strong>示例 1：</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><code class="hljs plain">输入：numbers &#x3D; [2,7,11,15], target &#x3D; 9<br>输出：[1,2]<br>解释：2 与 7 之和等于目标数 9 。因此 index1 &#x3D; 1, index2 &#x3D; 2 。<br></code></pre></td></tr></table></figure>
+
+<p><strong>示例 2：</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><code class="hljs plain">输入：numbers &#x3D; [2,3,4], target &#x3D; 6<br>输出：[1,3]<br></code></pre></td></tr></table></figure>
+
+<p><strong>示例 3：</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><code class="hljs plain">输入：numbers &#x3D; [-1,0], target &#x3D; -1<br>输出：[1,2]<br></code></pre></td></tr></table></figure>
+
+<p><strong>提示：</strong></p>
+<ul>
+<li>  <code>2 &lt;= numbers.length &lt;= 3 * 10&lt;sup&gt;4&lt;/sup&gt;</code></li>
+<li>  <code>-1000 &lt;= numbers[i] &lt;= 1000</code></li>
+<li>  <code>numbers</code> 按 <strong>非递减顺序</strong> 排列</li>
+<li>  <code>-1000 &lt;= target &lt;= 1000</code></li>
+<li>  <strong>仅存在一个有效答案</strong></li>
+</ul>
+<h2 id="Solution-1"><a href="#Solution-1" class="headerlink" title="Solution"></a>Solution</h2><p>#双指针</p>
+<figure class="highlight go"><table><tr><td class="code"><pre><code class="hljs go"><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">twoSum</span><span class="hljs-params">(numbers []<span class="hljs-keyword">int</span>, target <span class="hljs-keyword">int</span>)</span> []<span class="hljs-title">int</span></span> &#123;<br>    left,right := <span class="hljs-number">0</span>, <span class="hljs-built_in">len</span>(numbers) - <span class="hljs-number">1</span><br>    <br>    <span class="hljs-keyword">for</span> left &lt; right &#123;<br>        sum := numbers[left] + numbers [right]<br>        <span class="hljs-keyword">if</span> sum == target &#123;<br>            <span class="hljs-keyword">return</span> []<span class="hljs-keyword">int</span>&#123;left + <span class="hljs-number">1</span>, right + <span class="hljs-number">1</span>&#125;<br>        &#125; <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> sum &lt; target &#123;<br>            left++<br>        &#125; <span class="hljs-keyword">else</span> &#123;<br>            right--<br>        &#125;<br>    &#125;<br>    <span class="hljs-keyword">return</span> []<span class="hljs-keyword">int</span>&#123;<span class="hljs-number">-1</span>,<span class="hljs-number">-1</span>&#125;<br>    <br>&#125;<br></code></pre></td></tr></table></figure>
+
+<hr>
+<h1 id="15-三数之和"><a href="#15-三数之和" class="headerlink" title="15. 三数之和"></a><a href="https://leetcode-cn.com/problems/3sum/">15. 三数之和</a></h1><p>给你一个包含 <code>n</code> 个整数的数组 <code>nums</code>，判断 <code>nums</code> 中是否存在三个元素 _a，b，c ，_使得 <em>a + b + c =</em> 0 ？请你找出所有和为 <code>0</code> 且不重复的三元组。</p>
+<p><strong>注意：</strong>答案中不可以包含重复的三元组。</p>
+<p><strong>示例 1：</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><code class="hljs plain">输入：nums &#x3D; [-1,0,1,2,-1,-4]<br>输出：[[-1,-1,2],[-1,0,1]]<br></code></pre></td></tr></table></figure>
+
+<p><strong>示例 2：</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><code class="hljs plain">输入：nums &#x3D; []<br>输出：[]<br></code></pre></td></tr></table></figure>
+
+<p><strong>示例 3：</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><code class="hljs plain">输入：nums &#x3D; [0]<br>输出：[]<br></code></pre></td></tr></table></figure>
+
+<p><strong>提示：</strong></p>
+<ul>
+<li>  <code>0 &lt;= nums.length &lt;= 3000</code></li>
+<li>  <code>-10&lt;sup&gt;5&lt;/sup&gt; &lt;= nums[i] &lt;= 10&lt;sup&gt;5&lt;/sup&gt;</code></li>
+</ul>
+<h2 id="Solution-2"><a href="#Solution-2" class="headerlink" title="Solution"></a>Solution</h2><p>#三指针</p>
+<figure class="highlight go"><table><tr><td class="code"><pre><code class="hljs go">class Solution &#123;<br>public:<br>    vector&lt;vector&lt;<span class="hljs-keyword">int</span>&gt;&gt; threeSum(vector&lt;<span class="hljs-keyword">int</span>&gt;&amp; nums) &#123;<br>        vector&lt;vector&lt;<span class="hljs-keyword">int</span>&gt;&gt; ans;<br>        <span class="hljs-comment">// 先排序</span><br>        <span class="hljs-keyword">int</span> n = nums.size();<br>        sort(nums.begin(), nums.end());<br><br>        <span class="hljs-comment">// 定义首指针==target</span><br>        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; n; i++) &#123;<br>            <span class="hljs-keyword">if</span> ( i &gt; <span class="hljs-number">0</span> &amp;&amp; nums[i] == nums[i<span class="hljs-number">-1</span>]) <br>                <span class="hljs-keyword">continue</span>;<br>            <br>            <span class="hljs-keyword">int</span> k = n - <span class="hljs-number">1</span>; <span class="hljs-comment">// 内层首指针</span><br>            <span class="hljs-keyword">int</span> target = -nums[i];<br><br>            <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> j = i + <span class="hljs-number">1</span>; j &lt; n; j++) <span class="hljs-comment">// 内层尾指针</span><br>            &#123; <br>                <span class="hljs-keyword">if</span>( j &gt; i + <span class="hljs-number">1</span> &amp;&amp; nums[j] == nums[j<span class="hljs-number">-1</span>]) <br>                    <span class="hljs-keyword">continue</span>;<br><br>                while (j &lt; k &amp;&amp; nums[j] + nums[k] &gt; target) &#123; <span class="hljs-comment">// 遍历尾指针，找合适序列</span><br>                    --k;<br>                &#125;<br><br>                <span class="hljs-comment">// 当前i不满足</span><br>                <span class="hljs-keyword">if</span>(j == k) &#123;<br>                    <span class="hljs-keyword">break</span>;<br>                &#125;<br><br>                <span class="hljs-comment">// 得到符合条件序列</span><br>                <span class="hljs-keyword">if</span>(nums[j] + nums[k] == target) &#123;<br>                    ans.push_back(&#123;nums[i],nums[j],nums[k]&#125;);<br>                &#125;<br>            &#125;<br>        &#125;<br>        <span class="hljs-keyword">return</span> ans;<br>    &#125;<br>&#125;;<br></code></pre></td></tr></table></figure>
+
+<hr>
+<h1 id="18-四数之和"><a href="#18-四数之和" class="headerlink" title="18. 四数之和"></a><a href="https://leetcode-cn.com/problems/4sum/">18. 四数之和</a></h1><p>给你一个由 <code>n</code> 个整数组成的数组 <code>nums</code> ，和一个目标值 <code>target</code> 。请你找出并返回满足下述全部条件且<strong>不重复</strong>的四元组 <code>[nums[a], nums[b], nums[c], nums[d]]</code> （若两个四元组元素一一对应，则认为两个四元组重复）：</p>
+<ul>
+<li>  <code>0 &lt;= a, b, c, d &lt; n</code></li>
+<li>  <code>a</code>、<code>b</code>、<code>c</code> 和 <code>d</code> <strong>互不相同</strong></li>
+<li>  <code>nums[a] + nums[b] + nums[c] + nums[d] == target</code></li>
+</ul>
+<p>你可以按 <strong>任意顺序</strong> 返回答案 。</p>
+<p><strong>示例 1：</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><code class="hljs plain">输入：nums &#x3D; [1,0,-1,0,-2,2], target &#x3D; 0<br>输出：[[-2,-1,1,2],[-2,0,0,2],[-1,0,0,1]]<br></code></pre></td></tr></table></figure>
+
+<p><strong>示例 2：</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><code class="hljs plain">输入：nums &#x3D; [2,2,2,2,2], target &#x3D; 8<br>输出：[[2,2,2,2]]<br></code></pre></td></tr></table></figure>
+
+<p><strong>提示：</strong></p>
+<ul>
+<li>  <code>1 &lt;= nums.length &lt;= 200</code></li>
+<li>  <code>-10&lt;sup&gt;9&lt;/sup&gt; &lt;= nums[i] &lt;= 10&lt;sup&gt;9&lt;/sup&gt;</code></li>
+<li>  <code>-10&lt;sup&gt;9&lt;/sup&gt; &lt;= target &lt;= 10&lt;sup&gt;9&lt;/sup&gt;</code></li>
+</ul>
+<h2 id="Solution-3"><a href="#Solution-3" class="headerlink" title="Solution"></a>Solution</h2><figure class="highlight go"><table><tr><td class="code"><pre><code class="hljs go">class Solution &#123;<br>public:<br>    vector&lt;vector&lt;<span class="hljs-keyword">int</span>&gt;&gt; fourSum(vector&lt;<span class="hljs-keyword">int</span>&gt;&amp; nums, <span class="hljs-keyword">int</span> target) &#123;<br>        vector&lt;vector&lt;<span class="hljs-keyword">int</span>&gt;&gt; ans;<br>        <span class="hljs-keyword">int</span> n = nums.size();<br>        <span class="hljs-keyword">if</span>(n &lt; <span class="hljs-number">4</span>)<br>            <span class="hljs-keyword">return</span> ans;<br>        sort(nums.begin(), nums.end());<br><br>        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; n - <span class="hljs-number">3</span>; i++) &#123;<br>            <span class="hljs-keyword">if</span> (i &gt; <span class="hljs-number">0</span> &amp;&amp; nums[i] == nums[i<span class="hljs-number">-1</span>])<br>                <span class="hljs-keyword">continue</span>;<br>            <span class="hljs-keyword">if</span> ((long) nums[i] + nums[i + <span class="hljs-number">1</span>] + nums[i + <span class="hljs-number">2</span>] + nums[i + <span class="hljs-number">3</span>] &gt; target) &#123;<br>                <span class="hljs-keyword">break</span>;<br>            &#125;<br>            <span class="hljs-keyword">if</span> ((long) nums[i] + nums[n - <span class="hljs-number">3</span>] + nums[n - <span class="hljs-number">2</span>] + nums[n - <span class="hljs-number">1</span>] &lt; target) &#123;<br>                <span class="hljs-keyword">continue</span>;<br>            &#125;<br><br><br>            <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> j = i + <span class="hljs-number">1</span>; j &lt; n - <span class="hljs-number">2</span>; j++) &#123;<br>                <span class="hljs-keyword">if</span> (j &gt; i + <span class="hljs-number">1</span> &amp;&amp; nums[j] == nums[j<span class="hljs-number">-1</span>])<br>                    <span class="hljs-keyword">continue</span>;<br>                <span class="hljs-keyword">if</span> ((long) nums[i] + nums[j] + nums[j + <span class="hljs-number">1</span>] + nums[j + <span class="hljs-number">2</span>] &gt; target) &#123;<br>                    <span class="hljs-keyword">break</span>;<br>                &#125;<br>                <span class="hljs-keyword">if</span> ((long) nums[i] + nums[j] + nums[n - <span class="hljs-number">2</span>] + nums[n - <span class="hljs-number">1</span>] &lt; target) &#123;<br>                    <span class="hljs-keyword">continue</span>;<br>                &#125;<br><br>                <span class="hljs-comment">// 最内层首尾指针</span><br>                <span class="hljs-keyword">int</span> m = n - <span class="hljs-number">1</span>, k = j + <span class="hljs-number">1</span>;<br>                while(k &lt; m) &#123;<br>                    <span class="hljs-keyword">int</span> sum = nums[i] + nums[j] + nums[k] + nums[m];<br>                    <span class="hljs-keyword">if</span> (sum == target) &#123;<br>                        ans.push_back(&#123;nums[i], nums[j], nums[k], nums[m]&#125;);<br>                        while (k &lt; m &amp;&amp; nums[k] == nums[k + <span class="hljs-number">1</span>]) &#123;<br>                            k++;<br>                        &#125;<br>                        k++;<br>                        while (k &lt; m &amp;&amp; nums[m] == nums[m - <span class="hljs-number">1</span>]) &#123;<br>                            m--;<br>                        &#125;<br>                        m--;<br>                    &#125; <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (sum &lt; target) &#123;<br>                        k++;<br>                    &#125; <span class="hljs-keyword">else</span> &#123;<br>                        m--;<br>                    &#125;<br>                &#125; <br>            &#125;<br>        &#125;<br>        <span class="hljs-keyword">return</span> ans;<br>    &#125;<br>&#125;;<br></code></pre></td></tr></table></figure>
+
+<hr>
+<h1 id="509-斐波那契数"><a href="#509-斐波那契数" class="headerlink" title="509. 斐波那契数"></a><a href="https://leetcode-cn.com/problems/fibonacci-number/">509. 斐波那契数</a></h1><p><strong>斐波那契数</strong>，通常用 <code>F(n)</code> 表示，形成的序列称为 <strong>斐波那契数列</strong> 。该数列由 <code>0</code> 和 <code>1</code> 开始，后面的每一项数字都是前面两项数字的和。也就是：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><code class="hljs plain">F(0) &#x3D; 0，F(1) &#x3D; 1<br>F(n) &#x3D; F(n - 1) + F(n - 2)，其中 n &gt; 1<br></code></pre></td></tr></table></figure>
+
+<p>给你 <code>n</code> ，请计算 <code>F(n)</code> 。</p>
+<p><strong>示例 1：</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><code class="hljs plain">输入：2<br>输出：1<br>解释：F(2) &#x3D; F(1) + F(0) &#x3D; 1 + 0 &#x3D; 1<br></code></pre></td></tr></table></figure>
+
+<p><strong>示例 2：</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><code class="hljs plain">输入：3<br>输出：2<br>解释：F(3) &#x3D; F(2) + F(1) &#x3D; 1 + 1 &#x3D; 2<br></code></pre></td></tr></table></figure>
+
+<p><strong>示例 3：</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><code class="hljs plain">输入：4<br>输出：3<br>解释：F(4) &#x3D; F(3) + F(2) &#x3D; 2 + 1 &#x3D; 3<br></code></pre></td></tr></table></figure>
+
+<p><strong>提示：</strong></p>
+<ul>
+<li>  <code>0 &lt;= n &lt;= 30</code></li>
+</ul>
+<h2 id="Solution-4"><a href="#Solution-4" class="headerlink" title="Solution"></a>Solution</h2><figure class="highlight go"><table><tr><td class="code"><pre><code class="hljs go"><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">fib</span><span class="hljs-params">(n <span class="hljs-keyword">int</span>)</span> <span class="hljs-title">int</span></span> &#123;<br>    <span class="hljs-keyword">if</span> n == <span class="hljs-number">0</span> &#123;<br>        <span class="hljs-keyword">return</span> <span class="hljs-number">0</span><br>    &#125; <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> n == <span class="hljs-number">1</span> &#123;<br>        <span class="hljs-keyword">return</span> <span class="hljs-number">1</span><br>    &#125; <span class="hljs-keyword">else</span> &#123;<br>        <span class="hljs-keyword">return</span> fib(n<span class="hljs-number">-2</span>) + fib(n<span class="hljs-number">-1</span>)<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<hr>
+<h1 id="70-爬楼梯"><a href="#70-爬楼梯" class="headerlink" title="70. 爬楼梯"></a><a href="https://leetcode-cn.com/problems/climbing-stairs/">70. 爬楼梯</a></h1><p>假设你正在爬楼梯。需要 <em>n</em> 阶你才能到达楼顶。</p>
+<p>每次你可以爬 1 或 2 个台阶。你有多少种不同的方法可以爬到楼顶呢？</p>
+<p><strong>注意：</strong>给定 <em>n</em> 是一个正整数。</p>
+<p><strong>示例 1：</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><code class="hljs plain">输入： 2<br>输出： 2<br>解释： 有两种方法可以爬到楼顶。<br>1\.  1 阶 + 1 阶<br>2\.  2 阶<br></code></pre></td></tr></table></figure>
+
+<p><strong>示例 2：</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><code class="hljs plain">输入： 3<br>输出： 3<br>解释： 有三种方法可以爬到楼顶。<br>1\.  1 阶 + 1 阶 + 1 阶<br>2\.  1 阶 + 2 阶<br>3\.  2 阶 + 1 阶<br></code></pre></td></tr></table></figure>
+
+
+<h2 id="Solution-5"><a href="#Solution-5" class="headerlink" title="Solution"></a>Solution</h2><figure class="highlight go"><table><tr><td class="code"><pre><code class="hljs go"><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">climbStairs</span><span class="hljs-params">(n <span class="hljs-keyword">int</span>)</span> <span class="hljs-title">int</span></span> &#123;<br>    <span class="hljs-keyword">if</span> n &lt;= <span class="hljs-number">2</span> &#123;<br>        <span class="hljs-keyword">return</span> n<br>    &#125;<br>    pre1,pre2 := <span class="hljs-number">2</span>,<span class="hljs-number">1</span><br><br>    <span class="hljs-keyword">for</span> i := <span class="hljs-number">2</span>; i &lt; n; i++ &#123;<br>        cur := pre1 + pre2<br>        pre2 = pre1<br>        pre1 = cur<br>    &#125;<br>    <span class="hljs-keyword">return</span> pre1<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<hr>
+<h1 id="53-最大子数组和"><a href="#53-最大子数组和" class="headerlink" title="53. 最大子数组和"></a><a href="https://leetcode-cn.com/problems/maximum-subarray/">53. 最大子数组和</a></h1><p>给你一个整数数组 <code>nums</code> ，请你找出一个具有最大和的连续子数组（子数组最少包含一个元素），返回其最大和。</p>
+<p><strong>子数组</strong> 是数组中的一个连续部分。</p>
+<p><strong>示例 1：</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><code class="hljs plain">输入：nums &#x3D; [-2,1,-3,4,-1,2,1,-5,4]<br>输出：6<br>解释：连续子数组 [4,-1,2,1] 的和最大，为 6 。<br></code></pre></td></tr></table></figure>
+
+<p><strong>示例 2：</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><code class="hljs plain">输入：nums &#x3D; [1]<br>输出：1<br></code></pre></td></tr></table></figure>
+
+<p><strong>示例 3：</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><code class="hljs plain">输入：nums &#x3D; [5,4,-1,7,8]<br>输出：23<br></code></pre></td></tr></table></figure>
+
+<p><strong>提示：</strong></p>
+<ul>
+<li>  <code>1 &lt;= nums.length &lt;= 10&lt;sup&gt;5&lt;/sup&gt;</code></li>
+<li>  <code>-10&lt;sup&gt;4&lt;/sup&gt; &lt;= nums[i] &lt;= 10&lt;sup&gt;4&lt;/sup&gt;</code></li>
+</ul>
+<p><strong>进阶：</strong>如果你已经实现复杂度为 <code>O(n)</code> 的解法，尝试使用更为精妙的 <strong>分治法</strong> 求解。</p>
+<h2 id="Solution-6"><a href="#Solution-6" class="headerlink" title="Solution"></a>Solution</h2><p>#动态规划</p>
+<figure class="highlight go"><table><tr><td class="code"><pre><code class="hljs go"><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">maxSubArray</span><span class="hljs-params">(nums []<span class="hljs-keyword">int</span>)</span> <span class="hljs-title">int</span></span> &#123;<br>    sum := nums[<span class="hljs-number">0</span>]<br>    <span class="hljs-keyword">for</span> i := <span class="hljs-number">1</span>; i &lt; <span class="hljs-built_in">len</span>(nums); i++ &#123;<br>        <span class="hljs-keyword">if</span> nums[i] + nums[i<span class="hljs-number">-1</span>] &gt; nums[i] &#123;<br>            nums[i] += nums[i<span class="hljs-number">-1</span>]<br>        &#125;<br>        <span class="hljs-keyword">if</span>  nums[i] &gt; sum &#123;<br>            sum = nums[i]<br>        &#125;<br>    &#125;  <br>    <span class="hljs-keyword">return</span> sum<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<hr>
+<h1 id="416-分割等和子集"><a href="#416-分割等和子集" class="headerlink" title="416. 分割等和子集"></a><a href="https://leetcode-cn.com/problems/partition-equal-subset-sum/">416. 分割等和子集</a></h1><p>给你一个 <strong>只包含正整数</strong> 的 <strong>非空</strong> 数组 <code>nums</code> 。请你判断是否可以将这个数组分割成两个子集，使得两个子集的元素和相等。</p>
+<p><strong>示例 1：</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><code class="hljs plain">输入：nums &#x3D; [1,5,11,5]<br>输出：true<br>解释：数组可以分割成 [1, 5, 5] 和 [11] 。<br></code></pre></td></tr></table></figure>
+
+<p><strong>示例 2：</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><code class="hljs plain">输入：nums &#x3D; [1,2,3,5]<br>输出：false<br>解释：数组不能分割成两个元素和相等的子集。<br></code></pre></td></tr></table></figure>
+
+<p><strong>提示：</strong></p>
+<ul>
+<li>  <code>1 &lt;= nums.length &lt;= 200</code></li>
+<li>  <code>1 &lt;= nums[i] &lt;= 100</code></li>
+</ul>
+<h2 id="Solution-7"><a href="#Solution-7" class="headerlink" title="Solution"></a>Solution</h2><p>#动态规划 #背包问题 #difficult</p>
+<figure class="highlight go"><table><tr><td class="code"><pre><code class="hljs go"><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">canPartition</span><span class="hljs-params">(nums []<span class="hljs-keyword">int</span>)</span> <span class="hljs-title">bool</span></span> &#123;<br>    n := <span class="hljs-built_in">len</span>(nums)<br>    <span class="hljs-keyword">if</span> n &lt; <span class="hljs-number">2</span> &#123;<br>        <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span><br>    &#125;<br><br>    sum, maxNum := <span class="hljs-number">0</span>,<span class="hljs-number">0</span><br>    <span class="hljs-keyword">for</span> _,num := <span class="hljs-keyword">range</span> nums &#123;<br>        sum += num<br>        <span class="hljs-keyword">if</span> num &gt; maxNum &#123;<br>            maxNum = num<br>        &#125;<br>    &#125;<br><br>    <span class="hljs-comment">// 判断总和是不是奇数</span><br>    <span class="hljs-keyword">if</span> sum%<span class="hljs-number">2</span> != <span class="hljs-number">0</span> &#123;<br>        <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span><br>    &#125;<br><br>    target := sum / <span class="hljs-number">2</span><br>    <span class="hljs-keyword">if</span> target &lt; maxNum &#123;<br>        <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span><br>    &#125;<br>    <br>    dp := <span class="hljs-built_in">make</span>([]<span class="hljs-keyword">bool</span>, target+<span class="hljs-number">1</span>)<br>    dp[<span class="hljs-number">0</span>] = <span class="hljs-literal">true</span><br>    <span class="hljs-keyword">for</span> i := <span class="hljs-number">0</span>; i &lt; n; i++ &#123;<br>        v := nums[i]<br>        <span class="hljs-keyword">for</span> j := target; j &gt;= v; j-- &#123;<br>            dp[j] = dp[j] || dp[j-v]<br>        &#125;<br>    &#125;<br>    <span class="hljs-keyword">return</span> dp[target]<br><br>&#125;<br></code></pre></td></tr></table></figure>
+
+<hr>
+<h1 id="322-零钱兑换"><a href="#322-零钱兑换" class="headerlink" title="322. 零钱兑换"></a><a href="https://leetcode-cn.com/problems/coin-change/">322. 零钱兑换</a></h1><p>给你一个整数数组 <code>coins</code> ，表示不同面额的硬币；以及一个整数 <code>amount</code> ，表示总金额。</p>
+<p>计算并返回可以凑成总金额所需的 <strong>最少的硬币个数</strong> 。如果没有任何一种硬币组合能组成总金额，返回 <code>-1</code> 。</p>
+<p>你可以认为每种硬币的数量是无限的。</p>
+<p><strong>示例 1：</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><code class="hljs plain">输入：coins &#x3D; [1, 2, 5], amount &#x3D; 11<br>输出：3 <br>解释：11 &#x3D; 5 + 5 + 1<br></code></pre></td></tr></table></figure>
+
+<p><strong>示例 2：</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><code class="hljs plain">输入：coins &#x3D; [2], amount &#x3D; 3<br>输出：-1<br></code></pre></td></tr></table></figure>
+
+<p><strong>示例 3：</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><code class="hljs plain">输入：coins &#x3D; [1], amount &#x3D; 0<br>输出：0<br></code></pre></td></tr></table></figure>
+
+<p><strong>示例 4：</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><code class="hljs plain">输入：coins &#x3D; [1], amount &#x3D; 1<br>输出：1<br></code></pre></td></tr></table></figure>
+
+<p><strong>示例 5：</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><code class="hljs plain">输入：coins &#x3D; [1], amount &#x3D; 2<br>输出：2<br></code></pre></td></tr></table></figure>
+
+<p><strong>提示：</strong></p>
+<ul>
+<li>  <code>1 &lt;= coins.length &lt;= 12</code></li>
+<li>  <code>1 &lt;= coins[i] &lt;= 2&lt;sup&gt;31&lt;/sup&gt; - 1</code></li>
+<li>  <code>0 &lt;= amount &lt;= 10&lt;sup&gt;4&lt;/sup&gt;</code></li>
+</ul>
+<h2 id="Solution-8"><a href="#Solution-8" class="headerlink" title="Solution"></a>Solution</h2><p>#动态规划</p>
+<figure class="highlight go"><table><tr><td class="code"><pre><code class="hljs go"><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">coinChange</span><span class="hljs-params">(coins []<span class="hljs-keyword">int</span>, amount <span class="hljs-keyword">int</span>)</span> <span class="hljs-title">int</span></span> &#123;<br>    dp := <span class="hljs-built_in">make</span>([]<span class="hljs-keyword">int</span>, amount + <span class="hljs-number">1</span>)<br>    dp[<span class="hljs-number">0</span>] = <span class="hljs-number">0</span><br>    <span class="hljs-comment">// 初始化为math.MaxInt32</span><br>	<span class="hljs-keyword">for</span> j := <span class="hljs-number">1</span>; j &lt;= amount; j++ &#123;<br>		dp[j] = math.MaxInt32<br>	&#125;<br>    <span class="hljs-keyword">for</span> i := <span class="hljs-number">0</span>; i &lt; <span class="hljs-built_in">len</span>(coins); i++ &#123;<br>        <span class="hljs-keyword">for</span> j := coins[i]; j &lt;= amount ; j++ &#123;<br>            <span class="hljs-keyword">if</span> dp[j-coins[i]] != math.MaxInt32 &#123;<br>                dp[j] = min(dp[j], dp[j-coins[i]]+<span class="hljs-number">1</span>)<br>            &#125;<br>        &#125;<br>    &#125;<br><br>    <span class="hljs-comment">// 没找到能装满背包的, 就返回-1</span><br>	<span class="hljs-keyword">if</span> dp[amount] == math.MaxInt32 &#123;<br>		<span class="hljs-keyword">return</span> <span class="hljs-number">-1</span><br>	&#125;<br>	<span class="hljs-keyword">return</span> dp[amount]<br><br>&#125;<br><br><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">min</span><span class="hljs-params">(a, b <span class="hljs-keyword">int</span>)</span> <span class="hljs-title">int</span></span> &#123;<br>    <span class="hljs-keyword">if</span> a &lt; b&#123;<br>        <span class="hljs-keyword">return</span> a<br>    &#125;<br>    <span class="hljs-keyword">return</span> b<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<hr>
+<h1 id="20-有效的括号"><a href="#20-有效的括号" class="headerlink" title="20. 有效的括号"></a><a href="https://leetcode-cn.com/problems/valid-parentheses/">20. 有效的括号</a></h1><p>给定一个只包括 <code>&#39;(&#39;</code>，<code>&#39;)&#39;</code>，<code>&#39;&#123;&#39;</code>，<code>&#39;&#125;&#39;</code>，<code>&#39;[&#39;</code>，<code>&#39;]&#39;</code> 的字符串 <code>s</code> ，判断字符串是否有效。</p>
+<p>有效字符串需满足：</p>
+<ol>
+<li> 左括号必须用相同类型的右括号闭合。</li>
+<li> 左括号必须以正确的顺序闭合。</li>
+</ol>
+<p><strong>示例 1：</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><code class="hljs plain">输入：s &#x3D; &quot;()&quot;<br>输出：true<br></code></pre></td></tr></table></figure>
+
+<p><strong>示例 2：</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><code class="hljs plain">输入：s &#x3D; &quot;()[]&#123;&#125;&quot;<br>输出：true<br></code></pre></td></tr></table></figure>
+
+<p><strong>示例 3：</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><code class="hljs plain">输入：s &#x3D; &quot;(]&quot;<br>输出：false<br></code></pre></td></tr></table></figure>
+
+<p><strong>示例 4：</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><code class="hljs plain">输入：s &#x3D; &quot;([)]&quot;<br>输出：false<br></code></pre></td></tr></table></figure>
+
+<p><strong>示例 5：</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><code class="hljs plain">输入：s &#x3D; &quot;&#123;[]&#125;&quot;<br>输出：true<br></code></pre></td></tr></table></figure>
+
+<p><strong>提示：</strong></p>
+<ul>
+<li>  <code>1 &lt;= s.length &lt;= 10&lt;sup&gt;4&lt;/sup&gt;</code></li>
+<li>  <code>s</code> 仅由括号 <code>&#39;()[]&#123;&#125;&#39;</code> 组成</li>
+</ul>
+<h2 id="Solution-9"><a href="#Solution-9" class="headerlink" title="Solution"></a>Solution</h2><p>#栈</p>
+<figure class="highlight go"><table><tr><td class="code"><pre><code class="hljs Go"><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">isValid</span><span class="hljs-params">(s <span class="hljs-keyword">string</span>)</span> <span class="hljs-title">bool</span></span> &#123;<br>    n := <span class="hljs-built_in">len</span>(s)<br>    <span class="hljs-keyword">if</span> n % <span class="hljs-number">2</span> == <span class="hljs-number">1</span> &#123;<br>        <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span><br>    &#125;<br><br>    pairs := <span class="hljs-keyword">map</span>[<span class="hljs-keyword">byte</span>]<span class="hljs-keyword">byte</span> &#123;<br>        <span class="hljs-string">&#x27;)&#x27;</span>:<span class="hljs-string">&#x27;(&#x27;</span>,<br>        <span class="hljs-string">&#x27;]&#x27;</span>:<span class="hljs-string">&#x27;[&#x27;</span>,<br>        <span class="hljs-string">&#x27;&#125;&#x27;</span>:<span class="hljs-string">&#x27;&#123;&#x27;</span>,<br>    &#125;<br><br>    stack := []<span class="hljs-keyword">byte</span>&#123;&#125;<br>    <span class="hljs-keyword">for</span> i := <span class="hljs-number">0</span>; i &lt; n; i++ &#123;<br>        <span class="hljs-keyword">if</span> pairs[s[i]] &gt; <span class="hljs-number">0</span> &#123;<br>            <span class="hljs-keyword">if</span> <span class="hljs-built_in">len</span>(stack) == <span class="hljs-number">0</span> || stack[<span class="hljs-built_in">len</span>(stack)<span class="hljs-number">-1</span>] != pairs[s[i]] &#123;<br>                <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span><br>            &#125;<br>            stack = stack[:<span class="hljs-built_in">len</span>(stack)<span class="hljs-number">-1</span>]<br>        &#125; <span class="hljs-keyword">else</span> &#123;<br>            stack = <span class="hljs-built_in">append</span>(stack,s[i])<br>        &#125;<br>    &#125;<br>    <span class="hljs-keyword">return</span> <span class="hljs-built_in">len</span>(stack) == <span class="hljs-number">0</span><br>&#125;<br></code></pre></td></tr></table></figure>
+
+<hr>
+<h1 id="20-有效的括号-1"><a href="#20-有效的括号-1" class="headerlink" title="20. 有效的括号"></a><a href="https://leetcode-cn.com/problems/valid-parentheses/">20. 有效的括号</a></h1><p>给定一个只包括 <code>&#39;(&#39;</code>，<code>&#39;)&#39;</code>，<code>&#39;&#123;&#39;</code>，<code>&#39;&#125;&#39;</code>，<code>&#39;[&#39;</code>，<code>&#39;]&#39;</code> 的字符串 <code>s</code> ，判断字符串是否有效。</p>
+<p>有效字符串需满足：</p>
+<ol>
+<li> 左括号必须用相同类型的右括号闭合。</li>
+<li> 左括号必须以正确的顺序闭合。</li>
+</ol>
+<p><strong>示例 1：</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><code class="hljs plain">输入：s &#x3D; &quot;()&quot;<br>输出：true<br></code></pre></td></tr></table></figure>
+
+<p><strong>示例 2：</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><code class="hljs plain">输入：s &#x3D; &quot;()[]&#123;&#125;&quot;<br>输出：true<br></code></pre></td></tr></table></figure>
+
+<p><strong>示例 3：</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><code class="hljs plain">输入：s &#x3D; &quot;(]&quot;<br>输出：false<br></code></pre></td></tr></table></figure>
+
+<p><strong>示例 4：</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><code class="hljs plain">输入：s &#x3D; &quot;([)]&quot;<br>输出：false<br></code></pre></td></tr></table></figure>
+
+<p><strong>示例 5：</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><code class="hljs plain">输入：s &#x3D; &quot;&#123;[]&#125;&quot;<br>输出：true<br></code></pre></td></tr></table></figure>
+
+<p><strong>提示：</strong></p>
+<ul>
+<li>  <code>1 &lt;= s.length &lt;= 10&lt;sup&gt;4&lt;/sup&gt;</code></li>
+<li>  <code>s</code> 仅由括号 <code>&#39;()[]&#123;&#125;&#39;</code> 组成</li>
+</ul>
+<h2 id="Solution-10"><a href="#Solution-10" class="headerlink" title="Solution"></a>Solution</h2><p>#栈</p>
+<figure class="highlight go"><table><tr><td class="code"><pre><code class="hljs go"><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">isValid</span><span class="hljs-params">(s <span class="hljs-keyword">string</span>)</span> <span class="hljs-title">bool</span></span> &#123;<br>    n := <span class="hljs-built_in">len</span>(s)<br>    <span class="hljs-keyword">if</span> n % <span class="hljs-number">2</span> == <span class="hljs-number">1</span> &#123;<br>        <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span><br>    &#125;<br><br>    pairs := <span class="hljs-keyword">map</span>[<span class="hljs-keyword">byte</span>]<span class="hljs-keyword">byte</span> &#123;<br>        <span class="hljs-string">&#x27;)&#x27;</span>:<span class="hljs-string">&#x27;(&#x27;</span>,<br>        <span class="hljs-string">&#x27;]&#x27;</span>:<span class="hljs-string">&#x27;[&#x27;</span>,<br>        <span class="hljs-string">&#x27;&#125;&#x27;</span>:<span class="hljs-string">&#x27;&#123;&#x27;</span>,<br>    &#125;<br><br>    stack := []<span class="hljs-keyword">byte</span>&#123;&#125;<br>    <span class="hljs-keyword">for</span> i := <span class="hljs-number">0</span>; i &lt; n; i++ &#123;<br>        <span class="hljs-keyword">if</span> pairs[s[i]] &gt; <span class="hljs-number">0</span> &#123;<br>            <span class="hljs-keyword">if</span> <span class="hljs-built_in">len</span>(stack) == <span class="hljs-number">0</span> || stack[<span class="hljs-built_in">len</span>(stack)<span class="hljs-number">-1</span>] != pairs[s[i]] &#123;<br>                <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span><br>            &#125;<br>            stack = stack[:<span class="hljs-built_in">len</span>(stack)<span class="hljs-number">-1</span>]<br>        &#125; <span class="hljs-keyword">else</span> &#123;<br>            stack = <span class="hljs-built_in">append</span>(stack,s[i])<br>        &#125;<br>    &#125;<br>    <span class="hljs-keyword">return</span> <span class="hljs-built_in">len</span>(stack) == <span class="hljs-number">0</span><br>&#125;<br></code></pre></td></tr></table></figure>
+
+<hr>
+<h1 id="496-下一个更大元素-I"><a href="#496-下一个更大元素-I" class="headerlink" title="496. 下一个更大元素 I"></a><a href="https://leetcode-cn.com/problems/next-greater-element-i/">496. 下一个更大元素 I</a></h1><p><code>nums1</code> 中数字 <code>x</code> 的 <strong>下一个更大元素</strong> 是指 <code>x</code> 在 <code>nums2</code> 中对应位置 <strong>右侧</strong> 的 <strong>第一个</strong> 比 <code>x</code>大的元素。</p>
+<p>给你两个 <strong>没有重复元素</strong> 的数组 <code>nums1</code> 和 <code>nums2</code> ，下标从 <strong>0</strong> 开始计数，其中<code>nums1</code> 是 <code>nums2</code> 的子集。</p>
+<p>对于每个 <code>0 &lt;= i &lt; nums1.length</code> ，找出满足 <code>nums1[i] == nums2[j]</code> 的下标 <code>j</code> ，并且在 <code>nums2</code> 确定 <code>nums2[j]</code> 的 <strong>下一个更大元素</strong> 。如果不存在下一个更大元素，那么本次查询的答案是 <code>-1</code> 。</p>
+<p>返回一个长度为 <code>nums1.length</code> 的数组<code>ans</code>作为答案，满足<code>ans[i]</code>是如上所述的 <strong>下一个更大元素</strong> 。</p>
+<p><strong>示例 1：</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><code class="hljs plain">输入：nums1 &#x3D; [4,1,2], nums2 &#x3D; [1,3,4,2].<br>输出：[-1,3,-1]<br>解释：nums1 中每个值的下一个更大元素如下所述：<br>- 4 ，用加粗斜体标识，nums2 &#x3D; [1,3,4,2]。不存在下一个更大元素，所以答案是 -1 。<br>- 1 ，用加粗斜体标识，nums2 &#x3D; [1,3,4,2]。下一个更大元素是 3 。<br>- 2 ，用加粗斜体标识，nums2 &#x3D; [1,3,4,2]。不存在下一个更大元素，所以答案是 -1 。<br></code></pre></td></tr></table></figure>
+
+<p><strong>示例 2：</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><code class="hljs plain">输入：nums1 &#x3D; [2,4], nums2 &#x3D; [1,2,3,4].<br>输出：[3,-1]<br>解释：nums1 中每个值的下一个更大元素如下所述：<br>- 2 ，用加粗斜体标识，nums2 &#x3D; [1,2,3,4]。下一个更大元素是 3 。<br>- 4 ，用加粗斜体标识，nums2 &#x3D; [1,2,3,4]。不存在下一个更大元素，所以答案是 -1 。<br></code></pre></td></tr></table></figure>
+
+<p><strong>提示：</strong></p>
+<ul>
+<li>  <code>1 &lt;= nums1.length &lt;= nums2.length &lt;= 1000</code></li>
+<li>  <code>0 &lt;= nums1[i], nums2[i] &lt;= 10&lt;sup&gt;4&lt;/sup&gt;</code></li>
+<li>  <code>nums1</code>和<code>nums2</code>中所有整数 <strong>互不相同</strong></li>
+<li>  <code>nums1</code> 中的所有整数同样出现在 <code>nums2</code> 中</li>
+</ul>
+<p><strong>进阶：</strong>你可以设计一个时间复杂度为 <code>O(nums1.length + nums2.length)</code> 的解决方案吗？</p>
+<h2 id="Solution-11"><a href="#Solution-11" class="headerlink" title="Solution"></a>Solution</h2><p>/#暴力解</p>
+<figure class="highlight go"><table><tr><td class="code"><pre><code class="hljs go"><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">nextGreaterElement</span><span class="hljs-params">(nums1 []<span class="hljs-keyword">int</span>, nums2 []<span class="hljs-keyword">int</span>)</span> []<span class="hljs-title">int</span></span> &#123;<br>    m,n := <span class="hljs-built_in">len</span>(nums1),<span class="hljs-built_in">len</span>(nums2)<br>    res := <span class="hljs-built_in">make</span>([]<span class="hljs-keyword">int</span>, m)<br>    <span class="hljs-keyword">for</span> i := <span class="hljs-number">0</span>; i &lt; m; i++ &#123;<br>        j := <span class="hljs-number">0</span><br>        <span class="hljs-keyword">for</span> j &lt; n &amp;&amp; nums2[j] != nums1[i] &#123;<br>            j++<br>        &#125;<br>        k := j + <span class="hljs-number">1</span><br>        <span class="hljs-keyword">for</span> k &lt; n &amp;&amp; nums2[k] &lt; nums2[j] &#123;<br>            k++<br>        &#125;<br>        <br>        <span class="hljs-keyword">if</span> k &lt; n &#123;<br>            res[i] = nums2[k]<br>        &#125; <span class="hljs-keyword">else</span> &#123;<br>            res[i] = <span class="hljs-number">-1</span><br>        &#125;<br>    &#125;<br>    <span class="hljs-keyword">return</span> res<br><br>&#125;<br></code></pre></td></tr></table></figure>
+
+<hr>
+<h1 id="456-132-模式"><a href="#456-132-模式" class="headerlink" title="456. 132 模式"></a><a href="https://leetcode-cn.com/problems/132-pattern/">456. 132 模式</a></h1><p>给你一个整数数组 <code>nums</code> ，数组中共有 <code>n</code> 个整数。<strong>132 模式的子序列</strong> 由三个整数 <code>nums[i]</code>、<code>nums[j]</code> 和 <code>nums[k]</code> 组成，并同时满足：<code>i &lt; j &lt; k</code> 和 <code>nums[i] &lt; nums[k] &lt; nums[j]</code> 。</p>
+<p>如果 <code>nums</code> 中存在 <strong>132 模式的子序列</strong> ，返回 <code>true</code> ；否则，返回 <code>false</code> 。</p>
+<p><strong>示例 1：</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><code class="hljs plain">输入：nums &#x3D; [1,2,3,4]<br>输出：false<br>解释：序列中不存在 132 模式的子序列。<br></code></pre></td></tr></table></figure>
+
+<p><strong>示例 2：</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><code class="hljs plain">输入：nums &#x3D; [3,1,4,2]<br>输出：true<br>解释：序列中有 1 个 132 模式的子序列： [1, 4, 2] 。<br></code></pre></td></tr></table></figure>
+
+<p><strong>示例 3：</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><code class="hljs plain">输入：nums &#x3D; [-1,3,2,0]<br>输出：true<br>解释：序列中有 3 个 132 模式的的子序列：[-1, 3, 2]、[-1, 3, 0] 和 [-1, 2, 0] 。<br></code></pre></td></tr></table></figure>
+
+<p><strong>提示：</strong></p>
+<ul>
+<li>  <code>n == nums.length</code></li>
+<li>  <code>1 &lt;= n &lt;= 2 * 10&lt;sup&gt;5&lt;/sup&gt;</code></li>
+<li>  <code>-10&lt;sup&gt;9&lt;/sup&gt; &lt;= nums[i] &lt;= 10&lt;sup&gt;9&lt;/sup&gt;</code></li>
+</ul>
+<h4 id="Solution-12"><a href="#Solution-12" class="headerlink" title="Solution"></a>Solution</h4><p>#栈 #单调栈</p>
+<figure class="highlight go"><table><tr><td class="code"><pre><code class="hljs go"><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">find132pattern</span><span class="hljs-params">(nums []<span class="hljs-keyword">int</span>)</span> <span class="hljs-title">bool</span></span> &#123;<br>    n := <span class="hljs-built_in">len</span>(nums)<br>    candidateK := []<span class="hljs-keyword">int</span>&#123;nums[n<span class="hljs-number">-1</span>]&#125;<br><br>    maxK := math.MinInt64<br><br>    <span class="hljs-keyword">for</span> i := n - <span class="hljs-number">2</span>; i &gt;= <span class="hljs-number">0</span>; i-- &#123;<br>        <span class="hljs-keyword">if</span> nums[i] &lt; maxK &#123;<br>            <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span><br>        &#125;<br><br>        <span class="hljs-keyword">for</span> <span class="hljs-built_in">len</span>(candidateK) &gt; <span class="hljs-number">0</span> &amp;&amp; nums[i] &gt; candidateK[<span class="hljs-built_in">len</span>(candidateK)<span class="hljs-number">-1</span>] &#123;<br>            maxK = candidateK[<span class="hljs-built_in">len</span>(candidateK)<span class="hljs-number">-1</span>]<br>            candidateK = candidateK[:<span class="hljs-built_in">len</span>(candidateK)<span class="hljs-number">-1</span>]<br>        &#125;<br><br>        <span class="hljs-keyword">if</span> nums[i] &gt; maxK &#123;<br>            candidateK = <span class="hljs-built_in">append</span>(candidateK, nums[i])<br>        &#125;<br>    &#125;<br>    <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span><br>&#125;<br></code></pre></td></tr></table></figure>
+
+<hr>
+<h1 id="119-杨辉三角-II"><a href="#119-杨辉三角-II" class="headerlink" title="119. 杨辉三角 II"></a><a href="https://leetcode-cn.com/problems/pascals-triangle-ii/">119. 杨辉三角 II</a></h1><p>给定一个非负索引 <code>rowIndex</code>，返回「杨辉三角」的第 <code>rowIndex</code>行。</p>
+<p><small style="display: inline;">在「杨辉三角」中，每个数是它左上方和右上方的数的和。</small></p>
+<p><img src="https://pic.leetcode-cn.com/1626927345-DZmfxB-PascalTriangleAnimated2.gif"></p>
+<p><strong>示例 1:</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><code class="hljs plain">输入: rowIndex &#x3D; 3<br>输出: [1,3,3,1]<br></code></pre></td></tr></table></figure>
+
+<p><strong>示例 2:</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><code class="hljs plain">输入: rowIndex &#x3D; 0<br>输出: [1]<br></code></pre></td></tr></table></figure>
+
+<p><strong>示例 3:</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><code class="hljs plain">输入: rowIndex &#x3D; 1<br>输出: [1,1]<br></code></pre></td></tr></table></figure>
+
+<p><strong>提示:</strong></p>
+<ul>
+<li>  <code>0 &lt;= rowIndex &lt;= 33</code></li>
+</ul>
+<p><strong>进阶：</strong></p>
+<p>你可以优化你的算法到 <code>_O_(_rowIndex_)</code> 空间复杂度吗？</p>
+<h2 id="Solution-13"><a href="#Solution-13" class="headerlink" title="Solution"></a>Solution</h2><p>#数学</p>
+<figure class="highlight go"><table><tr><td class="code"><pre><code class="hljs Go"><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">getRow</span><span class="hljs-params">(rowIndex <span class="hljs-keyword">int</span>)</span> []<span class="hljs-title">int</span></span> &#123;<br>    C := <span class="hljs-built_in">make</span>([][]<span class="hljs-keyword">int</span>, rowIndex+<span class="hljs-number">1</span>)<br>    <span class="hljs-keyword">for</span> i := <span class="hljs-keyword">range</span> C &#123;<br>        C[i] = <span class="hljs-built_in">make</span>([]<span class="hljs-keyword">int</span>,i+<span class="hljs-number">1</span>)<br>        C[i][<span class="hljs-number">0</span>],C[i][i] = <span class="hljs-number">1</span>,<span class="hljs-number">1</span><br>        <span class="hljs-keyword">for</span> j := <span class="hljs-number">1</span>; j &lt; i; j++ &#123;<br>            C[i][j] = C[i<span class="hljs-number">-1</span>][j<span class="hljs-number">-1</span>] + C[i<span class="hljs-number">-1</span>][j]<br>        &#125;<br>    &#125;<br>    <span class="hljs-keyword">return</span> C[rowIndex]<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<hr>
+<h1 id="279-完全平方数"><a href="#279-完全平方数" class="headerlink" title="279. 完全平方数"></a><a href="https://leetcode-cn.com/problems/perfect-squares/">279. 完全平方数</a></h1><p>给定正整数 _n_，找到若干个完全平方数（比如 <code>1, 4, 9, 16, ...</code>）使得它们的和等于 _n_。你需要让组成和的完全平方数的个数最少。</p>
+<p>给你一个整数 <code>n</code> ，返回和为 <code>n</code> 的完全平方数的 <strong>最少数量</strong> 。</p>
+<p><strong>完全平方数</strong> 是一个整数，其值等于另一个整数的平方；换句话说，其值等于一个整数自乘的积。例如，<code>1</code>、<code>4</code>、<code>9</code> 和 <code>16</code> 都是完全平方数，而 <code>3</code> 和 <code>11</code> 不是。</p>
+<p><strong>示例 1：</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><code class="hljs plain">输入：n &#x3D; 12<br>输出：3 <br>解释：12 &#x3D; 4 + 4 + 4<br></code></pre></td></tr></table></figure>
+
+<p><strong>示例 2：</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><code class="hljs plain">输入：n &#x3D; 13<br>输出：2<br>解释：13 &#x3D; 4 + 9<br></code></pre></td></tr></table></figure>
+
+<p><strong>提示：</strong></p>
+<ul>
+<li>  <code>1 &lt;= n &lt;= 10&lt;sup&gt;4&lt;/sup&gt;</code></li>
+</ul>
+<h2 id="Solution-14"><a href="#Solution-14" class="headerlink" title="Solution"></a>Solution</h2><p>#动态规划</p>
+<figure class="highlight go"><table><tr><td class="code"><pre><code class="hljs go"><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">numSquares</span><span class="hljs-params">(n <span class="hljs-keyword">int</span>)</span> <span class="hljs-title">int</span></span> &#123;<br>    f := <span class="hljs-built_in">make</span>([]<span class="hljs-keyword">int</span>, n+<span class="hljs-number">1</span>)<br>    <span class="hljs-keyword">for</span> i := <span class="hljs-number">1</span>; i &lt;= n; i++ &#123;<br>        minn := math.MaxInt32<br>        <span class="hljs-keyword">for</span> j := <span class="hljs-number">1</span>; j*j &lt;= i; j++ &#123;<br>            minn = min(minn, f[i-j*j])<br>        &#125;<br>        f[i] = minn + <span class="hljs-number">1</span><br>    &#125;<br>    <span class="hljs-keyword">return</span> f[n]<br>&#125;<br><br><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">min</span><span class="hljs-params">(a,b <span class="hljs-keyword">int</span>)</span> <span class="hljs-title">int</span></span> &#123;<br>    <span class="hljs-keyword">if</span> a &lt; b &#123;<br>        <span class="hljs-keyword">return</span> a<br>    &#125;<br>    <span class="hljs-keyword">return</span> b<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<hr>
+<hr>
+<h1 id="112-路径总和"><a href="#112-路径总和" class="headerlink" title="112. 路径总和"></a><a href="https://leetcode-cn.com/problems/path-sum/">112. 路径总和</a></h1><p>给你二叉树的根节点 <code>root</code> 和一个表示目标和的整数 <code>targetSum</code> 。判断该树中是否存在 <strong>根节点到叶子节点</strong> 的路径，这条路径上所有节点值相加等于目标和 <code>targetSum</code> 。如果存在，返回 <code>true</code> ；否则，返回 <code>false</code> 。</p>
+<p><strong>叶子节点</strong> 是指没有子节点的节点。</p>
+<p><strong>示例 1：</strong></p>
+<p><img src="https://assets.leetcode.com/uploads/2021/01/18/pathsum1.jpg"></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><code class="hljs plain">输入：root &#x3D; [5,4,8,11,null,13,4,7,2,null,null,null,1], targetSum &#x3D; 22<br>输出：true<br>解释：等于目标和的根节点到叶节点路径如上图所示。<br></code></pre></td></tr></table></figure>
+
+<p><strong>示例 2：</strong></p>
+<p><img src="https://assets.leetcode.com/uploads/2021/01/18/pathsum2.jpg"></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><code class="hljs plain">输入：root &#x3D; [1,2,3], targetSum &#x3D; 5<br>输出：false<br>解释：树中存在两条根节点到叶子节点的路径：<br>(1 --&gt; 2): 和为 3<br>(1 --&gt; 3): 和为 4<br>不存在 sum &#x3D; 5 的根节点到叶子节点的路径。<br></code></pre></td></tr></table></figure>
+
+<p><strong>示例 3：</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><code class="hljs plain">输入：root &#x3D; [], targetSum &#x3D; 0<br>输出：false<br>解释：由于树是空的，所以不存在根节点到叶子节点的路径。<br></code></pre></td></tr></table></figure>
+
+<p><strong>提示：</strong></p>
+<ul>
+<li>  树中节点的数目在范围 <code>[0, 5000]</code> 内</li>
+<li>  <code>-1000 &lt;= Node.val &lt;= 1000</code></li>
+<li>  <code>-1000 &lt;= targetSum &lt;= 1000</code></li>
+</ul>
+<h2 id="Solution-15"><a href="#Solution-15" class="headerlink" title="Solution"></a>Solution</h2><p>#广度搜索</p>
+<figure class="highlight go"><table><tr><td class="code"><pre><code class="hljs go"><span class="hljs-comment">/**</span><br><span class="hljs-comment"> * Definition for a binary tree node.</span><br><span class="hljs-comment"> * type TreeNode struct &#123;</span><br><span class="hljs-comment"> *     Val int</span><br><span class="hljs-comment"> *     Left *TreeNode</span><br><span class="hljs-comment"> *     Right *TreeNode</span><br><span class="hljs-comment"> * &#125;</span><br><span class="hljs-comment"> */</span><br><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">hasPathSum</span><span class="hljs-params">(root *TreeNode, targetSum <span class="hljs-keyword">int</span>)</span> <span class="hljs-title">bool</span></span> &#123;<br>    <span class="hljs-keyword">if</span> root == <span class="hljs-literal">nil</span> &#123;<br>        <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span><br>    &#125;<br><br>    queNode := []*TreeNode&#123;&#125;<br>    queVal := []<span class="hljs-keyword">int</span>&#123;&#125;<br>    queNode = <span class="hljs-built_in">append</span>(queNode,root)<br>    queVal = <span class="hljs-built_in">append</span>(queVal,root.Val)<br><br>    <span class="hljs-keyword">for</span> <span class="hljs-built_in">len</span>(queNode) != <span class="hljs-number">0</span> &#123;<br>        now := queNode[<span class="hljs-number">0</span>]<br>        queNode = queNode[<span class="hljs-number">1</span>:]<br>        temp := queVal[<span class="hljs-number">0</span>]<br>        queVal = queVal[<span class="hljs-number">1</span>:]<br><br>        <span class="hljs-keyword">if</span> now.Left == <span class="hljs-literal">nil</span> &amp;&amp; now.Right == <span class="hljs-literal">nil</span> &#123;<br>            <span class="hljs-keyword">if</span> temp == targetSum &#123;<br>                <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span><br>            &#125;<br>            <span class="hljs-keyword">continue</span><br>        &#125;<br><br>        <span class="hljs-keyword">if</span> now.Left != <span class="hljs-literal">nil</span> &#123;<br>            queNode = <span class="hljs-built_in">append</span>(queNode,now.Left)<br>            queVal = <span class="hljs-built_in">append</span>(queVal,now.Left.Val + temp)<br>        &#125;<br><br>        <span class="hljs-keyword">if</span> now.Right != <span class="hljs-literal">nil</span> &#123;<br>            queNode = <span class="hljs-built_in">append</span>(queNode, now.Right)<br>            queVal = <span class="hljs-built_in">append</span>(queVal, now.Right.Val + temp)<br>        &#125;<br>    &#125;<br><br>    <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span><br>&#125;<br></code></pre></td></tr></table></figure>
+
+<hr>
+<hr>
+<hr>
+<h1 id="720-词典中最长的单词"><a href="#720-词典中最长的单词" class="headerlink" title="720. 词典中最长的单词"></a><a href="https://leetcode-cn.com/problems/longest-word-in-dictionary/">720. 词典中最长的单词</a></h1><p>给出一个字符串数组<code>words</code>组成的一本英语词典。从中找出最长的一个单词，该单词是由<code>words</code>词典中其他单词逐步添加一个字母组成。若其中有多个可行的答案，则返回答案中字典序最小的单词。</p>
+<p>若无答案，则返回空字符串。</p>
+<p><strong>示例 1：</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><code class="hljs plain">输入：<br>words &#x3D; [&quot;w&quot;,&quot;wo&quot;,&quot;wor&quot;,&quot;worl&quot;, &quot;world&quot;]<br>输出：&quot;world&quot;<br>解释： <br>单词&quot;world&quot;可由&quot;w&quot;, &quot;wo&quot;, &quot;wor&quot;, 和 &quot;worl&quot;添加一个字母组成。<br></code></pre></td></tr></table></figure>
+
+<p><strong>示例 2：</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><code class="hljs plain">输入：<br>words &#x3D; [&quot;a&quot;, &quot;banana&quot;, &quot;app&quot;, &quot;appl&quot;, &quot;ap&quot;, &quot;apply&quot;, &quot;apple&quot;]<br>输出：&quot;apple&quot;<br>解释：<br>&quot;apply&quot;和&quot;apple&quot;都能由词典中的单词组成。但是&quot;apple&quot;的字典序小于&quot;apply&quot;。<br></code></pre></td></tr></table></figure>
+
+<p><strong>提示：</strong></p>
+<ul>
+<li>  所有输入的字符串都只包含小写字母。</li>
+<li>  <code>words</code>数组长度范围为<code>[1,1000]</code>。</li>
+<li>  <code>words[i]</code>的长度范围为<code>[1,30]</code>。</li>
+</ul>
+<h4 id="Solution-16"><a href="#Solution-16" class="headerlink" title="Solution"></a>Solution</h4><p>Language: ****</p>
+<figure class="highlight go"><table><tr><td class="code"><pre><code class="hljs go"><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">longestWord</span><span class="hljs-params">(words []<span class="hljs-keyword">string</span>)</span> <span class="hljs-title">string</span></span> &#123;<br>    <span class="hljs-comment">// 排序哈希</span><br>    sort.Strings(words)<br><br>    <span class="hljs-comment">// 字符串/是否出现</span><br>    wordsMap := <span class="hljs-built_in">make</span>(<span class="hljs-keyword">map</span>[<span class="hljs-keyword">string</span>]<span class="hljs-keyword">bool</span>)<br>    res := <span class="hljs-string">&quot;&quot;</span><br><br>    <span class="hljs-keyword">for</span> _,word := <span class="hljs-keyword">range</span> words &#123;<br>        wlen, reslen := <span class="hljs-built_in">len</span>(word), <span class="hljs-built_in">len</span>(res)<br><br>        <span class="hljs-comment">// 字符串前缀</span><br>        <span class="hljs-keyword">if</span> wlen == <span class="hljs-number">1</span> || wordsMap[word[:wlen<span class="hljs-number">-1</span>]] &#123;<br>            wordsMap[word] = <span class="hljs-literal">true</span><br>            <span class="hljs-comment">// 更新res为最长的单词</span><br>            <span class="hljs-keyword">if</span> reslen == <span class="hljs-number">0</span> || reslen &lt; wlen &#123;<br>                res = word<br>            &#125;<br>        &#125;<br>    &#125;<br><br>    <span class="hljs-keyword">return</span> res<br><br>&#125;<br></code></pre></td></tr></table></figure>
+
+<hr>
+<hr>
+<hr>
+<hr>
+<hr>
+<h1 id="28-实现-strStr"><a href="#28-实现-strStr" class="headerlink" title="28. 实现 strStr()"></a><a href="https://leetcode-cn.com/problems/implement-strstr/">28. 实现 strStr()</a></h1><p>实现  函数。</p>
+<p>给你两个字符串 <code>haystack</code> 和 <code>needle</code> ，请你在 <code>haystack</code> 字符串中找出 <code>needle</code> 字符串出现的第一个位置（下标从 0 开始）。如果不存在，则返回  <code>-1</code>。</p>
+<p><strong>说明：</strong></p>
+<p>当 <code>needle</code> 是空字符串时，我们应当返回什么值呢？这是一个在面试中很好的问题。</p>
+<p>对于本题而言，当 <code>needle</code> 是空字符串时我们应当返回 0 。这与 C 语言的  以及 Java 的  定义相符。</p>
+<p><strong>示例 1：</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><code class="hljs plain">输入：haystack &#x3D; &quot;hello&quot;, needle &#x3D; &quot;ll&quot;<br>输出：2<br></code></pre></td></tr></table></figure>
+
+<p><strong>示例 2：</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><code class="hljs plain">输入：haystack &#x3D; &quot;aaaaa&quot;, needle &#x3D; &quot;bba&quot;<br>输出：-1<br></code></pre></td></tr></table></figure>
+
+<p><strong>示例 3：</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><code class="hljs plain">输入：haystack &#x3D; &quot;&quot;, needle &#x3D; &quot;&quot;<br>输出：0<br></code></pre></td></tr></table></figure>
+
+<p><strong>提示：</strong></p>
+<ul>
+<li>  <code>0 &lt;= haystack.length, needle.length &lt;= 5 * 10&lt;sup&gt;4&lt;/sup&gt;</code></li>
+<li>  <code>haystack</code> 和 <code>needle</code> 仅由小写英文字符组成</li>
+</ul>
+<h2 id="Solution-17"><a href="#Solution-17" class="headerlink" title="Solution"></a>Solution</h2><figure class="highlight go"><table><tr><td class="code"><pre><code class="hljs go"><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">strStr</span><span class="hljs-params">(haystack <span class="hljs-keyword">string</span>, needle <span class="hljs-keyword">string</span>)</span> <span class="hljs-title">int</span></span> &#123;<br>    n,m := <span class="hljs-built_in">len</span>(haystack), <span class="hljs-built_in">len</span>(needle)<br>outer:<br>    <span class="hljs-keyword">for</span> i := <span class="hljs-number">0</span>; i + m &lt;= n; i++ &#123;<br>        <span class="hljs-keyword">for</span> j:= <span class="hljs-keyword">range</span> needle &#123;<br>            <span class="hljs-keyword">if</span> haystack[i+j] != needle[j] &#123;<br>                <span class="hljs-keyword">continue</span> outer<br>            &#125;<br>        &#125;<br>        <span class="hljs-keyword">return</span> i<br>    &#125;<br>    <span class="hljs-keyword">return</span> <span class="hljs-number">-1</span><br>&#125;<br></code></pre></td></tr></table></figure>
+
+<hr>
+<h1 id="3-无重复字符的最长子串"><a href="#3-无重复字符的最长子串" class="headerlink" title="3. 无重复字符的最长子串"></a><a href="https://leetcode-cn.com/problems/longest-substring-without-repeating-characters/">3. 无重复字符的最长子串</a></h1><p>给定一个字符串 <code>s</code> ，请你找出其中不含有重复字符的 **最长子串 **的长度。</p>
+<p><strong>示例 1:</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><code class="hljs plain">输入: s &#x3D; &quot;abcabcbb&quot;<br>输出: 3 <br>解释: 因为无重复字符的最长子串是 &quot;abc&quot;，所以其长度为 3。<br></code></pre></td></tr></table></figure>
+
+<p><strong>示例 2:</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><code class="hljs plain">输入: s &#x3D; &quot;bbbbb&quot;<br>输出: 1<br>解释: 因为无重复字符的最长子串是 &quot;b&quot;，所以其长度为 1。<br></code></pre></td></tr></table></figure>
+
+<p><strong>示例 3:</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><code class="hljs plain">输入: s &#x3D; &quot;pwwkew&quot;<br>输出: 3<br>解释: 因为无重复字符的最长子串是 &quot;wke&quot;，所以其长度为 3。<br>     请注意，你的答案必须是 子串 的长度，&quot;pwke&quot; 是一个子序列，不是子串。<br></code></pre></td></tr></table></figure>
+
+<p><strong>示例 4:</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><code class="hljs plain">输入: s &#x3D; &quot;&quot;<br>输出: 0<br></code></pre></td></tr></table></figure>
+
+<p><strong>提示：</strong></p>
+<ul>
+<li>  <code>0 &lt;= s.length &lt;= 5 * 10&lt;sup&gt;4&lt;/sup&gt;</code></li>
+<li>  <code>s</code> 由英文字母、数字、符号和空格组成</li>
+</ul>
+<h2 id="Solution-18"><a href="#Solution-18" class="headerlink" title="Solution"></a>Solution</h2><p>Language: ****</p>
+<figure class="highlight go"><table><tr><td class="code"><pre><code class="hljs go"><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">lengthOfLongestSubstring</span><span class="hljs-params">(s <span class="hljs-keyword">string</span>)</span> <span class="hljs-title">int</span></span> &#123;<br>    m := <span class="hljs-keyword">map</span>[<span class="hljs-keyword">byte</span>]<span class="hljs-keyword">int</span>&#123;&#125;<br>    n := <span class="hljs-built_in">len</span>(s)<br><br>    rk, ans := <span class="hljs-number">-1</span>, <span class="hljs-number">0</span><br>    <span class="hljs-keyword">for</span> i := <span class="hljs-number">0</span>; i &lt; n; i++ &#123;<br>        <span class="hljs-keyword">if</span> i != <span class="hljs-number">0</span> &#123;<br>            <span class="hljs-built_in">delete</span>(m,s[i<span class="hljs-number">-1</span>])<br>        &#125;<br><br>        <span class="hljs-keyword">for</span> rk + <span class="hljs-number">1</span> &lt; n &amp;&amp; m[s[rk+<span class="hljs-number">1</span>]] == <span class="hljs-number">0</span> &#123;<br>            m[s[rk+<span class="hljs-number">1</span>]]++<br>            rk++<br>        &#125; <br><br>        ans = max(ans, rk - i + <span class="hljs-number">1</span>)<br>    &#125;<br>    <span class="hljs-keyword">return</span> ans<br>&#125;<br><br><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">max</span><span class="hljs-params">(x, y <span class="hljs-keyword">int</span>)</span> <span class="hljs-title">int</span></span> &#123;<br>    <span class="hljs-keyword">if</span> x &lt; y &#123;<br>        <span class="hljs-keyword">return</span> y<br>    &#125;<br>    <span class="hljs-keyword">return</span> x<br>&#125;<br></code></pre></td></tr></table></figure>
+
+
+
+]]></content>
+      <categories>
+        <category>Go</category>
+        <category>学习笔记</category>
+        <category>刷题笔记</category>
+      </categories>
+      <tags>
+        <tag>Go</tag>
+        <tag>LeetCode</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>(Golang)链表学习记录</title>
     <url>/posts/85980731.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>[toc]</p>
@@ -1102,8 +1540,8 @@
 <figure class="highlight plain"><table><tr><td class="code"><pre><code class="hljs plain">func findRepeatNumber(nums []int) int &#123;<br>    i :&#x3D; 0<br>    for i &lt; len(nums) &#123;<br>        if nums[i] &#x3D;&#x3D; i &#123;<br>            i++<br>            continue<br>        &#125;<br><br>        if nums[nums[i]] &#x3D;&#x3D; nums[i] &#123;<br>            return nums[i]<br>        &#125;<br><br>        nums[nums[i]], nums[i] &#x3D; nums[i], nums[nums[i]]<br>    &#125;<br>    return -1<br>&#125;<br></code></pre></td></tr></table></figure>
 ]]></content>
       <categories>
-        <category>学习笔记</category>
         <category>Go</category>
+        <category>学习笔记</category>
         <category>刷题笔记</category>
       </categories>
       <tags>
