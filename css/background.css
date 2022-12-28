@@ -5484,7 +5484,7 @@ div.timenode .meta:before {
   display: none;
   margin-left: -15rem;
   padding: 1rem;
-  width: 30rem;
+  height: 80%;
   border-radius: 8px;
   background: var(--search-bg);
   -webkit-animation: titlescale 0.5s;
@@ -5599,12 +5599,13 @@ div.timenode .meta:before {
 }
 #local-search .search-dialog .search-result-list {
   overflow-y: auto;
-  max-height: 10.5rem;
+  /* max-height: 10.5rem;*/
 }
 @media screen and (max-width: 768px) {
   #local-search .search-dialog .search-result-list {
     padding-bottom: 2rem;
-    max-height: 75vh !important;
+    /* max-height: 75vh !important;*/
+    max-height: 80%;
   }
 }
 
